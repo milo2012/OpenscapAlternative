@@ -1,5 +1,6 @@
 # OpenscapAlternative
 OpenSCAP verifies the presence of patches by using content produced by the Red Hat Security Response Team (SRT), checks system security configuration settings and examines systems for signs of compromise by using rules based on standards/specifications.  
+  
 There are situations where the systems aren't installed with OpenSCAP and you need to check for packages that are missing important security patches.  
   
 To list the list of installed appliactions on the RHEL system.  
