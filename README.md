@@ -6,7 +6,7 @@ There are situations where the systems aren't installed with OpenSCAP and you ne
 To list the list of installed appliactions on the RHEL system.  
 $ yum list installed > packages.txt  
   
-To run the script
+To run the script  
 $ python checkPatches.py -i packages.txt  
 - Extracting hotfixes from https://rhn.redhat.com/errata/RHSA-2015-1035.html  
 - Extracting hotfixes from https://rhn.redhat.com/errata/RHSA-2015-1031.html  
