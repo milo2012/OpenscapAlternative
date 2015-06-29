@@ -1,0 +1,1739 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <script type="text/javascript">
+      var siteMapState="security";
+    </script>
+    <link rel="stylesheet" href="/css/rhn-base.css" type="text/css" />
+    
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<!-- metaInclude -->
+	<meta name="avalon-host-info" content="gss-webjava01" />
+	<meta name="avalon-version" content="2.0.19.0" />
+	<meta name="google-site-verification" content="nP0a2DWUcOxjRgDDACHEbDptiGIGBrChbghrC0ZzcK0" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- /metaInclude -->
+	<!-- ^ meta and X-UA-Compatible must come first -->
+	
+	<meta http-equiv="cleartype" content="on" />
+
+	<!-- _preInclude -->
+
+	<!-- title -->
+	<title>Red Hat Customer Portal
+	</title>
+	<!-- /title -->
+	<!-- /_preInclude -->
+
+	<!-- cssInclude -->
+
+	<link rel="shortcut icon" href="https://access.redhat.com/webassets/avalon/g/favicon.ico" />
+	<link rel="stylesheet" type="text/css" media="screen, print" href="https://access.redhat.com/webassets/avalon/s/jquery-ui/cp/jquery-ui-1.8.7.custom.css?version=2.0.19.0" />
+
+	<!-- TODO: What is pageCssLinks and do we still need it? -->
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/legacy.css?version=2.0.19.0" />
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/bootstrap.css?version=2.0.19.0" />
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/master-blessed1.css?version=2.0.19.0" />
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/master.css?version=2.0.19.0" />
+
+	<link href="https://access.redhat.com/webassets/avalon/s/chosen.css?version=2.0.19.0" rel="stylesheet" type="text/css" />
+	<!--[if lte IE 9]>
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/ie.css" />
+    <![endif]-->
+    
+
+	<!-- .primary-nav starts out hidden (at sm res and higher), and
+	is later revealed with JS after the megamenu has been built
+	out.  here, use noscript to un-hide the nav, in case the user
+	has JS disabled. -->
+	<noscript>
+		<style type="text/css" media="screen"> .primary-nav { display: block; } </style>
+	</noscript>
+
+	<!-- /cssInclude -->
+
+	<!-- jsInclude -->
+	<script type="text/javascript">
+		window.portal = {
+			analytics             : {},
+			host                  : "https://access.redhat.com",
+			kbaseContext          : "/preview_faq",
+			cspContext            : "/preview_jbossnetwork",
+			customerCenterContext : "/wapps",
+			lang                  : "en",
+			version               : "2.0.19.0",
+			decorationWhitelist   : ["https://access.redhat.com","https://rhn.redhat.com", "docs.redhat.com"]
+		};
+
+		/*
+		* TODO
+		* deprecate this avalon object
+		*/
+		window.avalon = window.portal;
+		window.avalonHost = avalon.host; // deprecate this?
+
+		/********************************
+		*  Temporary pagename shim     *
+		*  TODO: Remove this           *
+		********************************/
+
+		portal.analytics.shim = {};
+		portal.analytics.shim.pageTitle = "";
+		portal.analytics.shim.siteMapState = "";
+
+	</script>
+	<script type="text/javascript" src="https://access.redhat.com/webassets/avalon/j/lib/jquery.min.js?version=2.0.19.0"></script>
+	<script type="text/javascript" src="https://access.redhat.com/webassets/avalon/j/lib/require.js?version=2.0.19.0" data-main="/webassets/avalon/j/"></script>
+	<!-- TODO: can we please upgrade jquery?! -->
+	<script type="text/javascript">
+		/*
+		 * THIS IS NEEDED! Integrated apps include their own jQuery lib.
+		 * We need this *before* base.js so we can effectvley pass messages (trigger, bind) to base.js
+		 * *DO NOT* remove! window.jQuery the object is still accessible.
+		*/
+		window.ajq = jQuery.noConflict();
+	</script>
+	<script type="text/javascript" src="https://access.redhat.com/webassets/avalon/j/outage/outageJson_en.js?version=2.0.19.0"></script>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	
+	<!-- /jsInclude -->
+	
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>
+  </head>
+  <body>
+    
+	<!-- Chrome: Full -->
+	<div id="page-wrap" class="page-wrap">
+		<div class="top-page-wrap">
+<!--googleoff: all-->
+
+			<header class="masthead"><div id="to-top"><a class="btn_slideto"><span class="web-icon-upload"></span></a></div>
+<div class="mobile-bar-wrap hidden-sm hidden-md hidden-lg">
+	<a class="logo" href="https://access.redhat.com/">
+		<span class="logo-crop"><img src="https://access.redhat.com/chrome_themes/nimbus/img/l_redhat-lg.png"></span>
+		<span class="site-title"><span>Customer </span><span>Portal</span></span>
+	</a>
+	<button id="mobile-nav-btn" class="btn btn-navbar" data-toggle="collapse" data-target="#mobile-nav">
+		<span class="web-icon-mobile-menu"></span>
+		<span class="link-text">global.menu</span>
+	</button>
+	<button class="btn btn-search btn-utility" data-target="#site-search">
+		<span class="web-icon-search"></span>
+		<span class="link-text">Search</span>
+	</button>
+</div>
+
+<div class="utility-wrap">
+	<div class="utility-container">
+		<div class="utility-bar visible-sm visible-md visible-lg">
+			<menu class="top-nav">
+				<ul>
+					<li id="nav-subscription"><a class="top-nav-subscriptions" href="https://access.redhat.com/management/">Subscriptions</a></li>
+					<li id="nav-downloads"><a class="top-nav-downloads" href="https://access.redhat.com/downloads/">Downloads</a></li>
+					<li id="nav-support"><a class="top-nav-support-cases" href="https://access.redhat.com/support/cases/">Support Cases</a></li>
+				</ul>
+			</menu>
+
+			<menu class="utility-nav">
+				<ul>
+					<li>
+						<a class="btn-search" data-target="#site-search">
+							<span class="web-icon-search"></span>
+							<span class="link-text">Search</span>
+						</a>
+					</li>
+					<li>
+						<a class="btn-profile" data-target="#account-info">
+							<span class="web-icon-user"></span>
+							<span class="link-text">Account</span>
+							<span class="account-user" id="accountUserName"></span>
+						</a>
+					</li>
+					<li>
+						<a class="btn-language" data-target="#language">
+							<span class="web-icon-globe"></span>
+							<span class="link-text">Language</span>
+						</a>
+					</li>
+				</ul>
+			</menu>
+		</div>
+		<!-- Utility Tray -->
+		<div class="utility-tray-container">
+			<div class="utility-tray">
+				<div id="site-search" class="utility-link site-search">
+					<div class="content">
+            			<form class="ng-pristine ng-valid topSearchForm" id="topSearchForm" name="topSearchForm" action="/search/browse/search/" method="get" enctype="application/x-www-form-urlencoded">
+							<div class="input-group">
+
+                    			<input class="form-control searchField" id="topSearchInput" name="keyword" value="" placeholder="Enter Your Search Term" type="text">
+								<span class="input-group-btn">
+				    				<button type="submit" class="btn btn-primary">Search</button>
+								</span>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div id="account-info" class="utility-link account-info">
+					<div class="content">
+
+						<!-- Account Unauthenticated -->
+						<div id="accountLinksLoggedOut" class="unauthenticated">
+							<h2 class="utility-header">Log in to Your Red Hat Account</h2>
+							<div class="row col-border-row">
+								<div class="col-sm-6 col-border">
+									<p><a href="https://access.redhat.com/login" id="accountLogin" class="btn btn-primary">Log In</a></p>
+									<p>Your Red Hat account gives you access to your profile, preferences, and services, depending on your status.</p>
+								</div>
+								<div class="col-sm-6 col-border col-border-left">
+									<p><a href="https://www.redhat.com/wapps/ugc/register.html" class="btn btn-primary">Register</a></p>
+									<p>If you are a new customer, register now for access to product evaluations and purchasing capabilities. </p>
+
+									<strong>Need access to an account?</strong><p>If your company has an existing Red Hat account, your organization administrator can grant you access.</p>
+
+									<p><a href="https://access.redhat.com/support/contact/customerService/">If you have any questions, please contact customer service.</a></p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Account Authenticated -->
+						<div id="accountLinksLoggedIn" class="authenticated">
+							<h2 class="utility-header"><span id="userFirstName"></span></h2>
+							<div class="row col-border-row">
+								<div class="col-sm-6 col-border col-border-right">
+									<div class="account-info" id="accountUser">
+										<div class="avatar"><!-- placeholder--></div>
+										<div class="account-name"><strong id="userFullName"></strong></div>
+										<div class="account-org"><span id="userOrg"></span></div>
+										<div class="account-number accountNumber"><span class="property">Red Hat Account Number:</span> <span class="value"></span></div>
+									</div>
+
+									<div class="row account-settings">
+										<div class="col-md-6">
+											<h3>Red Hat Account</h3>
+											<ul class="reset">
+												<li><a href="https://www.redhat.com/wapps/ugc/protected/personalInfo.html">Account Details</a></li>
+												<li><a href="https://www.redhat.com/wapps/ugc/protected/prefs.html">Newsletter and Contact Preferences</a></li>
+												<li><a href="https://www.redhat.com/wapps/ugc/protected/usermgt/userList.html">User Management</a></li>
+												<li><a href="https://www.redhat.com/wapps/ugc/protected/account.html">Account Maintenance</a></li>
+											</ul>
+										</div>
+										<div class="col-md-6">
+											<h3>Customer Portal</h3>
+											<ul class="reset">
+												<li><a href="https://access.redhat.com/user">My Profile</a></li>
+												<li><a href="https://access.redhat.com/user" id="userNotificationsLink">Notifications</a></li>
+												<li><a href="https://access.redhat.com/help/">Help</a></li>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+								<div class="col-sm-6 col-border">
+									<p>For your security, if you’re on a public computer and have finished using your Red Hat services, please be sure to log out.</p>
+									<p><a href="https://www.redhat.com/wapps/sso/logout.html?redirect=https://access.redhat.com/logout" id="accountLogout" class="btn btn-primary">Log Out</a></p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div id="language" class="utility-link language">
+					<div class="content">
+						<h2 class="utility-header">Select Your Language</h2>
+						<div class="row" id="localesMenu">
+							<div class="col-sm-4">
+								<ul class="reset">
+									<li><a href="https://access.redhat.com/changeLanguage?language=en" id="en">English</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=es" id="es">español</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=de" id="de">Deutsch</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=it" id="it">italiano</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=ko" id="ko">한국어</a></li>
+								</ul>
+							</div>
+							<div class="col-sm-4">
+								<ul class="reset">
+									<li><a href="https://access.redhat.com/changeLanguage?language=fr" id="fr">français</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=ja" id="ja">日本語</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=pt" id="pt">português</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=zh_CN" id="zh_CN">中文 (中国)</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=ru" id="ru">русский</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="scroll-anchor">
+</div>
+
+<div class="header-nav visible-sm visible-md visible-lg">
+	<div id="header-nav">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+
+					<a href="https://access.redhat.com/" class="logo">
+						<span class="logo-crop"><img src="https://access.redhat.com/chrome_themes/nimbus/img/l_redhat-lg.png"></span>
+						<span class="site-title"><span>Customer </span><span>Portal</span></span>
+					</a>
+
+					<menu class="primary-nav hidden-sm">
+						<ul>
+							<li id="nav-products"><a class="products" data-link="mega" data-target="products-menu" href="https://access.redhat.com/products/">Products &amp; Services</a></li>
+							<li id="nav-tools"><a class="tools" data-link="mega" data-target="tools-menu" href="https://access.redhat.com/labs/">Tools</a></li><!-- #Need URL -->
+							<li id="nav-security"><a class="security" data-link="mega" data-target="security-menu" href="https://access.redhat.com/security/">Security</a></li>
+							<li id="nav-community"><a class="community" data-link="mega" data-target="community-menu" href="https://access.redhat.com/community/">Community</a></li><!-- #Need URL -->
+						</ul>
+					</menu>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="mobile-nav-wrap hidden-sm hidden-md hidden-lg">
+	<div id="mobile-nav" class="mobile-nav navbar collapse navbar-collapse">
+		<div class="navbar-inner">
+
+			<menu>
+				<ul class="mobile-utility">
+					<li>
+						<a class="btn-profile" data-target="#account-info-mobile">
+							<span class="web-icon-user"></span>
+							<span class="link-text">Account</span>
+						</a>
+					</li><!-- white space inline
+					--><li>
+						<a class="btn-language" data-target="#language-mobile">
+							<span class="web-icon-globe"></span>
+							<span class="link-text">Language</span>
+						</a>
+					</li>
+				</ul>
+				<div id="account-info-mobile" class="mobile-utility-wrap">
+					<!-- Account Unauthenticated -->
+					<div id="mobile-accountLinksLoggedOut" class="unauthenticated">
+						<ul class="nav mobile-utility-nav">
+							<li><a href="https://access.redhat.com/login">Log In</a></li>
+							<li><a href="https://www.redhat.com/wapps/ugc/register.html">Register</a></li>
+						</ul>
+					</div>
+					<!-- Account Authenticated -->
+					<div id="mobile-accountLinksLoggedIn" class="authenticated">
+						<div class="account-info" id="mobile-accountUser">
+							<div class="account-name"><strong id="mobile-userFullName"></strong></div>
+							<div class="account-org"><span id="mobile-userOrg"></span></div>
+							<div class="account-number mobile-accountNumber"><span class="property">Red Hat Account Number:</span> <span class="value"></span></div>
+						</div>
+						<ul class="nav mobile-utility-nav">
+							<li><a href="https://www.redhat.com/wapps/ugc/protected/personalInfo.html">Account Details</a></li>
+							<li><a href="https://www.redhat.com/wapps/ugc/protected/prefs.html">Newsletter and Contact Preferences</a></li>
+							<li><a href="https://www.redhat.com/wapps/ugc/protected/usermgt/userList.html">User Management</a></li>
+							<li><a href="https://www.redhat.com/wapps/ugc/protected/account.html">Account Maintenance</a></li>
+							<li><a href="https://access.redhat.com/user">My Profile</a></li>
+							<li><a href="https://access.redhat.com/user" id="userNotificationsLink">Notifications</a></li>
+							<li><a href="https://access.redhat.com/help/">Help</a></li>
+							<li class="logout"><a href="https://www.redhat.com/wapps/sso/logout.html?redirect=https://access.redhat.com/logout">Log Out</a>
+						</ul>
+					</div>
+				</div>
+				<div id="language-mobile" class="mobile-utility-wrap">
+					<ul class="nav mobile-utility-nav">
+						<li><a href="https://access.redhat.com/changeLanguage?language=en" id="mobile-en">English</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=es" id="mobile-es">español</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=de" id="mobile-de">Deutsch</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=it" id="mobile-it">italiano</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=ko" id="mobile-ko">한국어</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=fr" id="mobile-fr">français</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=ja" id="mobile-ja">日本語</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=pt" id="mobile-pt">português</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=zh_CN" id="mobile-zh_CN">中文 (中国)</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=ru" id="mobile-ru">русский</a></li>
+					</ul>
+				</div>
+				<ul class="main-mobile-nav nav">
+					<li id="mnav-home"><a href="https://access.redhat.com/">Home</a></li>
+					<li id="mnav-products"><a href="https://access.redhat.com/products/">Products &amp; Services</a></li>
+					<li id="mnav-tools"><a href="https://access.redhat.com/tools/">Tools</a></li>
+					<li id="mnav-security"><a href="https://access.redhat.com/security/">Security</a></li>
+					<li id="mnav-community"><a href="https://access.redhat.com/community/">Community</a></li><!-- #Need URL -->
+					<li id="mnav-downloads"><a href="https://access.redhat.com/downloads/">Downloads</a></li>
+					<li id="mnav-subscription"><a href="https://access.redhat.com/management/">Subscriptions</a></li>
+					<li id="mnav-support"><a href="https://access.redhat.com/support/cases/">Support Cases</a></li>
+				</ul>
+			</menu>
+		</div>
+	</div>
+</div>
+
+<div class="mega-wrap visible-sm visible-md visible-lg">
+	<menu class="mega">
+		<div class="container">
+			<div class="mega-menu-wrap">
+				<!-- Products Menu -->
+				<div aria-labelledby="products-menu" class="products-menu mega-menu" data-eh="mega-menu" role="menu">
+					<div class="row">
+						<div class="col-md-6 col-sm-8">
+							<nav class="root">
+								<div class="row">
+									<ul class="subnav subnav-root col-sm-6">
+										<li data-target="infrastructure-menu" class="active">
+											<a href="https://access.redhat.com/products/">Infrastructure and Management</a>
+										</li>
+										<li data-target="cloud-menu">
+											<a href="https://access.redhat.com/products/">Cloud Products</a>
+										</li>
+										<li data-target="jboss-dev-menu">
+											<a href="https://access.redhat.com/products/">JBoss Development and Management</a>
+										</li>
+										<li data-target="jboss-int-menu">
+											<a href="https://access.redhat.com/products/">JBoss Integration and Automation</a>
+										</li>
+										<li data-target="services-menu">
+											<a href="https://access.redhat.com/products/">Services</a>
+										</li>
+									</ul>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="infrastructure-menu" style="display: block;">
+										<ul>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-enterprise-linux/">Red Hat Enterprise Linux</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-enterprise-virtualization/">Red Hat Enterprise Virtualization</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/Identity_Management/">Red Hat Identity Management &amp; Infrastructure</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-directory-server/">Red Hat Directory Server</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-certificate-system/">Red Hat Certificate System</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-satellite/">Red Hat Satellite</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/subscription-asset-manager/">Subscription Asset Manager</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-update-infrastructure/">Red Hat Update Infrastructure</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-storage/">Red Hat Gluster Storage</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-ceph-storage/">Red Hat Ceph Storage</a>
+											</li>
+										</ul>
+									</div>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="cloud-menu">
+										<ul>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-cloudforms/">Red Hat CloudForms</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-enterprise-linux-openstack-platform/">Red Hat Enterprise Linux OpenStack Platform</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-cloud-infrastructure/">Red Hat Cloud Infrastructure</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/openshift-enterprise-red-hat/">OpenShift Enterprise by Red Hat</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/openshift-online-red-hat/">OpenShift Online by Red Hat</a>
+											</li>
+										</ul>
+									</div>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="jboss-dev-menu">
+										<ul>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-enterprise-application-platform/">Red Hat JBoss Enterprise Application Platform</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-data-grid/">Red Hat JBoss Data Grid</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-web-server/">Red Hat JBoss Web Server</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-portal/">Red Hat JBoss Portal</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-operations-network/">Red Hat JBoss Operations Network</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-developer-studio/">Red Hat JBoss Developer Studio</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/feedhenry/">FeedHenry by Red Hat</a>
+											</li>
+										</ul>
+									</div>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="jboss-int-menu">
+										<ul>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-fuse-service-works/">Red Hat JBoss Fuse Service Works</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-data-virtualization/">Red Hat JBoss Data Virtualization</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-fuse/">Red Hat JBoss Fuse</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-a-mq/">Red Hat JBoss A-MQ</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-bpm-suite/">Red Hat JBoss BPM Suite</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-brms/">Red Hat JBoss BRMS</a>
+											</li>
+										</ul>
+									</div>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="services-menu">
+										<ul>
+											<li><a href="https://access.redhat.com/products/Consulting/">Consulting</a></li>
+			                    			<li><a href="https://access.redhat.com/products/red-hat-access/">Red Hat Access</a></li>
+			                    			<li><a href="https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/">Red Hat Enterprise Linux Developer Program</a></li>
+			                    			<li><a href="https://access.redhat.com/products/Training/">Training</a></li>
+			                    			<li><a href="https://access.redhat.com/support/offerings/tam/">Technical Account Management</a></li>
+										</ul>
+									</div>
+								</div>
+							</nav>
+							<a href="https://access.redhat.com/products" class="btn btn-primary">Explore Products and Services</a>
+						</div>
+
+						<div class="col-md-6 col-sm-4 pull-right">
+							<div class="row">
+								<div class="col-md-4">
+									<h3 class="nav-title">Ecosystem</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/certification">Overview</a></li>
+										<li><a href="https://access.redhat.com/search/browse/certified-hardware#?">Certified Hardware</a></li>
+										<li><a href="https://access.redhat.com/search/browse/certified-software#?">Certified Software</a></li>
+										<li><a href="https://access.redhat.com/search/browse/certified-cloud-providers#?">Certified Cloud Providers</a></li>
+									</ul>
+								</div>
+								<div class="col-md-4">
+									<h3 class="nav-title">Knowledge</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/search/browse/search/">Expert Advice</a></li>
+										<li><a href="https://access.redhat.com/documentation/">Product Documentation</a></li>
+									</ul>
+								</div>
+								<div class="col-md-4">
+									<h3 class="nav-title">Support Policies</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/support/offerings/production/">Production Support</a></li>
+										<li><a href="https://access.redhat.com/support/offerings/developer/">Development Support</a></li>
+									</ul>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Tools Menu -->
+				<div aria-labelledby="tools-menu" class="tools-menu mega-menu" data-eh="mega-menu" role="menu">
+					<div class="row">
+
+						<nav class="col-sm-9">
+							<div class="mega-menu-feature">
+								<div class="row">
+									<div class="col-sm-4">
+										<h2 class="mega-menu-feature-title">Red Hat Access Labs</h2>
+										<p>To help you use Red Hat products to their full potential, our engineers have developed a set of tools to support customer success.</p>
+										<p class="push-top"><a href="https://access.redhat.com/labs/" class="btn btn-primary">Explore Labs</a></p>
+									</div>
+									<div class="col-sm-4">
+										<a href="https://access.redhat.com/labs/#?type=config">
+											<h3 class="nav-title">Configuration</h3>
+										</a>
+										<ul>
+											<li><a href="https://access.redhat.com/labs/jvmconfig/">JVM Config</a></li>
+											<li><a href="https://access.redhat.com/labs/networkbondinghelper/">Network Bonding Helper</a></li>
+											<li><a href="https://access.redhat.com/labs/linterfordockerfile/">Linter for Dockerfile</a></li>
+										</ul>
+
+										<a href="https://access.redhat.com/labs/#?type=deploy">
+											<h3 class="nav-title">Deployment</h3>
+										</a>
+										<ul>
+											<li><a href="https://access.redhat.com/labs/registrationassistant/">Registration Assistant</a></li>
+											<li><a href="https://access.redhat.com/labs/kickstartconfig/">Kickstart Generator</a></li>
+											<li><a href="https://access.redhat.com/labs/rhevupgradehelper/">RHEV Upgrade Helper</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-4">
+										<a href="https://access.redhat.com/labs/#?type=troubleshoot">
+											<h3 class="nav-title">Troubleshooting</h3>
+										</a>
+										<ul>
+											<li><a href="https://access.redhat.com/labs/garbagedog/">Garbage Collection Analysis</a></li>
+											<li><a href="https://access.redhat.com/labs/kerneloopsanalyzer/">Kernel Oops Analyzer</a></li>
+											<li><a href="https://access.redhat.com/labs/kdumphelper/">Kdump Helper</a></li>
+										</ul>
+										<a href="https://access.redhat.com/labs/#?type=security">
+											<h3 class="nav-title">Security</h3>
+										</a>
+										<ul>
+											<li><a href="https://access.redhat.com/labs/venom/">VENOM: QEMU Vulnerability Detector</a></li>
+											<li><a href="https://access.redhat.com/labs/ghost/">GHOST - gethostbyname Detector</a></li>
+											<li><a href="https://access.redhat.com/labs/poodle/">SSLv3 (POODLE) Detector</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</nav>
+
+						<nav class="col-sm-3">
+							<h3 class="nav-title">Additional Tools</h3>
+							<ul>
+								<li><a href="https://access.redhat.com/products/red-hat-access/">Red Hat Access - Overview</a></li>
+								<li><a href="https://access.redhat.com/labs/hacat/">Red Hat High Availability Cluster Architecture Tool</a></li>
+								<li><a href="https://access.redhat.com/tools/satcert/">Red Hat Satellite Certificate Tool</a></li>
+							</ul>
+						</nav>
+
+					</div>
+				</div>
+
+				<!-- Security Menu -->
+				<div aria-labelledby="security-menu" class="security-menu mega-menu" data-eh="mega-menu" role="menu">
+					<div class="row">
+						<nav class="col-sm-12 basic">
+							<div class="row">
+								<div class="col-md-3 col-sm-4">
+									<h3 class="nav-title">Security Updates</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/security/cve">Red Hat CVE Database</a></li>
+										<li><a href="https://access.redhat.com/security/updates/active/">Active Products</a></li>
+										<li><a href="https://access.redhat.com/security/updates/eol/">End-of-Life Products</a></li>
+										<li><a href="https://access.redhat.com/security/updates/advisory/">How to Get Notified</a></li>
+									</ul>
+								</div>
+								<div class="col-md-3 col-sm-4">
+									<h3 class="nav-title">Red Hat Product Security</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/security/team/">About</a></li>
+										<li><a href="https://securityblog.redhat.com/">Security Blog</a></li>
+										<li><a href="https://access.redhat.com/security/team/contact/">Contact</a></li>
+									</ul>
+								</div>
+								<div class="col-md-3 col-sm-4">
+									<h3 class="nav-title">Resources</h3>
+									<ul>
+										<li><a href="https://www.redhat.com/security/data/metrics/">Security Measurement</a></li>
+										<li><a href="https://access.redhat.com/security/updates/classification/">Severity Ratings</a></li>
+										<li><a href="https://access.redhat.com/security/updates/backporting/">Backporting Policies</a></li>
+										<li><a href="https://access.redhat.com/security/team/key/">Product Signing (GPG) Keys</a></li>
+									</ul>
+								</div>
+							</div>
+						</nav>
+						<a href="https://access.redhat.com/security/" class="btn btn-primary">Explore Security</a>
+					</div>
+				</div>
+
+				<!-- Community Menu -->
+				<div aria-labelledby="community-menu" class="community-menu mega-menu" data-eh="mega-menu" role="menu">
+					<div class="row">
+            			<nav class="col-sm-12 basic">
+							<div class="row">
+								<div class="col-sm-3">
+									<h3 class="nav-title">Discussions</h3>
+									<ul>
+
+										<li><a href="https://access.redhat.com/discussions?product=25&category=All&tags=All">Red Hat Enterprise Linux</a></li>
+										<li><a href="https://access.redhat.com/discussions?product=8163&category=All&tags=All">Red Hat Enterprise Virtualization</a></li>
+										<li><a href="https://access.redhat.com/discussions?product=36&category=All&tags=All">Red Hat Satellite</a></li>
+										<li><a href="https://access.redhat.com/discussions?product=22&category=All&tags=All">Customer Portal</a></li>
+										<li><a href="https://access.redhat.com/groups/">Private Groups</a></li>
+										<li class="more-link"><a href="https://access.redhat.com/discussions?keyword=&name=&product=All&category=All&tags=All">All Discussions</a></li>
+										<li class="more-link"><a href="https://access.redhat.com/node/add/discussion">Start a Discussion</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-3">
+									<h3 class="nav-title">Blogs</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/blogs/767163">Customer Portal</a></li>
+										<li><a href="https://access.redhat.com/blogs/759303">Red Hat Access Labs</a></li>
+										<li><a href="https://access.redhat.com/blogs/766093">Red Hat Product Security Team</a></li>
+										<li class="more-link"><a href="https://access.redhat.com/blogs/">All Blogs</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-3">
+									<h3 class="nav-title">Events</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/customer-convergence">Customer Events</a></li>
+										<li><a href="http://www.redhat.com/summit/">Red Hat Summit</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-3">
+									<h3 class="nav-title">Stories</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/subscription-value/">Red Hat Subscription Benefits</a></li>
+										<li><a href="https://access.redhat.com/customer-success/">You Asked. We Acted.</a></li>
+										<li><a href="http://www.redhat.com/en/open-source">Open Source Communities</a></li>
+									</ul>
+								</div>
+							</div>
+						</nav>
+						<!--<a href="https://access.redhat.com/community/" class="btn btn-primary">Explore Community</a>-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</menu>
+</div>
+
+				<div id="site-section"></div>
+
+			</header>
+<!--googleon: all-->
+			<main id="cp-main" class="portal-content-area" role="main">
+				<div id="cp-content" class="main-content">
+					<!-- legacy divs start here -->
+					<div id="legacy-portal">
+						<div class="content-area">
+							<div id="legacy-container" class="legacy-container">
+									
+
+    <div class="wrapi">
+      <div id="container" class="clearWrap">
+        <div id="content">
+
+    
+
+
+
+
+
+
+
+
+
+<h1><img src="/img/rhn-icon-security.gif" alt="Security Advisory" align="absmiddle" /> Important: php security update</h1>
+
+<table class="details">
+	<tr>
+		<th>Advisory:</th>
+		<td>RHSA-2015:0021-1</td>
+	</tr>
+	<tr>	
+		<th>Type:</th>
+		<td>Security Advisory</td>
+	</tr>
+        <tr>
+                <th>Severity:</th>
+                <td>Important</td>
+        </tr>
+	<tr>	
+		<th>Issued on:</th>
+		<td>2015-01-08</td>
+	</tr>
+	<tr>	
+		<th>Last updated on:</th>
+		<td>2015-01-08</td>
+	</tr>
+
+	<tr>
+		<th valign="top">Affected Products:</th>
+		<td><a href="#Red Hat Enterprise Linux Server AUS (v. 6.5)">Red Hat Enterprise Linux Server AUS (v. 6.5)</a><br />
+<a href="#Red Hat Enterprise Linux Server EUS (v. 6.5.z)">Red Hat Enterprise Linux Server EUS (v. 6.5.z)</a></td>
+	</tr>
+
+
+	<tr>
+		<th valign="top">CVEs (<a href="http://cve.mitre.org">cve.mitre.org</a>):</th>
+		<td rowspan="2" valign="top">
+          <a href="https://www.redhat.com/security/data/cve/CVE-2014-3669.html">CVE-2014-3669</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2014-3670.html">CVE-2014-3670</a><br />
+		</td>
+	</tr>
+
+</table>
+
+<br />
+
+<h2>Details</h2>
+<div class="page-summary">
+<p>Updated php packages that fix two security issues are now available for<br />Red Hat Enterprise Linux 6.5 Extended Update Support.<br /><br />Red Hat Product Security has rated this update as having Important security<br />impact. Common Vulnerability Scoring System (CVSS) base scores, which give<br />detailed severity ratings, are available for each vulnerability from the<br />CVE links in the References section.<br /></p>
+
+<p>PHP is an HTML-embedded scripting language commonly used with the Apache<br />HTTP Server.<br /><br />A buffer overflow flaw was found in the Exif extension. A specially crafted<br />JPEG or TIFF file could cause a PHP application using the exif_thumbnail()<br />function to crash or, possibly, execute arbitrary code with the privileges<br />of the user running that PHP application. (CVE-2014-3670)<br /><br />An integer overflow flaw was found in the way custom objects were<br />unserialized. Specially crafted input processed by the unserialize()<br />function could cause a PHP application to crash. (CVE-2014-3669)<br /><br />All php users are advised to upgrade to these updated packages, which<br />contain backported patches to correct these issues. After installing the<br />updated packages, the httpd daemon must be restarted for the update to<br />take effect.<br /></p>
+</div>
+
+
+<br />
+
+<h2>Solution</h2>
+<div class="page-summary">Before applying this update, make sure all previously released errata<br />relevant to your system have been applied.<br /><br />This update is available via the Red Hat Network. Details on how to use the<br />Red Hat Network to apply this update are available at<br /><A HREF="https://access.redhat.com/articles/11258">https://access.redhat.com/articles/11258</A><br /></div>
+<br />
+
+<h2>Updated packages</h2>
+
+<table border="0" cellpadding="6" cellspacing="0">
+
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Server AUS (v. 6.5)">Red Hat Enterprise Linux Server AUS (v. 6.5)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-5.3.3-27.el6_5.3.src.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3d8006fd3dcf94755254be7b104db8d8<br/>SHA-256: d5b32e7dc45ecee7fbbb76bea4d6e0e74230ca637e35ee2eaf8e46878d0456a6</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0b3c22720947e908cae2de0a0aade0e2<br/>SHA-256: 0ed1855127a86b74deb9d553c11b775a3ed61ba66d0e766c12d9bc2a50275bcd</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-bcmath-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b647014da048ae7b11d84165c2637678<br/>SHA-256: 859c12bdad1a67fe247b5fc3ede37b7122a90b4112cd2ee47a1dd12d820380c3</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-cli-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 7de648342745237f80d556094c660cc0<br/>SHA-256: b0369deb6d345f9c482525718b3c4b9edad9cb81bec28f1b297e09f629037a9d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-common-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: cd3c20e28100f3b47c4d4c07c0acd473<br/>SHA-256: 7a1b3b916052ddb2bac8e9df0c4d3d40852e021c7618a95eff5fe067c31c2072</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-dba-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: cbfd78f2f08ddf4adecf934db73fa367<br/>SHA-256: 2093b013c9b85e9cefb1a06d61c2ef92e12da1577e820862f44231ce29b27216</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-debuginfo-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 7bfabda8f7818aa77fea5ba5bfba770f<br/>SHA-256: 2b3531f866166fc78b5563decc1a2bf4f7e7a1d4d5e862cf52da5db2973cf15f</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-devel-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0174ec9ca94e6f09add2f4faef94daae<br/>SHA-256: b6cd3fe4ed11ce18a62dd5961931ef96491d98b2f5c7d478dd0c9a92ee4b4da5</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-embedded-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 45024e76b660c0065d047f87b3e69c98<br/>SHA-256: 25d4ab11c5cb4c7dd8e5e2aae160135425228a3b0afa27d411cd7373bd36ad99</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-enchant-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5a363f5fe0438ad342dcb106b1a7dbc3<br/>SHA-256: 8877438b1abdf237a0f6344f9fc652591c68787444de4ac15088905e0c3ac18b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-fpm-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 07226228a4eb601f459f9d8678e75d33<br/>SHA-256: e62b4461d7f5d39591cb033984a02e7636da5dba896821672884728864e10647</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-gd-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 7cac920f812c331a54c75bfed8b7f767<br/>SHA-256: ea9120dd147f1886a5f6862e1a32b8ae3e30a488c75ccf0c3dc00a2acad0114a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-imap-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c0348644cde0b1b28edb444c3a3b5ca2<br/>SHA-256: 25918c8ebd795be9fe6eb413571faa8245c8ab54e09ec1418d9b357b7d73980e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-intl-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: daca87318526bc954fea6637d3751b09<br/>SHA-256: b1bdfb95d9d04dbcb7a4f51b95b58867cfa0fd3f84b74b47bd2e06dfd675199b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-ldap-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 76c7dc600db3eaf5a1e34318ba1c87c2<br/>SHA-256: 4ea0d0f5f7cf0aa97d086066e7af501ff10f1fe3988e7763406eaaa9b80b3b07</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-mbstring-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f0f05448f543948820813121ef4894fd<br/>SHA-256: 115b72814b7324e5b9e6351cc79fc1934808d1e6e5ad1d65984c866c8a4e244a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-mysql-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 158f4fca249b0338257c031992b5c330<br/>SHA-256: 4b70af3154fad01e79e238f4015d2453019e595ca16dae2c21b5611b82fe8fb2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-odbc-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 36419fae2e76022f9afdd01fa8817400<br/>SHA-256: ffc123cdf5ea07d3caca45e7d20aa04fa4a21227caf5d1da8797478044020458</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-pdo-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 7fd90135359c0b0f68310c35cf62709d<br/>SHA-256: 70c8c879836db56810c48f4c1d6d677fb944ffe007ceec4ed1a83be98c3583c0</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-pgsql-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9e433cad299d1199b9c418de1a08961c<br/>SHA-256: e13f5894b54f27695a6d03ac95a1bc5e17b9f0d2c82ed1165be185d71daa7047</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-process-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a52d05a57d63ec8b38cd806f3117bfd2<br/>SHA-256: 9ba1da5f8474636a266bea162eede4ec5320bf6504207bd8152b666d2aa40663</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-pspell-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 11bb730b46294b2132930d4538a0569d<br/>SHA-256: b10655f08be70629ac6b35a7a51def74667a6600bfe32e18b5759b21726cacea</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-recode-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ce6bceecf918a05abee7a51d3338403e<br/>SHA-256: 420db683b0b38271a9f168fd510cea05c9c46458be9e779a3eca4c3f2570287c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-snmp-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: dd2a1ec84e3c8821c9a0a9e37e587956<br/>SHA-256: 80af7e6e14288704d8390e741979fea8d8e31b48a0235438e6a6fffd4a28552e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-soap-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 22eecf649ce1c8dd9b843337727573ab<br/>SHA-256: 0205fbdf6e712362c25dfb9d776b878a9032e96393081df76aaf907a517f9215</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-tidy-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3e4a6678f5cb85067a1da6012fe001e2<br/>SHA-256: 31ffa440eedf2ae6a70c228a266a9737ab2c6051d2dc71e7be8dbd46d05ae5d3</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-xml-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 17c220ac4ba18ced8d6390e2ceb4eed6<br/>SHA-256: 45491702e6bb64f5c6e6239de44f2adb3d9a2195edf2d342cc68162a89276c95</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-xmlrpc-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 946542629ec1ff9d8ef511889868a0cc<br/>SHA-256: db1fa29442256963885781cfa2cc9203530d815227c06e647462802c4c4d666a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-zts-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5139bcfda419f0755939880d288a8d28<br/>SHA-256: 4bf4f835e2d30aa245b27fcfe352fe9d6ecd3d1641e5214696a2d95c6ac1b6b8</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Server EUS (v. 6.5.z)">Red Hat Enterprise Linux Server EUS (v. 6.5.z)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-5.3.3-27.el6_5.3.src.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3d8006fd3dcf94755254be7b104db8d8<br/>SHA-256: d5b32e7dc45ecee7fbbb76bea4d6e0e74230ca637e35ee2eaf8e46878d0456a6</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-5.3.3-27.el6_5.3.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c46e6df294a9b3b591a8205e86e98aac<br/>SHA-256: f887436a066b7a5b25d5915a78ba581a10b064bc224a50e4d06b63258e8eb5de</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-bcmath-5.3.3-27.el6_5.3.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0e3fe2da0267d876c8b11904dbc3892b<br/>SHA-256: 07792800e4d7cd81ee5655c84c8958282d39ba3b7c0453f011f07a5608b21284</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-cli-5.3.3-27.el6_5.3.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: cb3ec627022485308f0bae81f2bb5b6a<br/>SHA-256: ac39b99b28567d94b9ea45642cd6f208e69adad32a8eda0de5f90e95d5f00a9c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-common-5.3.3-27.el6_5.3.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3e8b3b7778d88a653088af378cb98884<br/>SHA-256: c268e9785503cc5ba33e2eb230c81e69660afb1247897753f1e11d8dc04e0b0d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-dba-5.3.3-27.el6_5.3.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a554e898d308aa19dd62279cb01a8f2c<br/>SHA-256: 532f277e630f5cafb5f9db713fda3588890801e5965bae6b780b2ed620b23204</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-debuginfo-5.3.3-27.el6_5.3.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6bf66c16c18c62174352f868988721f9<br/>SHA-256: 109d8da7785bc153526b85c5c73766ab964d32cd0e75be76e959e68aab0776f1</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-devel-5.3.3-27.el6_5.3.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 568cbaa7db27e2800ed50f245bf932f0<br/>SHA-256: 1da02bfa6991dd549ef8f268c6e94a44cf0a359a7c96d105ba41b8b06ed794d4</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-embedded-5.3.3-27.el6_5.3.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 023bf1b36c709ebef5489d76a0b634ae<br/>SHA-256: e961d13ca4f32696c13935532968dd095a00110f39c1f86ba48a3ca8f188508c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-enchant-5.3.3-27.el6_5.3.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5bbe34de7e510ce178f91f7c69184d92<br/>SHA-256: 416c2bc0d713f380b6a2a70330d2650f7ca8c68ba5c11c69fd02323afe5ecc10</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-fpm-5.3.3-27.el6_5.3.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a5ae2e4496b600be8fdc8fcd7eb96dba<br/>SHA-256: 720cb3b1007b6e8ae69578d85cb5b4104fa151a721d02928e1aee1d670e23714</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-gd-5.3.3-27.el6_5.3.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c6e1a9520f4fda3cee5ba1bde47ec47d<br/>SHA-256: fdb23d0f5faba3e0ce2b11fd27f7c54cf102e54ded229601b8d3dcf50c95e9fd</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-imap-5.3.3-27.el6_5.3.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c58e172243fef86bbcd33bdb3ecbe4dc<br/>SHA-256: e07767887ba3f8d88b3785edc557f9914b22b406d2ca2a81374d262947705834</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-intl-5.3.3-27.el6_5.3.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 600d05e20cd5156645799aeb8b13a97f<br/>SHA-256: 0ec6a9bd1f9e08306a6debaac662b379b6fd21075fa2fd4b809666eff1354f1a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-ldap-5.3.3-27.el6_5.3.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 66ff136a1607c4e03eba729c4135dd03<br/>SHA-256: 78e0c490c49851fb53e37e971b6a60594691e401ce8c3b3b0514163e6d8569dc</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-mbstring-5.3.3-27.el6_5.3.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a9210c50987202eacbbeae2e20b94568<br/>SHA-256: 99eb18fe4f630dd13d7dcd49e321cfd76f1391147acb1bcc60f3d21366c4cd50</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-mysql-5.3.3-27.el6_5.3.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 54624c7df9e308b36b635d12b9abdd02<br/>SHA-256: 47b35c84543525becb49f3c0361200642471b30aeae2c4fe775e59b7e1ea87d6</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-odbc-5.3.3-27.el6_5.3.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e892980e117170cc9eb0ea40670a5c94<br/>SHA-256: 089a8ddd191bb1204d4e4d6478128763fa939514de44a5ae4f26cb3defe0a74a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-pdo-5.3.3-27.el6_5.3.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b03ae269fa550bdb586940e82100b35b<br/>SHA-256: 97bb4ceebd8de239508163762bc8429e386813b6752d5c07932ec71c4593fa8a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-pgsql-5.3.3-27.el6_5.3.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 16888670eff61f85d93002ffe07a74b8<br/>SHA-256: 8fda1bde0939ab3e53d2b69b86e0169e43356a5080bb1725fc538b6c410057c3</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-process-5.3.3-27.el6_5.3.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d3fb15edbb904d544f4272fe5ee97e97<br/>SHA-256: cadc03a2110c275b5dd73c6e753daebb3cdfe8a7a0153c402e8cae90a45c9bc4</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-pspell-5.3.3-27.el6_5.3.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: fb3e8671299bcbb3a37163261606b1bc<br/>SHA-256: f74886a271ca46154ee64280970ea8bfd12470344e446c915ae0a4287a1f444e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-recode-5.3.3-27.el6_5.3.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ba055ae000412b2d50f39548d7a428e8<br/>SHA-256: ab1b3bb2ca8d9105b2ba8e46f2ecc406a32bc8dd7823e3bec38ebc6906b4b6dd</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-snmp-5.3.3-27.el6_5.3.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a8025a81717b540ad517a5ce9d4c24ea<br/>SHA-256: 95398f696cc386418cf24762cbf6f8090423d2befd168e1c64bb7b454be63db4</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-soap-5.3.3-27.el6_5.3.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 708c83840118516c38209f9786a2df1b<br/>SHA-256: d3cdcf774831d0aee78e9cda4279a8adc24b0796830c83c006ed6d5916683e29</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-tidy-5.3.3-27.el6_5.3.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 4ceea399f596c77d271f2e1e302621ad<br/>SHA-256: d7dd572dc9128664b4aa1ebf85d2b26ddd4923b65aadb25e814a9d25fb0d94f0</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-xml-5.3.3-27.el6_5.3.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 349068a39655b3f57e5f88b61d942cb4<br/>SHA-256: 3a069801e89448927c4371791030a83bc5e6caf5af5f9ff3bab1733dcc2b1e0b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-xmlrpc-5.3.3-27.el6_5.3.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a1e51ff84748c960ca54ee6dd3920631<br/>SHA-256: f17028c2a22b8843c4232bce8c0490f9259355c0f005c7a36e45102fb675cc52</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-zts-5.3.3-27.el6_5.3.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 69961661469135f1b13280f3afaf8fa7<br/>SHA-256: 15aeb72c9443a84c08c1a0d9310dbe280f9fcf65877c8506fbe2cd852d678e99</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>PPC:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-5.3.3-27.el6_5.3.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1f4e93eb751b08dd6cb2ef34627261f2<br/>SHA-256: 721b8d0bdaf2639acb1c3fc8671f743dacca7582922c48b3158171cf7ca5baa0</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-bcmath-5.3.3-27.el6_5.3.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a9fcd011e398fdbd2c9c9c0adacaa6c9<br/>SHA-256: c063b8d6f460e55b52f5170f2cdf7683213c1697097f9cd782a10d4fa15b6303</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-cli-5.3.3-27.el6_5.3.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5ed58353ef8741b448186030a48d70a6<br/>SHA-256: 2cef69065a3a9fe16f0a1c0000dd218058c652754a045bebdf1428e9e1da14f6</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-common-5.3.3-27.el6_5.3.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 41f091fb167caaee57542a021c20eb8a<br/>SHA-256: 18b0a9a4ee159ccec5efa0ac76aa0b0182669f240ef0e6e0431b09fad47edf7e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-dba-5.3.3-27.el6_5.3.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: caf059b15af5605d4143f30cb958acc6<br/>SHA-256: 97f95c40cbb59270b1e3fb43e5d3a852047395117a740aabf7ad59fd7ad60ec2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-debuginfo-5.3.3-27.el6_5.3.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 4507ef8a065a70077b7237e2d71c362d<br/>SHA-256: 91c0134d0ab91f7790103ae7456e7f74eaba57798c93e739cdbc9415fd87db8e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-devel-5.3.3-27.el6_5.3.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8a853f3a59297a7b267ccdb3b2394aae<br/>SHA-256: 829922663362bfc58bbc5fc02371f072018b9c88c17de7c9d4aca11255b2824f</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-embedded-5.3.3-27.el6_5.3.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 7f63575b6d168675683ac298dfc7c003<br/>SHA-256: b6e193a199217dcf564df90d4467dba1b0c9129da27bd1955bec9b25f68ce47e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-enchant-5.3.3-27.el6_5.3.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: bf8fa1b7d484bdc75c9467cc12055593<br/>SHA-256: 23b4b94916c78c6f109569bfd5856b748f928380d544b4d3cf8734109e2dbfbd</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-fpm-5.3.3-27.el6_5.3.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c08f09e97ed72ef1e43f83ddfa69251e<br/>SHA-256: 1202541eea9abcd4b83277714f1ec0ed663c54afbc64491a9342dabf8784d12d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-gd-5.3.3-27.el6_5.3.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0ea73366306a6d672c9021411eae5384<br/>SHA-256: 666ba909d2052973794117e03bf55ee28d5dc567ccdefbce1a9fc02b99bc77c0</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-imap-5.3.3-27.el6_5.3.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 529095960ed146be1d479b3765161e16<br/>SHA-256: 9ef1f571e3c4040868d14852763c67beb67245c476b8dfc53dc811e866b1568c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-intl-5.3.3-27.el6_5.3.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b0cb487e3d17a3ca24a3eaf2629b07a7<br/>SHA-256: fb1957900dbd7abe5623cd7ad239b1857ac4240d065349d044da7cbbef167077</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-ldap-5.3.3-27.el6_5.3.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 27c23f7b0d4007d9f8728ca74273489c<br/>SHA-256: 448fad5a799c1740aea42ca89b6e43590d86f4d899352a65d0f9b0f00ae7cace</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-mbstring-5.3.3-27.el6_5.3.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d2c978aa119e1498ed67aa402cfa98b2<br/>SHA-256: 358c1cf71df07b79cd91a51bed0cc6361faab9c0b4837429b6409a7067659f66</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-mysql-5.3.3-27.el6_5.3.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d9abe4c53538f7330a1d8d9731b3f570<br/>SHA-256: 2c7c3d4f84ffecda6453a31c0b8c5aae0cc98159702a2029826d59ac47a3f5c9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-odbc-5.3.3-27.el6_5.3.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 17062ce360544552c37f2fbe4e3169e8<br/>SHA-256: f25a6c2f77432a2b9a64b8bf6add4e4ddb5b3a18973aec30fb18e18793ae795b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-pdo-5.3.3-27.el6_5.3.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ac2fd12e4ea263356cde5bb1cba28032<br/>SHA-256: d52cc8837abee10c436992e629a385de284f25c1ecf244b7112bf8c6e54ba8bd</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-pgsql-5.3.3-27.el6_5.3.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 90afb20d0518ef86579855583eb117a9<br/>SHA-256: b2d736acbf1753e17705a61bbf01915091b6b8f8e5ab613782694cf121f0f317</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-process-5.3.3-27.el6_5.3.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3ed27fc47936b51f9e40a97ebab64f17<br/>SHA-256: 2cc46a01d4b29cb5b9f5bbd9eeb7be4ae3ade29f4b00c5a9f5bdab4e34199769</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-pspell-5.3.3-27.el6_5.3.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b7eaa61d12165c981b7fa07622b8cb1a<br/>SHA-256: 553ae7d03ba6f8d564d5df7db1b3c4b0589e1efe1ea4f2a8ee275e9d6d0eebb2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-recode-5.3.3-27.el6_5.3.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 95300a98278d79d9509222cf587a036b<br/>SHA-256: 0eb07b3753d2534156cd04f5c622469a339733904820821bff8003980cf1b927</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-snmp-5.3.3-27.el6_5.3.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: aa47cddf05f87247fc3b2e3e6c75de9b<br/>SHA-256: 4369eec50459ee3dfc747676873c40368e8f88725249d1cacfcb4763166b27ef</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-soap-5.3.3-27.el6_5.3.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 19e29ccbbf540433ebad0efdd1d6c1b3<br/>SHA-256: 5dc86b1cc11c9ac748564a7ad0ae7ed9aafa1cd9a5e1f1ef6f34060ad86636c2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-tidy-5.3.3-27.el6_5.3.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a139087e8979e9c0b420319b289f20e9<br/>SHA-256: 702eb6ca591b44706058d10135659cbeaff7d605af13fd8533ba6568de7f0d4b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-xml-5.3.3-27.el6_5.3.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 743d2d709eb6559ee278ab04b10f0ac4<br/>SHA-256: 8887589037ba175a08602559c7716180cc2a1f1fb26d1b37dca6d8c24bc3551e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-xmlrpc-5.3.3-27.el6_5.3.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 4642183c916c547f75fc6581b1353ca5<br/>SHA-256: aac2085d0c2b613e2b931252539607c53f36780b2ce88e82d08ef411feb9e310</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-zts-5.3.3-27.el6_5.3.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0d8fc5b5fa81ace047b007c73b6f70d3<br/>SHA-256: 6f7ec24b45d855a50bf298d3a23ba9425666d474e4f6df37ecc4b049f260d89c</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>s390x:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-5.3.3-27.el6_5.3.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d92556fe375bda5d1cb6b42487c1533e<br/>SHA-256: 1a1775db59b28fde512a76ebcdef0c643874bb6c43d979e69898681723c0b2bd</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-bcmath-5.3.3-27.el6_5.3.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 228c3382e82e82414bcfca4e990f868e<br/>SHA-256: de0496607451dc29012d6984875cc317f75f13d13ecb6163f4cd518b2766310a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-cli-5.3.3-27.el6_5.3.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 187a2079c99c172431945a60cdc6224c<br/>SHA-256: 124be4ea0ce61939baaa4d70c6db1d69538fc725503a8b230079205f05e29ef9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-common-5.3.3-27.el6_5.3.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 4600ddb00eb3117fa83eaeb8a82ca62d<br/>SHA-256: 54cd668a98098bd3e6a6f299f141a8aaf8ae095971f910827daa7d850e05426f</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-dba-5.3.3-27.el6_5.3.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 267609c363afcd14df39ca80a35f9236<br/>SHA-256: 817cd5767fb6892633256c46efc180ec11029db465218fdfba904909231592b2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-debuginfo-5.3.3-27.el6_5.3.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e77696ae8861650a049f09247574112a<br/>SHA-256: a40890a0c4c24fa7f696333c286546a3a7178ae17971d9ea03815ff19ffca88e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-devel-5.3.3-27.el6_5.3.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b1863eb3f58c296780f05bb56ece48ee<br/>SHA-256: f10e7d658366cd351f8798ac85cc2037c96203b5484a745f521ce0fabb5519da</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-embedded-5.3.3-27.el6_5.3.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 62abc233ea98ae05bf8738b39070ebd5<br/>SHA-256: 3e4488cd25b3cee84e0e2f38fefceac4ce24cd51571fce0fa8636f1759e7729d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-enchant-5.3.3-27.el6_5.3.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0a9a70761797c3e42c058a69fba1ef21<br/>SHA-256: 938a3a75eda77dcb16a670ed4d4fd8ef2a54d7f5b528a6d1c6c4c17f66f66fde</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-fpm-5.3.3-27.el6_5.3.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 35bc2908aa2bcc71f46a969347094c21<br/>SHA-256: 40839b07859ceb923710653488e4c635a67b9572348b85078749e89525d8a556</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-gd-5.3.3-27.el6_5.3.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ec149d761e304ecd43530d47bc69c281<br/>SHA-256: 3820d8b328d183c945a66dff786b13dacc5ede42140b17dd92f663ec8ed61a8a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-imap-5.3.3-27.el6_5.3.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 4c50b468deeb6ecd39fdebcf2ff454a8<br/>SHA-256: fdaab5feb68cae5610e56a94bf8f47512aa554477352be59a7968f776ea1de87</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-intl-5.3.3-27.el6_5.3.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 78899696431765ab9af0d51e31447e62<br/>SHA-256: ac60c51a2ce9284b0050436273ed1702c3ffa3b0148637261593c6493b3fb0bd</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-ldap-5.3.3-27.el6_5.3.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8de43730f1fadc95fdd997492a0dea12<br/>SHA-256: eebee8495d81a46bf4b547dba309fb479910c35d8b525043694d0af5d3c6c29a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-mbstring-5.3.3-27.el6_5.3.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 925f49a38f4c2cd47a483bed693e44f6<br/>SHA-256: a1846c06cd015557fb38efa740d0029c34e7db8c3043f3fd2683d15f707078b6</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-mysql-5.3.3-27.el6_5.3.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f9ccfbb77f420259ad70530a43e66dd1<br/>SHA-256: 2a18e06849619fe6fff14770021af0d2c5f487ef746f7e560da6938054ed4a81</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-odbc-5.3.3-27.el6_5.3.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b604df42655d00f30fb5442de4675770<br/>SHA-256: 8003e0171c28eccf5c9057ec13e242dc202af98981ab7cbf336b3014b77cda89</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-pdo-5.3.3-27.el6_5.3.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 91566131174d8157113e780bdae8d1ce<br/>SHA-256: e5ef7b606d88aa688fee66b01f597920cb9376f6f5ead97b88877dbbfa36be51</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-pgsql-5.3.3-27.el6_5.3.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d1c766af2f66cb906c5e2af3bfe7fdd8<br/>SHA-256: 63473521b7ce5b4b3b86ca35f38ce80504fc2b19fa279e48cacc575e530e2b0a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-process-5.3.3-27.el6_5.3.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 545ad75ff9188baf0e2946abfac4810c<br/>SHA-256: 96442fa73ce984a72ee79738bbe09c901f47f0c2d0940cdc7a08d66a3d3e90e5</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-pspell-5.3.3-27.el6_5.3.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 947573172ab09c22b11dc79e7c40846d<br/>SHA-256: 29d82f43981dd8426017f6b751275d0a0e6465872887abd1c249710b907a0c3e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-recode-5.3.3-27.el6_5.3.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a9f9cc97fe11bedd00484670dbe4be52<br/>SHA-256: c4781b2bf165aff574d0c232be46807ddb9a2f74cad134d1894ca541ee2ef87d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-snmp-5.3.3-27.el6_5.3.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9be7b9db21025141abc17ac052454b2d<br/>SHA-256: 952ba53ae290559a1426544dd6212784ea31478f41d9e3ddbaf228d3ea87d9bc</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-soap-5.3.3-27.el6_5.3.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 595e9eb15bf30d739cc5b7c024d2ea3b<br/>SHA-256: 4afd6947c2506fb162c44a80b48cdd985d5b6835c2d23d8ad38abe69c7e16d6f</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-tidy-5.3.3-27.el6_5.3.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 116db076d8da1362959bb6ad5cb58856<br/>SHA-256: f997a6dfa79cb7064f91c2ec058237ff14ac0eecfcf1045111e9fd3fe2e7406d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-xml-5.3.3-27.el6_5.3.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 45471583ca56a9eaf2ba24d7de9ff8b5<br/>SHA-256: 9ff130205aa6f78d445f417ad356aa5b5a53f53ce1057de34a892c1c4454dd32</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-xmlrpc-5.3.3-27.el6_5.3.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 264b3a83340381c80bbba24cd54620a2<br/>SHA-256: 016fb10621b4649093a35b13848e5da250a27c54c995ecff90a9ce3b480f9f23</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-zts-5.3.3-27.el6_5.3.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3a951270ea0f78689f1d37d7e5598e04<br/>SHA-256: c454b443bc8e98a0096422ccadf49927148a7343850b7844d99fb47f9050616d</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0b3c22720947e908cae2de0a0aade0e2<br/>SHA-256: 0ed1855127a86b74deb9d553c11b775a3ed61ba66d0e766c12d9bc2a50275bcd</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-bcmath-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b647014da048ae7b11d84165c2637678<br/>SHA-256: 859c12bdad1a67fe247b5fc3ede37b7122a90b4112cd2ee47a1dd12d820380c3</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-cli-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 7de648342745237f80d556094c660cc0<br/>SHA-256: b0369deb6d345f9c482525718b3c4b9edad9cb81bec28f1b297e09f629037a9d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-common-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: cd3c20e28100f3b47c4d4c07c0acd473<br/>SHA-256: 7a1b3b916052ddb2bac8e9df0c4d3d40852e021c7618a95eff5fe067c31c2072</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-dba-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: cbfd78f2f08ddf4adecf934db73fa367<br/>SHA-256: 2093b013c9b85e9cefb1a06d61c2ef92e12da1577e820862f44231ce29b27216</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-debuginfo-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 7bfabda8f7818aa77fea5ba5bfba770f<br/>SHA-256: 2b3531f866166fc78b5563decc1a2bf4f7e7a1d4d5e862cf52da5db2973cf15f</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-devel-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0174ec9ca94e6f09add2f4faef94daae<br/>SHA-256: b6cd3fe4ed11ce18a62dd5961931ef96491d98b2f5c7d478dd0c9a92ee4b4da5</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-embedded-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 45024e76b660c0065d047f87b3e69c98<br/>SHA-256: 25d4ab11c5cb4c7dd8e5e2aae160135425228a3b0afa27d411cd7373bd36ad99</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-enchant-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5a363f5fe0438ad342dcb106b1a7dbc3<br/>SHA-256: 8877438b1abdf237a0f6344f9fc652591c68787444de4ac15088905e0c3ac18b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-fpm-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 07226228a4eb601f459f9d8678e75d33<br/>SHA-256: e62b4461d7f5d39591cb033984a02e7636da5dba896821672884728864e10647</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-gd-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 7cac920f812c331a54c75bfed8b7f767<br/>SHA-256: ea9120dd147f1886a5f6862e1a32b8ae3e30a488c75ccf0c3dc00a2acad0114a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-imap-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c0348644cde0b1b28edb444c3a3b5ca2<br/>SHA-256: 25918c8ebd795be9fe6eb413571faa8245c8ab54e09ec1418d9b357b7d73980e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-intl-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: daca87318526bc954fea6637d3751b09<br/>SHA-256: b1bdfb95d9d04dbcb7a4f51b95b58867cfa0fd3f84b74b47bd2e06dfd675199b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-ldap-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 76c7dc600db3eaf5a1e34318ba1c87c2<br/>SHA-256: 4ea0d0f5f7cf0aa97d086066e7af501ff10f1fe3988e7763406eaaa9b80b3b07</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-mbstring-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f0f05448f543948820813121ef4894fd<br/>SHA-256: 115b72814b7324e5b9e6351cc79fc1934808d1e6e5ad1d65984c866c8a4e244a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-mysql-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 158f4fca249b0338257c031992b5c330<br/>SHA-256: 4b70af3154fad01e79e238f4015d2453019e595ca16dae2c21b5611b82fe8fb2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-odbc-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 36419fae2e76022f9afdd01fa8817400<br/>SHA-256: ffc123cdf5ea07d3caca45e7d20aa04fa4a21227caf5d1da8797478044020458</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-pdo-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 7fd90135359c0b0f68310c35cf62709d<br/>SHA-256: 70c8c879836db56810c48f4c1d6d677fb944ffe007ceec4ed1a83be98c3583c0</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-pgsql-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9e433cad299d1199b9c418de1a08961c<br/>SHA-256: e13f5894b54f27695a6d03ac95a1bc5e17b9f0d2c82ed1165be185d71daa7047</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-process-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a52d05a57d63ec8b38cd806f3117bfd2<br/>SHA-256: 9ba1da5f8474636a266bea162eede4ec5320bf6504207bd8152b666d2aa40663</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-pspell-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 11bb730b46294b2132930d4538a0569d<br/>SHA-256: b10655f08be70629ac6b35a7a51def74667a6600bfe32e18b5759b21726cacea</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-recode-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ce6bceecf918a05abee7a51d3338403e<br/>SHA-256: 420db683b0b38271a9f168fd510cea05c9c46458be9e779a3eca4c3f2570287c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-snmp-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: dd2a1ec84e3c8821c9a0a9e37e587956<br/>SHA-256: 80af7e6e14288704d8390e741979fea8d8e31b48a0235438e6a6fffd4a28552e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-soap-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 22eecf649ce1c8dd9b843337727573ab<br/>SHA-256: 0205fbdf6e712362c25dfb9d776b878a9032e96393081df76aaf907a517f9215</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-tidy-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3e4a6678f5cb85067a1da6012fe001e2<br/>SHA-256: 31ffa440eedf2ae6a70c228a266a9737ab2c6051d2dc71e7be8dbd46d05ae5d3</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-xml-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 17c220ac4ba18ced8d6390e2ceb4eed6<br/>SHA-256: 45491702e6bb64f5c6e6239de44f2adb3d9a2195edf2d342cc68162a89276c95</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>php-xmlrpc-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 946542629ec1ff9d8ef511889868a0cc<br/>SHA-256: db1fa29442256963885781cfa2cc9203530d815227c06e647462802c4c4d666a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>php-zts-5.3.3-27.el6_5.3.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5139bcfda419f0755939880d288a8d28<br/>SHA-256: 4bf4f835e2d30aa245b27fcfe352fe9d6ecd3d1641e5214696a2d95c6ac1b6b8</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+<tr><td colspan="2">(The unlinked packages above are only available from the <a href="/">Red Hat Network</a>)<br /></td></tr>
+
+</table>
+
+
+
+<br />
+<h2>Bugs fixed (see <A HREF="http://bugzilla.redhat.com/bugzilla">bugzilla</A> for more information)</h2>
+<div class="page-summary">
+<p><a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1154500">1154500</a> - CVE-2014-3669 php: integer overflow in unserialize()<br />
+<a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1154502">1154502</a> - CVE-2014-3670 php: heap corruption issue in exif_thumbnail()</p>
+</div>
+
+
+
+<br />
+<h2>References</h2>
+<div class="page-summary">
+
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-3669.html">https://www.redhat.com/security/data/cve/CVE-2014-3669.html</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2014-3670.html">https://www.redhat.com/security/data/cve/CVE-2014-3670.html</a><br />
+
+<A HREF="https://access.redhat.com/security/updates/classification/#important">https://access.redhat.com/security/updates/classification/#important</A>
+</div>
+
+
+
+
+
+
+
+<br />
+
+<hr border="1" />
+These packages are GPG signed by Red Hat for security.  Our key and 
+details on how to verify the signature are available from:<br />
+
+<a href="https://www.redhat.com/security/team/key/#package">https://www.redhat.com/security/team/key/#package</a>
+
+<p>The Red Hat security contact is <a href="mailto:secalert@redhat.com">secalert@redhat.com</a>.  More contact details at <a href="http://www.redhat.com/security/team/contact/">http://www.redhat.com/security/team/contact/</a></p>
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+    
+
+							</div>
+						</div>
+					</div>
+					<!-- end of legacy -->
+				</div>
+			</main>
+		</div>
+	<!--googleoff: all-->
+	<footer class="footer-main">
+		<div class="container footer-top">
+			<div class="row">
+
+				<div class="col-sm-2 brand">
+					<img src="https://access.redhat.com/chrome_themes/nimbus/img/l_redhat-reverse.png" alt="Red Hat" />
+				</div><menu class="col-sm-2">
+					<h3>Quick Links</h3>
+					<ul>
+						<li><a class="download-software" href="https://access.redhat.com/downloads/">Downloads</a></li>
+						<li><a class="manage-subscriptions" href="https://access.redhat.com/management/subscriptions/#active">Subscriptions</a></li>
+						<li><a class="support-cases" href="https://access.redhat.com/support">Support Cases</a></li>
+						<li><a class="quick-docs" href="https://access.redhat.com/documentation">Product Documentation</a></li>
+					</ul>
+				</menu>
+
+				<menu class="col-sm-2">
+					<h3>Help</h3>
+					<ul>
+						<li><a class="contact-us" href="https://access.redhat.com/support/contact/">Contact Us</a></li>
+						<li><a class="login-problems" href="https://access.redhat.com/help/login_assistance">Log-in Assistance</a></li>
+						<li><a class="accessibility" href="https://access.redhat.com/help/accessibility/">Accessibility</a></li>
+						<li><a class="browser-support-policy" href="https://access.redhat.com/help/browsers/">Browser Support Policy</a></li>
+					</ul>
+				</menu>
+
+				<menu class="col-sm-2">
+					<h3>Site Info</h3>
+					<ul>
+						<li><a class="recognition" href="https://access.redhat.com/recognition/">Awards and Recognition</a></li>
+						<li><a class="colophon" href="https://access.redhat.com/help/colophon/">Colophon</a></li>
+						<li><a class="cp-faqs" href="https://access.redhat.com/articles/33844">Customer Portal FAQ</a></li>
+					</ul>
+				</menu>
+
+				<menu class="col-sm-2">
+					<h3>About</h3>
+					<ul>
+						<li><a href="https://access.redhat.com/subscription-value" class="subscription-value">Red Hat Subscription Value</a></li>
+						<li><a href="https://www.redhat.com/about/" class="about-red-hat">About Red Hat</a></li>
+					</ul>
+				</menu>
+
+				<menu class="col-sm-2">
+					<h3>Related Sites</h3>
+					<ul>
+						<li><a href="https://www.redhat.com/" class="red-hat-com">RedHat.com</a></li>
+						<li><a href="https://www.jboss.org/" class="jboss-org">JBoss.org</a></li>
+						<li><a href="https://www.openshift.com" class="openshift-com">OpenShift.com</a></li>
+						<li><a href="https://partnercenter.force.com" class="partner-connect">Red Hat Partner Connect</a></li>
+					</ul>
+				</menu>
+
+			</div>
+		</div>
+
+		<div class="anchor">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 social">
+						<a target="_blank" href="http://www.redhat.com/summit/" class="summit"><img src="https://access.redhat.com/chrome_themes/nimbus/img/l_summit.png" alt="Red Hat Summit" /></a>
+						<a target="_blank" href="https://twitter.com/RedHatSupport" class="sm-icon twitter"><span class="nicon-twitter"></span><span class="offscreen">Twitter</span></a>
+						<a target="_blank" href="https://www.facebook.com/RedHatSupport" class="sm-icon facebook"><span class="nicon-facebook"></span><span class="offscreen">Facebook</span></a>
+						<a target="_blank" href="https://plus.google.com/100456039940694908045/posts" class="sm-icon googleplus"><span class="nicon-googleplus"></span><span class="offscreen">Google+</span></a>
+					</div>
+					<div class="col-sm-8 legal">
+						<menu class="legal-nav">
+							<ul>
+								<li><a href="http://www.redhat.com/en/about/privacy-policy" class="privacy-policy">Privacy Policy</a></li>
+								<li><a href="https://access.redhat.com/help/terms/" class="terms-of-use">Customer Portal Terms of Use</a></li>
+								<li><a href="http://www.redhat.com/en/about/all-policies-guidelines" class="all-policies">All Policies and Guidelines</a></li>
+							</ul>
+						</menu>							
+						<small class="copyright">Copyright © 2015 Red Hat, Inc.
+						</small>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+	</footer>
+	<!--googleon: all-->
+	</div>
+	
+  </body>
+</html>
+
+
+
+

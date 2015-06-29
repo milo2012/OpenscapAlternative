@@ -10,27 +10,43 @@ import os
 REMOTE_SERVER = "www.google.com"
 platform = "x86_64"
 
+def checkPlatform(filename):
+ lines=[]
+ with open(filename) as f:
+  lines = f.read().splitlines()
+ if "x86_64" in str(lines):
+  platform = "x86_64"
+ elif "i686" in str(lines):
+  platform = "i686"
+ elif "ppc" in str(lines):
+  platform = "ppc"
+ elif "390x" in str(lines):
+  platform = "390x"
+ else:
+  platform = ""
+ return platform
+ 
 def extractSecurityIssues():
  securityFixList = []
  url = "https://rhn.redhat.com/errata/rhel-server-6.5-errata-security.html"
  text = urlopen(url).read()   
  list1 = re.findall('errata/RHSA-(\w\w\w\w-\w\w\w\w.html)',text)
  for x in list1:
-  securityFixList.append("https://rhn.redhat.com/errata/RHSA-"+x)
+  securityFixList.append(x.replace(".html",""))
+  #securityFixList.append("https://rhn.redhat.com/errata/RHSA-"+x)
  return securityFixList
  
-def retrieveInstalledPackages():
- set1=readFile(fileList[0])
- count=0
- uniqueList=[]
- while count<len(fileList):
-  #print fileList[count]
-  lines=readFile(fileList[count])
-  for line in lines:
-   if line not in uniqueList:
-    uniqueList.append(line)
-  count+=1
- return uniqueList
+#def retrieveInstalledPackages():
+# set1=readFile(fileList[0])
+# count=0
+# uniqueList=[]
+# while count<len(fileList):
+#  lines=readFile(fileList[count])
+#  for line in lines:
+#   if line not in uniqueList:
+#    uniqueList.append(line)
+#  count+=1
+# return uniqueList
 
 def readFile(filename):
  with open(filename) as f:
@@ -49,8 +65,6 @@ def is_connected():
  except:
   pass
  return False
-
-#retrieveInstalledPackages():
 
 def extractPkgNameAndVer(line):
   found=False
@@ -73,40 +87,54 @@ def runTask(argFilename):
  if is_connected()==False:
   print "Internet is down"
   sys.exit()
+ 
+ global platform
+ platform = checkPlatform(argFilename)
 
  urlList=extractSecurityIssues()
  patchList=[]
  outputFile="data.txt"
- if not os.path.exists(outputFile):
-  for url in urlList:
-  
-   errataNo=url.replace("https://rhn.redhat.com/errata/","")
-   errataNo=errataNo.replace(".html","")
+ if os.path.exists("data.txt"):
+  os.remove("data.txt")
 
-   print "- Extracting hotfixes from "+url
-   html = urlopen(url).read()    
-   list1 = re.findall('(.*).rpm',html)
+ if not os.path.exists(outputFile):
+  for errataNo in urlList:
+  
+   #errataNo=url.replace("https://rhn.redhat.com/errata/","")
+   #errataNo=errataNo.replace(".html","")
+
+   if not os.path.exists(os.getcwd()+"/data"):
+    os.makedirs(os.getcwd()+"/data")
+    
+   url = "https://rhn.redhat.com/errata/RHSA-"+errataNo+".html"
+
+   filename = os.getcwd()+"/data/RHSA-"+errataNo+".html"
+   html = ""
+   lines = []
+   if not os.path.exists(filename):
+    print "- Extracting hotfixes from "+url
+    html = urlopen(url).read()    
+    f = open(filename, 'w')
+    f.write(html)
+    f.close()
+   else:
+    print "- Extracting hotfixes from "+filename
+    with open(filename) as f:
+     #html=f.read().replace('\n', '')
+     html=f.read()
+
+   list1 = re.findall('(.*).rpm',html)  
+
    for x in list1:
     if "\t\t<td>" in x:
-     filename=x.replace("\t\t<td>","")+".rpm"
-     if filename not in patchList:
-      patchList.append([errataNo,filename])
+     filename1=x.replace("\t\t<td>","")+".rpm"
+     if filename1 not in patchList:
+      patchList.append([errataNo,filename1])
   f = open(outputFile, 'w')
   for patch in patchList:
    f.write(patch[0]+","+patch[1]+"\n")
   f.close()
 
- #resultList=[]
- #lines=readFile(outputFile)
- #for line in lines:
- # line = line.strip()
- # line1 = line1.split(",")
- # pkgName, pkgVersion = extractPkgNameAndVer(line1[1])
- # if platform in pkgVersion: 
- #  pkgName=pkgName.strip()
- #  if len(pkgName)>1:
- #   if [pkgName,pkgVersion] not in resultList:
- #    resultList.append([pkgName,pkgVersion]) 
  doneList=[]
 
  fileList=[]
@@ -120,22 +148,32 @@ def runTask(argFilename):
   line2 = line1[1]
   pkgNameHotfix, pkgVerHotfix = extractPkgNameAndVer(line2)
 
-
   for filename in fileList:
    resultList=readFile(filename)
    for x in resultList:
     pkgName, pkgVer = extractPkgNameAndVer(x)
     if pkgName==pkgNameHotfix:
-     if "x86_64" in pkgVerHotfix and "x86_64" in pkgVer:
-      if [pkgName,pkgVerHotfix,pkgVer] not in doneList:
-       cmd = "dpkg --compare-versions "+pkgVerHotfix+" gt "+pkgVer+" && echo 'True'"
-       #cmd = "dpkg --compare-versions "+pkgVerHotfix+" lt "+pkgVer+" && echo 'True'"
-       results = runCommand(cmd)
-       if results:
-        errataNo = line1[0]
-        if [errataNo,pkgName,pkgVer] not in finalList1:  
-          finalList1.append([errataNo,pkgName,pkgVer])
-       doneList.append([pkgName,pkgVerHotfix,pkgVer])
+     if platform!="":
+      if platform in pkgVerHotfix and platform in pkgVer:
+      #if "x86_64" in pkgVerHotfix and "x86_64" in pkgVer:
+       if [pkgName,pkgVerHotfix,pkgVer] not in doneList:
+        cmd = "dpkg --compare-versions "+pkgVerHotfix+" gt "+pkgVer+" && echo 'True'"
+        results = runCommand(cmd)
+        if results:
+         errataNo = line1[0]
+         if [errataNo,pkgName,pkgVer] not in finalList1:  
+           finalList1.append([errataNo,pkgName,pkgVer])
+        doneList.append([pkgName,pkgVerHotfix,pkgVer])
+     else:
+      if "x86_64" not in pkgVerHotfix and "i686" not in pkgVerHotFix and "ppc" not in pkgVerHotFix and "s390" not in pkgVerHotFix and "x86_64" not in pkgVer and "i686" not in pkgVer and "ppc" not in pkgVer and "s390" not in pkgVer:
+       if [pkgName,pkgVerHotfix,pkgVer] not in doneList:
+        cmd = "dpkg --compare-versions "+pkgVerHotfix+" gt "+pkgVer+" && echo 'True'"
+        results = runCommand(cmd)
+        if results:
+         errataNo = line1[0]
+         if [errataNo,pkgName,pkgVer] not in finalList1:  
+           finalList1.append([errataNo,pkgName,pkgVer])
+        doneList.append([pkgName,pkgVerHotfix,pkgVer])
 
  urlList=[]
  pkgList=[]
@@ -147,33 +185,30 @@ def runTask(argFilename):
    if y[1] in str(dataList):
     packageName = y[1]+"-"+y[2]
 
-    #url = "https://rhn.redhat.com/errata/"+y[0]+".html"
-    #print "Url: "+url
-    #print "Outdated Package: "+packageName
+    url = "https://rhn.redhat.com/errata/RHSA-"+y[0]+".html"
 
     if packageName not in pkgList:
      pkgList.append(packageName)
-     urlList.append(y[0])
+     urlList.append(url)
     else:
      positionNo = pkgList.index(packageName)
-     urlList[positionNo] += ", "
-     urlList[positionNo] += y[0]
+     urlList[positionNo] += "\n"
+     urlList[positionNo] += url
 
  count=0
  for x in urlList:
   print "Outdated Package: "+pkgList[count]
-  print "ID: "+x+"\n"
+  print x+"\n"
   count+=1
 
 
 if __name__ == '__main__':
  parser = argparse.ArgumentParser()
- parser.add_argument('-f', action='store', help='[packages file]')
+ parser.add_argument('-i','--input', action='store', help='[packages file]')
  if len(sys.argv)==1:
   parser.print_help()
   sys.exit(1)
     
  options = parser.parse_args()
- if options.f:
-  #fileList.append(options.f)
-  runTask(options.f)
+ if options.input:
+  runTask(options.input)

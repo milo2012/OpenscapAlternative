@@ -1,0 +1,1902 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <script type="text/javascript">
+      var siteMapState="security";
+    </script>
+    <link rel="stylesheet" href="/css/rhn-base.css" type="text/css" />
+    
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<!-- metaInclude -->
+	<meta name="avalon-host-info" content="gss-webjava01" />
+	<meta name="avalon-version" content="2.0.19.0" />
+	<meta name="google-site-verification" content="nP0a2DWUcOxjRgDDACHEbDptiGIGBrChbghrC0ZzcK0" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- /metaInclude -->
+	<!-- ^ meta and X-UA-Compatible must come first -->
+	
+	<meta http-equiv="cleartype" content="on" />
+
+	<!-- _preInclude -->
+
+	<!-- title -->
+	<title>Red Hat Customer Portal
+	</title>
+	<!-- /title -->
+	<!-- /_preInclude -->
+
+	<!-- cssInclude -->
+
+	<link rel="shortcut icon" href="https://access.redhat.com/webassets/avalon/g/favicon.ico" />
+	<link rel="stylesheet" type="text/css" media="screen, print" href="https://access.redhat.com/webassets/avalon/s/jquery-ui/cp/jquery-ui-1.8.7.custom.css?version=2.0.19.0" />
+
+	<!-- TODO: What is pageCssLinks and do we still need it? -->
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/legacy.css?version=2.0.19.0" />
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/bootstrap.css?version=2.0.19.0" />
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/master-blessed1.css?version=2.0.19.0" />
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/master.css?version=2.0.19.0" />
+
+	<link href="https://access.redhat.com/webassets/avalon/s/chosen.css?version=2.0.19.0" rel="stylesheet" type="text/css" />
+	<!--[if lte IE 9]>
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/ie.css" />
+    <![endif]-->
+    
+
+	<!-- .primary-nav starts out hidden (at sm res and higher), and
+	is later revealed with JS after the megamenu has been built
+	out.  here, use noscript to un-hide the nav, in case the user
+	has JS disabled. -->
+	<noscript>
+		<style type="text/css" media="screen"> .primary-nav { display: block; } </style>
+	</noscript>
+
+	<!-- /cssInclude -->
+
+	<!-- jsInclude -->
+	<script type="text/javascript">
+		window.portal = {
+			analytics             : {},
+			host                  : "https://access.redhat.com",
+			kbaseContext          : "/preview_faq",
+			cspContext            : "/preview_jbossnetwork",
+			customerCenterContext : "/wapps",
+			lang                  : "en",
+			version               : "2.0.19.0",
+			decorationWhitelist   : ["https://access.redhat.com","https://rhn.redhat.com", "docs.redhat.com"]
+		};
+
+		/*
+		* TODO
+		* deprecate this avalon object
+		*/
+		window.avalon = window.portal;
+		window.avalonHost = avalon.host; // deprecate this?
+
+		/********************************
+		*  Temporary pagename shim     *
+		*  TODO: Remove this           *
+		********************************/
+
+		portal.analytics.shim = {};
+		portal.analytics.shim.pageTitle = "";
+		portal.analytics.shim.siteMapState = "";
+
+	</script>
+	<script type="text/javascript" src="https://access.redhat.com/webassets/avalon/j/lib/jquery.min.js?version=2.0.19.0"></script>
+	<script type="text/javascript" src="https://access.redhat.com/webassets/avalon/j/lib/require.js?version=2.0.19.0" data-main="/webassets/avalon/j/"></script>
+	<!-- TODO: can we please upgrade jquery?! -->
+	<script type="text/javascript">
+		/*
+		 * THIS IS NEEDED! Integrated apps include their own jQuery lib.
+		 * We need this *before* base.js so we can effectvley pass messages (trigger, bind) to base.js
+		 * *DO NOT* remove! window.jQuery the object is still accessible.
+		*/
+		window.ajq = jQuery.noConflict();
+	</script>
+	<script type="text/javascript" src="https://access.redhat.com/webassets/avalon/j/outage/outageJson_en.js?version=2.0.19.0"></script>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	
+	<!-- /jsInclude -->
+	
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>
+  </head>
+  <body>
+    
+	<!-- Chrome: Full -->
+	<div id="page-wrap" class="page-wrap">
+		<div class="top-page-wrap">
+<!--googleoff: all-->
+
+			<header class="masthead"><div id="to-top"><a class="btn_slideto"><span class="web-icon-upload"></span></a></div>
+<div class="mobile-bar-wrap hidden-sm hidden-md hidden-lg">
+	<a class="logo" href="https://access.redhat.com/">
+		<span class="logo-crop"><img src="https://access.redhat.com/chrome_themes/nimbus/img/l_redhat-lg.png"></span>
+		<span class="site-title"><span>Customer </span><span>Portal</span></span>
+	</a>
+	<button id="mobile-nav-btn" class="btn btn-navbar" data-toggle="collapse" data-target="#mobile-nav">
+		<span class="web-icon-mobile-menu"></span>
+		<span class="link-text">global.menu</span>
+	</button>
+	<button class="btn btn-search btn-utility" data-target="#site-search">
+		<span class="web-icon-search"></span>
+		<span class="link-text">Search</span>
+	</button>
+</div>
+
+<div class="utility-wrap">
+	<div class="utility-container">
+		<div class="utility-bar visible-sm visible-md visible-lg">
+			<menu class="top-nav">
+				<ul>
+					<li id="nav-subscription"><a class="top-nav-subscriptions" href="https://access.redhat.com/management/">Subscriptions</a></li>
+					<li id="nav-downloads"><a class="top-nav-downloads" href="https://access.redhat.com/downloads/">Downloads</a></li>
+					<li id="nav-support"><a class="top-nav-support-cases" href="https://access.redhat.com/support/cases/">Support Cases</a></li>
+				</ul>
+			</menu>
+
+			<menu class="utility-nav">
+				<ul>
+					<li>
+						<a class="btn-search" data-target="#site-search">
+							<span class="web-icon-search"></span>
+							<span class="link-text">Search</span>
+						</a>
+					</li>
+					<li>
+						<a class="btn-profile" data-target="#account-info">
+							<span class="web-icon-user"></span>
+							<span class="link-text">Account</span>
+							<span class="account-user" id="accountUserName"></span>
+						</a>
+					</li>
+					<li>
+						<a class="btn-language" data-target="#language">
+							<span class="web-icon-globe"></span>
+							<span class="link-text">Language</span>
+						</a>
+					</li>
+				</ul>
+			</menu>
+		</div>
+		<!-- Utility Tray -->
+		<div class="utility-tray-container">
+			<div class="utility-tray">
+				<div id="site-search" class="utility-link site-search">
+					<div class="content">
+            			<form class="ng-pristine ng-valid topSearchForm" id="topSearchForm" name="topSearchForm" action="/search/browse/search/" method="get" enctype="application/x-www-form-urlencoded">
+							<div class="input-group">
+
+                    			<input class="form-control searchField" id="topSearchInput" name="keyword" value="" placeholder="Enter Your Search Term" type="text">
+								<span class="input-group-btn">
+				    				<button type="submit" class="btn btn-primary">Search</button>
+								</span>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div id="account-info" class="utility-link account-info">
+					<div class="content">
+
+						<!-- Account Unauthenticated -->
+						<div id="accountLinksLoggedOut" class="unauthenticated">
+							<h2 class="utility-header">Log in to Your Red Hat Account</h2>
+							<div class="row col-border-row">
+								<div class="col-sm-6 col-border">
+									<p><a href="https://access.redhat.com/login" id="accountLogin" class="btn btn-primary">Log In</a></p>
+									<p>Your Red Hat account gives you access to your profile, preferences, and services, depending on your status.</p>
+								</div>
+								<div class="col-sm-6 col-border col-border-left">
+									<p><a href="https://www.redhat.com/wapps/ugc/register.html" class="btn btn-primary">Register</a></p>
+									<p>If you are a new customer, register now for access to product evaluations and purchasing capabilities. </p>
+
+									<strong>Need access to an account?</strong><p>If your company has an existing Red Hat account, your organization administrator can grant you access.</p>
+
+									<p><a href="https://access.redhat.com/support/contact/customerService/">If you have any questions, please contact customer service.</a></p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Account Authenticated -->
+						<div id="accountLinksLoggedIn" class="authenticated">
+							<h2 class="utility-header"><span id="userFirstName"></span></h2>
+							<div class="row col-border-row">
+								<div class="col-sm-6 col-border col-border-right">
+									<div class="account-info" id="accountUser">
+										<div class="avatar"><!-- placeholder--></div>
+										<div class="account-name"><strong id="userFullName"></strong></div>
+										<div class="account-org"><span id="userOrg"></span></div>
+										<div class="account-number accountNumber"><span class="property">Red Hat Account Number:</span> <span class="value"></span></div>
+									</div>
+
+									<div class="row account-settings">
+										<div class="col-md-6">
+											<h3>Red Hat Account</h3>
+											<ul class="reset">
+												<li><a href="https://www.redhat.com/wapps/ugc/protected/personalInfo.html">Account Details</a></li>
+												<li><a href="https://www.redhat.com/wapps/ugc/protected/prefs.html">Newsletter and Contact Preferences</a></li>
+												<li><a href="https://www.redhat.com/wapps/ugc/protected/usermgt/userList.html">User Management</a></li>
+												<li><a href="https://www.redhat.com/wapps/ugc/protected/account.html">Account Maintenance</a></li>
+											</ul>
+										</div>
+										<div class="col-md-6">
+											<h3>Customer Portal</h3>
+											<ul class="reset">
+												<li><a href="https://access.redhat.com/user">My Profile</a></li>
+												<li><a href="https://access.redhat.com/user" id="userNotificationsLink">Notifications</a></li>
+												<li><a href="https://access.redhat.com/help/">Help</a></li>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+								<div class="col-sm-6 col-border">
+									<p>For your security, if you’re on a public computer and have finished using your Red Hat services, please be sure to log out.</p>
+									<p><a href="https://www.redhat.com/wapps/sso/logout.html?redirect=https://access.redhat.com/logout" id="accountLogout" class="btn btn-primary">Log Out</a></p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div id="language" class="utility-link language">
+					<div class="content">
+						<h2 class="utility-header">Select Your Language</h2>
+						<div class="row" id="localesMenu">
+							<div class="col-sm-4">
+								<ul class="reset">
+									<li><a href="https://access.redhat.com/changeLanguage?language=en" id="en">English</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=es" id="es">español</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=de" id="de">Deutsch</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=it" id="it">italiano</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=ko" id="ko">한국어</a></li>
+								</ul>
+							</div>
+							<div class="col-sm-4">
+								<ul class="reset">
+									<li><a href="https://access.redhat.com/changeLanguage?language=fr" id="fr">français</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=ja" id="ja">日本語</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=pt" id="pt">português</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=zh_CN" id="zh_CN">中文 (中国)</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=ru" id="ru">русский</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="scroll-anchor">
+</div>
+
+<div class="header-nav visible-sm visible-md visible-lg">
+	<div id="header-nav">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+
+					<a href="https://access.redhat.com/" class="logo">
+						<span class="logo-crop"><img src="https://access.redhat.com/chrome_themes/nimbus/img/l_redhat-lg.png"></span>
+						<span class="site-title"><span>Customer </span><span>Portal</span></span>
+					</a>
+
+					<menu class="primary-nav hidden-sm">
+						<ul>
+							<li id="nav-products"><a class="products" data-link="mega" data-target="products-menu" href="https://access.redhat.com/products/">Products &amp; Services</a></li>
+							<li id="nav-tools"><a class="tools" data-link="mega" data-target="tools-menu" href="https://access.redhat.com/labs/">Tools</a></li><!-- #Need URL -->
+							<li id="nav-security"><a class="security" data-link="mega" data-target="security-menu" href="https://access.redhat.com/security/">Security</a></li>
+							<li id="nav-community"><a class="community" data-link="mega" data-target="community-menu" href="https://access.redhat.com/community/">Community</a></li><!-- #Need URL -->
+						</ul>
+					</menu>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="mobile-nav-wrap hidden-sm hidden-md hidden-lg">
+	<div id="mobile-nav" class="mobile-nav navbar collapse navbar-collapse">
+		<div class="navbar-inner">
+
+			<menu>
+				<ul class="mobile-utility">
+					<li>
+						<a class="btn-profile" data-target="#account-info-mobile">
+							<span class="web-icon-user"></span>
+							<span class="link-text">Account</span>
+						</a>
+					</li><!-- white space inline
+					--><li>
+						<a class="btn-language" data-target="#language-mobile">
+							<span class="web-icon-globe"></span>
+							<span class="link-text">Language</span>
+						</a>
+					</li>
+				</ul>
+				<div id="account-info-mobile" class="mobile-utility-wrap">
+					<!-- Account Unauthenticated -->
+					<div id="mobile-accountLinksLoggedOut" class="unauthenticated">
+						<ul class="nav mobile-utility-nav">
+							<li><a href="https://access.redhat.com/login">Log In</a></li>
+							<li><a href="https://www.redhat.com/wapps/ugc/register.html">Register</a></li>
+						</ul>
+					</div>
+					<!-- Account Authenticated -->
+					<div id="mobile-accountLinksLoggedIn" class="authenticated">
+						<div class="account-info" id="mobile-accountUser">
+							<div class="account-name"><strong id="mobile-userFullName"></strong></div>
+							<div class="account-org"><span id="mobile-userOrg"></span></div>
+							<div class="account-number mobile-accountNumber"><span class="property">Red Hat Account Number:</span> <span class="value"></span></div>
+						</div>
+						<ul class="nav mobile-utility-nav">
+							<li><a href="https://www.redhat.com/wapps/ugc/protected/personalInfo.html">Account Details</a></li>
+							<li><a href="https://www.redhat.com/wapps/ugc/protected/prefs.html">Newsletter and Contact Preferences</a></li>
+							<li><a href="https://www.redhat.com/wapps/ugc/protected/usermgt/userList.html">User Management</a></li>
+							<li><a href="https://www.redhat.com/wapps/ugc/protected/account.html">Account Maintenance</a></li>
+							<li><a href="https://access.redhat.com/user">My Profile</a></li>
+							<li><a href="https://access.redhat.com/user" id="userNotificationsLink">Notifications</a></li>
+							<li><a href="https://access.redhat.com/help/">Help</a></li>
+							<li class="logout"><a href="https://www.redhat.com/wapps/sso/logout.html?redirect=https://access.redhat.com/logout">Log Out</a>
+						</ul>
+					</div>
+				</div>
+				<div id="language-mobile" class="mobile-utility-wrap">
+					<ul class="nav mobile-utility-nav">
+						<li><a href="https://access.redhat.com/changeLanguage?language=en" id="mobile-en">English</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=es" id="mobile-es">español</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=de" id="mobile-de">Deutsch</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=it" id="mobile-it">italiano</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=ko" id="mobile-ko">한국어</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=fr" id="mobile-fr">français</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=ja" id="mobile-ja">日本語</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=pt" id="mobile-pt">português</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=zh_CN" id="mobile-zh_CN">中文 (中国)</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=ru" id="mobile-ru">русский</a></li>
+					</ul>
+				</div>
+				<ul class="main-mobile-nav nav">
+					<li id="mnav-home"><a href="https://access.redhat.com/">Home</a></li>
+					<li id="mnav-products"><a href="https://access.redhat.com/products/">Products &amp; Services</a></li>
+					<li id="mnav-tools"><a href="https://access.redhat.com/tools/">Tools</a></li>
+					<li id="mnav-security"><a href="https://access.redhat.com/security/">Security</a></li>
+					<li id="mnav-community"><a href="https://access.redhat.com/community/">Community</a></li><!-- #Need URL -->
+					<li id="mnav-downloads"><a href="https://access.redhat.com/downloads/">Downloads</a></li>
+					<li id="mnav-subscription"><a href="https://access.redhat.com/management/">Subscriptions</a></li>
+					<li id="mnav-support"><a href="https://access.redhat.com/support/cases/">Support Cases</a></li>
+				</ul>
+			</menu>
+		</div>
+	</div>
+</div>
+
+<div class="mega-wrap visible-sm visible-md visible-lg">
+	<menu class="mega">
+		<div class="container">
+			<div class="mega-menu-wrap">
+				<!-- Products Menu -->
+				<div aria-labelledby="products-menu" class="products-menu mega-menu" data-eh="mega-menu" role="menu">
+					<div class="row">
+						<div class="col-md-6 col-sm-8">
+							<nav class="root">
+								<div class="row">
+									<ul class="subnav subnav-root col-sm-6">
+										<li data-target="infrastructure-menu" class="active">
+											<a href="https://access.redhat.com/products/">Infrastructure and Management</a>
+										</li>
+										<li data-target="cloud-menu">
+											<a href="https://access.redhat.com/products/">Cloud Products</a>
+										</li>
+										<li data-target="jboss-dev-menu">
+											<a href="https://access.redhat.com/products/">JBoss Development and Management</a>
+										</li>
+										<li data-target="jboss-int-menu">
+											<a href="https://access.redhat.com/products/">JBoss Integration and Automation</a>
+										</li>
+										<li data-target="services-menu">
+											<a href="https://access.redhat.com/products/">Services</a>
+										</li>
+									</ul>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="infrastructure-menu" style="display: block;">
+										<ul>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-enterprise-linux/">Red Hat Enterprise Linux</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-enterprise-virtualization/">Red Hat Enterprise Virtualization</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/Identity_Management/">Red Hat Identity Management &amp; Infrastructure</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-directory-server/">Red Hat Directory Server</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-certificate-system/">Red Hat Certificate System</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-satellite/">Red Hat Satellite</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/subscription-asset-manager/">Subscription Asset Manager</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-update-infrastructure/">Red Hat Update Infrastructure</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-storage/">Red Hat Gluster Storage</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-ceph-storage/">Red Hat Ceph Storage</a>
+											</li>
+										</ul>
+									</div>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="cloud-menu">
+										<ul>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-cloudforms/">Red Hat CloudForms</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-enterprise-linux-openstack-platform/">Red Hat Enterprise Linux OpenStack Platform</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-cloud-infrastructure/">Red Hat Cloud Infrastructure</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/openshift-enterprise-red-hat/">OpenShift Enterprise by Red Hat</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/openshift-online-red-hat/">OpenShift Online by Red Hat</a>
+											</li>
+										</ul>
+									</div>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="jboss-dev-menu">
+										<ul>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-enterprise-application-platform/">Red Hat JBoss Enterprise Application Platform</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-data-grid/">Red Hat JBoss Data Grid</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-web-server/">Red Hat JBoss Web Server</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-portal/">Red Hat JBoss Portal</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-operations-network/">Red Hat JBoss Operations Network</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-developer-studio/">Red Hat JBoss Developer Studio</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/feedhenry/">FeedHenry by Red Hat</a>
+											</li>
+										</ul>
+									</div>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="jboss-int-menu">
+										<ul>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-fuse-service-works/">Red Hat JBoss Fuse Service Works</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-data-virtualization/">Red Hat JBoss Data Virtualization</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-fuse/">Red Hat JBoss Fuse</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-a-mq/">Red Hat JBoss A-MQ</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-bpm-suite/">Red Hat JBoss BPM Suite</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-brms/">Red Hat JBoss BRMS</a>
+											</li>
+										</ul>
+									</div>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="services-menu">
+										<ul>
+											<li><a href="https://access.redhat.com/products/Consulting/">Consulting</a></li>
+			                    			<li><a href="https://access.redhat.com/products/red-hat-access/">Red Hat Access</a></li>
+			                    			<li><a href="https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/">Red Hat Enterprise Linux Developer Program</a></li>
+			                    			<li><a href="https://access.redhat.com/products/Training/">Training</a></li>
+			                    			<li><a href="https://access.redhat.com/support/offerings/tam/">Technical Account Management</a></li>
+										</ul>
+									</div>
+								</div>
+							</nav>
+							<a href="https://access.redhat.com/products" class="btn btn-primary">Explore Products and Services</a>
+						</div>
+
+						<div class="col-md-6 col-sm-4 pull-right">
+							<div class="row">
+								<div class="col-md-4">
+									<h3 class="nav-title">Ecosystem</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/certification">Overview</a></li>
+										<li><a href="https://access.redhat.com/search/browse/certified-hardware#?">Certified Hardware</a></li>
+										<li><a href="https://access.redhat.com/search/browse/certified-software#?">Certified Software</a></li>
+										<li><a href="https://access.redhat.com/search/browse/certified-cloud-providers#?">Certified Cloud Providers</a></li>
+									</ul>
+								</div>
+								<div class="col-md-4">
+									<h3 class="nav-title">Knowledge</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/search/browse/search/">Expert Advice</a></li>
+										<li><a href="https://access.redhat.com/documentation/">Product Documentation</a></li>
+									</ul>
+								</div>
+								<div class="col-md-4">
+									<h3 class="nav-title">Support Policies</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/support/offerings/production/">Production Support</a></li>
+										<li><a href="https://access.redhat.com/support/offerings/developer/">Development Support</a></li>
+									</ul>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Tools Menu -->
+				<div aria-labelledby="tools-menu" class="tools-menu mega-menu" data-eh="mega-menu" role="menu">
+					<div class="row">
+
+						<nav class="col-sm-9">
+							<div class="mega-menu-feature">
+								<div class="row">
+									<div class="col-sm-4">
+										<h2 class="mega-menu-feature-title">Red Hat Access Labs</h2>
+										<p>To help you use Red Hat products to their full potential, our engineers have developed a set of tools to support customer success.</p>
+										<p class="push-top"><a href="https://access.redhat.com/labs/" class="btn btn-primary">Explore Labs</a></p>
+									</div>
+									<div class="col-sm-4">
+										<a href="https://access.redhat.com/labs/#?type=config">
+											<h3 class="nav-title">Configuration</h3>
+										</a>
+										<ul>
+											<li><a href="https://access.redhat.com/labs/jvmconfig/">JVM Config</a></li>
+											<li><a href="https://access.redhat.com/labs/networkbondinghelper/">Network Bonding Helper</a></li>
+											<li><a href="https://access.redhat.com/labs/linterfordockerfile/">Linter for Dockerfile</a></li>
+										</ul>
+
+										<a href="https://access.redhat.com/labs/#?type=deploy">
+											<h3 class="nav-title">Deployment</h3>
+										</a>
+										<ul>
+											<li><a href="https://access.redhat.com/labs/registrationassistant/">Registration Assistant</a></li>
+											<li><a href="https://access.redhat.com/labs/kickstartconfig/">Kickstart Generator</a></li>
+											<li><a href="https://access.redhat.com/labs/rhevupgradehelper/">RHEV Upgrade Helper</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-4">
+										<a href="https://access.redhat.com/labs/#?type=troubleshoot">
+											<h3 class="nav-title">Troubleshooting</h3>
+										</a>
+										<ul>
+											<li><a href="https://access.redhat.com/labs/garbagedog/">Garbage Collection Analysis</a></li>
+											<li><a href="https://access.redhat.com/labs/kerneloopsanalyzer/">Kernel Oops Analyzer</a></li>
+											<li><a href="https://access.redhat.com/labs/kdumphelper/">Kdump Helper</a></li>
+										</ul>
+										<a href="https://access.redhat.com/labs/#?type=security">
+											<h3 class="nav-title">Security</h3>
+										</a>
+										<ul>
+											<li><a href="https://access.redhat.com/labs/venom/">VENOM: QEMU Vulnerability Detector</a></li>
+											<li><a href="https://access.redhat.com/labs/ghost/">GHOST - gethostbyname Detector</a></li>
+											<li><a href="https://access.redhat.com/labs/poodle/">SSLv3 (POODLE) Detector</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</nav>
+
+						<nav class="col-sm-3">
+							<h3 class="nav-title">Additional Tools</h3>
+							<ul>
+								<li><a href="https://access.redhat.com/products/red-hat-access/">Red Hat Access - Overview</a></li>
+								<li><a href="https://access.redhat.com/labs/hacat/">Red Hat High Availability Cluster Architecture Tool</a></li>
+								<li><a href="https://access.redhat.com/tools/satcert/">Red Hat Satellite Certificate Tool</a></li>
+							</ul>
+						</nav>
+
+					</div>
+				</div>
+
+				<!-- Security Menu -->
+				<div aria-labelledby="security-menu" class="security-menu mega-menu" data-eh="mega-menu" role="menu">
+					<div class="row">
+						<nav class="col-sm-12 basic">
+							<div class="row">
+								<div class="col-md-3 col-sm-4">
+									<h3 class="nav-title">Security Updates</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/security/cve">Red Hat CVE Database</a></li>
+										<li><a href="https://access.redhat.com/security/updates/active/">Active Products</a></li>
+										<li><a href="https://access.redhat.com/security/updates/eol/">End-of-Life Products</a></li>
+										<li><a href="https://access.redhat.com/security/updates/advisory/">How to Get Notified</a></li>
+									</ul>
+								</div>
+								<div class="col-md-3 col-sm-4">
+									<h3 class="nav-title">Red Hat Product Security</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/security/team/">About</a></li>
+										<li><a href="https://securityblog.redhat.com/">Security Blog</a></li>
+										<li><a href="https://access.redhat.com/security/team/contact/">Contact</a></li>
+									</ul>
+								</div>
+								<div class="col-md-3 col-sm-4">
+									<h3 class="nav-title">Resources</h3>
+									<ul>
+										<li><a href="https://www.redhat.com/security/data/metrics/">Security Measurement</a></li>
+										<li><a href="https://access.redhat.com/security/updates/classification/">Severity Ratings</a></li>
+										<li><a href="https://access.redhat.com/security/updates/backporting/">Backporting Policies</a></li>
+										<li><a href="https://access.redhat.com/security/team/key/">Product Signing (GPG) Keys</a></li>
+									</ul>
+								</div>
+							</div>
+						</nav>
+						<a href="https://access.redhat.com/security/" class="btn btn-primary">Explore Security</a>
+					</div>
+				</div>
+
+				<!-- Community Menu -->
+				<div aria-labelledby="community-menu" class="community-menu mega-menu" data-eh="mega-menu" role="menu">
+					<div class="row">
+            			<nav class="col-sm-12 basic">
+							<div class="row">
+								<div class="col-sm-3">
+									<h3 class="nav-title">Discussions</h3>
+									<ul>
+
+										<li><a href="https://access.redhat.com/discussions?product=25&category=All&tags=All">Red Hat Enterprise Linux</a></li>
+										<li><a href="https://access.redhat.com/discussions?product=8163&category=All&tags=All">Red Hat Enterprise Virtualization</a></li>
+										<li><a href="https://access.redhat.com/discussions?product=36&category=All&tags=All">Red Hat Satellite</a></li>
+										<li><a href="https://access.redhat.com/discussions?product=22&category=All&tags=All">Customer Portal</a></li>
+										<li><a href="https://access.redhat.com/groups/">Private Groups</a></li>
+										<li class="more-link"><a href="https://access.redhat.com/discussions?keyword=&name=&product=All&category=All&tags=All">All Discussions</a></li>
+										<li class="more-link"><a href="https://access.redhat.com/node/add/discussion">Start a Discussion</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-3">
+									<h3 class="nav-title">Blogs</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/blogs/767163">Customer Portal</a></li>
+										<li><a href="https://access.redhat.com/blogs/759303">Red Hat Access Labs</a></li>
+										<li><a href="https://access.redhat.com/blogs/766093">Red Hat Product Security Team</a></li>
+										<li class="more-link"><a href="https://access.redhat.com/blogs/">All Blogs</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-3">
+									<h3 class="nav-title">Events</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/customer-convergence">Customer Events</a></li>
+										<li><a href="http://www.redhat.com/summit/">Red Hat Summit</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-3">
+									<h3 class="nav-title">Stories</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/subscription-value/">Red Hat Subscription Benefits</a></li>
+										<li><a href="https://access.redhat.com/customer-success/">You Asked. We Acted.</a></li>
+										<li><a href="http://www.redhat.com/en/open-source">Open Source Communities</a></li>
+									</ul>
+								</div>
+							</div>
+						</nav>
+						<!--<a href="https://access.redhat.com/community/" class="btn btn-primary">Explore Community</a>-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</menu>
+</div>
+
+				<div id="site-section"></div>
+
+			</header>
+<!--googleon: all-->
+			<main id="cp-main" class="portal-content-area" role="main">
+				<div id="cp-content" class="main-content">
+					<!-- legacy divs start here -->
+					<div id="legacy-portal">
+						<div class="content-area">
+							<div id="legacy-container" class="legacy-container">
+									
+
+    <div class="wrapi">
+      <div id="container" class="clearWrap">
+        <div id="content">
+
+    
+
+
+
+
+
+
+
+
+
+<h1><img src="/img/rhn-icon-security.gif" alt="Security Advisory" align="absmiddle" /> Critical: bash security update</h1>
+
+<table class="details">
+	<tr>
+		<th>Advisory:</th>
+		<td>RHSA-2014:1293-1</td>
+	</tr>
+	<tr>	
+		<th>Type:</th>
+		<td>Security Advisory</td>
+	</tr>
+        <tr>
+                <th>Severity:</th>
+                <td>Critical</td>
+        </tr>
+	<tr>	
+		<th>Issued on:</th>
+		<td>2014-09-24</td>
+	</tr>
+	<tr>	
+		<th>Last updated on:</th>
+		<td>2014-09-24</td>
+	</tr>
+
+	<tr>
+		<th valign="top">Affected Products:</th>
+		<td><a href="#Red Hat Enterprise Linux (v. 5 server)">Red Hat Enterprise Linux (v. 5 server)</a><br />
+<a href="#Red Hat Enterprise Linux Desktop (v. 5 client)">Red Hat Enterprise Linux Desktop (v. 5 client)</a><br />
+<a href="#Red Hat Enterprise Linux Desktop (v. 6)">Red Hat Enterprise Linux Desktop (v. 6)</a><br />
+<a href="#Red Hat Enterprise Linux Desktop (v. 7)">Red Hat Enterprise Linux Desktop (v. 7)</a><br />
+<a href="#Red Hat Enterprise Linux HPC Node (v. 6)">Red Hat Enterprise Linux HPC Node (v. 6)</a><br />
+<a href="#Red Hat Enterprise Linux HPC Node (v. 7)">Red Hat Enterprise Linux HPC Node (v. 7)</a><br />
+<a href="#Red Hat Enterprise Linux Server (v. 6)">Red Hat Enterprise Linux Server (v. 6)</a><br />
+<a href="#Red Hat Enterprise Linux Server (v. 7)">Red Hat Enterprise Linux Server (v. 7)</a><br />
+<a href="#Red Hat Enterprise Linux Server AUS (v. 6.5)">Red Hat Enterprise Linux Server AUS (v. 6.5)</a><br />
+<a href="#Red Hat Enterprise Linux Server EUS (v. 6.5.z)">Red Hat Enterprise Linux Server EUS (v. 6.5.z)</a><br />
+<a href="#Red Hat Enterprise Linux Workstation (v. 6)">Red Hat Enterprise Linux Workstation (v. 6)</a><br />
+<a href="#Red Hat Enterprise Linux Workstation (v. 7)">Red Hat Enterprise Linux Workstation (v. 7)</a></td>
+	</tr>
+
+
+	<tr>
+		<th valign="top">CVEs (<a href="http://cve.mitre.org">cve.mitre.org</a>):</th>
+		<td rowspan="2" valign="top">
+          <a href="https://www.redhat.com/security/data/cve/CVE-2014-6271.html">CVE-2014-6271</a><br />
+		</td>
+	</tr>
+
+</table>
+
+<br />
+
+<h2>Details</h2>
+<div class="page-summary">
+<p>Updated bash packages that fix one security issue are now available for Red<br />Hat Enterprise Linux 5, 6, and 7.<br /><br />Red Hat Product Security has rated this update as having Critical security<br />impact. A Common Vulnerability Scoring System (CVSS) base score, which<br />gives a detailed severity rating, is available from the CVE link in the<br />References section.<br /></p>
+
+<p>The GNU Bourne Again shell (Bash) is a shell and command language<br />interpreter compatible with the Bourne shell (sh). Bash is the default<br />shell for Red Hat Enterprise Linux.<br /><br />A flaw was found in the way Bash evaluated certain specially crafted<br />environment variables. An attacker could use this flaw to override or<br />bypass environment restrictions to execute shell commands. Certain<br />services and applications allow remote unauthenticated attackers to<br />provide environment variables, allowing them to exploit this issue.<br />(CVE-2014-6271)<br /><br />For additional information on the CVE-2014-6271 flaw, refer to the<br />Knowledgebase article at <A HREF="https://access.redhat.com/articles/1200223">https://access.redhat.com/articles/1200223</A><br /><br />Red Hat would like to thank Stephane Chazelas for reporting this issue.<br /><br />All bash users are advised to upgrade to these updated packages, which<br />contain a backported patch to correct this issue.<br /></p>
+</div>
+
+
+<br />
+
+<h2>Solution</h2>
+<div class="page-summary">Before applying this update, make sure all previously released errata <br />relevant to your system have been applied.<br /><br />This update is available via the Red Hat Network. Details on how to use the <br />Red Hat Network to apply this update are available at <br /><A HREF="https://access.redhat.com/articles/11258">https://access.redhat.com/articles/11258</A><br /></div>
+<br />
+
+<h2>Updated packages</h2>
+
+<table border="0" cellpadding="6" cellspacing="0">
+
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux (v. 5 server)">Red Hat Enterprise Linux (v. 5 server)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-3.2-33.el5.1.src.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 277b8da91e6ed93fec8341f8ac0ccdfa<br/>SHA-256: 3ea139447e5f3fbd07160a2a0c5e3335595d3058d822901ed16a573fae4f1077</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-3.2-33.el5.1.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 148ffa69f644ecdda09521f9a2809377<br/>SHA-256: 522b2861136e45f47a99b55e2d4c3ab6f0b75a6a3a06efc836a542ba1d97b105</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>bash-debuginfo-3.2-33.el5.1.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a35f1322ccf075a781f7261ea24d1116<br/>SHA-256: 8cec0648d5ae5c927de58a882c174e2681124ea0a019b1f3acc82dc41ed0f8ce</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-3.2-33.el5.1.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 148ffa69f644ecdda09521f9a2809377<br/>SHA-256: 522b2861136e45f47a99b55e2d4c3ab6f0b75a6a3a06efc836a542ba1d97b105</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>bash-3.2-33.el5.1.ia64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1ab118721ab182b3e5dfa44bdf464de3<br/>SHA-256: a9faad5298d9cc079417e1202e7d320edb9049fb86b217b25bb646eaec600d1d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-debuginfo-3.2-33.el5.1.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a35f1322ccf075a781f7261ea24d1116<br/>SHA-256: 8cec0648d5ae5c927de58a882c174e2681124ea0a019b1f3acc82dc41ed0f8ce</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>bash-debuginfo-3.2-33.el5.1.ia64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 03a5819bf1c0418651ed181b603801f9<br/>SHA-256: 39244a0f15d680e7439d81fb9944f090ec124498f26248f96eeae0ea9702ec31</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>PPC:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-3.2-33.el5.1.ppc.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8988b1063c1f3f4313b5b21e2ea0123d<br/>SHA-256: b3bb2d85bb5fa30be8549c2f52419a54073c2e2a4753d4340996c14a0ca55525</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>bash-debuginfo-3.2-33.el5.1.ppc.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 4f19e6a6e813b4bb8413c51e9be68ba4<br/>SHA-256: 32e22a6aa35419c9e7b1a22f4ef8c0019a558c06bf563dd0e3b8e935307a8465</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>s390x:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-3.2-33.el5.1.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5de8c80a855146eca05bd5252a828ce2<br/>SHA-256: 6901d5d1f8b76fa5be08bf0c448a18d6c6041c74e430daa19d101281ecb24340</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>bash-debuginfo-3.2-33.el5.1.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0094fa4df5c6eae11f9d34ceabab8e6e<br/>SHA-256: e558b149cb85207d8b1d2f2adeee6221604c4467ba541683588cfd008a34188d</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-3.2-33.el5.1.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 05af42ebf2e6b18ceda4ec68e86d97c4<br/>SHA-256: 760393f35d86476ac94147fe66035ca417ee03d5b950baa64084cc5a7edfe46a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>bash-debuginfo-3.2-33.el5.1.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f0baa6ddd1d0a827b56948fea54e832c<br/>SHA-256: fe9ef3e69887cac8a2b50075de4461575f9ac31c97b2c0075c760d2cac837755</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Desktop (v. 5 client)">Red Hat Enterprise Linux Desktop (v. 5 client)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-3.2-33.el5.1.src.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 277b8da91e6ed93fec8341f8ac0ccdfa<br/>SHA-256: 3ea139447e5f3fbd07160a2a0c5e3335595d3058d822901ed16a573fae4f1077</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-3.2-33.el5.1.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 148ffa69f644ecdda09521f9a2809377<br/>SHA-256: 522b2861136e45f47a99b55e2d4c3ab6f0b75a6a3a06efc836a542ba1d97b105</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>bash-debuginfo-3.2-33.el5.1.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a35f1322ccf075a781f7261ea24d1116<br/>SHA-256: 8cec0648d5ae5c927de58a882c174e2681124ea0a019b1f3acc82dc41ed0f8ce</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-3.2-33.el5.1.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 05af42ebf2e6b18ceda4ec68e86d97c4<br/>SHA-256: 760393f35d86476ac94147fe66035ca417ee03d5b950baa64084cc5a7edfe46a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>bash-debuginfo-3.2-33.el5.1.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f0baa6ddd1d0a827b56948fea54e832c<br/>SHA-256: fe9ef3e69887cac8a2b50075de4461575f9ac31c97b2c0075c760d2cac837755</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Desktop (v. 6)">Red Hat Enterprise Linux Desktop (v. 6)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.1.2-15.el6_5.1.src.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 05be466cb5b282658110dfb714cf1793<br/>SHA-256: 36dce099832a8b0897951a467b1a4f863f7e366b5834de395cb3bc083941927b</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.1.2-15.el6_5.1.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b3d86398f0e1b0ba23b1dce5ed4c7915<br/>SHA-256: ab06b132b07804fea0fa00892ef8e93b92af642127602e218584bd5104435262</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>bash-debuginfo-4.1.2-15.el6_5.1.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0a465bcef24f8b63f3c903747b9dd22a<br/>SHA-256: 7041f3e9dbb1c5571b682715dd7367f3c0ae3ede494f13a4d099f58c307d2b47</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-doc-4.1.2-15.el6_5.1.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3db81453965f853022eeabe64d608bfd<br/>SHA-256: 7f4c1e304471c1b1b59e6960f2952713043d521e8830b2e0c0da52db8ef75e97</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.1.2-15.el6_5.1.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d35ac7eb24705ef5a444d50ab11ad7e7<br/>SHA-256: bedf1ed386b1f2ba951234f640ab674558443232e04aa7602931e31399fd0b98</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>bash-debuginfo-4.1.2-15.el6_5.1.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 223b49f4d627495849423f64864d8642<br/>SHA-256: 14928dee110e0442283a3e1f510dd9cb675d4528ad241bf9c356cf40875d2c7e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-doc-4.1.2-15.el6_5.1.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 86ebcf954bf8e0da9e518ff5284e08d7<br/>SHA-256: d13218d1b252934ccbf33c92d771608ae26d809e0ef15c6dad40cda5da5d48ba</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Desktop (v. 7)">Red Hat Enterprise Linux Desktop (v. 7)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.2.45-5.el7_0.2.src.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2015-0317.html">RHBA-2015:0317</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5d1739b3069ab69a6c18a9be6f466735<br/>SHA-256: be4640f473d67ffea1761a6ff2b5cb06e77b01cd612d317cad6e7723044c0ee8</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.2.45-5.el7_0.2.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2015-0317.html">RHBA-2015:0317</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 08692c55361fed4d8bf51190c842cafe<br/>SHA-256: f3be9d9ec189ced2096a8b5ce09359e1f8654f7e413683064b1f48aeaaeb0b11</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>bash-debuginfo-4.2.45-5.el7_0.2.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2015-0317.html">RHBA-2015:0317</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8384ea5761abee2757ae43e114cf7ed6<br/>SHA-256: aa4c42549b6ddbee4988d6d4154ee7d8863d4f49975d384d5843c83d5e5181e7</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-doc-4.2.45-5.el7_0.2.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2015-0317.html">RHBA-2015:0317</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d4f76db9e5ecfe2a720aecab4504ac6a<br/>SHA-256: 53aa8014730d9b1505ed92ca962b0d52e732c4b2b63027471dfdf92d79a27f70</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux HPC Node (v. 6)">Red Hat Enterprise Linux HPC Node (v. 6)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.1.2-15.el6_5.1.src.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 05be466cb5b282658110dfb714cf1793<br/>SHA-256: 36dce099832a8b0897951a467b1a4f863f7e366b5834de395cb3bc083941927b</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.1.2-15.el6_5.1.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d35ac7eb24705ef5a444d50ab11ad7e7<br/>SHA-256: bedf1ed386b1f2ba951234f640ab674558443232e04aa7602931e31399fd0b98</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>bash-debuginfo-4.1.2-15.el6_5.1.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 223b49f4d627495849423f64864d8642<br/>SHA-256: 14928dee110e0442283a3e1f510dd9cb675d4528ad241bf9c356cf40875d2c7e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-doc-4.1.2-15.el6_5.1.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 86ebcf954bf8e0da9e518ff5284e08d7<br/>SHA-256: d13218d1b252934ccbf33c92d771608ae26d809e0ef15c6dad40cda5da5d48ba</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux HPC Node (v. 7)">Red Hat Enterprise Linux HPC Node (v. 7)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.2.45-5.el7_0.2.src.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2015-0317.html">RHBA-2015:0317</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5d1739b3069ab69a6c18a9be6f466735<br/>SHA-256: be4640f473d67ffea1761a6ff2b5cb06e77b01cd612d317cad6e7723044c0ee8</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.2.45-5.el7_0.2.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2015-0317.html">RHBA-2015:0317</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 08692c55361fed4d8bf51190c842cafe<br/>SHA-256: f3be9d9ec189ced2096a8b5ce09359e1f8654f7e413683064b1f48aeaaeb0b11</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>bash-debuginfo-4.2.45-5.el7_0.2.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2015-0317.html">RHBA-2015:0317</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8384ea5761abee2757ae43e114cf7ed6<br/>SHA-256: aa4c42549b6ddbee4988d6d4154ee7d8863d4f49975d384d5843c83d5e5181e7</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-doc-4.2.45-5.el7_0.2.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2015-0317.html">RHBA-2015:0317</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d4f76db9e5ecfe2a720aecab4504ac6a<br/>SHA-256: 53aa8014730d9b1505ed92ca962b0d52e732c4b2b63027471dfdf92d79a27f70</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Server (v. 6)">Red Hat Enterprise Linux Server (v. 6)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.1.2-15.el6_5.1.src.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 05be466cb5b282658110dfb714cf1793<br/>SHA-256: 36dce099832a8b0897951a467b1a4f863f7e366b5834de395cb3bc083941927b</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.1.2-15.el6_5.1.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b3d86398f0e1b0ba23b1dce5ed4c7915<br/>SHA-256: ab06b132b07804fea0fa00892ef8e93b92af642127602e218584bd5104435262</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>bash-debuginfo-4.1.2-15.el6_5.1.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0a465bcef24f8b63f3c903747b9dd22a<br/>SHA-256: 7041f3e9dbb1c5571b682715dd7367f3c0ae3ede494f13a4d099f58c307d2b47</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-doc-4.1.2-15.el6_5.1.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3db81453965f853022eeabe64d608bfd<br/>SHA-256: 7f4c1e304471c1b1b59e6960f2952713043d521e8830b2e0c0da52db8ef75e97</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>PPC:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.1.2-15.el6_5.1.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 42291d185fd9e3a1723477750f13f777<br/>SHA-256: 039def4a268de4fb23f0d9f2b5996d47f1601cb7e013631f1f7db0ae9303e341</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>bash-debuginfo-4.1.2-15.el6_5.1.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9aad7a3627bcd130c4e1979a7892ef7c<br/>SHA-256: b959e3af41b162ed2b792c43964caf7135fbfa252b8b81c67c4ee4f600390d20</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-doc-4.1.2-15.el6_5.1.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 124e110c8b4bf7365400a0e3795e6d1f<br/>SHA-256: 55addab114378e40bc9a04e3b98c936b1b1ae1bbc72a1af376569c6fcd414c16</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>s390x:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.1.2-15.el6_5.1.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6bfb26a993b480de099a83309cf6f194<br/>SHA-256: 6b34b21ece549e3579922ed8850a502f78e320ae12b371df8506510462e5ba48</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>bash-debuginfo-4.1.2-15.el6_5.1.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a1af0aa28e9dad6107017c4136e41be5<br/>SHA-256: a724c3bcc4ad920bc8073934d8c0d48a0a9a9391d3b90b298a64049cf9a4eb8c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-doc-4.1.2-15.el6_5.1.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 08baf44b9c0d2974041d9c1595ee20fa<br/>SHA-256: b4c459c4713b42e07727bde675aa96c91f2e1a2fc11a94e0719d476d161ae89c</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.1.2-15.el6_5.1.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d35ac7eb24705ef5a444d50ab11ad7e7<br/>SHA-256: bedf1ed386b1f2ba951234f640ab674558443232e04aa7602931e31399fd0b98</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>bash-debuginfo-4.1.2-15.el6_5.1.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 223b49f4d627495849423f64864d8642<br/>SHA-256: 14928dee110e0442283a3e1f510dd9cb675d4528ad241bf9c356cf40875d2c7e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-doc-4.1.2-15.el6_5.1.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 86ebcf954bf8e0da9e518ff5284e08d7<br/>SHA-256: d13218d1b252934ccbf33c92d771608ae26d809e0ef15c6dad40cda5da5d48ba</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Server (v. 7)">Red Hat Enterprise Linux Server (v. 7)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.2.45-5.el7_0.2.src.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2015-0317.html">RHBA-2015:0317</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5d1739b3069ab69a6c18a9be6f466735<br/>SHA-256: be4640f473d67ffea1761a6ff2b5cb06e77b01cd612d317cad6e7723044c0ee8</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>PPC:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.2.45-5.el7_0.2.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2015-0317.html">RHBA-2015:0317</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2b491d5aa458370452b7d8416e308661<br/>SHA-256: a04c922dde33890f996e30ccc79b6547dfb46bbc21134613d0fb10b81850a3f2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>bash-debuginfo-4.2.45-5.el7_0.2.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2015-0317.html">RHBA-2015:0317</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 28fb702b32edefa7ebf0073c7cd6aed6<br/>SHA-256: 7425e9583197aec67295b9ec64982d691f13ce06572e5ede7c9448c7f8eb0b69</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-doc-4.2.45-5.el7_0.2.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2015-0317.html">RHBA-2015:0317</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c87259013e758f65de8e964bcecb22e2<br/>SHA-256: 0dea1ef33e7847a7f1f3cce2b27dd904ba9b095f620b7603d5c78a8ca6ddedb8</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>s390x:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.2.45-5.el7_0.2.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2015-0317.html">RHBA-2015:0317</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6778b17261de6e047e395ee5ce3d8163<br/>SHA-256: bf2fed5e7633193cb26bf84ec2835f70385ee5c7e6640741eafc8ba2e481375d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>bash-debuginfo-4.2.45-5.el7_0.2.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2015-0317.html">RHBA-2015:0317</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 343220a03ec01f36da590bbb486ddffb<br/>SHA-256: 8bf35dfebaf2cf55dc39cbcb3ccdafef864fb84adae8953fd9dfe43005b58008</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-doc-4.2.45-5.el7_0.2.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2015-0317.html">RHBA-2015:0317</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5edf81530d52ebca2420cb524a1f7bf9<br/>SHA-256: 145466b13a61544ea102eaf7da7c13a0b7d755a5f525d5a2ff4a108963c0459c</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.2.45-5.el7_0.2.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2015-0317.html">RHBA-2015:0317</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 08692c55361fed4d8bf51190c842cafe<br/>SHA-256: f3be9d9ec189ced2096a8b5ce09359e1f8654f7e413683064b1f48aeaaeb0b11</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>bash-debuginfo-4.2.45-5.el7_0.2.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2015-0317.html">RHBA-2015:0317</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8384ea5761abee2757ae43e114cf7ed6<br/>SHA-256: aa4c42549b6ddbee4988d6d4154ee7d8863d4f49975d384d5843c83d5e5181e7</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-doc-4.2.45-5.el7_0.2.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2015-0317.html">RHBA-2015:0317</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d4f76db9e5ecfe2a720aecab4504ac6a<br/>SHA-256: 53aa8014730d9b1505ed92ca962b0d52e732c4b2b63027471dfdf92d79a27f70</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Server AUS (v. 6.5)">Red Hat Enterprise Linux Server AUS (v. 6.5)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.1.2-15.el6_5.1.src.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 05be466cb5b282658110dfb714cf1793<br/>SHA-256: 36dce099832a8b0897951a467b1a4f863f7e366b5834de395cb3bc083941927b</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.1.2-15.el6_5.1.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d35ac7eb24705ef5a444d50ab11ad7e7<br/>SHA-256: bedf1ed386b1f2ba951234f640ab674558443232e04aa7602931e31399fd0b98</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>bash-debuginfo-4.1.2-15.el6_5.1.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 223b49f4d627495849423f64864d8642<br/>SHA-256: 14928dee110e0442283a3e1f510dd9cb675d4528ad241bf9c356cf40875d2c7e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-doc-4.1.2-15.el6_5.1.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 86ebcf954bf8e0da9e518ff5284e08d7<br/>SHA-256: d13218d1b252934ccbf33c92d771608ae26d809e0ef15c6dad40cda5da5d48ba</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Server EUS (v. 6.5.z)">Red Hat Enterprise Linux Server EUS (v. 6.5.z)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.1.2-15.el6_5.1.src.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 05be466cb5b282658110dfb714cf1793<br/>SHA-256: 36dce099832a8b0897951a467b1a4f863f7e366b5834de395cb3bc083941927b</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.1.2-15.el6_5.1.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b3d86398f0e1b0ba23b1dce5ed4c7915<br/>SHA-256: ab06b132b07804fea0fa00892ef8e93b92af642127602e218584bd5104435262</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>bash-debuginfo-4.1.2-15.el6_5.1.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0a465bcef24f8b63f3c903747b9dd22a<br/>SHA-256: 7041f3e9dbb1c5571b682715dd7367f3c0ae3ede494f13a4d099f58c307d2b47</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-doc-4.1.2-15.el6_5.1.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3db81453965f853022eeabe64d608bfd<br/>SHA-256: 7f4c1e304471c1b1b59e6960f2952713043d521e8830b2e0c0da52db8ef75e97</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>PPC:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.1.2-15.el6_5.1.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 42291d185fd9e3a1723477750f13f777<br/>SHA-256: 039def4a268de4fb23f0d9f2b5996d47f1601cb7e013631f1f7db0ae9303e341</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>bash-debuginfo-4.1.2-15.el6_5.1.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9aad7a3627bcd130c4e1979a7892ef7c<br/>SHA-256: b959e3af41b162ed2b792c43964caf7135fbfa252b8b81c67c4ee4f600390d20</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-doc-4.1.2-15.el6_5.1.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 124e110c8b4bf7365400a0e3795e6d1f<br/>SHA-256: 55addab114378e40bc9a04e3b98c936b1b1ae1bbc72a1af376569c6fcd414c16</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>s390x:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.1.2-15.el6_5.1.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6bfb26a993b480de099a83309cf6f194<br/>SHA-256: 6b34b21ece549e3579922ed8850a502f78e320ae12b371df8506510462e5ba48</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>bash-debuginfo-4.1.2-15.el6_5.1.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a1af0aa28e9dad6107017c4136e41be5<br/>SHA-256: a724c3bcc4ad920bc8073934d8c0d48a0a9a9391d3b90b298a64049cf9a4eb8c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-doc-4.1.2-15.el6_5.1.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 08baf44b9c0d2974041d9c1595ee20fa<br/>SHA-256: b4c459c4713b42e07727bde675aa96c91f2e1a2fc11a94e0719d476d161ae89c</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.1.2-15.el6_5.1.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d35ac7eb24705ef5a444d50ab11ad7e7<br/>SHA-256: bedf1ed386b1f2ba951234f640ab674558443232e04aa7602931e31399fd0b98</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>bash-debuginfo-4.1.2-15.el6_5.1.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 223b49f4d627495849423f64864d8642<br/>SHA-256: 14928dee110e0442283a3e1f510dd9cb675d4528ad241bf9c356cf40875d2c7e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-doc-4.1.2-15.el6_5.1.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2014-1306.html">RHSA-2014:1306</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 86ebcf954bf8e0da9e518ff5284e08d7<br/>SHA-256: d13218d1b252934ccbf33c92d771608ae26d809e0ef15c6dad40cda5da5d48ba</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Workstation (v. 6)">Red Hat Enterprise Linux Workstation (v. 6)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.1.2-15.el6_5.1.src.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 05be466cb5b282658110dfb714cf1793<br/>SHA-256: 36dce099832a8b0897951a467b1a4f863f7e366b5834de395cb3bc083941927b</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.1.2-15.el6_5.1.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b3d86398f0e1b0ba23b1dce5ed4c7915<br/>SHA-256: ab06b132b07804fea0fa00892ef8e93b92af642127602e218584bd5104435262</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>bash-debuginfo-4.1.2-15.el6_5.1.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0a465bcef24f8b63f3c903747b9dd22a<br/>SHA-256: 7041f3e9dbb1c5571b682715dd7367f3c0ae3ede494f13a4d099f58c307d2b47</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-doc-4.1.2-15.el6_5.1.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3db81453965f853022eeabe64d608bfd<br/>SHA-256: 7f4c1e304471c1b1b59e6960f2952713043d521e8830b2e0c0da52db8ef75e97</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.1.2-15.el6_5.1.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d35ac7eb24705ef5a444d50ab11ad7e7<br/>SHA-256: bedf1ed386b1f2ba951234f640ab674558443232e04aa7602931e31399fd0b98</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>bash-debuginfo-4.1.2-15.el6_5.1.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 223b49f4d627495849423f64864d8642<br/>SHA-256: 14928dee110e0442283a3e1f510dd9cb675d4528ad241bf9c356cf40875d2c7e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-doc-4.1.2-15.el6_5.1.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2014-1503.html">RHBA-2014:1503</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 86ebcf954bf8e0da9e518ff5284e08d7<br/>SHA-256: d13218d1b252934ccbf33c92d771608ae26d809e0ef15c6dad40cda5da5d48ba</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Workstation (v. 7)">Red Hat Enterprise Linux Workstation (v. 7)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.2.45-5.el7_0.2.src.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2015-0317.html">RHBA-2015:0317</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5d1739b3069ab69a6c18a9be6f466735<br/>SHA-256: be4640f473d67ffea1761a6ff2b5cb06e77b01cd612d317cad6e7723044c0ee8</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-4.2.45-5.el7_0.2.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2015-0317.html">RHBA-2015:0317</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 08692c55361fed4d8bf51190c842cafe<br/>SHA-256: f3be9d9ec189ced2096a8b5ce09359e1f8654f7e413683064b1f48aeaaeb0b11</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>bash-debuginfo-4.2.45-5.el7_0.2.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2015-0317.html">RHBA-2015:0317</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8384ea5761abee2757ae43e114cf7ed6<br/>SHA-256: aa4c42549b6ddbee4988d6d4154ee7d8863d4f49975d384d5843c83d5e5181e7</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>bash-doc-4.2.45-5.el7_0.2.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHBA-2015-0317.html">RHBA-2015:0317</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d4f76db9e5ecfe2a720aecab4504ac6a<br/>SHA-256: 53aa8014730d9b1505ed92ca962b0d52e732c4b2b63027471dfdf92d79a27f70</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+<tr><td colspan="2">(The unlinked packages above are only available from the <a href="/">Red Hat Network</a>)<br /></td></tr>
+
+</table>
+
+
+
+<br />
+<h2>Bugs fixed (see <A HREF="http://bugzilla.redhat.com/bugzilla">bugzilla</A> for more information)</h2>
+<div class="page-summary">
+<p><a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1141597">1141597</a> - CVE-2014-6271 bash: specially-crafted environment variables can be used to inject shell commands</p>
+</div>
+
+
+
+<br />
+<h2>References</h2>
+<div class="page-summary">
+
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-6271.html">https://www.redhat.com/security/data/cve/CVE-2014-6271.html</a><br />
+
+<A HREF="https://access.redhat.com/security/updates/classification/#critical">https://access.redhat.com/security/updates/classification/#critical</A><br /><A HREF="https://access.redhat.com/articles/1200223">https://access.redhat.com/articles/1200223</A>
+</div>
+
+
+
+
+
+
+
+<br />
+
+<hr border="1" />
+These packages are GPG signed by Red Hat for security.  Our key and 
+details on how to verify the signature are available from:<br />
+
+<a href="https://www.redhat.com/security/team/key/#package">https://www.redhat.com/security/team/key/#package</a>
+
+<p>The Red Hat security contact is <a href="mailto:secalert@redhat.com">secalert@redhat.com</a>.  More contact details at <a href="http://www.redhat.com/security/team/contact/">http://www.redhat.com/security/team/contact/</a></p>
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+    
+
+							</div>
+						</div>
+					</div>
+					<!-- end of legacy -->
+				</div>
+			</main>
+		</div>
+	<!--googleoff: all-->
+	<footer class="footer-main">
+		<div class="container footer-top">
+			<div class="row">
+
+				<div class="col-sm-2 brand">
+					<img src="https://access.redhat.com/chrome_themes/nimbus/img/l_redhat-reverse.png" alt="Red Hat" />
+				</div><menu class="col-sm-2">
+					<h3>Quick Links</h3>
+					<ul>
+						<li><a class="download-software" href="https://access.redhat.com/downloads/">Downloads</a></li>
+						<li><a class="manage-subscriptions" href="https://access.redhat.com/management/subscriptions/#active">Subscriptions</a></li>
+						<li><a class="support-cases" href="https://access.redhat.com/support">Support Cases</a></li>
+						<li><a class="quick-docs" href="https://access.redhat.com/documentation">Product Documentation</a></li>
+					</ul>
+				</menu>
+
+				<menu class="col-sm-2">
+					<h3>Help</h3>
+					<ul>
+						<li><a class="contact-us" href="https://access.redhat.com/support/contact/">Contact Us</a></li>
+						<li><a class="login-problems" href="https://access.redhat.com/help/login_assistance">Log-in Assistance</a></li>
+						<li><a class="accessibility" href="https://access.redhat.com/help/accessibility/">Accessibility</a></li>
+						<li><a class="browser-support-policy" href="https://access.redhat.com/help/browsers/">Browser Support Policy</a></li>
+					</ul>
+				</menu>
+
+				<menu class="col-sm-2">
+					<h3>Site Info</h3>
+					<ul>
+						<li><a class="recognition" href="https://access.redhat.com/recognition/">Awards and Recognition</a></li>
+						<li><a class="colophon" href="https://access.redhat.com/help/colophon/">Colophon</a></li>
+						<li><a class="cp-faqs" href="https://access.redhat.com/articles/33844">Customer Portal FAQ</a></li>
+					</ul>
+				</menu>
+
+				<menu class="col-sm-2">
+					<h3>About</h3>
+					<ul>
+						<li><a href="https://access.redhat.com/subscription-value" class="subscription-value">Red Hat Subscription Value</a></li>
+						<li><a href="https://www.redhat.com/about/" class="about-red-hat">About Red Hat</a></li>
+					</ul>
+				</menu>
+
+				<menu class="col-sm-2">
+					<h3>Related Sites</h3>
+					<ul>
+						<li><a href="https://www.redhat.com/" class="red-hat-com">RedHat.com</a></li>
+						<li><a href="https://www.jboss.org/" class="jboss-org">JBoss.org</a></li>
+						<li><a href="https://www.openshift.com" class="openshift-com">OpenShift.com</a></li>
+						<li><a href="https://partnercenter.force.com" class="partner-connect">Red Hat Partner Connect</a></li>
+					</ul>
+				</menu>
+
+			</div>
+		</div>
+
+		<div class="anchor">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 social">
+						<a target="_blank" href="http://www.redhat.com/summit/" class="summit"><img src="https://access.redhat.com/chrome_themes/nimbus/img/l_summit.png" alt="Red Hat Summit" /></a>
+						<a target="_blank" href="https://twitter.com/RedHatSupport" class="sm-icon twitter"><span class="nicon-twitter"></span><span class="offscreen">Twitter</span></a>
+						<a target="_blank" href="https://www.facebook.com/RedHatSupport" class="sm-icon facebook"><span class="nicon-facebook"></span><span class="offscreen">Facebook</span></a>
+						<a target="_blank" href="https://plus.google.com/100456039940694908045/posts" class="sm-icon googleplus"><span class="nicon-googleplus"></span><span class="offscreen">Google+</span></a>
+					</div>
+					<div class="col-sm-8 legal">
+						<menu class="legal-nav">
+							<ul>
+								<li><a href="http://www.redhat.com/en/about/privacy-policy" class="privacy-policy">Privacy Policy</a></li>
+								<li><a href="https://access.redhat.com/help/terms/" class="terms-of-use">Customer Portal Terms of Use</a></li>
+								<li><a href="http://www.redhat.com/en/about/all-policies-guidelines" class="all-policies">All Policies and Guidelines</a></li>
+							</ul>
+						</menu>							
+						<small class="copyright">Copyright © 2015 Red Hat, Inc.
+						</small>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+	</footer>
+	<!--googleon: all-->
+	</div>
+	
+  </body>
+</html>
+
+
+
+

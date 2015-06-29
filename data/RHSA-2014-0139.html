@@ -1,0 +1,2205 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <script type="text/javascript">
+      var siteMapState="security";
+    </script>
+    <link rel="stylesheet" href="/css/rhn-base.css" type="text/css" />
+    
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<!-- metaInclude -->
+	<meta name="avalon-host-info" content="gss-webjava01" />
+	<meta name="avalon-version" content="2.0.19.0" />
+	<meta name="google-site-verification" content="nP0a2DWUcOxjRgDDACHEbDptiGIGBrChbghrC0ZzcK0" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- /metaInclude -->
+	<!-- ^ meta and X-UA-Compatible must come first -->
+	
+	<meta http-equiv="cleartype" content="on" />
+
+	<!-- _preInclude -->
+
+	<!-- title -->
+	<title>Red Hat Customer Portal
+	</title>
+	<!-- /title -->
+	<!-- /_preInclude -->
+
+	<!-- cssInclude -->
+
+	<link rel="shortcut icon" href="https://access.redhat.com/webassets/avalon/g/favicon.ico" />
+	<link rel="stylesheet" type="text/css" media="screen, print" href="https://access.redhat.com/webassets/avalon/s/jquery-ui/cp/jquery-ui-1.8.7.custom.css?version=2.0.19.0" />
+
+	<!-- TODO: What is pageCssLinks and do we still need it? -->
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/legacy.css?version=2.0.19.0" />
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/bootstrap.css?version=2.0.19.0" />
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/master-blessed1.css?version=2.0.19.0" />
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/master.css?version=2.0.19.0" />
+
+	<link href="https://access.redhat.com/webassets/avalon/s/chosen.css?version=2.0.19.0" rel="stylesheet" type="text/css" />
+	<!--[if lte IE 9]>
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/ie.css" />
+    <![endif]-->
+    
+
+	<!-- .primary-nav starts out hidden (at sm res and higher), and
+	is later revealed with JS after the megamenu has been built
+	out.  here, use noscript to un-hide the nav, in case the user
+	has JS disabled. -->
+	<noscript>
+		<style type="text/css" media="screen"> .primary-nav { display: block; } </style>
+	</noscript>
+
+	<!-- /cssInclude -->
+
+	<!-- jsInclude -->
+	<script type="text/javascript">
+		window.portal = {
+			analytics             : {},
+			host                  : "https://access.redhat.com",
+			kbaseContext          : "/preview_faq",
+			cspContext            : "/preview_jbossnetwork",
+			customerCenterContext : "/wapps",
+			lang                  : "en",
+			version               : "2.0.19.0",
+			decorationWhitelist   : ["https://access.redhat.com","https://rhn.redhat.com", "docs.redhat.com"]
+		};
+
+		/*
+		* TODO
+		* deprecate this avalon object
+		*/
+		window.avalon = window.portal;
+		window.avalonHost = avalon.host; // deprecate this?
+
+		/********************************
+		*  Temporary pagename shim     *
+		*  TODO: Remove this           *
+		********************************/
+
+		portal.analytics.shim = {};
+		portal.analytics.shim.pageTitle = "";
+		portal.analytics.shim.siteMapState = "";
+
+	</script>
+	<script type="text/javascript" src="https://access.redhat.com/webassets/avalon/j/lib/jquery.min.js?version=2.0.19.0"></script>
+	<script type="text/javascript" src="https://access.redhat.com/webassets/avalon/j/lib/require.js?version=2.0.19.0" data-main="/webassets/avalon/j/"></script>
+	<!-- TODO: can we please upgrade jquery?! -->
+	<script type="text/javascript">
+		/*
+		 * THIS IS NEEDED! Integrated apps include their own jQuery lib.
+		 * We need this *before* base.js so we can effectvley pass messages (trigger, bind) to base.js
+		 * *DO NOT* remove! window.jQuery the object is still accessible.
+		*/
+		window.ajq = jQuery.noConflict();
+	</script>
+	<script type="text/javascript" src="https://access.redhat.com/webassets/avalon/j/outage/outageJson_en.js?version=2.0.19.0"></script>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	
+	<!-- /jsInclude -->
+	
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>
+  </head>
+  <body>
+    
+	<!-- Chrome: Full -->
+	<div id="page-wrap" class="page-wrap">
+		<div class="top-page-wrap">
+<!--googleoff: all-->
+
+			<header class="masthead"><div id="to-top"><a class="btn_slideto"><span class="web-icon-upload"></span></a></div>
+<div class="mobile-bar-wrap hidden-sm hidden-md hidden-lg">
+	<a class="logo" href="https://access.redhat.com/">
+		<span class="logo-crop"><img src="https://access.redhat.com/chrome_themes/nimbus/img/l_redhat-lg.png"></span>
+		<span class="site-title"><span>Customer </span><span>Portal</span></span>
+	</a>
+	<button id="mobile-nav-btn" class="btn btn-navbar" data-toggle="collapse" data-target="#mobile-nav">
+		<span class="web-icon-mobile-menu"></span>
+		<span class="link-text">global.menu</span>
+	</button>
+	<button class="btn btn-search btn-utility" data-target="#site-search">
+		<span class="web-icon-search"></span>
+		<span class="link-text">Search</span>
+	</button>
+</div>
+
+<div class="utility-wrap">
+	<div class="utility-container">
+		<div class="utility-bar visible-sm visible-md visible-lg">
+			<menu class="top-nav">
+				<ul>
+					<li id="nav-subscription"><a class="top-nav-subscriptions" href="https://access.redhat.com/management/">Subscriptions</a></li>
+					<li id="nav-downloads"><a class="top-nav-downloads" href="https://access.redhat.com/downloads/">Downloads</a></li>
+					<li id="nav-support"><a class="top-nav-support-cases" href="https://access.redhat.com/support/cases/">Support Cases</a></li>
+				</ul>
+			</menu>
+
+			<menu class="utility-nav">
+				<ul>
+					<li>
+						<a class="btn-search" data-target="#site-search">
+							<span class="web-icon-search"></span>
+							<span class="link-text">Search</span>
+						</a>
+					</li>
+					<li>
+						<a class="btn-profile" data-target="#account-info">
+							<span class="web-icon-user"></span>
+							<span class="link-text">Account</span>
+							<span class="account-user" id="accountUserName"></span>
+						</a>
+					</li>
+					<li>
+						<a class="btn-language" data-target="#language">
+							<span class="web-icon-globe"></span>
+							<span class="link-text">Language</span>
+						</a>
+					</li>
+				</ul>
+			</menu>
+		</div>
+		<!-- Utility Tray -->
+		<div class="utility-tray-container">
+			<div class="utility-tray">
+				<div id="site-search" class="utility-link site-search">
+					<div class="content">
+            			<form class="ng-pristine ng-valid topSearchForm" id="topSearchForm" name="topSearchForm" action="/search/browse/search/" method="get" enctype="application/x-www-form-urlencoded">
+							<div class="input-group">
+
+                    			<input class="form-control searchField" id="topSearchInput" name="keyword" value="" placeholder="Enter Your Search Term" type="text">
+								<span class="input-group-btn">
+				    				<button type="submit" class="btn btn-primary">Search</button>
+								</span>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div id="account-info" class="utility-link account-info">
+					<div class="content">
+
+						<!-- Account Unauthenticated -->
+						<div id="accountLinksLoggedOut" class="unauthenticated">
+							<h2 class="utility-header">Log in to Your Red Hat Account</h2>
+							<div class="row col-border-row">
+								<div class="col-sm-6 col-border">
+									<p><a href="https://access.redhat.com/login" id="accountLogin" class="btn btn-primary">Log In</a></p>
+									<p>Your Red Hat account gives you access to your profile, preferences, and services, depending on your status.</p>
+								</div>
+								<div class="col-sm-6 col-border col-border-left">
+									<p><a href="https://www.redhat.com/wapps/ugc/register.html" class="btn btn-primary">Register</a></p>
+									<p>If you are a new customer, register now for access to product evaluations and purchasing capabilities. </p>
+
+									<strong>Need access to an account?</strong><p>If your company has an existing Red Hat account, your organization administrator can grant you access.</p>
+
+									<p><a href="https://access.redhat.com/support/contact/customerService/">If you have any questions, please contact customer service.</a></p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Account Authenticated -->
+						<div id="accountLinksLoggedIn" class="authenticated">
+							<h2 class="utility-header"><span id="userFirstName"></span></h2>
+							<div class="row col-border-row">
+								<div class="col-sm-6 col-border col-border-right">
+									<div class="account-info" id="accountUser">
+										<div class="avatar"><!-- placeholder--></div>
+										<div class="account-name"><strong id="userFullName"></strong></div>
+										<div class="account-org"><span id="userOrg"></span></div>
+										<div class="account-number accountNumber"><span class="property">Red Hat Account Number:</span> <span class="value"></span></div>
+									</div>
+
+									<div class="row account-settings">
+										<div class="col-md-6">
+											<h3>Red Hat Account</h3>
+											<ul class="reset">
+												<li><a href="https://www.redhat.com/wapps/ugc/protected/personalInfo.html">Account Details</a></li>
+												<li><a href="https://www.redhat.com/wapps/ugc/protected/prefs.html">Newsletter and Contact Preferences</a></li>
+												<li><a href="https://www.redhat.com/wapps/ugc/protected/usermgt/userList.html">User Management</a></li>
+												<li><a href="https://www.redhat.com/wapps/ugc/protected/account.html">Account Maintenance</a></li>
+											</ul>
+										</div>
+										<div class="col-md-6">
+											<h3>Customer Portal</h3>
+											<ul class="reset">
+												<li><a href="https://access.redhat.com/user">My Profile</a></li>
+												<li><a href="https://access.redhat.com/user" id="userNotificationsLink">Notifications</a></li>
+												<li><a href="https://access.redhat.com/help/">Help</a></li>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+								<div class="col-sm-6 col-border">
+									<p>For your security, if you’re on a public computer and have finished using your Red Hat services, please be sure to log out.</p>
+									<p><a href="https://www.redhat.com/wapps/sso/logout.html?redirect=https://access.redhat.com/logout" id="accountLogout" class="btn btn-primary">Log Out</a></p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div id="language" class="utility-link language">
+					<div class="content">
+						<h2 class="utility-header">Select Your Language</h2>
+						<div class="row" id="localesMenu">
+							<div class="col-sm-4">
+								<ul class="reset">
+									<li><a href="https://access.redhat.com/changeLanguage?language=en" id="en">English</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=es" id="es">español</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=de" id="de">Deutsch</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=it" id="it">italiano</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=ko" id="ko">한국어</a></li>
+								</ul>
+							</div>
+							<div class="col-sm-4">
+								<ul class="reset">
+									<li><a href="https://access.redhat.com/changeLanguage?language=fr" id="fr">français</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=ja" id="ja">日本語</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=pt" id="pt">português</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=zh_CN" id="zh_CN">中文 (中国)</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=ru" id="ru">русский</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="scroll-anchor">
+</div>
+
+<div class="header-nav visible-sm visible-md visible-lg">
+	<div id="header-nav">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+
+					<a href="https://access.redhat.com/" class="logo">
+						<span class="logo-crop"><img src="https://access.redhat.com/chrome_themes/nimbus/img/l_redhat-lg.png"></span>
+						<span class="site-title"><span>Customer </span><span>Portal</span></span>
+					</a>
+
+					<menu class="primary-nav hidden-sm">
+						<ul>
+							<li id="nav-products"><a class="products" data-link="mega" data-target="products-menu" href="https://access.redhat.com/products/">Products &amp; Services</a></li>
+							<li id="nav-tools"><a class="tools" data-link="mega" data-target="tools-menu" href="https://access.redhat.com/labs/">Tools</a></li><!-- #Need URL -->
+							<li id="nav-security"><a class="security" data-link="mega" data-target="security-menu" href="https://access.redhat.com/security/">Security</a></li>
+							<li id="nav-community"><a class="community" data-link="mega" data-target="community-menu" href="https://access.redhat.com/community/">Community</a></li><!-- #Need URL -->
+						</ul>
+					</menu>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="mobile-nav-wrap hidden-sm hidden-md hidden-lg">
+	<div id="mobile-nav" class="mobile-nav navbar collapse navbar-collapse">
+		<div class="navbar-inner">
+
+			<menu>
+				<ul class="mobile-utility">
+					<li>
+						<a class="btn-profile" data-target="#account-info-mobile">
+							<span class="web-icon-user"></span>
+							<span class="link-text">Account</span>
+						</a>
+					</li><!-- white space inline
+					--><li>
+						<a class="btn-language" data-target="#language-mobile">
+							<span class="web-icon-globe"></span>
+							<span class="link-text">Language</span>
+						</a>
+					</li>
+				</ul>
+				<div id="account-info-mobile" class="mobile-utility-wrap">
+					<!-- Account Unauthenticated -->
+					<div id="mobile-accountLinksLoggedOut" class="unauthenticated">
+						<ul class="nav mobile-utility-nav">
+							<li><a href="https://access.redhat.com/login">Log In</a></li>
+							<li><a href="https://www.redhat.com/wapps/ugc/register.html">Register</a></li>
+						</ul>
+					</div>
+					<!-- Account Authenticated -->
+					<div id="mobile-accountLinksLoggedIn" class="authenticated">
+						<div class="account-info" id="mobile-accountUser">
+							<div class="account-name"><strong id="mobile-userFullName"></strong></div>
+							<div class="account-org"><span id="mobile-userOrg"></span></div>
+							<div class="account-number mobile-accountNumber"><span class="property">Red Hat Account Number:</span> <span class="value"></span></div>
+						</div>
+						<ul class="nav mobile-utility-nav">
+							<li><a href="https://www.redhat.com/wapps/ugc/protected/personalInfo.html">Account Details</a></li>
+							<li><a href="https://www.redhat.com/wapps/ugc/protected/prefs.html">Newsletter and Contact Preferences</a></li>
+							<li><a href="https://www.redhat.com/wapps/ugc/protected/usermgt/userList.html">User Management</a></li>
+							<li><a href="https://www.redhat.com/wapps/ugc/protected/account.html">Account Maintenance</a></li>
+							<li><a href="https://access.redhat.com/user">My Profile</a></li>
+							<li><a href="https://access.redhat.com/user" id="userNotificationsLink">Notifications</a></li>
+							<li><a href="https://access.redhat.com/help/">Help</a></li>
+							<li class="logout"><a href="https://www.redhat.com/wapps/sso/logout.html?redirect=https://access.redhat.com/logout">Log Out</a>
+						</ul>
+					</div>
+				</div>
+				<div id="language-mobile" class="mobile-utility-wrap">
+					<ul class="nav mobile-utility-nav">
+						<li><a href="https://access.redhat.com/changeLanguage?language=en" id="mobile-en">English</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=es" id="mobile-es">español</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=de" id="mobile-de">Deutsch</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=it" id="mobile-it">italiano</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=ko" id="mobile-ko">한국어</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=fr" id="mobile-fr">français</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=ja" id="mobile-ja">日本語</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=pt" id="mobile-pt">português</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=zh_CN" id="mobile-zh_CN">中文 (中国)</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=ru" id="mobile-ru">русский</a></li>
+					</ul>
+				</div>
+				<ul class="main-mobile-nav nav">
+					<li id="mnav-home"><a href="https://access.redhat.com/">Home</a></li>
+					<li id="mnav-products"><a href="https://access.redhat.com/products/">Products &amp; Services</a></li>
+					<li id="mnav-tools"><a href="https://access.redhat.com/tools/">Tools</a></li>
+					<li id="mnav-security"><a href="https://access.redhat.com/security/">Security</a></li>
+					<li id="mnav-community"><a href="https://access.redhat.com/community/">Community</a></li><!-- #Need URL -->
+					<li id="mnav-downloads"><a href="https://access.redhat.com/downloads/">Downloads</a></li>
+					<li id="mnav-subscription"><a href="https://access.redhat.com/management/">Subscriptions</a></li>
+					<li id="mnav-support"><a href="https://access.redhat.com/support/cases/">Support Cases</a></li>
+				</ul>
+			</menu>
+		</div>
+	</div>
+</div>
+
+<div class="mega-wrap visible-sm visible-md visible-lg">
+	<menu class="mega">
+		<div class="container">
+			<div class="mega-menu-wrap">
+				<!-- Products Menu -->
+				<div aria-labelledby="products-menu" class="products-menu mega-menu" data-eh="mega-menu" role="menu">
+					<div class="row">
+						<div class="col-md-6 col-sm-8">
+							<nav class="root">
+								<div class="row">
+									<ul class="subnav subnav-root col-sm-6">
+										<li data-target="infrastructure-menu" class="active">
+											<a href="https://access.redhat.com/products/">Infrastructure and Management</a>
+										</li>
+										<li data-target="cloud-menu">
+											<a href="https://access.redhat.com/products/">Cloud Products</a>
+										</li>
+										<li data-target="jboss-dev-menu">
+											<a href="https://access.redhat.com/products/">JBoss Development and Management</a>
+										</li>
+										<li data-target="jboss-int-menu">
+											<a href="https://access.redhat.com/products/">JBoss Integration and Automation</a>
+										</li>
+										<li data-target="services-menu">
+											<a href="https://access.redhat.com/products/">Services</a>
+										</li>
+									</ul>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="infrastructure-menu" style="display: block;">
+										<ul>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-enterprise-linux/">Red Hat Enterprise Linux</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-enterprise-virtualization/">Red Hat Enterprise Virtualization</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/Identity_Management/">Red Hat Identity Management &amp; Infrastructure</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-directory-server/">Red Hat Directory Server</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-certificate-system/">Red Hat Certificate System</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-satellite/">Red Hat Satellite</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/subscription-asset-manager/">Subscription Asset Manager</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-update-infrastructure/">Red Hat Update Infrastructure</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-storage/">Red Hat Gluster Storage</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-ceph-storage/">Red Hat Ceph Storage</a>
+											</li>
+										</ul>
+									</div>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="cloud-menu">
+										<ul>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-cloudforms/">Red Hat CloudForms</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-enterprise-linux-openstack-platform/">Red Hat Enterprise Linux OpenStack Platform</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-cloud-infrastructure/">Red Hat Cloud Infrastructure</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/openshift-enterprise-red-hat/">OpenShift Enterprise by Red Hat</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/openshift-online-red-hat/">OpenShift Online by Red Hat</a>
+											</li>
+										</ul>
+									</div>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="jboss-dev-menu">
+										<ul>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-enterprise-application-platform/">Red Hat JBoss Enterprise Application Platform</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-data-grid/">Red Hat JBoss Data Grid</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-web-server/">Red Hat JBoss Web Server</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-portal/">Red Hat JBoss Portal</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-operations-network/">Red Hat JBoss Operations Network</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-developer-studio/">Red Hat JBoss Developer Studio</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/feedhenry/">FeedHenry by Red Hat</a>
+											</li>
+										</ul>
+									</div>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="jboss-int-menu">
+										<ul>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-fuse-service-works/">Red Hat JBoss Fuse Service Works</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-data-virtualization/">Red Hat JBoss Data Virtualization</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-fuse/">Red Hat JBoss Fuse</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-a-mq/">Red Hat JBoss A-MQ</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-bpm-suite/">Red Hat JBoss BPM Suite</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-brms/">Red Hat JBoss BRMS</a>
+											</li>
+										</ul>
+									</div>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="services-menu">
+										<ul>
+											<li><a href="https://access.redhat.com/products/Consulting/">Consulting</a></li>
+			                    			<li><a href="https://access.redhat.com/products/red-hat-access/">Red Hat Access</a></li>
+			                    			<li><a href="https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/">Red Hat Enterprise Linux Developer Program</a></li>
+			                    			<li><a href="https://access.redhat.com/products/Training/">Training</a></li>
+			                    			<li><a href="https://access.redhat.com/support/offerings/tam/">Technical Account Management</a></li>
+										</ul>
+									</div>
+								</div>
+							</nav>
+							<a href="https://access.redhat.com/products" class="btn btn-primary">Explore Products and Services</a>
+						</div>
+
+						<div class="col-md-6 col-sm-4 pull-right">
+							<div class="row">
+								<div class="col-md-4">
+									<h3 class="nav-title">Ecosystem</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/certification">Overview</a></li>
+										<li><a href="https://access.redhat.com/search/browse/certified-hardware#?">Certified Hardware</a></li>
+										<li><a href="https://access.redhat.com/search/browse/certified-software#?">Certified Software</a></li>
+										<li><a href="https://access.redhat.com/search/browse/certified-cloud-providers#?">Certified Cloud Providers</a></li>
+									</ul>
+								</div>
+								<div class="col-md-4">
+									<h3 class="nav-title">Knowledge</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/search/browse/search/">Expert Advice</a></li>
+										<li><a href="https://access.redhat.com/documentation/">Product Documentation</a></li>
+									</ul>
+								</div>
+								<div class="col-md-4">
+									<h3 class="nav-title">Support Policies</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/support/offerings/production/">Production Support</a></li>
+										<li><a href="https://access.redhat.com/support/offerings/developer/">Development Support</a></li>
+									</ul>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Tools Menu -->
+				<div aria-labelledby="tools-menu" class="tools-menu mega-menu" data-eh="mega-menu" role="menu">
+					<div class="row">
+
+						<nav class="col-sm-9">
+							<div class="mega-menu-feature">
+								<div class="row">
+									<div class="col-sm-4">
+										<h2 class="mega-menu-feature-title">Red Hat Access Labs</h2>
+										<p>To help you use Red Hat products to their full potential, our engineers have developed a set of tools to support customer success.</p>
+										<p class="push-top"><a href="https://access.redhat.com/labs/" class="btn btn-primary">Explore Labs</a></p>
+									</div>
+									<div class="col-sm-4">
+										<a href="https://access.redhat.com/labs/#?type=config">
+											<h3 class="nav-title">Configuration</h3>
+										</a>
+										<ul>
+											<li><a href="https://access.redhat.com/labs/jvmconfig/">JVM Config</a></li>
+											<li><a href="https://access.redhat.com/labs/networkbondinghelper/">Network Bonding Helper</a></li>
+											<li><a href="https://access.redhat.com/labs/linterfordockerfile/">Linter for Dockerfile</a></li>
+										</ul>
+
+										<a href="https://access.redhat.com/labs/#?type=deploy">
+											<h3 class="nav-title">Deployment</h3>
+										</a>
+										<ul>
+											<li><a href="https://access.redhat.com/labs/registrationassistant/">Registration Assistant</a></li>
+											<li><a href="https://access.redhat.com/labs/kickstartconfig/">Kickstart Generator</a></li>
+											<li><a href="https://access.redhat.com/labs/rhevupgradehelper/">RHEV Upgrade Helper</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-4">
+										<a href="https://access.redhat.com/labs/#?type=troubleshoot">
+											<h3 class="nav-title">Troubleshooting</h3>
+										</a>
+										<ul>
+											<li><a href="https://access.redhat.com/labs/garbagedog/">Garbage Collection Analysis</a></li>
+											<li><a href="https://access.redhat.com/labs/kerneloopsanalyzer/">Kernel Oops Analyzer</a></li>
+											<li><a href="https://access.redhat.com/labs/kdumphelper/">Kdump Helper</a></li>
+										</ul>
+										<a href="https://access.redhat.com/labs/#?type=security">
+											<h3 class="nav-title">Security</h3>
+										</a>
+										<ul>
+											<li><a href="https://access.redhat.com/labs/venom/">VENOM: QEMU Vulnerability Detector</a></li>
+											<li><a href="https://access.redhat.com/labs/ghost/">GHOST - gethostbyname Detector</a></li>
+											<li><a href="https://access.redhat.com/labs/poodle/">SSLv3 (POODLE) Detector</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</nav>
+
+						<nav class="col-sm-3">
+							<h3 class="nav-title">Additional Tools</h3>
+							<ul>
+								<li><a href="https://access.redhat.com/products/red-hat-access/">Red Hat Access - Overview</a></li>
+								<li><a href="https://access.redhat.com/labs/hacat/">Red Hat High Availability Cluster Architecture Tool</a></li>
+								<li><a href="https://access.redhat.com/tools/satcert/">Red Hat Satellite Certificate Tool</a></li>
+							</ul>
+						</nav>
+
+					</div>
+				</div>
+
+				<!-- Security Menu -->
+				<div aria-labelledby="security-menu" class="security-menu mega-menu" data-eh="mega-menu" role="menu">
+					<div class="row">
+						<nav class="col-sm-12 basic">
+							<div class="row">
+								<div class="col-md-3 col-sm-4">
+									<h3 class="nav-title">Security Updates</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/security/cve">Red Hat CVE Database</a></li>
+										<li><a href="https://access.redhat.com/security/updates/active/">Active Products</a></li>
+										<li><a href="https://access.redhat.com/security/updates/eol/">End-of-Life Products</a></li>
+										<li><a href="https://access.redhat.com/security/updates/advisory/">How to Get Notified</a></li>
+									</ul>
+								</div>
+								<div class="col-md-3 col-sm-4">
+									<h3 class="nav-title">Red Hat Product Security</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/security/team/">About</a></li>
+										<li><a href="https://securityblog.redhat.com/">Security Blog</a></li>
+										<li><a href="https://access.redhat.com/security/team/contact/">Contact</a></li>
+									</ul>
+								</div>
+								<div class="col-md-3 col-sm-4">
+									<h3 class="nav-title">Resources</h3>
+									<ul>
+										<li><a href="https://www.redhat.com/security/data/metrics/">Security Measurement</a></li>
+										<li><a href="https://access.redhat.com/security/updates/classification/">Severity Ratings</a></li>
+										<li><a href="https://access.redhat.com/security/updates/backporting/">Backporting Policies</a></li>
+										<li><a href="https://access.redhat.com/security/team/key/">Product Signing (GPG) Keys</a></li>
+									</ul>
+								</div>
+							</div>
+						</nav>
+						<a href="https://access.redhat.com/security/" class="btn btn-primary">Explore Security</a>
+					</div>
+				</div>
+
+				<!-- Community Menu -->
+				<div aria-labelledby="community-menu" class="community-menu mega-menu" data-eh="mega-menu" role="menu">
+					<div class="row">
+            			<nav class="col-sm-12 basic">
+							<div class="row">
+								<div class="col-sm-3">
+									<h3 class="nav-title">Discussions</h3>
+									<ul>
+
+										<li><a href="https://access.redhat.com/discussions?product=25&category=All&tags=All">Red Hat Enterprise Linux</a></li>
+										<li><a href="https://access.redhat.com/discussions?product=8163&category=All&tags=All">Red Hat Enterprise Virtualization</a></li>
+										<li><a href="https://access.redhat.com/discussions?product=36&category=All&tags=All">Red Hat Satellite</a></li>
+										<li><a href="https://access.redhat.com/discussions?product=22&category=All&tags=All">Customer Portal</a></li>
+										<li><a href="https://access.redhat.com/groups/">Private Groups</a></li>
+										<li class="more-link"><a href="https://access.redhat.com/discussions?keyword=&name=&product=All&category=All&tags=All">All Discussions</a></li>
+										<li class="more-link"><a href="https://access.redhat.com/node/add/discussion">Start a Discussion</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-3">
+									<h3 class="nav-title">Blogs</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/blogs/767163">Customer Portal</a></li>
+										<li><a href="https://access.redhat.com/blogs/759303">Red Hat Access Labs</a></li>
+										<li><a href="https://access.redhat.com/blogs/766093">Red Hat Product Security Team</a></li>
+										<li class="more-link"><a href="https://access.redhat.com/blogs/">All Blogs</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-3">
+									<h3 class="nav-title">Events</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/customer-convergence">Customer Events</a></li>
+										<li><a href="http://www.redhat.com/summit/">Red Hat Summit</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-3">
+									<h3 class="nav-title">Stories</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/subscription-value/">Red Hat Subscription Benefits</a></li>
+										<li><a href="https://access.redhat.com/customer-success/">You Asked. We Acted.</a></li>
+										<li><a href="http://www.redhat.com/en/open-source">Open Source Communities</a></li>
+									</ul>
+								</div>
+							</div>
+						</nav>
+						<!--<a href="https://access.redhat.com/community/" class="btn btn-primary">Explore Community</a>-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</menu>
+</div>
+
+				<div id="site-section"></div>
+
+			</header>
+<!--googleon: all-->
+			<main id="cp-main" class="portal-content-area" role="main">
+				<div id="cp-content" class="main-content">
+					<!-- legacy divs start here -->
+					<div id="legacy-portal">
+						<div class="content-area">
+							<div id="legacy-container" class="legacy-container">
+									
+
+    <div class="wrapi">
+      <div id="container" class="clearWrap">
+        <div id="content">
+
+    
+
+
+
+
+
+
+
+
+
+<h1><img src="/img/rhn-icon-security.gif" alt="Security Advisory" align="absmiddle" /> Moderate: pidgin security update</h1>
+
+<table class="details">
+	<tr>
+		<th>Advisory:</th>
+		<td>RHSA-2014:0139-1</td>
+	</tr>
+	<tr>	
+		<th>Type:</th>
+		<td>Security Advisory</td>
+	</tr>
+        <tr>
+                <th>Severity:</th>
+                <td>Moderate</td>
+        </tr>
+	<tr>	
+		<th>Issued on:</th>
+		<td>2014-02-05</td>
+	</tr>
+	<tr>	
+		<th>Last updated on:</th>
+		<td>2014-02-05</td>
+	</tr>
+
+	<tr>
+		<th valign="top">Affected Products:</th>
+		<td><a href="#RHEL Desktop Workstation (v. 5 client)">RHEL Desktop Workstation (v. 5 client)</a><br />
+<a href="#Red Hat Enterprise Linux Desktop (v. 5 client)">Red Hat Enterprise Linux Desktop (v. 5 client)</a><br />
+<a href="#Red Hat Enterprise Linux Desktop (v. 6)">Red Hat Enterprise Linux Desktop (v. 6)</a><br />
+<a href="#Red Hat Enterprise Linux Server (v. 6)">Red Hat Enterprise Linux Server (v. 6)</a><br />
+<a href="#Red Hat Enterprise Linux Server AUS (v. 6.5)">Red Hat Enterprise Linux Server AUS (v. 6.5)</a><br />
+<a href="#Red Hat Enterprise Linux Server EUS (v. 6.5.z)">Red Hat Enterprise Linux Server EUS (v. 6.5.z)</a><br />
+<a href="#Red Hat Enterprise Linux Workstation (v. 6)">Red Hat Enterprise Linux Workstation (v. 6)</a></td>
+	</tr>
+
+
+	<tr>
+		<th valign="top">CVEs (<a href="http://cve.mitre.org">cve.mitre.org</a>):</th>
+		<td rowspan="2" valign="top">
+          <a href="https://www.redhat.com/security/data/cve/CVE-2012-6152.html">CVE-2012-6152</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2013-6477.html">CVE-2013-6477</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2013-6478.html">CVE-2013-6478</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2013-6479.html">CVE-2013-6479</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2013-6481.html">CVE-2013-6481</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2013-6482.html">CVE-2013-6482</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2013-6483.html">CVE-2013-6483</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2013-6484.html">CVE-2013-6484</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2013-6485.html">CVE-2013-6485</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2013-6487.html">CVE-2013-6487</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2013-6489.html">CVE-2013-6489</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2013-6490.html">CVE-2013-6490</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2014-0020.html">CVE-2014-0020</a><br />
+		</td>
+	</tr>
+
+</table>
+
+<br />
+
+<h2>Details</h2>
+<div class="page-summary">
+<p>Updated pidgin packages that fix multiple security issues are now available<br />for Red Hat Enterprise Linux 5 and 6.<br /><br />The Red Hat Security Response Team has rated this update as having moderate<br />security impact. Common Vulnerability Scoring System (CVSS) base scores,<br />which give detailed severity ratings, are available for each vulnerability<br />from the CVE links in the References section.<br /></p>
+
+<p>Pidgin is an instant messaging program which can log in to multiple<br />accounts on multiple instant messaging networks simultaneously.<br /><br />A heap-based buffer overflow flaw was found in the way Pidgin processed<br />certain HTTP responses. A malicious server could send a specially crafted<br />HTTP response, causing Pidgin to crash or potentially execute arbitrary<br />code with the permissions of the user running Pidgin. (CVE-2013-6485)<br /><br />Multiple heap-based buffer overflow flaws were found in several protocol<br />plug-ins in Pidgin (Gadu-Gadu, MXit, SIMPLE). A malicious server could send<br />a specially crafted message, causing Pidgin to crash or potentially execute<br />arbitrary code with the permissions of the user running Pidgin.<br />(CVE-2013-6487, CVE-2013-6489, CVE-2013-6490)<br /><br />Multiple denial of service flaws were found in several protocol plug-ins in<br />Pidgin (Yahoo!, XMPP, MSN, stun, IRC). A remote attacker could use these<br />flaws to crash Pidgin by sending a specially crafted message.<br />(CVE-2012-6152, CVE-2013-6477, CVE-2013-6481, CVE-2013-6482, CVE-2013-6484,<br />CVE-2014-0020)<br /><br />It was found that the Pidgin XMPP protocol plug-in did not verify the<br />origin of &quot;iq&quot; replies. A remote attacker could use this flaw to spoof an<br />&quot;iq&quot; reply, which could lead to injection of fake data or cause Pidgin to<br />crash via a NULL pointer dereference. (CVE-2013-6483)<br /><br />A flaw was found in the way Pidgin parsed certain HTTP response headers.<br />A remote attacker could use this flaw to crash Pidgin via a specially<br />crafted HTTP response header. (CVE-2013-6479)<br /><br />It was found that Pidgin crashed when a mouse pointer was hovered over a<br />long URL. A remote attacker could use this flaw to crash Pidgin by sending<br />a message containing a long URL string. (CVE-2013-6478)<br /><br />Red Hat would like to thank the Pidgin project for reporting these issues.<br />Upstream acknowledges Thijs Alkemade, Robert Vehse, Jaime Breva Ribes,<br />Jacob Appelbaum of the Tor Project, Daniel Atallah, Fabian Yamaguchi and<br />Christian Wressnegger of the University of Goettingen, Matt Jones of<br />Volvent, and Yves Younan, Ryan Pentney, and Pawel Janic of Sourcefire VRT<br />as the original reporters of these issues.<br /><br />All pidgin users are advised to upgrade to these updated packages, which<br />contain backported patches to correct these issues. Pidgin must be<br />restarted for this update to take effect.<br /></p>
+</div>
+
+
+<br />
+
+<h2>Solution</h2>
+<div class="page-summary">Before applying this update, make sure all previously released errata<br />relevant to your system have been applied.<br /><br />This update is available via the Red Hat Network. Details on how to use the<br />Red Hat Network to apply this update are available at<br /><A HREF="https://access.redhat.com/site/articles/11258">https://access.redhat.com/site/articles/11258</A><br /></div>
+<br />
+
+<h2>Updated packages</h2>
+
+<table border="0" cellpadding="6" cellspacing="0">
+
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="RHEL Desktop Workstation (v. 5 client)">RHEL Desktop Workstation (v. 5 client)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-2.6.6-32.el5.src.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 19a46357fd31cd0b66d1402fa4568f63<br/>SHA-256: fc1724aa80af90e5b78342f137ec01de8f14ef819063c3ea4cdc53b988ef2e6f</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>finch-devel-2.6.6-32.el5.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 86493bd858af20bdb6c9c587e7654d93<br/>SHA-256: 9f47f4cb96326fa563e4db3b89edcffd55f129fda3fbb269df2f90ee3ced2306</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-devel-2.6.6-32.el5.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b68c7a0edcb54b494fd28d48ca8ae771<br/>SHA-256: 484e45f8974959adb048828db428ac2cdfd8f4e3e1e0df31cf09da67e52e200d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-debuginfo-2.6.6-32.el5.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9228319c53d8e91288aed0d5fe77d679<br/>SHA-256: 3e9795f7adcf1f58c24010da6a0142199c9b67b0deeb766e65116d703bf953b4</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-devel-2.6.6-32.el5.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f9ddb5dcc7ba3cd84e382175c12632e5<br/>SHA-256: 5e492f3ab672bfb39592cf8cce456a564f660aebe6a4a71dcc9096170dfa8dcf</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>finch-devel-2.6.6-32.el5.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 86493bd858af20bdb6c9c587e7654d93<br/>SHA-256: 9f47f4cb96326fa563e4db3b89edcffd55f129fda3fbb269df2f90ee3ced2306</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>finch-devel-2.6.6-32.el5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b99d9fc72e5a7fb57ac4663d8b70a859<br/>SHA-256: 3a0b73cc4789923445d5cb9906cbb18e750bb762a07ae43e05bfe88fb41bb24d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-devel-2.6.6-32.el5.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b68c7a0edcb54b494fd28d48ca8ae771<br/>SHA-256: 484e45f8974959adb048828db428ac2cdfd8f4e3e1e0df31cf09da67e52e200d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-devel-2.6.6-32.el5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c3ea38205dc743452171f67ca6a8ca98<br/>SHA-256: ce697f61417e4a56cc1e3a7d7dc4ec5b08610dddd2b846613696dd4c8df2fc67</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-debuginfo-2.6.6-32.el5.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9228319c53d8e91288aed0d5fe77d679<br/>SHA-256: 3e9795f7adcf1f58c24010da6a0142199c9b67b0deeb766e65116d703bf953b4</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-debuginfo-2.6.6-32.el5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 7e8d0cdebcd213a68e4582a0bed8c041<br/>SHA-256: 8b34421c2c3a442e2ddf89adc19b24f6659358a0b34094310a99445d5f94daf5</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-devel-2.6.6-32.el5.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f9ddb5dcc7ba3cd84e382175c12632e5<br/>SHA-256: 5e492f3ab672bfb39592cf8cce456a564f660aebe6a4a71dcc9096170dfa8dcf</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-devel-2.6.6-32.el5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a617b463a4b3b3c29d3116b578f84170<br/>SHA-256: 4b7220ad910c03f2ac09e33b28ff043835a20bbf13c292a0a1faef88c31d20ea</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Desktop (v. 5 client)">Red Hat Enterprise Linux Desktop (v. 5 client)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-2.6.6-32.el5.src.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 19a46357fd31cd0b66d1402fa4568f63<br/>SHA-256: fc1724aa80af90e5b78342f137ec01de8f14ef819063c3ea4cdc53b988ef2e6f</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>finch-2.6.6-32.el5.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8986655e2ecf60c07da637795e227786<br/>SHA-256: c058c13f7313d1ae04298a62fd3d20fdbb02e16c545c873c48059a8d319b0ec2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-2.6.6-32.el5.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f56e42919bd9ac4fb90d837a21710715<br/>SHA-256: 3d35af125b1efd0d48edd3280d391871076fe3a44ac2ffef155f75ec77156a41</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-perl-2.6.6-32.el5.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 137be8199af866645555451e8747a05b<br/>SHA-256: c5b380fb29fb26b49aba2bf6216ecc2e6d6c3667c26517d8e3ff3f1729edf741</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-tcl-2.6.6-32.el5.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f54a06124eb0ee7525897c8c85fbec2c<br/>SHA-256: 0d9c21bc0c652c2121e0449287f29411367fffd9581a933e682e21ff5036e714</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-2.6.6-32.el5.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 811e2a743b71813345b7d9b4a76d4999<br/>SHA-256: 237b6031b5b106b013eea92dd4fabf5df4a6ba6ee9c40cd4205ad5d05ca07f2b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-debuginfo-2.6.6-32.el5.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9228319c53d8e91288aed0d5fe77d679<br/>SHA-256: 3e9795f7adcf1f58c24010da6a0142199c9b67b0deeb766e65116d703bf953b4</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-perl-2.6.6-32.el5.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5121341a92d9792eef1424553eebbc0c<br/>SHA-256: f589590176591f210f5b7a2df78830fb9b3e78f49a81e8bbb589fc0f895713d6</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>finch-2.6.6-32.el5.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8986655e2ecf60c07da637795e227786<br/>SHA-256: c058c13f7313d1ae04298a62fd3d20fdbb02e16c545c873c48059a8d319b0ec2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>finch-2.6.6-32.el5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e10bc1e7d852b34667d7247fbc70f414<br/>SHA-256: f2c083a0f07cf611abccb01f5596aaa3b3daa6878020e5d3de93a8fc7283db75</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-2.6.6-32.el5.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f56e42919bd9ac4fb90d837a21710715<br/>SHA-256: 3d35af125b1efd0d48edd3280d391871076fe3a44ac2ffef155f75ec77156a41</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-2.6.6-32.el5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: df3614ca6ed1d54b64d11492419eead5<br/>SHA-256: 49f467f4aa89a2c08343dd5a9001a9ce6829c0f22ea6cb5c3bc2818de4bc1147</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-perl-2.6.6-32.el5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a092f54e0033b29c4853edf43964fe7e<br/>SHA-256: 638cc49a30c1699213d4c413b2540b15b1793f40efeace1bb07a389af89a33af</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-tcl-2.6.6-32.el5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6e3398ef4ec7f036b7d95f922d27e0c0<br/>SHA-256: 1824d9b56dfb57401551410ca5568e2b59656605a925a97fc9ae901130cce987</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-2.6.6-32.el5.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 811e2a743b71813345b7d9b4a76d4999<br/>SHA-256: 237b6031b5b106b013eea92dd4fabf5df4a6ba6ee9c40cd4205ad5d05ca07f2b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-2.6.6-32.el5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 7578ebea5617a20d5acce56ac8d3edd1<br/>SHA-256: b08f82476e84b4209c81abd0c8541b60714de0a511489d012887e601dbf2f909</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-debuginfo-2.6.6-32.el5.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9228319c53d8e91288aed0d5fe77d679<br/>SHA-256: 3e9795f7adcf1f58c24010da6a0142199c9b67b0deeb766e65116d703bf953b4</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-debuginfo-2.6.6-32.el5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 7e8d0cdebcd213a68e4582a0bed8c041<br/>SHA-256: 8b34421c2c3a442e2ddf89adc19b24f6659358a0b34094310a99445d5f94daf5</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-perl-2.6.6-32.el5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6ec779d6c8a5b6b243c1f53e1857c790<br/>SHA-256: d092186f211ae584577e20169f98e641a62a2361560c6899845f68ebb0ab1364</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Desktop (v. 6)">Red Hat Enterprise Linux Desktop (v. 6)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-2.7.9-27.el6.src.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 10435ccec768599c8e1cb71b13b67ac4<br/>SHA-256: 9c3e39ca27867803fe198d4c6be600cc58db6ea6dcfd1c904d6388d460337c48</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>finch-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: bf7e20394b3277c7822656acc24e6376<br/>SHA-256: ca49571cdb38949d6f5c845ea0d7775f7ba7a862cbe555fcf7c399dc9e91c418</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>finch-devel-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 750755a8898f30eec062e3398e95275d<br/>SHA-256: 153089a904bb64fdfb770aaadc0fe96ad90efc5ed6dcbc99d1bd488b9e2e02ab</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f8cd37c5c86fcc3225ad0de7d881c087<br/>SHA-256: 74d8556279525d88243d0eb9a532d7a0f17e8df89357c5550d9bf6ac4b2b9358</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-devel-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8b1417c7842cdb83bef8971936ba8361<br/>SHA-256: 60ab5f57e8a31d7f843cd30bf1eb26c7de3c8abb4daf7516d57a0e3a4de4b3ef</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-perl-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 7e349eb798c87c881935d0d34ddc89f2<br/>SHA-256: 5cd13711bde8bc80648ecc75852213961390bf511430d46ecb8e9218b3a95fdf</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-tcl-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: dd556b4ea9946ce331ee4de341f41ad8<br/>SHA-256: 169211d32d4c821fbaa5611db85367fae1c6f38fe8fd815ed0554b79237fd4b6</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6e9c39b12ef00bedaadd2df1ce1a86ff<br/>SHA-256: 4a79489a009222b1c556bb2724c7d56ba2be2c8ce940e99e638e3ae351e496ff</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-debuginfo-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 87087359d6a18dcc5ff44821213e1aa3<br/>SHA-256: 8691fdc742c1d058c8e7e9781f254ecdd392cd23dfeacaf214f4736dbf7e0dbf</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-devel-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 59c1c5da73c9c495bbca0c6a0986c1eb<br/>SHA-256: b89013ba3e56ba58981fcdb12ff2ca62be88511022c4d646552a87c9c2af9d67</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-docs-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6f8bd2790d0a49e51c3081069f12c01b<br/>SHA-256: 622d1fd3fca7547ad1c79ef02fdd6108ed2c7593d56f4a366acdca9e8cd71c61</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-perl-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5f879ccafbbe091a2c70db60200b4fa9<br/>SHA-256: 80fdebe720e7df12341120768be1f75eeda7ca872a0e322fbabfd85c4fd4862f</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>finch-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: bf7e20394b3277c7822656acc24e6376<br/>SHA-256: ca49571cdb38949d6f5c845ea0d7775f7ba7a862cbe555fcf7c399dc9e91c418</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>finch-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 20fe4fa51f48a4945eb8809742fc11a3<br/>SHA-256: 2b6116bf0b793e42ff8524b3988a1d83542a731c7d56562f22852c7921606357</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>finch-devel-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 750755a8898f30eec062e3398e95275d<br/>SHA-256: 153089a904bb64fdfb770aaadc0fe96ad90efc5ed6dcbc99d1bd488b9e2e02ab</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>finch-devel-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9a3c4551db50361fd64aa8e35de780c5<br/>SHA-256: a11da1b9cfd3481fdffbfe9ab743d325e95a96962e7323dcecda2be61c4d405e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f8cd37c5c86fcc3225ad0de7d881c087<br/>SHA-256: 74d8556279525d88243d0eb9a532d7a0f17e8df89357c5550d9bf6ac4b2b9358</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f82f2ab96317dc17fc6cafa32574272b<br/>SHA-256: 5d94c4f0d0547ab667b313cfe8c8e95b06f41e59d91a8c940d7ddea7fb26f29a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-devel-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8b1417c7842cdb83bef8971936ba8361<br/>SHA-256: 60ab5f57e8a31d7f843cd30bf1eb26c7de3c8abb4daf7516d57a0e3a4de4b3ef</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-devel-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a47969cf0d6aebe657aa57b04e4e5941<br/>SHA-256: 2614c1df86d9adc4c47c1708250222edba1cfef3da0782b79738a7ee0b5bb050</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-perl-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b82688f3c97f0adbe88da5c533edda51<br/>SHA-256: 0182834a878434830269c8bd65f66d5e1791b600c0b1c2e7768a602de56b4648</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-tcl-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2c32155c558353e2f355d4a21b4abb0a<br/>SHA-256: e43ed03e2066c18e5c64eb004d80d833a867cfad5f87709a328becedd806ce69</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 73397b29a86e1182ca591d7d8e3cbe51<br/>SHA-256: dd96385237fdf4d6c8392b18d55c6ab2afad4bf2e1aa2fe464479e61d0cc289d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-debuginfo-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 87087359d6a18dcc5ff44821213e1aa3<br/>SHA-256: 8691fdc742c1d058c8e7e9781f254ecdd392cd23dfeacaf214f4736dbf7e0dbf</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-debuginfo-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e8e895c497039d9897458c449abc5121<br/>SHA-256: a65341588fef0121a9bfd5520c54f090b34c3245086671f21563da6bfec5a089</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-devel-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 59c1c5da73c9c495bbca0c6a0986c1eb<br/>SHA-256: b89013ba3e56ba58981fcdb12ff2ca62be88511022c4d646552a87c9c2af9d67</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-devel-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0eb4e416882bb8015bdac8d2e190594b<br/>SHA-256: 7d23618c25763025e307c1855670fde491ef9a4d8014769615a27b7c2abfa984</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-docs-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3fb21ee9b9461a594a2f056eff341cc9<br/>SHA-256: 961758d635ae8ac934cf2745f62eec90810181b8a2375b7e4cb787333e68eb1b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-perl-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3c76ed0318fe1ee6b2c73356270fcf50<br/>SHA-256: 7f6bb75bb242553b0fa5ffd3996272bae318a99e19cc3bf318cb9e612f11823e</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Server (v. 6)">Red Hat Enterprise Linux Server (v. 6)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-2.7.9-27.el6.src.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 10435ccec768599c8e1cb71b13b67ac4<br/>SHA-256: 9c3e39ca27867803fe198d4c6be600cc58db6ea6dcfd1c904d6388d460337c48</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>finch-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: bf7e20394b3277c7822656acc24e6376<br/>SHA-256: ca49571cdb38949d6f5c845ea0d7775f7ba7a862cbe555fcf7c399dc9e91c418</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>finch-devel-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 750755a8898f30eec062e3398e95275d<br/>SHA-256: 153089a904bb64fdfb770aaadc0fe96ad90efc5ed6dcbc99d1bd488b9e2e02ab</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f8cd37c5c86fcc3225ad0de7d881c087<br/>SHA-256: 74d8556279525d88243d0eb9a532d7a0f17e8df89357c5550d9bf6ac4b2b9358</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-devel-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8b1417c7842cdb83bef8971936ba8361<br/>SHA-256: 60ab5f57e8a31d7f843cd30bf1eb26c7de3c8abb4daf7516d57a0e3a4de4b3ef</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-perl-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 7e349eb798c87c881935d0d34ddc89f2<br/>SHA-256: 5cd13711bde8bc80648ecc75852213961390bf511430d46ecb8e9218b3a95fdf</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-tcl-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: dd556b4ea9946ce331ee4de341f41ad8<br/>SHA-256: 169211d32d4c821fbaa5611db85367fae1c6f38fe8fd815ed0554b79237fd4b6</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6e9c39b12ef00bedaadd2df1ce1a86ff<br/>SHA-256: 4a79489a009222b1c556bb2724c7d56ba2be2c8ce940e99e638e3ae351e496ff</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-debuginfo-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 87087359d6a18dcc5ff44821213e1aa3<br/>SHA-256: 8691fdc742c1d058c8e7e9781f254ecdd392cd23dfeacaf214f4736dbf7e0dbf</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-devel-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 59c1c5da73c9c495bbca0c6a0986c1eb<br/>SHA-256: b89013ba3e56ba58981fcdb12ff2ca62be88511022c4d646552a87c9c2af9d67</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-docs-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6f8bd2790d0a49e51c3081069f12c01b<br/>SHA-256: 622d1fd3fca7547ad1c79ef02fdd6108ed2c7593d56f4a366acdca9e8cd71c61</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-perl-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5f879ccafbbe091a2c70db60200b4fa9<br/>SHA-256: 80fdebe720e7df12341120768be1f75eeda7ca872a0e322fbabfd85c4fd4862f</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>PPC:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>finch-2.7.9-27.el6.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 954ae2f28ddf8d9327b408bffb0c3db5<br/>SHA-256: 1c7281a5217903e82ff7092fed85d29994bd7803d0c3fb47ba8b92fe62dbea4d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>finch-2.7.9-27.el6.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8c90646db7ead73a3e4df7ead4f84c3c<br/>SHA-256: aafdf1089b5e60a0c6b7691eed2a08a0c04d7d398a68b903b36ca9f25b31fe9f</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>finch-devel-2.7.9-27.el6.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9467dee3859cb9302e55fbe475454314<br/>SHA-256: 298d4cce14447eb1b30edf88c4682142e38d831f489b9b6e9a5bd7f0b7dafb32</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>finch-devel-2.7.9-27.el6.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5b9f4fd62db9f6ac8d45dcabcde6919a<br/>SHA-256: 1f6648ca6a990d61591bc4721b571ec256f7d6fec1f8f9f3466c7def76b02306</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-2.7.9-27.el6.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 93cf875795ccd8a54836c692631a6fde<br/>SHA-256: 1e69b8d29c20aa70ef192ce785f18faaaee7271745bc6fe19e30f435d9c4ce24</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-2.7.9-27.el6.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 96922ed5176c36d34603d388ba16027c<br/>SHA-256: 8682c95b9c75381edced2008485355c14aca834c4417d4fd184c8a6fe81a4727</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-devel-2.7.9-27.el6.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 33a1da1b6206b0749127d06d3864cbb5<br/>SHA-256: 1599b6319eb5a32d293ff8556a9963b74a90b12d799564077481850ea8376305</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-devel-2.7.9-27.el6.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d6635b696b737d109213fdfcc815421c<br/>SHA-256: da9fed343be85be7ae07040ce953074a5b0354937cda441148bdb1d9eba3dfd5</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-perl-2.7.9-27.el6.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ce00781abc74205ddd4e9f54d0b8765b<br/>SHA-256: 8d211bd39eead8cec84049084de2f8446283bdb3fd30cb6af61d1277b165b06b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-tcl-2.7.9-27.el6.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a4a44812ad22223f4d8b981d042d58ad<br/>SHA-256: bda2543149f0eb3cdbac8989e54bf7eb827630972fea74d9396617e97646c3e7</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-2.7.9-27.el6.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f4e7cf8e0adeca024a493757d0af1ea1<br/>SHA-256: 564572b807a5c26cebcdd07c7269753e633ad9f2f746e6af75b780d8b131bf8b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-debuginfo-2.7.9-27.el6.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0f44ec0d518ad43d3118a80542f9908f<br/>SHA-256: aecd6ca0cfdefab3706f6b9c5c76e438fd6e52213aa4fd3868a09781a5ebab5e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-debuginfo-2.7.9-27.el6.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 84018227ca3fed731b1a8e36ce8b7b87<br/>SHA-256: 4956c090b97b17667cf211f145531d42eb9350a96b95c5dea9a45943920f30e9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-devel-2.7.9-27.el6.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6640154e7b0a29fd163151f32fd86642<br/>SHA-256: e57d35b3ed66a0500f6e6557cb84f3e84fac6a8aa2f400a2a504d3d57c40f507</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-devel-2.7.9-27.el6.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b615d415f42d5e7598143baf1ed87dfe<br/>SHA-256: 8fa1f3a1ff58f7e91b6b8d44560082633bfa3efb7aa56543e4b7e2e7290d70d7</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-docs-2.7.9-27.el6.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3c4d1592811c6580c69273b0104b88e9<br/>SHA-256: 1968ed94bbce2be47a7e2d48a8641c38eec3869f26ec3ee44630fc58533a15ba</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-perl-2.7.9-27.el6.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ff3d5ed54d9985dc9d1259820b8c8f69<br/>SHA-256: d0121ce9d6617978ed77cbacbf1d057acc357ab8cd26ba68e174642f5d8a9997</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>finch-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: bf7e20394b3277c7822656acc24e6376<br/>SHA-256: ca49571cdb38949d6f5c845ea0d7775f7ba7a862cbe555fcf7c399dc9e91c418</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>finch-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 20fe4fa51f48a4945eb8809742fc11a3<br/>SHA-256: 2b6116bf0b793e42ff8524b3988a1d83542a731c7d56562f22852c7921606357</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>finch-devel-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 750755a8898f30eec062e3398e95275d<br/>SHA-256: 153089a904bb64fdfb770aaadc0fe96ad90efc5ed6dcbc99d1bd488b9e2e02ab</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>finch-devel-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9a3c4551db50361fd64aa8e35de780c5<br/>SHA-256: a11da1b9cfd3481fdffbfe9ab743d325e95a96962e7323dcecda2be61c4d405e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f8cd37c5c86fcc3225ad0de7d881c087<br/>SHA-256: 74d8556279525d88243d0eb9a532d7a0f17e8df89357c5550d9bf6ac4b2b9358</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f82f2ab96317dc17fc6cafa32574272b<br/>SHA-256: 5d94c4f0d0547ab667b313cfe8c8e95b06f41e59d91a8c940d7ddea7fb26f29a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-devel-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8b1417c7842cdb83bef8971936ba8361<br/>SHA-256: 60ab5f57e8a31d7f843cd30bf1eb26c7de3c8abb4daf7516d57a0e3a4de4b3ef</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-devel-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a47969cf0d6aebe657aa57b04e4e5941<br/>SHA-256: 2614c1df86d9adc4c47c1708250222edba1cfef3da0782b79738a7ee0b5bb050</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-perl-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b82688f3c97f0adbe88da5c533edda51<br/>SHA-256: 0182834a878434830269c8bd65f66d5e1791b600c0b1c2e7768a602de56b4648</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-tcl-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2c32155c558353e2f355d4a21b4abb0a<br/>SHA-256: e43ed03e2066c18e5c64eb004d80d833a867cfad5f87709a328becedd806ce69</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 73397b29a86e1182ca591d7d8e3cbe51<br/>SHA-256: dd96385237fdf4d6c8392b18d55c6ab2afad4bf2e1aa2fe464479e61d0cc289d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-debuginfo-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 87087359d6a18dcc5ff44821213e1aa3<br/>SHA-256: 8691fdc742c1d058c8e7e9781f254ecdd392cd23dfeacaf214f4736dbf7e0dbf</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-debuginfo-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e8e895c497039d9897458c449abc5121<br/>SHA-256: a65341588fef0121a9bfd5520c54f090b34c3245086671f21563da6bfec5a089</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-devel-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 59c1c5da73c9c495bbca0c6a0986c1eb<br/>SHA-256: b89013ba3e56ba58981fcdb12ff2ca62be88511022c4d646552a87c9c2af9d67</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-devel-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0eb4e416882bb8015bdac8d2e190594b<br/>SHA-256: 7d23618c25763025e307c1855670fde491ef9a4d8014769615a27b7c2abfa984</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-docs-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3fb21ee9b9461a594a2f056eff341cc9<br/>SHA-256: 961758d635ae8ac934cf2745f62eec90810181b8a2375b7e4cb787333e68eb1b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-perl-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3c76ed0318fe1ee6b2c73356270fcf50<br/>SHA-256: 7f6bb75bb242553b0fa5ffd3996272bae318a99e19cc3bf318cb9e612f11823e</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Server AUS (v. 6.5)">Red Hat Enterprise Linux Server AUS (v. 6.5)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-2.7.9-27.el6.src.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 10435ccec768599c8e1cb71b13b67ac4<br/>SHA-256: 9c3e39ca27867803fe198d4c6be600cc58db6ea6dcfd1c904d6388d460337c48</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>finch-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: bf7e20394b3277c7822656acc24e6376<br/>SHA-256: ca49571cdb38949d6f5c845ea0d7775f7ba7a862cbe555fcf7c399dc9e91c418</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>finch-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 20fe4fa51f48a4945eb8809742fc11a3<br/>SHA-256: 2b6116bf0b793e42ff8524b3988a1d83542a731c7d56562f22852c7921606357</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>finch-devel-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 750755a8898f30eec062e3398e95275d<br/>SHA-256: 153089a904bb64fdfb770aaadc0fe96ad90efc5ed6dcbc99d1bd488b9e2e02ab</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>finch-devel-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9a3c4551db50361fd64aa8e35de780c5<br/>SHA-256: a11da1b9cfd3481fdffbfe9ab743d325e95a96962e7323dcecda2be61c4d405e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f8cd37c5c86fcc3225ad0de7d881c087<br/>SHA-256: 74d8556279525d88243d0eb9a532d7a0f17e8df89357c5550d9bf6ac4b2b9358</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f82f2ab96317dc17fc6cafa32574272b<br/>SHA-256: 5d94c4f0d0547ab667b313cfe8c8e95b06f41e59d91a8c940d7ddea7fb26f29a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-devel-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8b1417c7842cdb83bef8971936ba8361<br/>SHA-256: 60ab5f57e8a31d7f843cd30bf1eb26c7de3c8abb4daf7516d57a0e3a4de4b3ef</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-devel-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a47969cf0d6aebe657aa57b04e4e5941<br/>SHA-256: 2614c1df86d9adc4c47c1708250222edba1cfef3da0782b79738a7ee0b5bb050</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-perl-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b82688f3c97f0adbe88da5c533edda51<br/>SHA-256: 0182834a878434830269c8bd65f66d5e1791b600c0b1c2e7768a602de56b4648</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-tcl-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2c32155c558353e2f355d4a21b4abb0a<br/>SHA-256: e43ed03e2066c18e5c64eb004d80d833a867cfad5f87709a328becedd806ce69</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 73397b29a86e1182ca591d7d8e3cbe51<br/>SHA-256: dd96385237fdf4d6c8392b18d55c6ab2afad4bf2e1aa2fe464479e61d0cc289d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-debuginfo-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 87087359d6a18dcc5ff44821213e1aa3<br/>SHA-256: 8691fdc742c1d058c8e7e9781f254ecdd392cd23dfeacaf214f4736dbf7e0dbf</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-debuginfo-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e8e895c497039d9897458c449abc5121<br/>SHA-256: a65341588fef0121a9bfd5520c54f090b34c3245086671f21563da6bfec5a089</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-devel-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 59c1c5da73c9c495bbca0c6a0986c1eb<br/>SHA-256: b89013ba3e56ba58981fcdb12ff2ca62be88511022c4d646552a87c9c2af9d67</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-devel-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0eb4e416882bb8015bdac8d2e190594b<br/>SHA-256: 7d23618c25763025e307c1855670fde491ef9a4d8014769615a27b7c2abfa984</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-docs-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3fb21ee9b9461a594a2f056eff341cc9<br/>SHA-256: 961758d635ae8ac934cf2745f62eec90810181b8a2375b7e4cb787333e68eb1b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-perl-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3c76ed0318fe1ee6b2c73356270fcf50<br/>SHA-256: 7f6bb75bb242553b0fa5ffd3996272bae318a99e19cc3bf318cb9e612f11823e</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Server EUS (v. 6.5.z)">Red Hat Enterprise Linux Server EUS (v. 6.5.z)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-2.7.9-27.el6.src.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 10435ccec768599c8e1cb71b13b67ac4<br/>SHA-256: 9c3e39ca27867803fe198d4c6be600cc58db6ea6dcfd1c904d6388d460337c48</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>finch-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: bf7e20394b3277c7822656acc24e6376<br/>SHA-256: ca49571cdb38949d6f5c845ea0d7775f7ba7a862cbe555fcf7c399dc9e91c418</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>finch-devel-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 750755a8898f30eec062e3398e95275d<br/>SHA-256: 153089a904bb64fdfb770aaadc0fe96ad90efc5ed6dcbc99d1bd488b9e2e02ab</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f8cd37c5c86fcc3225ad0de7d881c087<br/>SHA-256: 74d8556279525d88243d0eb9a532d7a0f17e8df89357c5550d9bf6ac4b2b9358</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-devel-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8b1417c7842cdb83bef8971936ba8361<br/>SHA-256: 60ab5f57e8a31d7f843cd30bf1eb26c7de3c8abb4daf7516d57a0e3a4de4b3ef</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-perl-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 7e349eb798c87c881935d0d34ddc89f2<br/>SHA-256: 5cd13711bde8bc80648ecc75852213961390bf511430d46ecb8e9218b3a95fdf</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-tcl-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: dd556b4ea9946ce331ee4de341f41ad8<br/>SHA-256: 169211d32d4c821fbaa5611db85367fae1c6f38fe8fd815ed0554b79237fd4b6</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6e9c39b12ef00bedaadd2df1ce1a86ff<br/>SHA-256: 4a79489a009222b1c556bb2724c7d56ba2be2c8ce940e99e638e3ae351e496ff</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-debuginfo-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 87087359d6a18dcc5ff44821213e1aa3<br/>SHA-256: 8691fdc742c1d058c8e7e9781f254ecdd392cd23dfeacaf214f4736dbf7e0dbf</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-devel-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 59c1c5da73c9c495bbca0c6a0986c1eb<br/>SHA-256: b89013ba3e56ba58981fcdb12ff2ca62be88511022c4d646552a87c9c2af9d67</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-docs-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6f8bd2790d0a49e51c3081069f12c01b<br/>SHA-256: 622d1fd3fca7547ad1c79ef02fdd6108ed2c7593d56f4a366acdca9e8cd71c61</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-perl-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5f879ccafbbe091a2c70db60200b4fa9<br/>SHA-256: 80fdebe720e7df12341120768be1f75eeda7ca872a0e322fbabfd85c4fd4862f</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>PPC:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>finch-2.7.9-27.el6.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 954ae2f28ddf8d9327b408bffb0c3db5<br/>SHA-256: 1c7281a5217903e82ff7092fed85d29994bd7803d0c3fb47ba8b92fe62dbea4d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>finch-2.7.9-27.el6.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8c90646db7ead73a3e4df7ead4f84c3c<br/>SHA-256: aafdf1089b5e60a0c6b7691eed2a08a0c04d7d398a68b903b36ca9f25b31fe9f</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>finch-devel-2.7.9-27.el6.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9467dee3859cb9302e55fbe475454314<br/>SHA-256: 298d4cce14447eb1b30edf88c4682142e38d831f489b9b6e9a5bd7f0b7dafb32</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>finch-devel-2.7.9-27.el6.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5b9f4fd62db9f6ac8d45dcabcde6919a<br/>SHA-256: 1f6648ca6a990d61591bc4721b571ec256f7d6fec1f8f9f3466c7def76b02306</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-2.7.9-27.el6.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 93cf875795ccd8a54836c692631a6fde<br/>SHA-256: 1e69b8d29c20aa70ef192ce785f18faaaee7271745bc6fe19e30f435d9c4ce24</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-2.7.9-27.el6.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 96922ed5176c36d34603d388ba16027c<br/>SHA-256: 8682c95b9c75381edced2008485355c14aca834c4417d4fd184c8a6fe81a4727</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-devel-2.7.9-27.el6.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 33a1da1b6206b0749127d06d3864cbb5<br/>SHA-256: 1599b6319eb5a32d293ff8556a9963b74a90b12d799564077481850ea8376305</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-devel-2.7.9-27.el6.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d6635b696b737d109213fdfcc815421c<br/>SHA-256: da9fed343be85be7ae07040ce953074a5b0354937cda441148bdb1d9eba3dfd5</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-perl-2.7.9-27.el6.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ce00781abc74205ddd4e9f54d0b8765b<br/>SHA-256: 8d211bd39eead8cec84049084de2f8446283bdb3fd30cb6af61d1277b165b06b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-tcl-2.7.9-27.el6.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a4a44812ad22223f4d8b981d042d58ad<br/>SHA-256: bda2543149f0eb3cdbac8989e54bf7eb827630972fea74d9396617e97646c3e7</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-2.7.9-27.el6.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f4e7cf8e0adeca024a493757d0af1ea1<br/>SHA-256: 564572b807a5c26cebcdd07c7269753e633ad9f2f746e6af75b780d8b131bf8b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-debuginfo-2.7.9-27.el6.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0f44ec0d518ad43d3118a80542f9908f<br/>SHA-256: aecd6ca0cfdefab3706f6b9c5c76e438fd6e52213aa4fd3868a09781a5ebab5e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-debuginfo-2.7.9-27.el6.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 84018227ca3fed731b1a8e36ce8b7b87<br/>SHA-256: 4956c090b97b17667cf211f145531d42eb9350a96b95c5dea9a45943920f30e9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-devel-2.7.9-27.el6.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6640154e7b0a29fd163151f32fd86642<br/>SHA-256: e57d35b3ed66a0500f6e6557cb84f3e84fac6a8aa2f400a2a504d3d57c40f507</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-devel-2.7.9-27.el6.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b615d415f42d5e7598143baf1ed87dfe<br/>SHA-256: 8fa1f3a1ff58f7e91b6b8d44560082633bfa3efb7aa56543e4b7e2e7290d70d7</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-docs-2.7.9-27.el6.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3c4d1592811c6580c69273b0104b88e9<br/>SHA-256: 1968ed94bbce2be47a7e2d48a8641c38eec3869f26ec3ee44630fc58533a15ba</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-perl-2.7.9-27.el6.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ff3d5ed54d9985dc9d1259820b8c8f69<br/>SHA-256: d0121ce9d6617978ed77cbacbf1d057acc357ab8cd26ba68e174642f5d8a9997</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>finch-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: bf7e20394b3277c7822656acc24e6376<br/>SHA-256: ca49571cdb38949d6f5c845ea0d7775f7ba7a862cbe555fcf7c399dc9e91c418</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>finch-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 20fe4fa51f48a4945eb8809742fc11a3<br/>SHA-256: 2b6116bf0b793e42ff8524b3988a1d83542a731c7d56562f22852c7921606357</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>finch-devel-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 750755a8898f30eec062e3398e95275d<br/>SHA-256: 153089a904bb64fdfb770aaadc0fe96ad90efc5ed6dcbc99d1bd488b9e2e02ab</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>finch-devel-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9a3c4551db50361fd64aa8e35de780c5<br/>SHA-256: a11da1b9cfd3481fdffbfe9ab743d325e95a96962e7323dcecda2be61c4d405e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f8cd37c5c86fcc3225ad0de7d881c087<br/>SHA-256: 74d8556279525d88243d0eb9a532d7a0f17e8df89357c5550d9bf6ac4b2b9358</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f82f2ab96317dc17fc6cafa32574272b<br/>SHA-256: 5d94c4f0d0547ab667b313cfe8c8e95b06f41e59d91a8c940d7ddea7fb26f29a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-devel-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8b1417c7842cdb83bef8971936ba8361<br/>SHA-256: 60ab5f57e8a31d7f843cd30bf1eb26c7de3c8abb4daf7516d57a0e3a4de4b3ef</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-devel-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a47969cf0d6aebe657aa57b04e4e5941<br/>SHA-256: 2614c1df86d9adc4c47c1708250222edba1cfef3da0782b79738a7ee0b5bb050</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-perl-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b82688f3c97f0adbe88da5c533edda51<br/>SHA-256: 0182834a878434830269c8bd65f66d5e1791b600c0b1c2e7768a602de56b4648</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-tcl-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2c32155c558353e2f355d4a21b4abb0a<br/>SHA-256: e43ed03e2066c18e5c64eb004d80d833a867cfad5f87709a328becedd806ce69</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 73397b29a86e1182ca591d7d8e3cbe51<br/>SHA-256: dd96385237fdf4d6c8392b18d55c6ab2afad4bf2e1aa2fe464479e61d0cc289d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-debuginfo-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 87087359d6a18dcc5ff44821213e1aa3<br/>SHA-256: 8691fdc742c1d058c8e7e9781f254ecdd392cd23dfeacaf214f4736dbf7e0dbf</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-debuginfo-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e8e895c497039d9897458c449abc5121<br/>SHA-256: a65341588fef0121a9bfd5520c54f090b34c3245086671f21563da6bfec5a089</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-devel-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 59c1c5da73c9c495bbca0c6a0986c1eb<br/>SHA-256: b89013ba3e56ba58981fcdb12ff2ca62be88511022c4d646552a87c9c2af9d67</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-devel-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0eb4e416882bb8015bdac8d2e190594b<br/>SHA-256: 7d23618c25763025e307c1855670fde491ef9a4d8014769615a27b7c2abfa984</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-docs-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3fb21ee9b9461a594a2f056eff341cc9<br/>SHA-256: 961758d635ae8ac934cf2745f62eec90810181b8a2375b7e4cb787333e68eb1b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-perl-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3c76ed0318fe1ee6b2c73356270fcf50<br/>SHA-256: 7f6bb75bb242553b0fa5ffd3996272bae318a99e19cc3bf318cb9e612f11823e</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Workstation (v. 6)">Red Hat Enterprise Linux Workstation (v. 6)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-2.7.9-27.el6.src.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 10435ccec768599c8e1cb71b13b67ac4<br/>SHA-256: 9c3e39ca27867803fe198d4c6be600cc58db6ea6dcfd1c904d6388d460337c48</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>finch-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: bf7e20394b3277c7822656acc24e6376<br/>SHA-256: ca49571cdb38949d6f5c845ea0d7775f7ba7a862cbe555fcf7c399dc9e91c418</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>finch-devel-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 750755a8898f30eec062e3398e95275d<br/>SHA-256: 153089a904bb64fdfb770aaadc0fe96ad90efc5ed6dcbc99d1bd488b9e2e02ab</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f8cd37c5c86fcc3225ad0de7d881c087<br/>SHA-256: 74d8556279525d88243d0eb9a532d7a0f17e8df89357c5550d9bf6ac4b2b9358</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-devel-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8b1417c7842cdb83bef8971936ba8361<br/>SHA-256: 60ab5f57e8a31d7f843cd30bf1eb26c7de3c8abb4daf7516d57a0e3a4de4b3ef</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-perl-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 7e349eb798c87c881935d0d34ddc89f2<br/>SHA-256: 5cd13711bde8bc80648ecc75852213961390bf511430d46ecb8e9218b3a95fdf</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-tcl-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: dd556b4ea9946ce331ee4de341f41ad8<br/>SHA-256: 169211d32d4c821fbaa5611db85367fae1c6f38fe8fd815ed0554b79237fd4b6</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6e9c39b12ef00bedaadd2df1ce1a86ff<br/>SHA-256: 4a79489a009222b1c556bb2724c7d56ba2be2c8ce940e99e638e3ae351e496ff</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-debuginfo-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 87087359d6a18dcc5ff44821213e1aa3<br/>SHA-256: 8691fdc742c1d058c8e7e9781f254ecdd392cd23dfeacaf214f4736dbf7e0dbf</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-devel-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 59c1c5da73c9c495bbca0c6a0986c1eb<br/>SHA-256: b89013ba3e56ba58981fcdb12ff2ca62be88511022c4d646552a87c9c2af9d67</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-docs-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6f8bd2790d0a49e51c3081069f12c01b<br/>SHA-256: 622d1fd3fca7547ad1c79ef02fdd6108ed2c7593d56f4a366acdca9e8cd71c61</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-perl-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5f879ccafbbe091a2c70db60200b4fa9<br/>SHA-256: 80fdebe720e7df12341120768be1f75eeda7ca872a0e322fbabfd85c4fd4862f</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>finch-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: bf7e20394b3277c7822656acc24e6376<br/>SHA-256: ca49571cdb38949d6f5c845ea0d7775f7ba7a862cbe555fcf7c399dc9e91c418</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>finch-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 20fe4fa51f48a4945eb8809742fc11a3<br/>SHA-256: 2b6116bf0b793e42ff8524b3988a1d83542a731c7d56562f22852c7921606357</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>finch-devel-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 750755a8898f30eec062e3398e95275d<br/>SHA-256: 153089a904bb64fdfb770aaadc0fe96ad90efc5ed6dcbc99d1bd488b9e2e02ab</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>finch-devel-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9a3c4551db50361fd64aa8e35de780c5<br/>SHA-256: a11da1b9cfd3481fdffbfe9ab743d325e95a96962e7323dcecda2be61c4d405e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f8cd37c5c86fcc3225ad0de7d881c087<br/>SHA-256: 74d8556279525d88243d0eb9a532d7a0f17e8df89357c5550d9bf6ac4b2b9358</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f82f2ab96317dc17fc6cafa32574272b<br/>SHA-256: 5d94c4f0d0547ab667b313cfe8c8e95b06f41e59d91a8c940d7ddea7fb26f29a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-devel-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8b1417c7842cdb83bef8971936ba8361<br/>SHA-256: 60ab5f57e8a31d7f843cd30bf1eb26c7de3c8abb4daf7516d57a0e3a4de4b3ef</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-devel-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a47969cf0d6aebe657aa57b04e4e5941<br/>SHA-256: 2614c1df86d9adc4c47c1708250222edba1cfef3da0782b79738a7ee0b5bb050</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libpurple-perl-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b82688f3c97f0adbe88da5c533edda51<br/>SHA-256: 0182834a878434830269c8bd65f66d5e1791b600c0b1c2e7768a602de56b4648</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libpurple-tcl-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2c32155c558353e2f355d4a21b4abb0a<br/>SHA-256: e43ed03e2066c18e5c64eb004d80d833a867cfad5f87709a328becedd806ce69</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 73397b29a86e1182ca591d7d8e3cbe51<br/>SHA-256: dd96385237fdf4d6c8392b18d55c6ab2afad4bf2e1aa2fe464479e61d0cc289d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-debuginfo-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 87087359d6a18dcc5ff44821213e1aa3<br/>SHA-256: 8691fdc742c1d058c8e7e9781f254ecdd392cd23dfeacaf214f4736dbf7e0dbf</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-debuginfo-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e8e895c497039d9897458c449abc5121<br/>SHA-256: a65341588fef0121a9bfd5520c54f090b34c3245086671f21563da6bfec5a089</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-devel-2.7.9-27.el6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 59c1c5da73c9c495bbca0c6a0986c1eb<br/>SHA-256: b89013ba3e56ba58981fcdb12ff2ca62be88511022c4d646552a87c9c2af9d67</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-devel-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0eb4e416882bb8015bdac8d2e190594b<br/>SHA-256: 7d23618c25763025e307c1855670fde491ef9a4d8014769615a27b7c2abfa984</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>pidgin-docs-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3fb21ee9b9461a594a2f056eff341cc9<br/>SHA-256: 961758d635ae8ac934cf2745f62eec90810181b8a2375b7e4cb787333e68eb1b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>pidgin-perl-2.7.9-27.el6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3c76ed0318fe1ee6b2c73356270fcf50<br/>SHA-256: 7f6bb75bb242553b0fa5ffd3996272bae318a99e19cc3bf318cb9e612f11823e</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+<tr><td colspan="2">(The unlinked packages above are only available from the <a href="/">Red Hat Network</a>)<br /></td></tr>
+
+</table>
+
+
+
+<br />
+<h2>Bugs fixed (see <A HREF="http://bugzilla.redhat.com/bugzilla">bugzilla</A> for more information)</h2>
+<div class="page-summary">
+<p><a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1056473">1056473</a> - CVE-2012-6152 pidgin: DoS when decoding non-UTF-8 strings in Yahoo protocol plugin<br />
+<a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1056479">1056479</a> - CVE-2013-6477 pidgin: DoS when handling timestamps in the XMPP plugin<br />
+<a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1056904">1056904</a> - CVE-2013-6478 pidgin: DoS when rendering long URLs<br />
+<a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1056907">1056907</a> - CVE-2013-6479 pidgin: DoS when parsing certain HTTP response headers<br />
+<a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1056908">1056908</a> - CVE-2013-6481 pidgin: DoS caused due to OOB read in Yahoo protocol plugin<br />
+<a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1056913">1056913</a> - CVE-2013-6482 pidgin: DoS via multiple null pointer dereferences in MSN protocol plugin<br />
+<a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1056978">1056978</a> - CVE-2013-6483 pidgin: Possible spoofing using iq replies in XMPP protocol plugin<br />
+<a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1057481">1057481</a> - CVE-2013-6484 pidgin: DoS via specially-crafted stun messages<br />
+<a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1057484">1057484</a> - CVE-2013-6485 pidgin: Heap-based buffer overflow when parsing chunked HTTP responses<br />
+<a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1057489">1057489</a> - CVE-2013-6487 pidgin: Heap-based buffer overflow in Gadu-Gadu protocol plugin<br />
+<a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1057490">1057490</a> - CVE-2013-6489 pidgin: Heap-based buffer overflow in MXit emoticon parsing<br />
+<a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1057498">1057498</a> - CVE-2013-6490 pidgin: Heap-based buffer overflow in SIMPLE protocol plugin<br />
+<a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1057502">1057502</a> - CVE-2014-0020 pidgin: DoS in IRC protocol plugin due to arguement parsing</p>
+</div>
+
+
+
+<br />
+<h2>References</h2>
+<div class="page-summary">
+
+<a href="https://www.redhat.com/security/data/cve/CVE-2012-6152.html">https://www.redhat.com/security/data/cve/CVE-2012-6152.html</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2013-6477.html">https://www.redhat.com/security/data/cve/CVE-2013-6477.html</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2013-6478.html">https://www.redhat.com/security/data/cve/CVE-2013-6478.html</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2013-6479.html">https://www.redhat.com/security/data/cve/CVE-2013-6479.html</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2013-6481.html">https://www.redhat.com/security/data/cve/CVE-2013-6481.html</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2013-6482.html">https://www.redhat.com/security/data/cve/CVE-2013-6482.html</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2013-6483.html">https://www.redhat.com/security/data/cve/CVE-2013-6483.html</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2013-6484.html">https://www.redhat.com/security/data/cve/CVE-2013-6484.html</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2013-6485.html">https://www.redhat.com/security/data/cve/CVE-2013-6485.html</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2013-6487.html">https://www.redhat.com/security/data/cve/CVE-2013-6487.html</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2013-6489.html">https://www.redhat.com/security/data/cve/CVE-2013-6489.html</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2013-6490.html">https://www.redhat.com/security/data/cve/CVE-2013-6490.html</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2014-0020.html">https://www.redhat.com/security/data/cve/CVE-2014-0020.html</a><br />
+
+<A HREF="https://access.redhat.com/security/updates/classification/#moderate">https://access.redhat.com/security/updates/classification/#moderate</A><br /><A HREF="http://www.pidgin.im/news/security/">http://www.pidgin.im/news/security/</A>
+</div>
+
+
+
+
+
+
+
+<br />
+
+<hr border="1" />
+These packages are GPG signed by Red Hat for security.  Our key and 
+details on how to verify the signature are available from:<br />
+
+<a href="https://www.redhat.com/security/team/key/#package">https://www.redhat.com/security/team/key/#package</a>
+
+<p>The Red Hat security contact is <a href="mailto:secalert@redhat.com">secalert@redhat.com</a>.  More contact details at <a href="http://www.redhat.com/security/team/contact/">http://www.redhat.com/security/team/contact/</a></p>
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+    
+
+							</div>
+						</div>
+					</div>
+					<!-- end of legacy -->
+				</div>
+			</main>
+		</div>
+	<!--googleoff: all-->
+	<footer class="footer-main">
+		<div class="container footer-top">
+			<div class="row">
+
+				<div class="col-sm-2 brand">
+					<img src="https://access.redhat.com/chrome_themes/nimbus/img/l_redhat-reverse.png" alt="Red Hat" />
+				</div><menu class="col-sm-2">
+					<h3>Quick Links</h3>
+					<ul>
+						<li><a class="download-software" href="https://access.redhat.com/downloads/">Downloads</a></li>
+						<li><a class="manage-subscriptions" href="https://access.redhat.com/management/subscriptions/#active">Subscriptions</a></li>
+						<li><a class="support-cases" href="https://access.redhat.com/support">Support Cases</a></li>
+						<li><a class="quick-docs" href="https://access.redhat.com/documentation">Product Documentation</a></li>
+					</ul>
+				</menu>
+
+				<menu class="col-sm-2">
+					<h3>Help</h3>
+					<ul>
+						<li><a class="contact-us" href="https://access.redhat.com/support/contact/">Contact Us</a></li>
+						<li><a class="login-problems" href="https://access.redhat.com/help/login_assistance">Log-in Assistance</a></li>
+						<li><a class="accessibility" href="https://access.redhat.com/help/accessibility/">Accessibility</a></li>
+						<li><a class="browser-support-policy" href="https://access.redhat.com/help/browsers/">Browser Support Policy</a></li>
+					</ul>
+				</menu>
+
+				<menu class="col-sm-2">
+					<h3>Site Info</h3>
+					<ul>
+						<li><a class="recognition" href="https://access.redhat.com/recognition/">Awards and Recognition</a></li>
+						<li><a class="colophon" href="https://access.redhat.com/help/colophon/">Colophon</a></li>
+						<li><a class="cp-faqs" href="https://access.redhat.com/articles/33844">Customer Portal FAQ</a></li>
+					</ul>
+				</menu>
+
+				<menu class="col-sm-2">
+					<h3>About</h3>
+					<ul>
+						<li><a href="https://access.redhat.com/subscription-value" class="subscription-value">Red Hat Subscription Value</a></li>
+						<li><a href="https://www.redhat.com/about/" class="about-red-hat">About Red Hat</a></li>
+					</ul>
+				</menu>
+
+				<menu class="col-sm-2">
+					<h3>Related Sites</h3>
+					<ul>
+						<li><a href="https://www.redhat.com/" class="red-hat-com">RedHat.com</a></li>
+						<li><a href="https://www.jboss.org/" class="jboss-org">JBoss.org</a></li>
+						<li><a href="https://www.openshift.com" class="openshift-com">OpenShift.com</a></li>
+						<li><a href="https://partnercenter.force.com" class="partner-connect">Red Hat Partner Connect</a></li>
+					</ul>
+				</menu>
+
+			</div>
+		</div>
+
+		<div class="anchor">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 social">
+						<a target="_blank" href="http://www.redhat.com/summit/" class="summit"><img src="https://access.redhat.com/chrome_themes/nimbus/img/l_summit.png" alt="Red Hat Summit" /></a>
+						<a target="_blank" href="https://twitter.com/RedHatSupport" class="sm-icon twitter"><span class="nicon-twitter"></span><span class="offscreen">Twitter</span></a>
+						<a target="_blank" href="https://www.facebook.com/RedHatSupport" class="sm-icon facebook"><span class="nicon-facebook"></span><span class="offscreen">Facebook</span></a>
+						<a target="_blank" href="https://plus.google.com/100456039940694908045/posts" class="sm-icon googleplus"><span class="nicon-googleplus"></span><span class="offscreen">Google+</span></a>
+					</div>
+					<div class="col-sm-8 legal">
+						<menu class="legal-nav">
+							<ul>
+								<li><a href="http://www.redhat.com/en/about/privacy-policy" class="privacy-policy">Privacy Policy</a></li>
+								<li><a href="https://access.redhat.com/help/terms/" class="terms-of-use">Customer Portal Terms of Use</a></li>
+								<li><a href="http://www.redhat.com/en/about/all-policies-guidelines" class="all-policies">All Policies and Guidelines</a></li>
+							</ul>
+						</menu>							
+						<small class="copyright">Copyright © 2015 Red Hat, Inc.
+						</small>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+	</footer>
+	<!--googleon: all-->
+	</div>
+	
+  </body>
+</html>
+
+
+
+

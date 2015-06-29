@@ -1,0 +1,2976 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <script type="text/javascript">
+      var siteMapState="security";
+    </script>
+    <link rel="stylesheet" href="/css/rhn-base.css" type="text/css" />
+    
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<!-- metaInclude -->
+	<meta name="avalon-host-info" content="gss-webjava01" />
+	<meta name="avalon-version" content="2.0.19.0" />
+	<meta name="google-site-verification" content="nP0a2DWUcOxjRgDDACHEbDptiGIGBrChbghrC0ZzcK0" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- /metaInclude -->
+	<!-- ^ meta and X-UA-Compatible must come first -->
+	
+	<meta http-equiv="cleartype" content="on" />
+
+	<!-- _preInclude -->
+
+	<!-- title -->
+	<title>Red Hat Customer Portal
+	</title>
+	<!-- /title -->
+	<!-- /_preInclude -->
+
+	<!-- cssInclude -->
+
+	<link rel="shortcut icon" href="https://access.redhat.com/webassets/avalon/g/favicon.ico" />
+	<link rel="stylesheet" type="text/css" media="screen, print" href="https://access.redhat.com/webassets/avalon/s/jquery-ui/cp/jquery-ui-1.8.7.custom.css?version=2.0.19.0" />
+
+	<!-- TODO: What is pageCssLinks and do we still need it? -->
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/legacy.css?version=2.0.19.0" />
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/bootstrap.css?version=2.0.19.0" />
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/master-blessed1.css?version=2.0.19.0" />
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/master.css?version=2.0.19.0" />
+
+	<link href="https://access.redhat.com/webassets/avalon/s/chosen.css?version=2.0.19.0" rel="stylesheet" type="text/css" />
+	<!--[if lte IE 9]>
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/ie.css" />
+    <![endif]-->
+    
+
+	<!-- .primary-nav starts out hidden (at sm res and higher), and
+	is later revealed with JS after the megamenu has been built
+	out.  here, use noscript to un-hide the nav, in case the user
+	has JS disabled. -->
+	<noscript>
+		<style type="text/css" media="screen"> .primary-nav { display: block; } </style>
+	</noscript>
+
+	<!-- /cssInclude -->
+
+	<!-- jsInclude -->
+	<script type="text/javascript">
+		window.portal = {
+			analytics             : {},
+			host                  : "https://access.redhat.com",
+			kbaseContext          : "/preview_faq",
+			cspContext            : "/preview_jbossnetwork",
+			customerCenterContext : "/wapps",
+			lang                  : "en",
+			version               : "2.0.19.0",
+			decorationWhitelist   : ["https://access.redhat.com","https://rhn.redhat.com", "docs.redhat.com"]
+		};
+
+		/*
+		* TODO
+		* deprecate this avalon object
+		*/
+		window.avalon = window.portal;
+		window.avalonHost = avalon.host; // deprecate this?
+
+		/********************************
+		*  Temporary pagename shim     *
+		*  TODO: Remove this           *
+		********************************/
+
+		portal.analytics.shim = {};
+		portal.analytics.shim.pageTitle = "";
+		portal.analytics.shim.siteMapState = "";
+
+	</script>
+	<script type="text/javascript" src="https://access.redhat.com/webassets/avalon/j/lib/jquery.min.js?version=2.0.19.0"></script>
+	<script type="text/javascript" src="https://access.redhat.com/webassets/avalon/j/lib/require.js?version=2.0.19.0" data-main="/webassets/avalon/j/"></script>
+	<!-- TODO: can we please upgrade jquery?! -->
+	<script type="text/javascript">
+		/*
+		 * THIS IS NEEDED! Integrated apps include their own jQuery lib.
+		 * We need this *before* base.js so we can effectvley pass messages (trigger, bind) to base.js
+		 * *DO NOT* remove! window.jQuery the object is still accessible.
+		*/
+		window.ajq = jQuery.noConflict();
+	</script>
+	<script type="text/javascript" src="https://access.redhat.com/webassets/avalon/j/outage/outageJson_en.js?version=2.0.19.0"></script>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	
+	<!-- /jsInclude -->
+	
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>
+  </head>
+  <body>
+    
+	<!-- Chrome: Full -->
+	<div id="page-wrap" class="page-wrap">
+		<div class="top-page-wrap">
+<!--googleoff: all-->
+
+			<header class="masthead"><div id="to-top"><a class="btn_slideto"><span class="web-icon-upload"></span></a></div>
+<div class="mobile-bar-wrap hidden-sm hidden-md hidden-lg">
+	<a class="logo" href="https://access.redhat.com/">
+		<span class="logo-crop"><img src="https://access.redhat.com/chrome_themes/nimbus/img/l_redhat-lg.png"></span>
+		<span class="site-title"><span>Customer </span><span>Portal</span></span>
+	</a>
+	<button id="mobile-nav-btn" class="btn btn-navbar" data-toggle="collapse" data-target="#mobile-nav">
+		<span class="web-icon-mobile-menu"></span>
+		<span class="link-text">global.menu</span>
+	</button>
+	<button class="btn btn-search btn-utility" data-target="#site-search">
+		<span class="web-icon-search"></span>
+		<span class="link-text">Search</span>
+	</button>
+</div>
+
+<div class="utility-wrap">
+	<div class="utility-container">
+		<div class="utility-bar visible-sm visible-md visible-lg">
+			<menu class="top-nav">
+				<ul>
+					<li id="nav-subscription"><a class="top-nav-subscriptions" href="https://access.redhat.com/management/">Subscriptions</a></li>
+					<li id="nav-downloads"><a class="top-nav-downloads" href="https://access.redhat.com/downloads/">Downloads</a></li>
+					<li id="nav-support"><a class="top-nav-support-cases" href="https://access.redhat.com/support/cases/">Support Cases</a></li>
+				</ul>
+			</menu>
+
+			<menu class="utility-nav">
+				<ul>
+					<li>
+						<a class="btn-search" data-target="#site-search">
+							<span class="web-icon-search"></span>
+							<span class="link-text">Search</span>
+						</a>
+					</li>
+					<li>
+						<a class="btn-profile" data-target="#account-info">
+							<span class="web-icon-user"></span>
+							<span class="link-text">Account</span>
+							<span class="account-user" id="accountUserName"></span>
+						</a>
+					</li>
+					<li>
+						<a class="btn-language" data-target="#language">
+							<span class="web-icon-globe"></span>
+							<span class="link-text">Language</span>
+						</a>
+					</li>
+				</ul>
+			</menu>
+		</div>
+		<!-- Utility Tray -->
+		<div class="utility-tray-container">
+			<div class="utility-tray">
+				<div id="site-search" class="utility-link site-search">
+					<div class="content">
+            			<form class="ng-pristine ng-valid topSearchForm" id="topSearchForm" name="topSearchForm" action="/search/browse/search/" method="get" enctype="application/x-www-form-urlencoded">
+							<div class="input-group">
+
+                    			<input class="form-control searchField" id="topSearchInput" name="keyword" value="" placeholder="Enter Your Search Term" type="text">
+								<span class="input-group-btn">
+				    				<button type="submit" class="btn btn-primary">Search</button>
+								</span>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div id="account-info" class="utility-link account-info">
+					<div class="content">
+
+						<!-- Account Unauthenticated -->
+						<div id="accountLinksLoggedOut" class="unauthenticated">
+							<h2 class="utility-header">Log in to Your Red Hat Account</h2>
+							<div class="row col-border-row">
+								<div class="col-sm-6 col-border">
+									<p><a href="https://access.redhat.com/login" id="accountLogin" class="btn btn-primary">Log In</a></p>
+									<p>Your Red Hat account gives you access to your profile, preferences, and services, depending on your status.</p>
+								</div>
+								<div class="col-sm-6 col-border col-border-left">
+									<p><a href="https://www.redhat.com/wapps/ugc/register.html" class="btn btn-primary">Register</a></p>
+									<p>If you are a new customer, register now for access to product evaluations and purchasing capabilities. </p>
+
+									<strong>Need access to an account?</strong><p>If your company has an existing Red Hat account, your organization administrator can grant you access.</p>
+
+									<p><a href="https://access.redhat.com/support/contact/customerService/">If you have any questions, please contact customer service.</a></p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Account Authenticated -->
+						<div id="accountLinksLoggedIn" class="authenticated">
+							<h2 class="utility-header"><span id="userFirstName"></span></h2>
+							<div class="row col-border-row">
+								<div class="col-sm-6 col-border col-border-right">
+									<div class="account-info" id="accountUser">
+										<div class="avatar"><!-- placeholder--></div>
+										<div class="account-name"><strong id="userFullName"></strong></div>
+										<div class="account-org"><span id="userOrg"></span></div>
+										<div class="account-number accountNumber"><span class="property">Red Hat Account Number:</span> <span class="value"></span></div>
+									</div>
+
+									<div class="row account-settings">
+										<div class="col-md-6">
+											<h3>Red Hat Account</h3>
+											<ul class="reset">
+												<li><a href="https://www.redhat.com/wapps/ugc/protected/personalInfo.html">Account Details</a></li>
+												<li><a href="https://www.redhat.com/wapps/ugc/protected/prefs.html">Newsletter and Contact Preferences</a></li>
+												<li><a href="https://www.redhat.com/wapps/ugc/protected/usermgt/userList.html">User Management</a></li>
+												<li><a href="https://www.redhat.com/wapps/ugc/protected/account.html">Account Maintenance</a></li>
+											</ul>
+										</div>
+										<div class="col-md-6">
+											<h3>Customer Portal</h3>
+											<ul class="reset">
+												<li><a href="https://access.redhat.com/user">My Profile</a></li>
+												<li><a href="https://access.redhat.com/user" id="userNotificationsLink">Notifications</a></li>
+												<li><a href="https://access.redhat.com/help/">Help</a></li>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+								<div class="col-sm-6 col-border">
+									<p>For your security, if you’re on a public computer and have finished using your Red Hat services, please be sure to log out.</p>
+									<p><a href="https://www.redhat.com/wapps/sso/logout.html?redirect=https://access.redhat.com/logout" id="accountLogout" class="btn btn-primary">Log Out</a></p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div id="language" class="utility-link language">
+					<div class="content">
+						<h2 class="utility-header">Select Your Language</h2>
+						<div class="row" id="localesMenu">
+							<div class="col-sm-4">
+								<ul class="reset">
+									<li><a href="https://access.redhat.com/changeLanguage?language=en" id="en">English</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=es" id="es">español</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=de" id="de">Deutsch</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=it" id="it">italiano</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=ko" id="ko">한국어</a></li>
+								</ul>
+							</div>
+							<div class="col-sm-4">
+								<ul class="reset">
+									<li><a href="https://access.redhat.com/changeLanguage?language=fr" id="fr">français</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=ja" id="ja">日本語</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=pt" id="pt">português</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=zh_CN" id="zh_CN">中文 (中国)</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=ru" id="ru">русский</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="scroll-anchor">
+</div>
+
+<div class="header-nav visible-sm visible-md visible-lg">
+	<div id="header-nav">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+
+					<a href="https://access.redhat.com/" class="logo">
+						<span class="logo-crop"><img src="https://access.redhat.com/chrome_themes/nimbus/img/l_redhat-lg.png"></span>
+						<span class="site-title"><span>Customer </span><span>Portal</span></span>
+					</a>
+
+					<menu class="primary-nav hidden-sm">
+						<ul>
+							<li id="nav-products"><a class="products" data-link="mega" data-target="products-menu" href="https://access.redhat.com/products/">Products &amp; Services</a></li>
+							<li id="nav-tools"><a class="tools" data-link="mega" data-target="tools-menu" href="https://access.redhat.com/labs/">Tools</a></li><!-- #Need URL -->
+							<li id="nav-security"><a class="security" data-link="mega" data-target="security-menu" href="https://access.redhat.com/security/">Security</a></li>
+							<li id="nav-community"><a class="community" data-link="mega" data-target="community-menu" href="https://access.redhat.com/community/">Community</a></li><!-- #Need URL -->
+						</ul>
+					</menu>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="mobile-nav-wrap hidden-sm hidden-md hidden-lg">
+	<div id="mobile-nav" class="mobile-nav navbar collapse navbar-collapse">
+		<div class="navbar-inner">
+
+			<menu>
+				<ul class="mobile-utility">
+					<li>
+						<a class="btn-profile" data-target="#account-info-mobile">
+							<span class="web-icon-user"></span>
+							<span class="link-text">Account</span>
+						</a>
+					</li><!-- white space inline
+					--><li>
+						<a class="btn-language" data-target="#language-mobile">
+							<span class="web-icon-globe"></span>
+							<span class="link-text">Language</span>
+						</a>
+					</li>
+				</ul>
+				<div id="account-info-mobile" class="mobile-utility-wrap">
+					<!-- Account Unauthenticated -->
+					<div id="mobile-accountLinksLoggedOut" class="unauthenticated">
+						<ul class="nav mobile-utility-nav">
+							<li><a href="https://access.redhat.com/login">Log In</a></li>
+							<li><a href="https://www.redhat.com/wapps/ugc/register.html">Register</a></li>
+						</ul>
+					</div>
+					<!-- Account Authenticated -->
+					<div id="mobile-accountLinksLoggedIn" class="authenticated">
+						<div class="account-info" id="mobile-accountUser">
+							<div class="account-name"><strong id="mobile-userFullName"></strong></div>
+							<div class="account-org"><span id="mobile-userOrg"></span></div>
+							<div class="account-number mobile-accountNumber"><span class="property">Red Hat Account Number:</span> <span class="value"></span></div>
+						</div>
+						<ul class="nav mobile-utility-nav">
+							<li><a href="https://www.redhat.com/wapps/ugc/protected/personalInfo.html">Account Details</a></li>
+							<li><a href="https://www.redhat.com/wapps/ugc/protected/prefs.html">Newsletter and Contact Preferences</a></li>
+							<li><a href="https://www.redhat.com/wapps/ugc/protected/usermgt/userList.html">User Management</a></li>
+							<li><a href="https://www.redhat.com/wapps/ugc/protected/account.html">Account Maintenance</a></li>
+							<li><a href="https://access.redhat.com/user">My Profile</a></li>
+							<li><a href="https://access.redhat.com/user" id="userNotificationsLink">Notifications</a></li>
+							<li><a href="https://access.redhat.com/help/">Help</a></li>
+							<li class="logout"><a href="https://www.redhat.com/wapps/sso/logout.html?redirect=https://access.redhat.com/logout">Log Out</a>
+						</ul>
+					</div>
+				</div>
+				<div id="language-mobile" class="mobile-utility-wrap">
+					<ul class="nav mobile-utility-nav">
+						<li><a href="https://access.redhat.com/changeLanguage?language=en" id="mobile-en">English</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=es" id="mobile-es">español</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=de" id="mobile-de">Deutsch</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=it" id="mobile-it">italiano</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=ko" id="mobile-ko">한국어</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=fr" id="mobile-fr">français</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=ja" id="mobile-ja">日本語</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=pt" id="mobile-pt">português</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=zh_CN" id="mobile-zh_CN">中文 (中国)</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=ru" id="mobile-ru">русский</a></li>
+					</ul>
+				</div>
+				<ul class="main-mobile-nav nav">
+					<li id="mnav-home"><a href="https://access.redhat.com/">Home</a></li>
+					<li id="mnav-products"><a href="https://access.redhat.com/products/">Products &amp; Services</a></li>
+					<li id="mnav-tools"><a href="https://access.redhat.com/tools/">Tools</a></li>
+					<li id="mnav-security"><a href="https://access.redhat.com/security/">Security</a></li>
+					<li id="mnav-community"><a href="https://access.redhat.com/community/">Community</a></li><!-- #Need URL -->
+					<li id="mnav-downloads"><a href="https://access.redhat.com/downloads/">Downloads</a></li>
+					<li id="mnav-subscription"><a href="https://access.redhat.com/management/">Subscriptions</a></li>
+					<li id="mnav-support"><a href="https://access.redhat.com/support/cases/">Support Cases</a></li>
+				</ul>
+			</menu>
+		</div>
+	</div>
+</div>
+
+<div class="mega-wrap visible-sm visible-md visible-lg">
+	<menu class="mega">
+		<div class="container">
+			<div class="mega-menu-wrap">
+				<!-- Products Menu -->
+				<div aria-labelledby="products-menu" class="products-menu mega-menu" data-eh="mega-menu" role="menu">
+					<div class="row">
+						<div class="col-md-6 col-sm-8">
+							<nav class="root">
+								<div class="row">
+									<ul class="subnav subnav-root col-sm-6">
+										<li data-target="infrastructure-menu" class="active">
+											<a href="https://access.redhat.com/products/">Infrastructure and Management</a>
+										</li>
+										<li data-target="cloud-menu">
+											<a href="https://access.redhat.com/products/">Cloud Products</a>
+										</li>
+										<li data-target="jboss-dev-menu">
+											<a href="https://access.redhat.com/products/">JBoss Development and Management</a>
+										</li>
+										<li data-target="jboss-int-menu">
+											<a href="https://access.redhat.com/products/">JBoss Integration and Automation</a>
+										</li>
+										<li data-target="services-menu">
+											<a href="https://access.redhat.com/products/">Services</a>
+										</li>
+									</ul>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="infrastructure-menu" style="display: block;">
+										<ul>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-enterprise-linux/">Red Hat Enterprise Linux</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-enterprise-virtualization/">Red Hat Enterprise Virtualization</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/Identity_Management/">Red Hat Identity Management &amp; Infrastructure</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-directory-server/">Red Hat Directory Server</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-certificate-system/">Red Hat Certificate System</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-satellite/">Red Hat Satellite</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/subscription-asset-manager/">Subscription Asset Manager</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-update-infrastructure/">Red Hat Update Infrastructure</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-storage/">Red Hat Gluster Storage</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-ceph-storage/">Red Hat Ceph Storage</a>
+											</li>
+										</ul>
+									</div>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="cloud-menu">
+										<ul>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-cloudforms/">Red Hat CloudForms</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-enterprise-linux-openstack-platform/">Red Hat Enterprise Linux OpenStack Platform</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-cloud-infrastructure/">Red Hat Cloud Infrastructure</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/openshift-enterprise-red-hat/">OpenShift Enterprise by Red Hat</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/openshift-online-red-hat/">OpenShift Online by Red Hat</a>
+											</li>
+										</ul>
+									</div>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="jboss-dev-menu">
+										<ul>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-enterprise-application-platform/">Red Hat JBoss Enterprise Application Platform</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-data-grid/">Red Hat JBoss Data Grid</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-web-server/">Red Hat JBoss Web Server</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-portal/">Red Hat JBoss Portal</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-operations-network/">Red Hat JBoss Operations Network</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-developer-studio/">Red Hat JBoss Developer Studio</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/feedhenry/">FeedHenry by Red Hat</a>
+											</li>
+										</ul>
+									</div>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="jboss-int-menu">
+										<ul>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-fuse-service-works/">Red Hat JBoss Fuse Service Works</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-data-virtualization/">Red Hat JBoss Data Virtualization</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-fuse/">Red Hat JBoss Fuse</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-a-mq/">Red Hat JBoss A-MQ</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-bpm-suite/">Red Hat JBoss BPM Suite</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-brms/">Red Hat JBoss BRMS</a>
+											</li>
+										</ul>
+									</div>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="services-menu">
+										<ul>
+											<li><a href="https://access.redhat.com/products/Consulting/">Consulting</a></li>
+			                    			<li><a href="https://access.redhat.com/products/red-hat-access/">Red Hat Access</a></li>
+			                    			<li><a href="https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/">Red Hat Enterprise Linux Developer Program</a></li>
+			                    			<li><a href="https://access.redhat.com/products/Training/">Training</a></li>
+			                    			<li><a href="https://access.redhat.com/support/offerings/tam/">Technical Account Management</a></li>
+										</ul>
+									</div>
+								</div>
+							</nav>
+							<a href="https://access.redhat.com/products" class="btn btn-primary">Explore Products and Services</a>
+						</div>
+
+						<div class="col-md-6 col-sm-4 pull-right">
+							<div class="row">
+								<div class="col-md-4">
+									<h3 class="nav-title">Ecosystem</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/certification">Overview</a></li>
+										<li><a href="https://access.redhat.com/search/browse/certified-hardware#?">Certified Hardware</a></li>
+										<li><a href="https://access.redhat.com/search/browse/certified-software#?">Certified Software</a></li>
+										<li><a href="https://access.redhat.com/search/browse/certified-cloud-providers#?">Certified Cloud Providers</a></li>
+									</ul>
+								</div>
+								<div class="col-md-4">
+									<h3 class="nav-title">Knowledge</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/search/browse/search/">Expert Advice</a></li>
+										<li><a href="https://access.redhat.com/documentation/">Product Documentation</a></li>
+									</ul>
+								</div>
+								<div class="col-md-4">
+									<h3 class="nav-title">Support Policies</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/support/offerings/production/">Production Support</a></li>
+										<li><a href="https://access.redhat.com/support/offerings/developer/">Development Support</a></li>
+									</ul>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Tools Menu -->
+				<div aria-labelledby="tools-menu" class="tools-menu mega-menu" data-eh="mega-menu" role="menu">
+					<div class="row">
+
+						<nav class="col-sm-9">
+							<div class="mega-menu-feature">
+								<div class="row">
+									<div class="col-sm-4">
+										<h2 class="mega-menu-feature-title">Red Hat Access Labs</h2>
+										<p>To help you use Red Hat products to their full potential, our engineers have developed a set of tools to support customer success.</p>
+										<p class="push-top"><a href="https://access.redhat.com/labs/" class="btn btn-primary">Explore Labs</a></p>
+									</div>
+									<div class="col-sm-4">
+										<a href="https://access.redhat.com/labs/#?type=config">
+											<h3 class="nav-title">Configuration</h3>
+										</a>
+										<ul>
+											<li><a href="https://access.redhat.com/labs/jvmconfig/">JVM Config</a></li>
+											<li><a href="https://access.redhat.com/labs/networkbondinghelper/">Network Bonding Helper</a></li>
+											<li><a href="https://access.redhat.com/labs/linterfordockerfile/">Linter for Dockerfile</a></li>
+										</ul>
+
+										<a href="https://access.redhat.com/labs/#?type=deploy">
+											<h3 class="nav-title">Deployment</h3>
+										</a>
+										<ul>
+											<li><a href="https://access.redhat.com/labs/registrationassistant/">Registration Assistant</a></li>
+											<li><a href="https://access.redhat.com/labs/kickstartconfig/">Kickstart Generator</a></li>
+											<li><a href="https://access.redhat.com/labs/rhevupgradehelper/">RHEV Upgrade Helper</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-4">
+										<a href="https://access.redhat.com/labs/#?type=troubleshoot">
+											<h3 class="nav-title">Troubleshooting</h3>
+										</a>
+										<ul>
+											<li><a href="https://access.redhat.com/labs/garbagedog/">Garbage Collection Analysis</a></li>
+											<li><a href="https://access.redhat.com/labs/kerneloopsanalyzer/">Kernel Oops Analyzer</a></li>
+											<li><a href="https://access.redhat.com/labs/kdumphelper/">Kdump Helper</a></li>
+										</ul>
+										<a href="https://access.redhat.com/labs/#?type=security">
+											<h3 class="nav-title">Security</h3>
+										</a>
+										<ul>
+											<li><a href="https://access.redhat.com/labs/venom/">VENOM: QEMU Vulnerability Detector</a></li>
+											<li><a href="https://access.redhat.com/labs/ghost/">GHOST - gethostbyname Detector</a></li>
+											<li><a href="https://access.redhat.com/labs/poodle/">SSLv3 (POODLE) Detector</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</nav>
+
+						<nav class="col-sm-3">
+							<h3 class="nav-title">Additional Tools</h3>
+							<ul>
+								<li><a href="https://access.redhat.com/products/red-hat-access/">Red Hat Access - Overview</a></li>
+								<li><a href="https://access.redhat.com/labs/hacat/">Red Hat High Availability Cluster Architecture Tool</a></li>
+								<li><a href="https://access.redhat.com/tools/satcert/">Red Hat Satellite Certificate Tool</a></li>
+							</ul>
+						</nav>
+
+					</div>
+				</div>
+
+				<!-- Security Menu -->
+				<div aria-labelledby="security-menu" class="security-menu mega-menu" data-eh="mega-menu" role="menu">
+					<div class="row">
+						<nav class="col-sm-12 basic">
+							<div class="row">
+								<div class="col-md-3 col-sm-4">
+									<h3 class="nav-title">Security Updates</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/security/cve">Red Hat CVE Database</a></li>
+										<li><a href="https://access.redhat.com/security/updates/active/">Active Products</a></li>
+										<li><a href="https://access.redhat.com/security/updates/eol/">End-of-Life Products</a></li>
+										<li><a href="https://access.redhat.com/security/updates/advisory/">How to Get Notified</a></li>
+									</ul>
+								</div>
+								<div class="col-md-3 col-sm-4">
+									<h3 class="nav-title">Red Hat Product Security</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/security/team/">About</a></li>
+										<li><a href="https://securityblog.redhat.com/">Security Blog</a></li>
+										<li><a href="https://access.redhat.com/security/team/contact/">Contact</a></li>
+									</ul>
+								</div>
+								<div class="col-md-3 col-sm-4">
+									<h3 class="nav-title">Resources</h3>
+									<ul>
+										<li><a href="https://www.redhat.com/security/data/metrics/">Security Measurement</a></li>
+										<li><a href="https://access.redhat.com/security/updates/classification/">Severity Ratings</a></li>
+										<li><a href="https://access.redhat.com/security/updates/backporting/">Backporting Policies</a></li>
+										<li><a href="https://access.redhat.com/security/team/key/">Product Signing (GPG) Keys</a></li>
+									</ul>
+								</div>
+							</div>
+						</nav>
+						<a href="https://access.redhat.com/security/" class="btn btn-primary">Explore Security</a>
+					</div>
+				</div>
+
+				<!-- Community Menu -->
+				<div aria-labelledby="community-menu" class="community-menu mega-menu" data-eh="mega-menu" role="menu">
+					<div class="row">
+            			<nav class="col-sm-12 basic">
+							<div class="row">
+								<div class="col-sm-3">
+									<h3 class="nav-title">Discussions</h3>
+									<ul>
+
+										<li><a href="https://access.redhat.com/discussions?product=25&category=All&tags=All">Red Hat Enterprise Linux</a></li>
+										<li><a href="https://access.redhat.com/discussions?product=8163&category=All&tags=All">Red Hat Enterprise Virtualization</a></li>
+										<li><a href="https://access.redhat.com/discussions?product=36&category=All&tags=All">Red Hat Satellite</a></li>
+										<li><a href="https://access.redhat.com/discussions?product=22&category=All&tags=All">Customer Portal</a></li>
+										<li><a href="https://access.redhat.com/groups/">Private Groups</a></li>
+										<li class="more-link"><a href="https://access.redhat.com/discussions?keyword=&name=&product=All&category=All&tags=All">All Discussions</a></li>
+										<li class="more-link"><a href="https://access.redhat.com/node/add/discussion">Start a Discussion</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-3">
+									<h3 class="nav-title">Blogs</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/blogs/767163">Customer Portal</a></li>
+										<li><a href="https://access.redhat.com/blogs/759303">Red Hat Access Labs</a></li>
+										<li><a href="https://access.redhat.com/blogs/766093">Red Hat Product Security Team</a></li>
+										<li class="more-link"><a href="https://access.redhat.com/blogs/">All Blogs</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-3">
+									<h3 class="nav-title">Events</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/customer-convergence">Customer Events</a></li>
+										<li><a href="http://www.redhat.com/summit/">Red Hat Summit</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-3">
+									<h3 class="nav-title">Stories</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/subscription-value/">Red Hat Subscription Benefits</a></li>
+										<li><a href="https://access.redhat.com/customer-success/">You Asked. We Acted.</a></li>
+										<li><a href="http://www.redhat.com/en/open-source">Open Source Communities</a></li>
+									</ul>
+								</div>
+							</div>
+						</nav>
+						<!--<a href="https://access.redhat.com/community/" class="btn btn-primary">Explore Community</a>-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</menu>
+</div>
+
+				<div id="site-section"></div>
+
+			</header>
+<!--googleon: all-->
+			<main id="cp-main" class="portal-content-area" role="main">
+				<div id="cp-content" class="main-content">
+					<!-- legacy divs start here -->
+					<div id="legacy-portal">
+						<div class="content-area">
+							<div id="legacy-container" class="legacy-container">
+									
+
+    <div class="wrapi">
+      <div id="container" class="clearWrap">
+        <div id="content">
+
+    
+
+
+
+
+
+
+
+
+
+<h1><img src="/img/rhn-icon-security.gif" alt="Security Advisory" align="absmiddle" /> Important: postgresql84 and postgresql security update</h1>
+
+<table class="details">
+	<tr>
+		<th>Advisory:</th>
+		<td>RHSA-2014:0211-1</td>
+	</tr>
+	<tr>	
+		<th>Type:</th>
+		<td>Security Advisory</td>
+	</tr>
+        <tr>
+                <th>Severity:</th>
+                <td>Important</td>
+        </tr>
+	<tr>	
+		<th>Issued on:</th>
+		<td>2014-02-25</td>
+	</tr>
+	<tr>	
+		<th>Last updated on:</th>
+		<td>2014-02-25</td>
+	</tr>
+
+	<tr>
+		<th valign="top">Affected Products:</th>
+		<td><a href="#RHEL Desktop Workstation (v. 5 client)">RHEL Desktop Workstation (v. 5 client)</a><br />
+<a href="#Red Hat Enterprise Linux (v. 5 server)">Red Hat Enterprise Linux (v. 5 server)</a><br />
+<a href="#Red Hat Enterprise Linux Desktop (v. 5 client)">Red Hat Enterprise Linux Desktop (v. 5 client)</a><br />
+<a href="#Red Hat Enterprise Linux Desktop (v. 6)">Red Hat Enterprise Linux Desktop (v. 6)</a><br />
+<a href="#Red Hat Enterprise Linux HPC Node (v. 6)">Red Hat Enterprise Linux HPC Node (v. 6)</a><br />
+<a href="#Red Hat Enterprise Linux Server (v. 6)">Red Hat Enterprise Linux Server (v. 6)</a><br />
+<a href="#Red Hat Enterprise Linux Server AUS (v. 6.5)">Red Hat Enterprise Linux Server AUS (v. 6.5)</a><br />
+<a href="#Red Hat Enterprise Linux Server EUS (v. 6.5.z)">Red Hat Enterprise Linux Server EUS (v. 6.5.z)</a><br />
+<a href="#Red Hat Enterprise Linux Workstation (v. 6)">Red Hat Enterprise Linux Workstation (v. 6)</a></td>
+	</tr>
+
+
+	<tr>
+		<th valign="top">CVEs (<a href="http://cve.mitre.org">cve.mitre.org</a>):</th>
+		<td rowspan="2" valign="top">
+          <a href="https://www.redhat.com/security/data/cve/CVE-2014-0060.html">CVE-2014-0060</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2014-0061.html">CVE-2014-0061</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2014-0062.html">CVE-2014-0062</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2014-0063.html">CVE-2014-0063</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2014-0064.html">CVE-2014-0064</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2014-0065.html">CVE-2014-0065</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2014-0066.html">CVE-2014-0066</a><br />
+		</td>
+	</tr>
+
+</table>
+
+<br />
+
+<h2>Details</h2>
+<div class="page-summary">
+<p>Updated postgresql84 and postgresql packages that fix multiple security<br />issues are now available for Red Hat Enterprise Linux 5 and 6 respectively.<br /><br />The Red Hat Security Response Team has rated this update as having<br />Important security impact. Common Vulnerability Scoring System (CVSS) base<br />scores, which give detailed severity ratings, are available for each<br />vulnerability from the CVE links in the References section.<br /></p>
+
+<p>PostgreSQL is an advanced object-relational database management system<br />(DBMS).<br /><br />Multiple stack-based buffer overflow flaws were found in the date/time<br />implementation of PostgreSQL. An authenticated database user could provide<br />a specially crafted date/time value that, when processed, could cause<br />PostgreSQL to crash or, potentially, execute arbitrary code with the<br />permissions of the user running PostgreSQL. (CVE-2014-0063)<br /><br />Multiple integer overflow flaws, leading to heap-based buffer overflows,<br />were found in various type input functions in PostgreSQL. An authenticated<br />database user could possibly use these flaws to crash PostgreSQL or,<br />potentially, execute arbitrary code with the permissions of the user<br />running PostgreSQL. (CVE-2014-0064)<br /><br />Multiple potential buffer overflow flaws were found in PostgreSQL.<br />An authenticated database user could possibly use these flaws to crash<br />PostgreSQL or, potentially, execute arbitrary code with the permissions of<br />the user running PostgreSQL. (CVE-2014-0065)<br /><br />It was found that granting an SQL role to a database user in a PostgreSQL<br />database without specifying the &quot;ADMIN&quot; option allowed the grantee to<br />remove other users from their granted role. An authenticated database user<br />could use this flaw to remove a user from an SQL role which they were<br />granted access to. (CVE-2014-0060)<br /><br />A flaw was found in the validator functions provided by PostgreSQL&#39;s<br />procedural languages (PLs). An authenticated database user could possibly<br />use this flaw to escalate their privileges. (CVE-2014-0061)<br /><br />A race condition was found in the way the CREATE INDEX command performed<br />multiple independent lookups of a table that had to be indexed. An<br />authenticated database user could possibly use this flaw to escalate their<br />privileges. (CVE-2014-0062)<br /><br />It was found that the chkpass extension of PostgreSQL did not check the<br />return value of the crypt() function. An authenticated database user could<br />possibly use this flaw to crash PostgreSQL via a null pointer dereference.<br />(CVE-2014-0066)<br /><br />Red Hat would like to thank the PostgreSQL project for reporting these<br />issues. Upstream acknowledges Noah Misch as the original reporter of<br />CVE-2014-0060 and CVE-2014-0063, Heikki Linnakangas and Noah Misch as the<br />original reporters of CVE-2014-0064, Peter Eisentraut and Jozef Mlich as<br />the original reporters of CVE-2014-0065, Andres Freund as the original<br />reporter of CVE-2014-0061, Robert Haas and Andres Freund as the original<br />reporters of CVE-2014-0062, and Honza Horak and Bruce Momjian as the<br />original reporters of CVE-2014-0066.<br /><br />These updated packages upgrade PostgreSQL to version 8.4.20, which fixes<br />these issues as well as several non-security issues. Refer to the<br />PostgreSQL Release Notes for a full list of changes:<br /><br /><A HREF="http://www.postgresql.org/docs/8.4/static/release-8-4-19.html">http://www.postgresql.org/docs/8.4/static/release-8-4-19.html</A><br /><A HREF="http://www.postgresql.org/docs/8.4/static/release-8-4-20.html">http://www.postgresql.org/docs/8.4/static/release-8-4-20.html</A><br /><br />All PostgreSQL users are advised to upgrade to these updated packages,<br />which contain backported patches to correct these issues. If the postgresql<br />service is running, it will be automatically restarted after installing<br />this update.<br /></p>
+</div>
+
+
+<br />
+
+<h2>Solution</h2>
+<div class="page-summary">Before applying this update, make sure all previously released errata<br />relevant to your system have been applied.<br /><br />This update is available via the Red Hat Network. Details on how to use the<br />Red Hat Network to apply this update are available at<br /><A HREF="https://access.redhat.com/site/articles/11258">https://access.redhat.com/site/articles/11258</A><br /></div>
+<br />
+
+<h2>Updated packages</h2>
+
+<table border="0" cellpadding="6" cellspacing="0">
+
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="RHEL Desktop Workstation (v. 5 client)">RHEL Desktop Workstation (v. 5 client)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-8.4.20-1.el5_10.src.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0a4a2c78e5b5d75b4f7cae0c4b6aed98<br/>SHA-256: b92cbce93b2177d85f3fb7f9a219b40cdac85c20a461b7671814d0696a38b174</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-debuginfo-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: fbba866b6c05c705eb1e09b6754ec5bb<br/>SHA-256: f7e952a586240bed59e22f00d45201682ad54104302526c445943332c259e27d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-devel-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: eadc6dfe9da2f064733b7787405381db<br/>SHA-256: 9f5e0fbb1a921b6f5baa785e772e08c0171473eb97a7280cfe0682bf6581cc0d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-plperl-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 626e53cb361efba4fe8b7bd3bc815052<br/>SHA-256: ffda3baea9127dcd78a98a2ec464504dcf41266db2128ee6082945c467b1c07e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-plpython-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 69103f9e9a2ff839b67c842c1e5a4eb1<br/>SHA-256: 22ed9ae9ccad50ea95f71d8e137c8fada509dbcafab2737b0ad46dd0b4abc8e3</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-pltcl-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a889c55035e3fa467921cd3144b5be63<br/>SHA-256: 3835aa13616ee0e04d3528a92f7dfe2aa8b553ba2f62fe5de19b6a0c06b9e8e5</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-server-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3c98e9b66a8ca5ebe36df52c46d1a31c<br/>SHA-256: 970553e9d834e3f08e730bce9323e099914e2ce480db05f77200bd7af9122974</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-test-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: aaba63cae491406f36c2757a5657a878<br/>SHA-256: 829b6595e28066b2876ff393cb1788f5a9f042363046a3b6bc214c935ef72ea0</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-debuginfo-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: fbba866b6c05c705eb1e09b6754ec5bb<br/>SHA-256: f7e952a586240bed59e22f00d45201682ad54104302526c445943332c259e27d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-debuginfo-8.4.20-1.el5_10.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 015af12bfd40b669278ffe5612e0fe0a<br/>SHA-256: a4f0f771ea18dc551a6b9ad52078cca7f2b90d8b2a699824aeedb749c02d9df9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-devel-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: eadc6dfe9da2f064733b7787405381db<br/>SHA-256: 9f5e0fbb1a921b6f5baa785e772e08c0171473eb97a7280cfe0682bf6581cc0d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-devel-8.4.20-1.el5_10.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c7557b409fdb5a821e900d0122c2e45c<br/>SHA-256: 62b47b99e8dd1947c9d920caaeb3a8c09fcd3277017622800c66a084dfcd0eee</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-plperl-8.4.20-1.el5_10.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f7fec641a8645f5296100ca2ca3ff963<br/>SHA-256: 3f15da1ae3c8343d64bf91b2164ecac65013a2a2c9906edd0f2a10a44d9a0ab1</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-plpython-8.4.20-1.el5_10.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 672dfe424511d4f04d672b72b15f8239<br/>SHA-256: db0e015db01bcf32484f08b845d0c1f2955aacb68714fb06fe475b6cd84965db</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-pltcl-8.4.20-1.el5_10.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: bd73ed9459093293be77e134b398d1ca<br/>SHA-256: d1d7ac10b5f45de780b919695c8ea2361e85a012b80861e48adbd1f1f15e81db</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-server-8.4.20-1.el5_10.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f98c21e9c13c18117f625e04dfc33be1<br/>SHA-256: e6d3aee3775c9e9f594c395909b9738bce183dbbc25d4f3cde7a8bbdc534b9ad</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-test-8.4.20-1.el5_10.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 83a09f13752de4bcd9061962b46dad05<br/>SHA-256: 993f0c9cd64538cc1a602442b7aa617e2af3250feb644dd20d908389ab5c2403</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux (v. 5 server)">Red Hat Enterprise Linux (v. 5 server)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-8.4.20-1.el5_10.src.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0a4a2c78e5b5d75b4f7cae0c4b6aed98<br/>SHA-256: b92cbce93b2177d85f3fb7f9a219b40cdac85c20a461b7671814d0696a38b174</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0b0b69d007cc9ce43734e9b280979a53<br/>SHA-256: a8e444cec49041570b343ef60fb88b87effeea74d00a96b5815ec0b0915a5d5c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-contrib-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 4ecb31b7e7030b76b3325abc60ba9656<br/>SHA-256: 3a69045a24d5f44802220deba8d9b70d1770137a7c6fcb83fb799af369570fcd</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-debuginfo-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: fbba866b6c05c705eb1e09b6754ec5bb<br/>SHA-256: f7e952a586240bed59e22f00d45201682ad54104302526c445943332c259e27d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-devel-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: eadc6dfe9da2f064733b7787405381db<br/>SHA-256: 9f5e0fbb1a921b6f5baa785e772e08c0171473eb97a7280cfe0682bf6581cc0d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-docs-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3d8a6d687e98667015d149d5d8d9fc51<br/>SHA-256: 375de9841213324d8d2dd174ba3dc56833dd5fb9b52ae86569b63e8269a239a0</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-libs-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6b7823e46fdb9e6feafeeb955a27b1bf<br/>SHA-256: 6f5c49ec0334107bbf4413a4c29befddf5a92a9acfc6fb58d7fad9e57c71383c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-plperl-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 626e53cb361efba4fe8b7bd3bc815052<br/>SHA-256: ffda3baea9127dcd78a98a2ec464504dcf41266db2128ee6082945c467b1c07e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-plpython-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 69103f9e9a2ff839b67c842c1e5a4eb1<br/>SHA-256: 22ed9ae9ccad50ea95f71d8e137c8fada509dbcafab2737b0ad46dd0b4abc8e3</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-pltcl-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a889c55035e3fa467921cd3144b5be63<br/>SHA-256: 3835aa13616ee0e04d3528a92f7dfe2aa8b553ba2f62fe5de19b6a0c06b9e8e5</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-python-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b2af24a84750cdfd417f0bfdcffc4ca0<br/>SHA-256: e0bea59fc184855025a252d1c09a9b448d5b49ae426e86986c06f5a28881a155</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-server-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3c98e9b66a8ca5ebe36df52c46d1a31c<br/>SHA-256: 970553e9d834e3f08e730bce9323e099914e2ce480db05f77200bd7af9122974</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-tcl-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9616e7afb6da917bce645a2453aeb611<br/>SHA-256: 35790f43f15859e9d093e53d75ec92dc7461e5c73744b0340f354b6e871b056d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-test-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: aaba63cae491406f36c2757a5657a878<br/>SHA-256: 829b6595e28066b2876ff393cb1788f5a9f042363046a3b6bc214c935ef72ea0</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-8.4.20-1.el5_10.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: bd2f1a658410e310345fb08cce896bdf<br/>SHA-256: 641d53554e5106bdecfae39758a1dc8a6cd9a74b5cde2732b52c6c971d7c1d46</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-contrib-8.4.20-1.el5_10.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: aea98e0166bf838c11ed7f798b267204<br/>SHA-256: 989611a9f06440ca314038294056d0c15834c8eee68590077798fe144530ece6</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-debuginfo-8.4.20-1.el5_10.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8447f2b4b9caf25336f689cdbfb09257<br/>SHA-256: fd80262b98993b6a6e29978dd9c5794c3d381db2a3543488d1020bdd7bfe6a11</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-devel-8.4.20-1.el5_10.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 30eb8fb4ad42b3cc81e92d981bbc1c0a<br/>SHA-256: a70391b2f317681be69fde46be0c8b1576682c066a20a442180e7096f8da4b33</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-docs-8.4.20-1.el5_10.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 50a010440f897bfb478051ec32923b5f<br/>SHA-256: fc6042f8aa64e52ddcafa17bb745f6fdd87a248f5b76f53513bb3410ab2049b8</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-libs-8.4.20-1.el5_10.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d7f233528259b34ebd8c3bd9affd38b7<br/>SHA-256: f7c683d92e67f5046f811a4f8ba7b64eb9412ae979ec3e6361492ceb9f7e09d1</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-plperl-8.4.20-1.el5_10.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: dca6073f1c13d943e5d0d3ce29e1518e<br/>SHA-256: fd7d0e23a083cf52c35c7437f7bbc2886e748a42a40a5adb13064592b2238a68</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-plpython-8.4.20-1.el5_10.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: df76015e2e9c66a62fe7ed55462282f2<br/>SHA-256: 53f593935662325d1b45a9cb4ce3e7619fff268465ca5f427378e128c71f038f</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-pltcl-8.4.20-1.el5_10.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3886e778cf749893a1f4a037d688c72a<br/>SHA-256: 01bba13d0564d442490dcc40c971c888023924c19879095bd20b1068a2cecd63</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-python-8.4.20-1.el5_10.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3e037541b07f063ac7ab2f2a15113892<br/>SHA-256: b01906391ec57cb9bee7717feea8c84d7444658a3a074bda845bb13343b26338</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-server-8.4.20-1.el5_10.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: fb3a346e04a5fecf526d4ad71568df26<br/>SHA-256: 5ddf4c266b08ff55c0048ae7bdb7439116fa67fe18994fba01ec3ba29a3fa2cc</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-tcl-8.4.20-1.el5_10.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2bc7a9ec1c5c8c4af4f9bb4c1650747c<br/>SHA-256: 60be26b88129dd820c726c0130b9f1931fcb92d144f035011b16a0bd0bc0bb5b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-test-8.4.20-1.el5_10.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d9de8e75a4d0d4549e1dabf979cff2df<br/>SHA-256: f4a2f52ccd2d65232eac2a182c20d640fa38164663618175354fb22a276b9158</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>PPC:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-8.4.20-1.el5_10.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a65cad86c20502054446faf1d7f64cab<br/>SHA-256: 2eeefa4b56b59e32493878a75e2ef7232bfc9ab89c62685177ab25d2f78f520a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-8.4.20-1.el5_10.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f393f8e128887802a95059f53bf4c333<br/>SHA-256: d8389e9f54140080cba98c54377d7fe5ca3f3779f892789264678753f1b5f083</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-contrib-8.4.20-1.el5_10.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 89b44c5b26459a6be5b1f879ffdfe0a7<br/>SHA-256: f2cc0861ec6de2f8a41cefd579ba76decf9a64ff8e29bf7be10a0723b45f0fad</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-debuginfo-8.4.20-1.el5_10.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a759ac9d26e752653d61365bbeb3c906<br/>SHA-256: d2e85c7ebfc3fefe134c3ca68165019a69f403511e0c185346f588d0177f2f80</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-debuginfo-8.4.20-1.el5_10.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d8551f49b1da45a75c95919b478e5c3a<br/>SHA-256: 4e90bc9927d8df8ab528b90ba8bd21ac1b1b977bb1b4df238ef5dd406dd06e62</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-devel-8.4.20-1.el5_10.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1ebd9d5326c94782e16811200d1a4571<br/>SHA-256: 819ad7e14ef0adf8f663158a6f574a029e679c2a8488c998dd5fbe33f1ad5a56</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-devel-8.4.20-1.el5_10.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 4544dc5b65333f4154dd2fd430654144<br/>SHA-256: 033c8643be4ac6ade101997b719d6369939e77e1fc1517a46b302e86f91be6fb</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-docs-8.4.20-1.el5_10.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f58d97203de1d80c449dd104ea974795<br/>SHA-256: c4237bd2da86b3a9e994cc87500e225fd95048d12b9192eec377a4064181f9ad</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-libs-8.4.20-1.el5_10.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ab5025ecd18e0228303148f59f4db023<br/>SHA-256: f41e067d69aeaff416c5be3e23d5bef77cfea3d58232464d6bff6d61a4f4a71e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-libs-8.4.20-1.el5_10.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: cf28b111127b0d7a2b8be8647d6d7117<br/>SHA-256: 35d900e5a51e4494ef611f1a7c141f497796f5c6cb90a301152d6e7b55f99ff9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-plperl-8.4.20-1.el5_10.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 78afa7ef2c37cc75a75ad21be6253623<br/>SHA-256: 891b63982ac1c6823ac11453e73c528eefb24e49d8606e92fdbff8be982deb41</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-plpython-8.4.20-1.el5_10.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8778b61c38965ff74033bccf645b5119<br/>SHA-256: 223e01f50877f27d6e5ba12e001d62746b54124ef946ca581eaf6fa8bb21bb39</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-pltcl-8.4.20-1.el5_10.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1ecfab174dc2d747d31f36615b349a66<br/>SHA-256: c435749f87c40d8aff891bf607daf571c195bf682579dd17ac8cdd1bc8079e2a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-python-8.4.20-1.el5_10.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5cc7b9bef2dc20fd4fd7a6c855799b53<br/>SHA-256: 3e78ffc9b14009e23c6f4177b32481e46c29f9fbef3400fbfdddc2cf4e57bf9d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-server-8.4.20-1.el5_10.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ff9261a7b98e9a05728324a10571b0e5<br/>SHA-256: a9ca9b9e0c111aa6382a316b28a9718a4bee38c80b32d7bf8adc6e280e5fb350</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-tcl-8.4.20-1.el5_10.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 71d1581fe47fe1f942cf5b0d43c3f774<br/>SHA-256: b8d8d6adcee5e30c0bb85a585b21a88548c43cdbd42f9446ec8c4b2fcae41723</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-test-8.4.20-1.el5_10.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8d442207b80cda443b069cfbd919d88c<br/>SHA-256: 80ea371052e9e52c9f0c11ffe04658045fdbdc41df8318106f85ee865da447e8</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>s390x:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-8.4.20-1.el5_10.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 78b6635de66bd17c35bc38f37dd1c420<br/>SHA-256: 934861d0a3f6542729e12eb289cd31a23cf3ba488f9b8efc5eacf3caa3e71cca</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-contrib-8.4.20-1.el5_10.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 41b0eed71f314806365d1c020bebd30e<br/>SHA-256: 18f2b1aa8cac697a6924814fda108c1281833b0a85cc6f3d9aa606cf7fa3434f</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-debuginfo-8.4.20-1.el5_10.s390.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 63e23765325fdc614b6dc77ff21a0025<br/>SHA-256: 4a62d39062ded7e4bc8b71597c3cae10c81480f006f0b0c7c0adf9a0cf9e49eb</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-debuginfo-8.4.20-1.el5_10.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 929d47d4abfe7471fe2c18e87666b874<br/>SHA-256: 665df99b16ea72d29732cadebc391a5e202570d8a38af6d4684e39af6f456790</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-devel-8.4.20-1.el5_10.s390.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2318f61687b7c2b3d56d2d21e1adba8d<br/>SHA-256: 52229b8f50056c7ae340933f5b87501bf6a8449046a3970d4cda68d92754d9d9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-devel-8.4.20-1.el5_10.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0bc3ff6f9fdce28ebacb4adba594f52b<br/>SHA-256: 1bdaa3de2d7ef6bd75a1e10648ce43d70bac9f87843038a338b2e6d2135334e3</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-docs-8.4.20-1.el5_10.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0bc215d0b2f8f3c9c10f090168bc2dcc<br/>SHA-256: 9c0a1164c7b2fef45ce16115a1516db8c8cc7ef3a263066ddc98cad4a2e067fe</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-libs-8.4.20-1.el5_10.s390.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e4a1182b110d9a23a812c53fc5ddc541<br/>SHA-256: 9417fe9d8de155dbeb256a82b689a5a4cf0e4dbcd0cb683d89f47f4aef324a5a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-libs-8.4.20-1.el5_10.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 047d0d7ca13e1a9321a643831d1b67f3<br/>SHA-256: c72eff054af57682e4a15c4df5444a97c0a216d78f96a0876c7258900a3c09e9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-plperl-8.4.20-1.el5_10.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 27d0de47e7efa8bf1af1a7a2fdb397b9<br/>SHA-256: 6f651ea855e0992b2efd53e04fb5f1934526e32747521aafcf21e8dbc7f1726b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-plpython-8.4.20-1.el5_10.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c1d4db90ab62354052b13e2f12d1f08a<br/>SHA-256: 967fec89b372bcdf82abbc03bd4a9b8b759ca7330dfaa42971d08ff78de247ca</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-pltcl-8.4.20-1.el5_10.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 21ed5b11e9fd6e3afeb8d92e3a721597<br/>SHA-256: 6cafdb171609ce2cd3858909f701eb38b0cdd3d13bbf9aaf08d826476419a484</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-python-8.4.20-1.el5_10.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 69a7171d7bd3eee1efd80755718eb9ae<br/>SHA-256: 72fbf0b0213c40563f813c05e474b3d5c0415ff5f5eae30cbe7f5502a9e46063</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-server-8.4.20-1.el5_10.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 7295c89a413abceb03aaf8ca1f146a25<br/>SHA-256: 93d2156c8e7d58f37adc3561806076209847907e76247d8e9dede89b697b692e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-tcl-8.4.20-1.el5_10.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2257320f4571667c4b83bfa49559a839<br/>SHA-256: d44384f4800a245cc756f410148773ff84cdc1d718019a04285eb9470c17ce0a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-test-8.4.20-1.el5_10.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 45700ff14ff5e5ec7af1247df2c8543b<br/>SHA-256: bbcda65049732129cd54f32d65cff7d76d217873122408a2fea57d0caad1df9a</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-8.4.20-1.el5_10.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 15836a23b313eae6fed84329b854ce72<br/>SHA-256: 290854eebe6369126339691484e7fa2d16503bfc5dcbc52787e2d519b60c50b5</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-contrib-8.4.20-1.el5_10.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 63370fe7d7f18b3303a58abc939a6002<br/>SHA-256: 50019ef58e2db626ada6817be69874a8e19623bf41f35bad9d795a0c4d0deff4</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-debuginfo-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: fbba866b6c05c705eb1e09b6754ec5bb<br/>SHA-256: f7e952a586240bed59e22f00d45201682ad54104302526c445943332c259e27d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-debuginfo-8.4.20-1.el5_10.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 015af12bfd40b669278ffe5612e0fe0a<br/>SHA-256: a4f0f771ea18dc551a6b9ad52078cca7f2b90d8b2a699824aeedb749c02d9df9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-devel-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: eadc6dfe9da2f064733b7787405381db<br/>SHA-256: 9f5e0fbb1a921b6f5baa785e772e08c0171473eb97a7280cfe0682bf6581cc0d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-devel-8.4.20-1.el5_10.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c7557b409fdb5a821e900d0122c2e45c<br/>SHA-256: 62b47b99e8dd1947c9d920caaeb3a8c09fcd3277017622800c66a084dfcd0eee</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-docs-8.4.20-1.el5_10.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: fb0983d958e63f71f16564f9f2040a0e<br/>SHA-256: 64bc87c65bf3fd37d67aec77aa8a2ca2b1782c5904390abb7db4177749f09434</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-libs-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6b7823e46fdb9e6feafeeb955a27b1bf<br/>SHA-256: 6f5c49ec0334107bbf4413a4c29befddf5a92a9acfc6fb58d7fad9e57c71383c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-libs-8.4.20-1.el5_10.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: be452d4446a453f67693d6ada5fbf8a4<br/>SHA-256: 685c02bbe6624face638883aaffdfd749b93ac4862a207d117a6039012439f8e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-plperl-8.4.20-1.el5_10.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f7fec641a8645f5296100ca2ca3ff963<br/>SHA-256: 3f15da1ae3c8343d64bf91b2164ecac65013a2a2c9906edd0f2a10a44d9a0ab1</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-plpython-8.4.20-1.el5_10.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 672dfe424511d4f04d672b72b15f8239<br/>SHA-256: db0e015db01bcf32484f08b845d0c1f2955aacb68714fb06fe475b6cd84965db</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-pltcl-8.4.20-1.el5_10.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: bd73ed9459093293be77e134b398d1ca<br/>SHA-256: d1d7ac10b5f45de780b919695c8ea2361e85a012b80861e48adbd1f1f15e81db</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-python-8.4.20-1.el5_10.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8d2f37bd3715f1e0e90abe5005b2984d<br/>SHA-256: da674a1a2c36c52a89a58be16dad2df0916cd9a6d42f01ad6b0ab6302ea447de</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-server-8.4.20-1.el5_10.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f98c21e9c13c18117f625e04dfc33be1<br/>SHA-256: e6d3aee3775c9e9f594c395909b9738bce183dbbc25d4f3cde7a8bbdc534b9ad</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-tcl-8.4.20-1.el5_10.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 76c51b9260c2beddea6187063732802b<br/>SHA-256: 33a303e0dc2834c68ce23fd69766482a26e9b993ded21d42312a49fdff41a393</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-test-8.4.20-1.el5_10.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 83a09f13752de4bcd9061962b46dad05<br/>SHA-256: 993f0c9cd64538cc1a602442b7aa617e2af3250feb644dd20d908389ab5c2403</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Desktop (v. 5 client)">Red Hat Enterprise Linux Desktop (v. 5 client)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-8.4.20-1.el5_10.src.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0a4a2c78e5b5d75b4f7cae0c4b6aed98<br/>SHA-256: b92cbce93b2177d85f3fb7f9a219b40cdac85c20a461b7671814d0696a38b174</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0b0b69d007cc9ce43734e9b280979a53<br/>SHA-256: a8e444cec49041570b343ef60fb88b87effeea74d00a96b5815ec0b0915a5d5c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-contrib-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 4ecb31b7e7030b76b3325abc60ba9656<br/>SHA-256: 3a69045a24d5f44802220deba8d9b70d1770137a7c6fcb83fb799af369570fcd</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-debuginfo-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: fbba866b6c05c705eb1e09b6754ec5bb<br/>SHA-256: f7e952a586240bed59e22f00d45201682ad54104302526c445943332c259e27d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-docs-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3d8a6d687e98667015d149d5d8d9fc51<br/>SHA-256: 375de9841213324d8d2dd174ba3dc56833dd5fb9b52ae86569b63e8269a239a0</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-libs-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6b7823e46fdb9e6feafeeb955a27b1bf<br/>SHA-256: 6f5c49ec0334107bbf4413a4c29befddf5a92a9acfc6fb58d7fad9e57c71383c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-python-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b2af24a84750cdfd417f0bfdcffc4ca0<br/>SHA-256: e0bea59fc184855025a252d1c09a9b448d5b49ae426e86986c06f5a28881a155</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-tcl-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9616e7afb6da917bce645a2453aeb611<br/>SHA-256: 35790f43f15859e9d093e53d75ec92dc7461e5c73744b0340f354b6e871b056d</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-8.4.20-1.el5_10.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 15836a23b313eae6fed84329b854ce72<br/>SHA-256: 290854eebe6369126339691484e7fa2d16503bfc5dcbc52787e2d519b60c50b5</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-contrib-8.4.20-1.el5_10.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 63370fe7d7f18b3303a58abc939a6002<br/>SHA-256: 50019ef58e2db626ada6817be69874a8e19623bf41f35bad9d795a0c4d0deff4</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-debuginfo-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: fbba866b6c05c705eb1e09b6754ec5bb<br/>SHA-256: f7e952a586240bed59e22f00d45201682ad54104302526c445943332c259e27d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-debuginfo-8.4.20-1.el5_10.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 015af12bfd40b669278ffe5612e0fe0a<br/>SHA-256: a4f0f771ea18dc551a6b9ad52078cca7f2b90d8b2a699824aeedb749c02d9df9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-docs-8.4.20-1.el5_10.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: fb0983d958e63f71f16564f9f2040a0e<br/>SHA-256: 64bc87c65bf3fd37d67aec77aa8a2ca2b1782c5904390abb7db4177749f09434</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-libs-8.4.20-1.el5_10.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6b7823e46fdb9e6feafeeb955a27b1bf<br/>SHA-256: 6f5c49ec0334107bbf4413a4c29befddf5a92a9acfc6fb58d7fad9e57c71383c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-libs-8.4.20-1.el5_10.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: be452d4446a453f67693d6ada5fbf8a4<br/>SHA-256: 685c02bbe6624face638883aaffdfd749b93ac4862a207d117a6039012439f8e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql84-python-8.4.20-1.el5_10.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8d2f37bd3715f1e0e90abe5005b2984d<br/>SHA-256: da674a1a2c36c52a89a58be16dad2df0916cd9a6d42f01ad6b0ab6302ea447de</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql84-tcl-8.4.20-1.el5_10.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 76c51b9260c2beddea6187063732802b<br/>SHA-256: 33a303e0dc2834c68ce23fd69766482a26e9b993ded21d42312a49fdff41a393</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Desktop (v. 6)">Red Hat Enterprise Linux Desktop (v. 6)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-8.4.20-1.el6_5.src.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a4dc01b7059dc2aa081da7a6a3db56a9<br/>SHA-256: 09fb04672193416a8e8a313bc0149c746910980ad1781f201ce239bff82af09d</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: be972cc47068dd88d4081dc5decb56f4<br/>SHA-256: fc4ac7f7d369c1544beb20f70c663d7f58059d163f9ef6004c8876f714770113</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-contrib-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0b1d0a8e010a02828ca7454912082155<br/>SHA-256: a6950c9d5b1bcbfa79226d199dae390675e3109c4b2ea699fa9a11e3e94a8f68</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-debuginfo-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f9097293ddaa5b2998a880cdc6742761<br/>SHA-256: e254dfe1ba35c92544b5ea29c4c8b45c8878f46b4fe605c5c56a6c86bfe25942</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-devel-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6918930955904034e43ffacf271427f8<br/>SHA-256: e23e1423981760b8dc024ae0d3afd58b0e7b35602654aa726831a8bea0a3d201</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-docs-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3251733ea018e38a01be24711f4fbcb6<br/>SHA-256: 825c55f68b06fd1ec3bbafa2cc0078a36bfdfa1515a47a927482f7c50a44f4a0</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-libs-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c910c8446d7ff1803665f1bc2de938e3<br/>SHA-256: e9a4c14b59bdc51a53da4ba062e01b5fd22c5cbba450be98e517c6d4f1f35bb6</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-plperl-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 643b759026d9a719b36960688bba10a9<br/>SHA-256: 546b64d50d8be7444690f3d2bdd9bc90c4c8e58f962fda9901061518f951399c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-plpython-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e7ccb1b76f06f101c931929a39b6c0e0<br/>SHA-256: 9f49e6db00cdfa83293a5575e9ebd244d5c7dab5e47b03078f185b1cb301c389</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-pltcl-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 67db406a8bbcec9c1ee739526742654a<br/>SHA-256: 02bf40b4e6bc14b037fe36f58ef1ff532ab03fd1df5427f24c80e7fe0fa15ecd</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-server-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 233661dbf2d63b4128c121cd57bc1041<br/>SHA-256: 445ccfdbb47a9daefd7b24dabe6ef2533cf65811560199c153f2e526bd9aaf13</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-test-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c7136243831ecfc5ea1d53ba387c7b3a<br/>SHA-256: 3f120332ca038ef118705e2ff461a657a051d319c28a37f88eb877375e55bb9d</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: be972cc47068dd88d4081dc5decb56f4<br/>SHA-256: fc4ac7f7d369c1544beb20f70c663d7f58059d163f9ef6004c8876f714770113</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 54837c56d52e9ea44c58c1e504dd5c21<br/>SHA-256: 8746940164e227763f6e904038d72b42f82edc874fb71aa2eaeae7e97c7e79cb</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-contrib-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 067a11d66557e74edf50c024f9bf2c40<br/>SHA-256: a52d8b31d384dd2cb893e0acd7b943379d66ce2c10da2ee716d34f2077ec6153</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-debuginfo-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f9097293ddaa5b2998a880cdc6742761<br/>SHA-256: e254dfe1ba35c92544b5ea29c4c8b45c8878f46b4fe605c5c56a6c86bfe25942</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-debuginfo-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: bb98c6d13c477a9eebcf2043f12092e5<br/>SHA-256: 0b11e7646d0fd779bd0e2d139bcd22dd45b0473dc7fb3f370073f8f67f87b5ef</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-devel-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6918930955904034e43ffacf271427f8<br/>SHA-256: e23e1423981760b8dc024ae0d3afd58b0e7b35602654aa726831a8bea0a3d201</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-devel-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 47e20363764d8340a236fd3c99c30d87<br/>SHA-256: 962803f4a09f4325e67f85bbd1737f2796d8379d3c838c9b9001604fe1f7e87a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-docs-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 17fae85ae035fbbb112e4b64c8fbf5f0<br/>SHA-256: a91afb00a18cb82bba32e74537d65994992ac2ce02e63413d20ce0742d1ed27c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-libs-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c910c8446d7ff1803665f1bc2de938e3<br/>SHA-256: e9a4c14b59bdc51a53da4ba062e01b5fd22c5cbba450be98e517c6d4f1f35bb6</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-libs-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d7818cc6c848126e174345702a48c11d<br/>SHA-256: b2717815992b762cea7606c64f924a67e2a0db8e3313ccaf508b12a74200216c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-plperl-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 13b2d38b48fda246c8bc7ac42de54a41<br/>SHA-256: 7480fe2d5deee9c0f770a918222682fc72d2b6d335f1a3b42d63d3524d4ac071</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-plpython-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5a631688e57c61243d837e800e0f54f1<br/>SHA-256: bc8b7c50cc97bdf14047d1fbe03ce5e54c5b44d49760ad96d30ff99df7a07fc2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-pltcl-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1f0d70a5bca4d18e4dbb5a067696eb50<br/>SHA-256: 6d44b57b1baed4bb940e6c5798e43394ff87ae7158dfcc63f48fdbe04846db89</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-server-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9507d24e1bc21195d2f1a25229344862<br/>SHA-256: c0c38377a5db59cfa8e4128e217979680cb0424e4fd7cdef0982a6254a35eaa9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-test-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6a96ec987d0a729bcd55e6b3d995531f<br/>SHA-256: 451a89d84b21ff3d08d6e3ba9e6c81692b3187b92f649aab621056484a8d0052</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux HPC Node (v. 6)">Red Hat Enterprise Linux HPC Node (v. 6)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-8.4.20-1.el6_5.src.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a4dc01b7059dc2aa081da7a6a3db56a9<br/>SHA-256: 09fb04672193416a8e8a313bc0149c746910980ad1781f201ce239bff82af09d</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: be972cc47068dd88d4081dc5decb56f4<br/>SHA-256: fc4ac7f7d369c1544beb20f70c663d7f58059d163f9ef6004c8876f714770113</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 54837c56d52e9ea44c58c1e504dd5c21<br/>SHA-256: 8746940164e227763f6e904038d72b42f82edc874fb71aa2eaeae7e97c7e79cb</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-contrib-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 067a11d66557e74edf50c024f9bf2c40<br/>SHA-256: a52d8b31d384dd2cb893e0acd7b943379d66ce2c10da2ee716d34f2077ec6153</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-debuginfo-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f9097293ddaa5b2998a880cdc6742761<br/>SHA-256: e254dfe1ba35c92544b5ea29c4c8b45c8878f46b4fe605c5c56a6c86bfe25942</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-debuginfo-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: bb98c6d13c477a9eebcf2043f12092e5<br/>SHA-256: 0b11e7646d0fd779bd0e2d139bcd22dd45b0473dc7fb3f370073f8f67f87b5ef</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-devel-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6918930955904034e43ffacf271427f8<br/>SHA-256: e23e1423981760b8dc024ae0d3afd58b0e7b35602654aa726831a8bea0a3d201</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-devel-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 47e20363764d8340a236fd3c99c30d87<br/>SHA-256: 962803f4a09f4325e67f85bbd1737f2796d8379d3c838c9b9001604fe1f7e87a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-docs-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 17fae85ae035fbbb112e4b64c8fbf5f0<br/>SHA-256: a91afb00a18cb82bba32e74537d65994992ac2ce02e63413d20ce0742d1ed27c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-libs-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c910c8446d7ff1803665f1bc2de938e3<br/>SHA-256: e9a4c14b59bdc51a53da4ba062e01b5fd22c5cbba450be98e517c6d4f1f35bb6</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-libs-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d7818cc6c848126e174345702a48c11d<br/>SHA-256: b2717815992b762cea7606c64f924a67e2a0db8e3313ccaf508b12a74200216c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-plperl-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 13b2d38b48fda246c8bc7ac42de54a41<br/>SHA-256: 7480fe2d5deee9c0f770a918222682fc72d2b6d335f1a3b42d63d3524d4ac071</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-plpython-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5a631688e57c61243d837e800e0f54f1<br/>SHA-256: bc8b7c50cc97bdf14047d1fbe03ce5e54c5b44d49760ad96d30ff99df7a07fc2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-pltcl-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1f0d70a5bca4d18e4dbb5a067696eb50<br/>SHA-256: 6d44b57b1baed4bb940e6c5798e43394ff87ae7158dfcc63f48fdbe04846db89</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-server-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9507d24e1bc21195d2f1a25229344862<br/>SHA-256: c0c38377a5db59cfa8e4128e217979680cb0424e4fd7cdef0982a6254a35eaa9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-test-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6a96ec987d0a729bcd55e6b3d995531f<br/>SHA-256: 451a89d84b21ff3d08d6e3ba9e6c81692b3187b92f649aab621056484a8d0052</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Server (v. 6)">Red Hat Enterprise Linux Server (v. 6)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-8.4.20-1.el6_5.src.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a4dc01b7059dc2aa081da7a6a3db56a9<br/>SHA-256: 09fb04672193416a8e8a313bc0149c746910980ad1781f201ce239bff82af09d</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: be972cc47068dd88d4081dc5decb56f4<br/>SHA-256: fc4ac7f7d369c1544beb20f70c663d7f58059d163f9ef6004c8876f714770113</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-contrib-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0b1d0a8e010a02828ca7454912082155<br/>SHA-256: a6950c9d5b1bcbfa79226d199dae390675e3109c4b2ea699fa9a11e3e94a8f68</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-debuginfo-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f9097293ddaa5b2998a880cdc6742761<br/>SHA-256: e254dfe1ba35c92544b5ea29c4c8b45c8878f46b4fe605c5c56a6c86bfe25942</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-devel-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6918930955904034e43ffacf271427f8<br/>SHA-256: e23e1423981760b8dc024ae0d3afd58b0e7b35602654aa726831a8bea0a3d201</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-docs-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3251733ea018e38a01be24711f4fbcb6<br/>SHA-256: 825c55f68b06fd1ec3bbafa2cc0078a36bfdfa1515a47a927482f7c50a44f4a0</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-libs-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c910c8446d7ff1803665f1bc2de938e3<br/>SHA-256: e9a4c14b59bdc51a53da4ba062e01b5fd22c5cbba450be98e517c6d4f1f35bb6</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-plperl-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 643b759026d9a719b36960688bba10a9<br/>SHA-256: 546b64d50d8be7444690f3d2bdd9bc90c4c8e58f962fda9901061518f951399c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-plpython-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e7ccb1b76f06f101c931929a39b6c0e0<br/>SHA-256: 9f49e6db00cdfa83293a5575e9ebd244d5c7dab5e47b03078f185b1cb301c389</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-pltcl-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 67db406a8bbcec9c1ee739526742654a<br/>SHA-256: 02bf40b4e6bc14b037fe36f58ef1ff532ab03fd1df5427f24c80e7fe0fa15ecd</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-server-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 233661dbf2d63b4128c121cd57bc1041<br/>SHA-256: 445ccfdbb47a9daefd7b24dabe6ef2533cf65811560199c153f2e526bd9aaf13</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-test-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c7136243831ecfc5ea1d53ba387c7b3a<br/>SHA-256: 3f120332ca038ef118705e2ff461a657a051d319c28a37f88eb877375e55bb9d</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>PPC:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-8.4.20-1.el6_5.ppc.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1d5bab10103b9e59d823e4b1a90ba8cd<br/>SHA-256: 4ee3a6759fa49cf0f703d0c144e0b5a475c1af00555c7ad5e506f3901661ecb3</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-8.4.20-1.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ddd8cbd3fe5812fbc4ac2f5852397197<br/>SHA-256: b31e05ec8bad27e8b50e48ddbbe575ef8d04b44e829baeb1b9a1778663c739da</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-contrib-8.4.20-1.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 51d8363eaf1abbd3a70b7a2dc5e55bfd<br/>SHA-256: 17fd93fb2fbeee05476b96008fdae6f56302108d53e18ac516a24a750ae16425</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-debuginfo-8.4.20-1.el6_5.ppc.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5a2d560be6ee955b202e220862309fc1<br/>SHA-256: d26280abbd8900110bcd4ec1fa2aeb54fa52a58cfa93523314941372c4e62839</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-debuginfo-8.4.20-1.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9e82b6f766b7bb27dd7a73c60ccb1e20<br/>SHA-256: 43511d96ab98fc23ce346b1494058d6a2fa5d83ec41b91c4310aef3c32fbf6b0</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-devel-8.4.20-1.el6_5.ppc.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d0a009edd51e14bd434a1cdff6b9a7d7<br/>SHA-256: 29e28d3c500a5545c466b0393268e60ed9c15e6e8a728c83b939ef6d90b5a9fd</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-devel-8.4.20-1.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b36fbedb78c25ba7d4ea3280d18fac69<br/>SHA-256: ea162b5449c4a797a9b64a70a3632a0391efdc5c77418b8885fd3f8424d1a295</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-docs-8.4.20-1.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6c318f69f902272a3e66f6a4c494c588<br/>SHA-256: ad92ce790d0685412b2f9f11301fd3576079104e3acb880f3b5020dff29264b2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-libs-8.4.20-1.el6_5.ppc.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 877ff45ca0ded9af5188b0afd4ac4db5<br/>SHA-256: 293545edef7b1791512ddc19878c6a35cf391e7abdea2f988b1b8758936c1590</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-libs-8.4.20-1.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 066243c3b40d4d018442decf35aae2f3<br/>SHA-256: 27c15cacdea096edabba2465d105378df22546d1479c7fc0d07659d8c32b8be1</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-plperl-8.4.20-1.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: cc46e46c13ef8898327074fc1a6d6297<br/>SHA-256: 1d997adf64c0c3954c6422a6ae9d4da1b102a0c156bbe861e5077d3a40511bc2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-plpython-8.4.20-1.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f901efb364b19a144c0f751976e820f7<br/>SHA-256: e33042abf82abf0442cb9afa1a971103b8d1892064918a408fec0ca2935855c9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-pltcl-8.4.20-1.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b979495d5b66876ae2aea3782f72a5d5<br/>SHA-256: 46624a1e10d67a48896b41fd9f51a8377c733d045bacf647a2eadd0618f81418</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-server-8.4.20-1.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 780aba05b1556446fe3f65a5ec02893c<br/>SHA-256: 06342614c611e039c416db043605372ad47544b3010379d69be30e61abdc1575</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-test-8.4.20-1.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e9fb5cc4ef9cde953d9fe91f9efac909<br/>SHA-256: 8f3f195e3b9ba54110cab1b92a6c73e5a6330c69fe917bf17eeb014eebb34cae</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>s390x:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-8.4.20-1.el6_5.s390.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: af4095c56827ec28698c1c71e1a38f58<br/>SHA-256: 3592569b1e8d6362c6dcdc938a94fe63a81e69c61fe489b6218b60c401feccb9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-8.4.20-1.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 224a52eba0b1d5cefade768b12720816<br/>SHA-256: 2fd4af7bd7f7d45c366cf92d3878069b1e4f80ca6f96f37c292bee9ee7affd0f</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-contrib-8.4.20-1.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 60e08268482b3107be3890143283287b<br/>SHA-256: 6e56cae2f0a19a71fc51ead548244b44e5ebbe01f864359847b3e72e36d9aac6</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-debuginfo-8.4.20-1.el6_5.s390.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b7968b65236222cc1ec50c5e598ad710<br/>SHA-256: 4265992bfa4c895862fd7a7b12b0ff1329aa06824c914ddfbc111a27c80b2ede</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-debuginfo-8.4.20-1.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 277395c655e3ddfa7639fe19f5e23efc<br/>SHA-256: 40d281235cc7880140534ea2d9c4aee338aaf6396308660bfb8bffc4199ba89d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-devel-8.4.20-1.el6_5.s390.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 37037452167f6148722fc2cc56376538<br/>SHA-256: 78471cf63e7c979a3583b45a6fc42bce4661c62bf7087e4fe20bd1def5b1fda6</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-devel-8.4.20-1.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 30a5e586ec790c3655344c82cac4aab6<br/>SHA-256: e97d5dea322ed620da5f6c93483790bd011753131eaaf790fcbda6dd55890866</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-docs-8.4.20-1.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f94e563ec9b569b4f7abe0640f72a7bc<br/>SHA-256: a8656ec4d1187f2b5aeb436601d8300407c5d888927e1f308f0d781b002e88a8</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-libs-8.4.20-1.el6_5.s390.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 464ce1556f1d778d499925a908ade3f1<br/>SHA-256: fc608d19d1176e288d141be086694df40f6c9b048ad8107996e44342258a939b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-libs-8.4.20-1.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c7442416a2fcd932a2e51b4cd8d1ce07<br/>SHA-256: ed2a25471e55135eddfd3f1a473dda899f4a9121e7bd6b7f67e1a53158c6acb1</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-plperl-8.4.20-1.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: bad9aca9561caa286b854fc07e5711bc<br/>SHA-256: b227c8b34da5f5bc5615e6fd50d07a2e46bd6e54bc96bfc99396d13203f8f36f</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-plpython-8.4.20-1.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 19ce74cac858bcb9518c61f7b79762de<br/>SHA-256: f69f4dc17cb0441697982faee74284335ebc04658266adb523a602c811ea4b9c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-pltcl-8.4.20-1.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8f1384f1b22ce4c65f668a1b230b3be9<br/>SHA-256: 60e31265e2a0c2b01e3bea659480bef4e30b18e9cf62d244418b49ec52e4f324</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-server-8.4.20-1.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 4548453dd4643417ec326196b837ae36<br/>SHA-256: 9046b8759c541380d6dd5927f4f680bdcfb72efb12bcafcc32c24c0d4db35059</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-test-8.4.20-1.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 215732004e68374c1f5644b3e0e93bab<br/>SHA-256: 4d7e05d3b66524645ff503158bf706532d737e2d75f6b4273abf978a5e0bbfe4</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: be972cc47068dd88d4081dc5decb56f4<br/>SHA-256: fc4ac7f7d369c1544beb20f70c663d7f58059d163f9ef6004c8876f714770113</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 54837c56d52e9ea44c58c1e504dd5c21<br/>SHA-256: 8746940164e227763f6e904038d72b42f82edc874fb71aa2eaeae7e97c7e79cb</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-contrib-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 067a11d66557e74edf50c024f9bf2c40<br/>SHA-256: a52d8b31d384dd2cb893e0acd7b943379d66ce2c10da2ee716d34f2077ec6153</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-debuginfo-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f9097293ddaa5b2998a880cdc6742761<br/>SHA-256: e254dfe1ba35c92544b5ea29c4c8b45c8878f46b4fe605c5c56a6c86bfe25942</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-debuginfo-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: bb98c6d13c477a9eebcf2043f12092e5<br/>SHA-256: 0b11e7646d0fd779bd0e2d139bcd22dd45b0473dc7fb3f370073f8f67f87b5ef</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-devel-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6918930955904034e43ffacf271427f8<br/>SHA-256: e23e1423981760b8dc024ae0d3afd58b0e7b35602654aa726831a8bea0a3d201</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-devel-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 47e20363764d8340a236fd3c99c30d87<br/>SHA-256: 962803f4a09f4325e67f85bbd1737f2796d8379d3c838c9b9001604fe1f7e87a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-docs-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 17fae85ae035fbbb112e4b64c8fbf5f0<br/>SHA-256: a91afb00a18cb82bba32e74537d65994992ac2ce02e63413d20ce0742d1ed27c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-libs-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c910c8446d7ff1803665f1bc2de938e3<br/>SHA-256: e9a4c14b59bdc51a53da4ba062e01b5fd22c5cbba450be98e517c6d4f1f35bb6</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-libs-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d7818cc6c848126e174345702a48c11d<br/>SHA-256: b2717815992b762cea7606c64f924a67e2a0db8e3313ccaf508b12a74200216c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-plperl-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 13b2d38b48fda246c8bc7ac42de54a41<br/>SHA-256: 7480fe2d5deee9c0f770a918222682fc72d2b6d335f1a3b42d63d3524d4ac071</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-plpython-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5a631688e57c61243d837e800e0f54f1<br/>SHA-256: bc8b7c50cc97bdf14047d1fbe03ce5e54c5b44d49760ad96d30ff99df7a07fc2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-pltcl-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1f0d70a5bca4d18e4dbb5a067696eb50<br/>SHA-256: 6d44b57b1baed4bb940e6c5798e43394ff87ae7158dfcc63f48fdbe04846db89</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-server-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9507d24e1bc21195d2f1a25229344862<br/>SHA-256: c0c38377a5db59cfa8e4128e217979680cb0424e4fd7cdef0982a6254a35eaa9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-test-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6a96ec987d0a729bcd55e6b3d995531f<br/>SHA-256: 451a89d84b21ff3d08d6e3ba9e6c81692b3187b92f649aab621056484a8d0052</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Server AUS (v. 6.5)">Red Hat Enterprise Linux Server AUS (v. 6.5)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-8.4.20-1.el6_5.src.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a4dc01b7059dc2aa081da7a6a3db56a9<br/>SHA-256: 09fb04672193416a8e8a313bc0149c746910980ad1781f201ce239bff82af09d</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-8.4.20-1.el6_5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: be972cc47068dd88d4081dc5decb56f4<br/>SHA-256: fc4ac7f7d369c1544beb20f70c663d7f58059d163f9ef6004c8876f714770113</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-8.4.20-1.el6_5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 54837c56d52e9ea44c58c1e504dd5c21<br/>SHA-256: 8746940164e227763f6e904038d72b42f82edc874fb71aa2eaeae7e97c7e79cb</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-contrib-8.4.20-1.el6_5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 067a11d66557e74edf50c024f9bf2c40<br/>SHA-256: a52d8b31d384dd2cb893e0acd7b943379d66ce2c10da2ee716d34f2077ec6153</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-debuginfo-8.4.20-1.el6_5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f9097293ddaa5b2998a880cdc6742761<br/>SHA-256: e254dfe1ba35c92544b5ea29c4c8b45c8878f46b4fe605c5c56a6c86bfe25942</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-debuginfo-8.4.20-1.el6_5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: bb98c6d13c477a9eebcf2043f12092e5<br/>SHA-256: 0b11e7646d0fd779bd0e2d139bcd22dd45b0473dc7fb3f370073f8f67f87b5ef</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-devel-8.4.20-1.el6_5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6918930955904034e43ffacf271427f8<br/>SHA-256: e23e1423981760b8dc024ae0d3afd58b0e7b35602654aa726831a8bea0a3d201</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-devel-8.4.20-1.el6_5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 47e20363764d8340a236fd3c99c30d87<br/>SHA-256: 962803f4a09f4325e67f85bbd1737f2796d8379d3c838c9b9001604fe1f7e87a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-docs-8.4.20-1.el6_5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 17fae85ae035fbbb112e4b64c8fbf5f0<br/>SHA-256: a91afb00a18cb82bba32e74537d65994992ac2ce02e63413d20ce0742d1ed27c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-libs-8.4.20-1.el6_5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c910c8446d7ff1803665f1bc2de938e3<br/>SHA-256: e9a4c14b59bdc51a53da4ba062e01b5fd22c5cbba450be98e517c6d4f1f35bb6</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-libs-8.4.20-1.el6_5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d7818cc6c848126e174345702a48c11d<br/>SHA-256: b2717815992b762cea7606c64f924a67e2a0db8e3313ccaf508b12a74200216c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-plperl-8.4.20-1.el6_5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 13b2d38b48fda246c8bc7ac42de54a41<br/>SHA-256: 7480fe2d5deee9c0f770a918222682fc72d2b6d335f1a3b42d63d3524d4ac071</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-plpython-8.4.20-1.el6_5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5a631688e57c61243d837e800e0f54f1<br/>SHA-256: bc8b7c50cc97bdf14047d1fbe03ce5e54c5b44d49760ad96d30ff99df7a07fc2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-pltcl-8.4.20-1.el6_5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1f0d70a5bca4d18e4dbb5a067696eb50<br/>SHA-256: 6d44b57b1baed4bb940e6c5798e43394ff87ae7158dfcc63f48fdbe04846db89</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-server-8.4.20-1.el6_5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9507d24e1bc21195d2f1a25229344862<br/>SHA-256: c0c38377a5db59cfa8e4128e217979680cb0424e4fd7cdef0982a6254a35eaa9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-test-8.4.20-1.el6_5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6a96ec987d0a729bcd55e6b3d995531f<br/>SHA-256: 451a89d84b21ff3d08d6e3ba9e6c81692b3187b92f649aab621056484a8d0052</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Server EUS (v. 6.5.z)">Red Hat Enterprise Linux Server EUS (v. 6.5.z)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-8.4.20-1.el6_5.src.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a4dc01b7059dc2aa081da7a6a3db56a9<br/>SHA-256: 09fb04672193416a8e8a313bc0149c746910980ad1781f201ce239bff82af09d</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-8.4.20-1.el6_5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: be972cc47068dd88d4081dc5decb56f4<br/>SHA-256: fc4ac7f7d369c1544beb20f70c663d7f58059d163f9ef6004c8876f714770113</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-contrib-8.4.20-1.el6_5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0b1d0a8e010a02828ca7454912082155<br/>SHA-256: a6950c9d5b1bcbfa79226d199dae390675e3109c4b2ea699fa9a11e3e94a8f68</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-debuginfo-8.4.20-1.el6_5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f9097293ddaa5b2998a880cdc6742761<br/>SHA-256: e254dfe1ba35c92544b5ea29c4c8b45c8878f46b4fe605c5c56a6c86bfe25942</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-devel-8.4.20-1.el6_5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6918930955904034e43ffacf271427f8<br/>SHA-256: e23e1423981760b8dc024ae0d3afd58b0e7b35602654aa726831a8bea0a3d201</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-docs-8.4.20-1.el6_5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3251733ea018e38a01be24711f4fbcb6<br/>SHA-256: 825c55f68b06fd1ec3bbafa2cc0078a36bfdfa1515a47a927482f7c50a44f4a0</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-libs-8.4.20-1.el6_5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c910c8446d7ff1803665f1bc2de938e3<br/>SHA-256: e9a4c14b59bdc51a53da4ba062e01b5fd22c5cbba450be98e517c6d4f1f35bb6</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-plperl-8.4.20-1.el6_5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 643b759026d9a719b36960688bba10a9<br/>SHA-256: 546b64d50d8be7444690f3d2bdd9bc90c4c8e58f962fda9901061518f951399c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-plpython-8.4.20-1.el6_5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e7ccb1b76f06f101c931929a39b6c0e0<br/>SHA-256: 9f49e6db00cdfa83293a5575e9ebd244d5c7dab5e47b03078f185b1cb301c389</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-pltcl-8.4.20-1.el6_5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 67db406a8bbcec9c1ee739526742654a<br/>SHA-256: 02bf40b4e6bc14b037fe36f58ef1ff532ab03fd1df5427f24c80e7fe0fa15ecd</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-server-8.4.20-1.el6_5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 233661dbf2d63b4128c121cd57bc1041<br/>SHA-256: 445ccfdbb47a9daefd7b24dabe6ef2533cf65811560199c153f2e526bd9aaf13</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-test-8.4.20-1.el6_5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c7136243831ecfc5ea1d53ba387c7b3a<br/>SHA-256: 3f120332ca038ef118705e2ff461a657a051d319c28a37f88eb877375e55bb9d</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>PPC:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-8.4.20-1.el6_5.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1d5bab10103b9e59d823e4b1a90ba8cd<br/>SHA-256: 4ee3a6759fa49cf0f703d0c144e0b5a475c1af00555c7ad5e506f3901661ecb3</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-8.4.20-1.el6_5.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ddd8cbd3fe5812fbc4ac2f5852397197<br/>SHA-256: b31e05ec8bad27e8b50e48ddbbe575ef8d04b44e829baeb1b9a1778663c739da</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-contrib-8.4.20-1.el6_5.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 51d8363eaf1abbd3a70b7a2dc5e55bfd<br/>SHA-256: 17fd93fb2fbeee05476b96008fdae6f56302108d53e18ac516a24a750ae16425</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-debuginfo-8.4.20-1.el6_5.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5a2d560be6ee955b202e220862309fc1<br/>SHA-256: d26280abbd8900110bcd4ec1fa2aeb54fa52a58cfa93523314941372c4e62839</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-debuginfo-8.4.20-1.el6_5.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9e82b6f766b7bb27dd7a73c60ccb1e20<br/>SHA-256: 43511d96ab98fc23ce346b1494058d6a2fa5d83ec41b91c4310aef3c32fbf6b0</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-devel-8.4.20-1.el6_5.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d0a009edd51e14bd434a1cdff6b9a7d7<br/>SHA-256: 29e28d3c500a5545c466b0393268e60ed9c15e6e8a728c83b939ef6d90b5a9fd</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-devel-8.4.20-1.el6_5.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b36fbedb78c25ba7d4ea3280d18fac69<br/>SHA-256: ea162b5449c4a797a9b64a70a3632a0391efdc5c77418b8885fd3f8424d1a295</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-docs-8.4.20-1.el6_5.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6c318f69f902272a3e66f6a4c494c588<br/>SHA-256: ad92ce790d0685412b2f9f11301fd3576079104e3acb880f3b5020dff29264b2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-libs-8.4.20-1.el6_5.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 877ff45ca0ded9af5188b0afd4ac4db5<br/>SHA-256: 293545edef7b1791512ddc19878c6a35cf391e7abdea2f988b1b8758936c1590</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-libs-8.4.20-1.el6_5.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 066243c3b40d4d018442decf35aae2f3<br/>SHA-256: 27c15cacdea096edabba2465d105378df22546d1479c7fc0d07659d8c32b8be1</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-plperl-8.4.20-1.el6_5.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: cc46e46c13ef8898327074fc1a6d6297<br/>SHA-256: 1d997adf64c0c3954c6422a6ae9d4da1b102a0c156bbe861e5077d3a40511bc2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-plpython-8.4.20-1.el6_5.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f901efb364b19a144c0f751976e820f7<br/>SHA-256: e33042abf82abf0442cb9afa1a971103b8d1892064918a408fec0ca2935855c9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-pltcl-8.4.20-1.el6_5.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b979495d5b66876ae2aea3782f72a5d5<br/>SHA-256: 46624a1e10d67a48896b41fd9f51a8377c733d045bacf647a2eadd0618f81418</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-server-8.4.20-1.el6_5.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 780aba05b1556446fe3f65a5ec02893c<br/>SHA-256: 06342614c611e039c416db043605372ad47544b3010379d69be30e61abdc1575</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-test-8.4.20-1.el6_5.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e9fb5cc4ef9cde953d9fe91f9efac909<br/>SHA-256: 8f3f195e3b9ba54110cab1b92a6c73e5a6330c69fe917bf17eeb014eebb34cae</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>s390x:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-8.4.20-1.el6_5.s390.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: af4095c56827ec28698c1c71e1a38f58<br/>SHA-256: 3592569b1e8d6362c6dcdc938a94fe63a81e69c61fe489b6218b60c401feccb9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-8.4.20-1.el6_5.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 224a52eba0b1d5cefade768b12720816<br/>SHA-256: 2fd4af7bd7f7d45c366cf92d3878069b1e4f80ca6f96f37c292bee9ee7affd0f</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-contrib-8.4.20-1.el6_5.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 60e08268482b3107be3890143283287b<br/>SHA-256: 6e56cae2f0a19a71fc51ead548244b44e5ebbe01f864359847b3e72e36d9aac6</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-debuginfo-8.4.20-1.el6_5.s390.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b7968b65236222cc1ec50c5e598ad710<br/>SHA-256: 4265992bfa4c895862fd7a7b12b0ff1329aa06824c914ddfbc111a27c80b2ede</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-debuginfo-8.4.20-1.el6_5.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 277395c655e3ddfa7639fe19f5e23efc<br/>SHA-256: 40d281235cc7880140534ea2d9c4aee338aaf6396308660bfb8bffc4199ba89d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-devel-8.4.20-1.el6_5.s390.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 37037452167f6148722fc2cc56376538<br/>SHA-256: 78471cf63e7c979a3583b45a6fc42bce4661c62bf7087e4fe20bd1def5b1fda6</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-devel-8.4.20-1.el6_5.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 30a5e586ec790c3655344c82cac4aab6<br/>SHA-256: e97d5dea322ed620da5f6c93483790bd011753131eaaf790fcbda6dd55890866</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-docs-8.4.20-1.el6_5.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f94e563ec9b569b4f7abe0640f72a7bc<br/>SHA-256: a8656ec4d1187f2b5aeb436601d8300407c5d888927e1f308f0d781b002e88a8</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-libs-8.4.20-1.el6_5.s390.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 464ce1556f1d778d499925a908ade3f1<br/>SHA-256: fc608d19d1176e288d141be086694df40f6c9b048ad8107996e44342258a939b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-libs-8.4.20-1.el6_5.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c7442416a2fcd932a2e51b4cd8d1ce07<br/>SHA-256: ed2a25471e55135eddfd3f1a473dda899f4a9121e7bd6b7f67e1a53158c6acb1</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-plperl-8.4.20-1.el6_5.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: bad9aca9561caa286b854fc07e5711bc<br/>SHA-256: b227c8b34da5f5bc5615e6fd50d07a2e46bd6e54bc96bfc99396d13203f8f36f</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-plpython-8.4.20-1.el6_5.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 19ce74cac858bcb9518c61f7b79762de<br/>SHA-256: f69f4dc17cb0441697982faee74284335ebc04658266adb523a602c811ea4b9c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-pltcl-8.4.20-1.el6_5.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8f1384f1b22ce4c65f668a1b230b3be9<br/>SHA-256: 60e31265e2a0c2b01e3bea659480bef4e30b18e9cf62d244418b49ec52e4f324</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-server-8.4.20-1.el6_5.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 4548453dd4643417ec326196b837ae36<br/>SHA-256: 9046b8759c541380d6dd5927f4f680bdcfb72efb12bcafcc32c24c0d4db35059</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-test-8.4.20-1.el6_5.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 215732004e68374c1f5644b3e0e93bab<br/>SHA-256: 4d7e05d3b66524645ff503158bf706532d737e2d75f6b4273abf978a5e0bbfe4</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-8.4.20-1.el6_5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: be972cc47068dd88d4081dc5decb56f4<br/>SHA-256: fc4ac7f7d369c1544beb20f70c663d7f58059d163f9ef6004c8876f714770113</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-8.4.20-1.el6_5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 54837c56d52e9ea44c58c1e504dd5c21<br/>SHA-256: 8746940164e227763f6e904038d72b42f82edc874fb71aa2eaeae7e97c7e79cb</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-contrib-8.4.20-1.el6_5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 067a11d66557e74edf50c024f9bf2c40<br/>SHA-256: a52d8b31d384dd2cb893e0acd7b943379d66ce2c10da2ee716d34f2077ec6153</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-debuginfo-8.4.20-1.el6_5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f9097293ddaa5b2998a880cdc6742761<br/>SHA-256: e254dfe1ba35c92544b5ea29c4c8b45c8878f46b4fe605c5c56a6c86bfe25942</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-debuginfo-8.4.20-1.el6_5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: bb98c6d13c477a9eebcf2043f12092e5<br/>SHA-256: 0b11e7646d0fd779bd0e2d139bcd22dd45b0473dc7fb3f370073f8f67f87b5ef</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-devel-8.4.20-1.el6_5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6918930955904034e43ffacf271427f8<br/>SHA-256: e23e1423981760b8dc024ae0d3afd58b0e7b35602654aa726831a8bea0a3d201</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-devel-8.4.20-1.el6_5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 47e20363764d8340a236fd3c99c30d87<br/>SHA-256: 962803f4a09f4325e67f85bbd1737f2796d8379d3c838c9b9001604fe1f7e87a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-docs-8.4.20-1.el6_5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 17fae85ae035fbbb112e4b64c8fbf5f0<br/>SHA-256: a91afb00a18cb82bba32e74537d65994992ac2ce02e63413d20ce0742d1ed27c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-libs-8.4.20-1.el6_5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c910c8446d7ff1803665f1bc2de938e3<br/>SHA-256: e9a4c14b59bdc51a53da4ba062e01b5fd22c5cbba450be98e517c6d4f1f35bb6</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-libs-8.4.20-1.el6_5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d7818cc6c848126e174345702a48c11d<br/>SHA-256: b2717815992b762cea7606c64f924a67e2a0db8e3313ccaf508b12a74200216c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-plperl-8.4.20-1.el6_5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 13b2d38b48fda246c8bc7ac42de54a41<br/>SHA-256: 7480fe2d5deee9c0f770a918222682fc72d2b6d335f1a3b42d63d3524d4ac071</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-plpython-8.4.20-1.el6_5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5a631688e57c61243d837e800e0f54f1<br/>SHA-256: bc8b7c50cc97bdf14047d1fbe03ce5e54c5b44d49760ad96d30ff99df7a07fc2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-pltcl-8.4.20-1.el6_5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1f0d70a5bca4d18e4dbb5a067696eb50<br/>SHA-256: 6d44b57b1baed4bb940e6c5798e43394ff87ae7158dfcc63f48fdbe04846db89</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-server-8.4.20-1.el6_5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9507d24e1bc21195d2f1a25229344862<br/>SHA-256: c0c38377a5db59cfa8e4128e217979680cb0424e4fd7cdef0982a6254a35eaa9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-test-8.4.20-1.el6_5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6a96ec987d0a729bcd55e6b3d995531f<br/>SHA-256: 451a89d84b21ff3d08d6e3ba9e6c81692b3187b92f649aab621056484a8d0052</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Workstation (v. 6)">Red Hat Enterprise Linux Workstation (v. 6)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-8.4.20-1.el6_5.src.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a4dc01b7059dc2aa081da7a6a3db56a9<br/>SHA-256: 09fb04672193416a8e8a313bc0149c746910980ad1781f201ce239bff82af09d</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: be972cc47068dd88d4081dc5decb56f4<br/>SHA-256: fc4ac7f7d369c1544beb20f70c663d7f58059d163f9ef6004c8876f714770113</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-contrib-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0b1d0a8e010a02828ca7454912082155<br/>SHA-256: a6950c9d5b1bcbfa79226d199dae390675e3109c4b2ea699fa9a11e3e94a8f68</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-debuginfo-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f9097293ddaa5b2998a880cdc6742761<br/>SHA-256: e254dfe1ba35c92544b5ea29c4c8b45c8878f46b4fe605c5c56a6c86bfe25942</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-devel-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6918930955904034e43ffacf271427f8<br/>SHA-256: e23e1423981760b8dc024ae0d3afd58b0e7b35602654aa726831a8bea0a3d201</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-docs-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3251733ea018e38a01be24711f4fbcb6<br/>SHA-256: 825c55f68b06fd1ec3bbafa2cc0078a36bfdfa1515a47a927482f7c50a44f4a0</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-libs-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c910c8446d7ff1803665f1bc2de938e3<br/>SHA-256: e9a4c14b59bdc51a53da4ba062e01b5fd22c5cbba450be98e517c6d4f1f35bb6</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-plperl-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 643b759026d9a719b36960688bba10a9<br/>SHA-256: 546b64d50d8be7444690f3d2bdd9bc90c4c8e58f962fda9901061518f951399c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-plpython-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e7ccb1b76f06f101c931929a39b6c0e0<br/>SHA-256: 9f49e6db00cdfa83293a5575e9ebd244d5c7dab5e47b03078f185b1cb301c389</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-pltcl-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 67db406a8bbcec9c1ee739526742654a<br/>SHA-256: 02bf40b4e6bc14b037fe36f58ef1ff532ab03fd1df5427f24c80e7fe0fa15ecd</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-server-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 233661dbf2d63b4128c121cd57bc1041<br/>SHA-256: 445ccfdbb47a9daefd7b24dabe6ef2533cf65811560199c153f2e526bd9aaf13</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-test-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c7136243831ecfc5ea1d53ba387c7b3a<br/>SHA-256: 3f120332ca038ef118705e2ff461a657a051d319c28a37f88eb877375e55bb9d</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: be972cc47068dd88d4081dc5decb56f4<br/>SHA-256: fc4ac7f7d369c1544beb20f70c663d7f58059d163f9ef6004c8876f714770113</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 54837c56d52e9ea44c58c1e504dd5c21<br/>SHA-256: 8746940164e227763f6e904038d72b42f82edc874fb71aa2eaeae7e97c7e79cb</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-contrib-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 067a11d66557e74edf50c024f9bf2c40<br/>SHA-256: a52d8b31d384dd2cb893e0acd7b943379d66ce2c10da2ee716d34f2077ec6153</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-debuginfo-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f9097293ddaa5b2998a880cdc6742761<br/>SHA-256: e254dfe1ba35c92544b5ea29c4c8b45c8878f46b4fe605c5c56a6c86bfe25942</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-debuginfo-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: bb98c6d13c477a9eebcf2043f12092e5<br/>SHA-256: 0b11e7646d0fd779bd0e2d139bcd22dd45b0473dc7fb3f370073f8f67f87b5ef</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-devel-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6918930955904034e43ffacf271427f8<br/>SHA-256: e23e1423981760b8dc024ae0d3afd58b0e7b35602654aa726831a8bea0a3d201</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-devel-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 47e20363764d8340a236fd3c99c30d87<br/>SHA-256: 962803f4a09f4325e67f85bbd1737f2796d8379d3c838c9b9001604fe1f7e87a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-docs-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 17fae85ae035fbbb112e4b64c8fbf5f0<br/>SHA-256: a91afb00a18cb82bba32e74537d65994992ac2ce02e63413d20ce0742d1ed27c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-libs-8.4.20-1.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c910c8446d7ff1803665f1bc2de938e3<br/>SHA-256: e9a4c14b59bdc51a53da4ba062e01b5fd22c5cbba450be98e517c6d4f1f35bb6</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-libs-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d7818cc6c848126e174345702a48c11d<br/>SHA-256: b2717815992b762cea7606c64f924a67e2a0db8e3313ccaf508b12a74200216c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-plperl-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 13b2d38b48fda246c8bc7ac42de54a41<br/>SHA-256: 7480fe2d5deee9c0f770a918222682fc72d2b6d335f1a3b42d63d3524d4ac071</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-plpython-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5a631688e57c61243d837e800e0f54f1<br/>SHA-256: bc8b7c50cc97bdf14047d1fbe03ce5e54c5b44d49760ad96d30ff99df7a07fc2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-pltcl-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1f0d70a5bca4d18e4dbb5a067696eb50<br/>SHA-256: 6d44b57b1baed4bb940e6c5798e43394ff87ae7158dfcc63f48fdbe04846db89</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>postgresql-server-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9507d24e1bc21195d2f1a25229344862<br/>SHA-256: c0c38377a5db59cfa8e4128e217979680cb0424e4fd7cdef0982a6254a35eaa9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>postgresql-test-8.4.20-1.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0750.html">RHSA-2015:0750</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6a96ec987d0a729bcd55e6b3d995531f<br/>SHA-256: 451a89d84b21ff3d08d6e3ba9e6c81692b3187b92f649aab621056484a8d0052</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+<tr><td colspan="2">(The unlinked packages above are only available from the <a href="/">Red Hat Network</a>)<br /></td></tr>
+
+</table>
+
+
+
+<br />
+<h2>Bugs fixed (see <A HREF="http://bugzilla.redhat.com/bugzilla">bugzilla</A> for more information)</h2>
+<div class="page-summary">
+<p><a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1065219">1065219</a> - CVE-2014-0060 postgresql: SET ROLE without ADMIN OPTION allows adding and removing group members<br />
+<a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1065220">1065220</a> - CVE-2014-0061 postgresql: privilege escalation via procedural language validator functions<br />
+<a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1065222">1065222</a> - CVE-2014-0062 postgresql: CREATE INDEX race condition possibly leading to privilege escalation<br />
+<a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1065226">1065226</a> - CVE-2014-0063 postgresql: stack-based buffer overflow in datetime input/output<br />
+<a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1065230">1065230</a> - CVE-2014-0064 postgresql: integer overflows leading to buffer overflows<br />
+<a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1065235">1065235</a> - CVE-2014-0065 postgresql: possible buffer overflow flaws<br />
+<a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1065236">1065236</a> - CVE-2014-0066 postgresql: NULL pointer dereference</p>
+</div>
+
+
+
+<br />
+<h2>References</h2>
+<div class="page-summary">
+
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-0060.html">https://www.redhat.com/security/data/cve/CVE-2014-0060.html</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2014-0061.html">https://www.redhat.com/security/data/cve/CVE-2014-0061.html</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2014-0062.html">https://www.redhat.com/security/data/cve/CVE-2014-0062.html</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2014-0063.html">https://www.redhat.com/security/data/cve/CVE-2014-0063.html</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2014-0064.html">https://www.redhat.com/security/data/cve/CVE-2014-0064.html</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2014-0065.html">https://www.redhat.com/security/data/cve/CVE-2014-0065.html</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2014-0066.html">https://www.redhat.com/security/data/cve/CVE-2014-0066.html</a><br />
+
+<A HREF="https://access.redhat.com/security/updates/classification/#important">https://access.redhat.com/security/updates/classification/#important</A><br /><A HREF="http://www.postgresql.org/docs/8.4/static/release-8-4-19.html">http://www.postgresql.org/docs/8.4/static/release-8-4-19.html</A><br /><A HREF="http://www.postgresql.org/docs/8.4/static/release-8-4-20.html">http://www.postgresql.org/docs/8.4/static/release-8-4-20.html</A>
+</div>
+
+
+
+
+
+
+
+<br />
+
+<hr border="1" />
+These packages are GPG signed by Red Hat for security.  Our key and 
+details on how to verify the signature are available from:<br />
+
+<a href="https://www.redhat.com/security/team/key/#package">https://www.redhat.com/security/team/key/#package</a>
+
+<p>The Red Hat security contact is <a href="mailto:secalert@redhat.com">secalert@redhat.com</a>.  More contact details at <a href="http://www.redhat.com/security/team/contact/">http://www.redhat.com/security/team/contact/</a></p>
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+    
+
+							</div>
+						</div>
+					</div>
+					<!-- end of legacy -->
+				</div>
+			</main>
+		</div>
+	<!--googleoff: all-->
+	<footer class="footer-main">
+		<div class="container footer-top">
+			<div class="row">
+
+				<div class="col-sm-2 brand">
+					<img src="https://access.redhat.com/chrome_themes/nimbus/img/l_redhat-reverse.png" alt="Red Hat" />
+				</div><menu class="col-sm-2">
+					<h3>Quick Links</h3>
+					<ul>
+						<li><a class="download-software" href="https://access.redhat.com/downloads/">Downloads</a></li>
+						<li><a class="manage-subscriptions" href="https://access.redhat.com/management/subscriptions/#active">Subscriptions</a></li>
+						<li><a class="support-cases" href="https://access.redhat.com/support">Support Cases</a></li>
+						<li><a class="quick-docs" href="https://access.redhat.com/documentation">Product Documentation</a></li>
+					</ul>
+				</menu>
+
+				<menu class="col-sm-2">
+					<h3>Help</h3>
+					<ul>
+						<li><a class="contact-us" href="https://access.redhat.com/support/contact/">Contact Us</a></li>
+						<li><a class="login-problems" href="https://access.redhat.com/help/login_assistance">Log-in Assistance</a></li>
+						<li><a class="accessibility" href="https://access.redhat.com/help/accessibility/">Accessibility</a></li>
+						<li><a class="browser-support-policy" href="https://access.redhat.com/help/browsers/">Browser Support Policy</a></li>
+					</ul>
+				</menu>
+
+				<menu class="col-sm-2">
+					<h3>Site Info</h3>
+					<ul>
+						<li><a class="recognition" href="https://access.redhat.com/recognition/">Awards and Recognition</a></li>
+						<li><a class="colophon" href="https://access.redhat.com/help/colophon/">Colophon</a></li>
+						<li><a class="cp-faqs" href="https://access.redhat.com/articles/33844">Customer Portal FAQ</a></li>
+					</ul>
+				</menu>
+
+				<menu class="col-sm-2">
+					<h3>About</h3>
+					<ul>
+						<li><a href="https://access.redhat.com/subscription-value" class="subscription-value">Red Hat Subscription Value</a></li>
+						<li><a href="https://www.redhat.com/about/" class="about-red-hat">About Red Hat</a></li>
+					</ul>
+				</menu>
+
+				<menu class="col-sm-2">
+					<h3>Related Sites</h3>
+					<ul>
+						<li><a href="https://www.redhat.com/" class="red-hat-com">RedHat.com</a></li>
+						<li><a href="https://www.jboss.org/" class="jboss-org">JBoss.org</a></li>
+						<li><a href="https://www.openshift.com" class="openshift-com">OpenShift.com</a></li>
+						<li><a href="https://partnercenter.force.com" class="partner-connect">Red Hat Partner Connect</a></li>
+					</ul>
+				</menu>
+
+			</div>
+		</div>
+
+		<div class="anchor">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 social">
+						<a target="_blank" href="http://www.redhat.com/summit/" class="summit"><img src="https://access.redhat.com/chrome_themes/nimbus/img/l_summit.png" alt="Red Hat Summit" /></a>
+						<a target="_blank" href="https://twitter.com/RedHatSupport" class="sm-icon twitter"><span class="nicon-twitter"></span><span class="offscreen">Twitter</span></a>
+						<a target="_blank" href="https://www.facebook.com/RedHatSupport" class="sm-icon facebook"><span class="nicon-facebook"></span><span class="offscreen">Facebook</span></a>
+						<a target="_blank" href="https://plus.google.com/100456039940694908045/posts" class="sm-icon googleplus"><span class="nicon-googleplus"></span><span class="offscreen">Google+</span></a>
+					</div>
+					<div class="col-sm-8 legal">
+						<menu class="legal-nav">
+							<ul>
+								<li><a href="http://www.redhat.com/en/about/privacy-policy" class="privacy-policy">Privacy Policy</a></li>
+								<li><a href="https://access.redhat.com/help/terms/" class="terms-of-use">Customer Portal Terms of Use</a></li>
+								<li><a href="http://www.redhat.com/en/about/all-policies-guidelines" class="all-policies">All Policies and Guidelines</a></li>
+							</ul>
+						</menu>							
+						<small class="copyright">Copyright © 2015 Red Hat, Inc.
+						</small>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+	</footer>
+	<!--googleon: all-->
+	</div>
+	
+  </body>
+</html>
+
+
+
+

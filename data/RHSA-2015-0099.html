@@ -1,0 +1,2606 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <script type="text/javascript">
+      var siteMapState="security";
+    </script>
+    <link rel="stylesheet" href="/css/rhn-base.css" type="text/css" />
+    
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<!-- metaInclude -->
+	<meta name="avalon-host-info" content="gss-webjava02" />
+	<meta name="avalon-version" content="2.0.19.0" />
+	<meta name="google-site-verification" content="nP0a2DWUcOxjRgDDACHEbDptiGIGBrChbghrC0ZzcK0" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- /metaInclude -->
+	<!-- ^ meta and X-UA-Compatible must come first -->
+	
+	<meta http-equiv="cleartype" content="on" />
+
+	<!-- _preInclude -->
+
+	<!-- title -->
+	<title>Red Hat Customer Portal
+	</title>
+	<!-- /title -->
+	<!-- /_preInclude -->
+
+	<!-- cssInclude -->
+
+	<link rel="shortcut icon" href="https://access.redhat.com/webassets/avalon/g/favicon.ico" />
+	<link rel="stylesheet" type="text/css" media="screen, print" href="https://access.redhat.com/webassets/avalon/s/jquery-ui/cp/jquery-ui-1.8.7.custom.css?version=2.0.19.0" />
+
+	<!-- TODO: What is pageCssLinks and do we still need it? -->
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/legacy.css?version=2.0.19.0" />
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/bootstrap.css?version=2.0.19.0" />
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/master-blessed1.css?version=2.0.19.0" />
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/master.css?version=2.0.19.0" />
+
+	<link href="https://access.redhat.com/webassets/avalon/s/chosen.css?version=2.0.19.0" rel="stylesheet" type="text/css" />
+	<!--[if lte IE 9]>
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/ie.css" />
+    <![endif]-->
+    
+
+	<!-- .primary-nav starts out hidden (at sm res and higher), and
+	is later revealed with JS after the megamenu has been built
+	out.  here, use noscript to un-hide the nav, in case the user
+	has JS disabled. -->
+	<noscript>
+		<style type="text/css" media="screen"> .primary-nav { display: block; } </style>
+	</noscript>
+
+	<!-- /cssInclude -->
+
+	<!-- jsInclude -->
+	<script type="text/javascript">
+		window.portal = {
+			analytics             : {},
+			host                  : "https://access.redhat.com",
+			kbaseContext          : "/preview_faq",
+			cspContext            : "/preview_jbossnetwork",
+			customerCenterContext : "/wapps",
+			lang                  : "en",
+			version               : "2.0.19.0",
+			decorationWhitelist   : ["https://access.redhat.com","https://rhn.redhat.com", "docs.redhat.com"]
+		};
+
+		/*
+		* TODO
+		* deprecate this avalon object
+		*/
+		window.avalon = window.portal;
+		window.avalonHost = avalon.host; // deprecate this?
+
+		/********************************
+		*  Temporary pagename shim     *
+		*  TODO: Remove this           *
+		********************************/
+
+		portal.analytics.shim = {};
+		portal.analytics.shim.pageTitle = "";
+		portal.analytics.shim.siteMapState = "";
+
+	</script>
+	<script type="text/javascript" src="https://access.redhat.com/webassets/avalon/j/lib/jquery.min.js?version=2.0.19.0"></script>
+	<script type="text/javascript" src="https://access.redhat.com/webassets/avalon/j/lib/require.js?version=2.0.19.0" data-main="/webassets/avalon/j/"></script>
+	<!-- TODO: can we please upgrade jquery?! -->
+	<script type="text/javascript">
+		/*
+		 * THIS IS NEEDED! Integrated apps include their own jQuery lib.
+		 * We need this *before* base.js so we can effectvley pass messages (trigger, bind) to base.js
+		 * *DO NOT* remove! window.jQuery the object is still accessible.
+		*/
+		window.ajq = jQuery.noConflict();
+	</script>
+	<script type="text/javascript" src="https://access.redhat.com/webassets/avalon/j/outage/outageJson_en.js?version=2.0.19.0"></script>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	
+	<!-- /jsInclude -->
+	
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>
+  </head>
+  <body>
+    
+	<!-- Chrome: Full -->
+	<div id="page-wrap" class="page-wrap">
+		<div class="top-page-wrap">
+<!--googleoff: all-->
+
+			<header class="masthead"><div id="to-top"><a class="btn_slideto"><span class="web-icon-upload"></span></a></div>
+<div class="mobile-bar-wrap hidden-sm hidden-md hidden-lg">
+	<a class="logo" href="https://access.redhat.com/">
+		<span class="logo-crop"><img src="https://access.redhat.com/chrome_themes/nimbus/img/l_redhat-lg.png"></span>
+		<span class="site-title"><span>Customer </span><span>Portal</span></span>
+	</a>
+	<button id="mobile-nav-btn" class="btn btn-navbar" data-toggle="collapse" data-target="#mobile-nav">
+		<span class="web-icon-mobile-menu"></span>
+		<span class="link-text">global.menu</span>
+	</button>
+	<button class="btn btn-search btn-utility" data-target="#site-search">
+		<span class="web-icon-search"></span>
+		<span class="link-text">Search</span>
+	</button>
+</div>
+
+<div class="utility-wrap">
+	<div class="utility-container">
+		<div class="utility-bar visible-sm visible-md visible-lg">
+			<menu class="top-nav">
+				<ul>
+					<li id="nav-subscription"><a class="top-nav-subscriptions" href="https://access.redhat.com/management/">Subscriptions</a></li>
+					<li id="nav-downloads"><a class="top-nav-downloads" href="https://access.redhat.com/downloads/">Downloads</a></li>
+					<li id="nav-support"><a class="top-nav-support-cases" href="https://access.redhat.com/support/cases/">Support Cases</a></li>
+				</ul>
+			</menu>
+
+			<menu class="utility-nav">
+				<ul>
+					<li>
+						<a class="btn-search" data-target="#site-search">
+							<span class="web-icon-search"></span>
+							<span class="link-text">Search</span>
+						</a>
+					</li>
+					<li>
+						<a class="btn-profile" data-target="#account-info">
+							<span class="web-icon-user"></span>
+							<span class="link-text">Account</span>
+							<span class="account-user" id="accountUserName"></span>
+						</a>
+					</li>
+					<li>
+						<a class="btn-language" data-target="#language">
+							<span class="web-icon-globe"></span>
+							<span class="link-text">Language</span>
+						</a>
+					</li>
+				</ul>
+			</menu>
+		</div>
+		<!-- Utility Tray -->
+		<div class="utility-tray-container">
+			<div class="utility-tray">
+				<div id="site-search" class="utility-link site-search">
+					<div class="content">
+            			<form class="ng-pristine ng-valid topSearchForm" id="topSearchForm" name="topSearchForm" action="/search/browse/search/" method="get" enctype="application/x-www-form-urlencoded">
+							<div class="input-group">
+
+                    			<input class="form-control searchField" id="topSearchInput" name="keyword" value="" placeholder="Enter Your Search Term" type="text">
+								<span class="input-group-btn">
+				    				<button type="submit" class="btn btn-primary">Search</button>
+								</span>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div id="account-info" class="utility-link account-info">
+					<div class="content">
+
+						<!-- Account Unauthenticated -->
+						<div id="accountLinksLoggedOut" class="unauthenticated">
+							<h2 class="utility-header">Log in to Your Red Hat Account</h2>
+							<div class="row col-border-row">
+								<div class="col-sm-6 col-border">
+									<p><a href="https://access.redhat.com/login" id="accountLogin" class="btn btn-primary">Log In</a></p>
+									<p>Your Red Hat account gives you access to your profile, preferences, and services, depending on your status.</p>
+								</div>
+								<div class="col-sm-6 col-border col-border-left">
+									<p><a href="https://www.redhat.com/wapps/ugc/register.html" class="btn btn-primary">Register</a></p>
+									<p>If you are a new customer, register now for access to product evaluations and purchasing capabilities. </p>
+
+									<strong>Need access to an account?</strong><p>If your company has an existing Red Hat account, your organization administrator can grant you access.</p>
+
+									<p><a href="https://access.redhat.com/support/contact/customerService/">If you have any questions, please contact customer service.</a></p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Account Authenticated -->
+						<div id="accountLinksLoggedIn" class="authenticated">
+							<h2 class="utility-header"><span id="userFirstName"></span></h2>
+							<div class="row col-border-row">
+								<div class="col-sm-6 col-border col-border-right">
+									<div class="account-info" id="accountUser">
+										<div class="avatar"><!-- placeholder--></div>
+										<div class="account-name"><strong id="userFullName"></strong></div>
+										<div class="account-org"><span id="userOrg"></span></div>
+										<div class="account-number accountNumber"><span class="property">Red Hat Account Number:</span> <span class="value"></span></div>
+									</div>
+
+									<div class="row account-settings">
+										<div class="col-md-6">
+											<h3>Red Hat Account</h3>
+											<ul class="reset">
+												<li><a href="https://www.redhat.com/wapps/ugc/protected/personalInfo.html">Account Details</a></li>
+												<li><a href="https://www.redhat.com/wapps/ugc/protected/prefs.html">Newsletter and Contact Preferences</a></li>
+												<li><a href="https://www.redhat.com/wapps/ugc/protected/usermgt/userList.html">User Management</a></li>
+												<li><a href="https://www.redhat.com/wapps/ugc/protected/account.html">Account Maintenance</a></li>
+											</ul>
+										</div>
+										<div class="col-md-6">
+											<h3>Customer Portal</h3>
+											<ul class="reset">
+												<li><a href="https://access.redhat.com/user">My Profile</a></li>
+												<li><a href="https://access.redhat.com/user" id="userNotificationsLink">Notifications</a></li>
+												<li><a href="https://access.redhat.com/help/">Help</a></li>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+								<div class="col-sm-6 col-border">
+									<p>For your security, if you’re on a public computer and have finished using your Red Hat services, please be sure to log out.</p>
+									<p><a href="https://www.redhat.com/wapps/sso/logout.html?redirect=https://access.redhat.com/logout" id="accountLogout" class="btn btn-primary">Log Out</a></p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div id="language" class="utility-link language">
+					<div class="content">
+						<h2 class="utility-header">Select Your Language</h2>
+						<div class="row" id="localesMenu">
+							<div class="col-sm-4">
+								<ul class="reset">
+									<li><a href="https://access.redhat.com/changeLanguage?language=en" id="en">English</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=es" id="es">español</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=de" id="de">Deutsch</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=it" id="it">italiano</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=ko" id="ko">한국어</a></li>
+								</ul>
+							</div>
+							<div class="col-sm-4">
+								<ul class="reset">
+									<li><a href="https://access.redhat.com/changeLanguage?language=fr" id="fr">français</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=ja" id="ja">日本語</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=pt" id="pt">português</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=zh_CN" id="zh_CN">中文 (中国)</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=ru" id="ru">русский</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="scroll-anchor">
+</div>
+
+<div class="header-nav visible-sm visible-md visible-lg">
+	<div id="header-nav">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+
+					<a href="https://access.redhat.com/" class="logo">
+						<span class="logo-crop"><img src="https://access.redhat.com/chrome_themes/nimbus/img/l_redhat-lg.png"></span>
+						<span class="site-title"><span>Customer </span><span>Portal</span></span>
+					</a>
+
+					<menu class="primary-nav hidden-sm">
+						<ul>
+							<li id="nav-products"><a class="products" data-link="mega" data-target="products-menu" href="https://access.redhat.com/products/">Products &amp; Services</a></li>
+							<li id="nav-tools"><a class="tools" data-link="mega" data-target="tools-menu" href="https://access.redhat.com/labs/">Tools</a></li><!-- #Need URL -->
+							<li id="nav-security"><a class="security" data-link="mega" data-target="security-menu" href="https://access.redhat.com/security/">Security</a></li>
+							<li id="nav-community"><a class="community" data-link="mega" data-target="community-menu" href="https://access.redhat.com/community/">Community</a></li><!-- #Need URL -->
+						</ul>
+					</menu>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="mobile-nav-wrap hidden-sm hidden-md hidden-lg">
+	<div id="mobile-nav" class="mobile-nav navbar collapse navbar-collapse">
+		<div class="navbar-inner">
+
+			<menu>
+				<ul class="mobile-utility">
+					<li>
+						<a class="btn-profile" data-target="#account-info-mobile">
+							<span class="web-icon-user"></span>
+							<span class="link-text">Account</span>
+						</a>
+					</li><!-- white space inline
+					--><li>
+						<a class="btn-language" data-target="#language-mobile">
+							<span class="web-icon-globe"></span>
+							<span class="link-text">Language</span>
+						</a>
+					</li>
+				</ul>
+				<div id="account-info-mobile" class="mobile-utility-wrap">
+					<!-- Account Unauthenticated -->
+					<div id="mobile-accountLinksLoggedOut" class="unauthenticated">
+						<ul class="nav mobile-utility-nav">
+							<li><a href="https://access.redhat.com/login">Log In</a></li>
+							<li><a href="https://www.redhat.com/wapps/ugc/register.html">Register</a></li>
+						</ul>
+					</div>
+					<!-- Account Authenticated -->
+					<div id="mobile-accountLinksLoggedIn" class="authenticated">
+						<div class="account-info" id="mobile-accountUser">
+							<div class="account-name"><strong id="mobile-userFullName"></strong></div>
+							<div class="account-org"><span id="mobile-userOrg"></span></div>
+							<div class="account-number mobile-accountNumber"><span class="property">Red Hat Account Number:</span> <span class="value"></span></div>
+						</div>
+						<ul class="nav mobile-utility-nav">
+							<li><a href="https://www.redhat.com/wapps/ugc/protected/personalInfo.html">Account Details</a></li>
+							<li><a href="https://www.redhat.com/wapps/ugc/protected/prefs.html">Newsletter and Contact Preferences</a></li>
+							<li><a href="https://www.redhat.com/wapps/ugc/protected/usermgt/userList.html">User Management</a></li>
+							<li><a href="https://www.redhat.com/wapps/ugc/protected/account.html">Account Maintenance</a></li>
+							<li><a href="https://access.redhat.com/user">My Profile</a></li>
+							<li><a href="https://access.redhat.com/user" id="userNotificationsLink">Notifications</a></li>
+							<li><a href="https://access.redhat.com/help/">Help</a></li>
+							<li class="logout"><a href="https://www.redhat.com/wapps/sso/logout.html?redirect=https://access.redhat.com/logout">Log Out</a>
+						</ul>
+					</div>
+				</div>
+				<div id="language-mobile" class="mobile-utility-wrap">
+					<ul class="nav mobile-utility-nav">
+						<li><a href="https://access.redhat.com/changeLanguage?language=en" id="mobile-en">English</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=es" id="mobile-es">español</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=de" id="mobile-de">Deutsch</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=it" id="mobile-it">italiano</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=ko" id="mobile-ko">한국어</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=fr" id="mobile-fr">français</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=ja" id="mobile-ja">日本語</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=pt" id="mobile-pt">português</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=zh_CN" id="mobile-zh_CN">中文 (中国)</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=ru" id="mobile-ru">русский</a></li>
+					</ul>
+				</div>
+				<ul class="main-mobile-nav nav">
+					<li id="mnav-home"><a href="https://access.redhat.com/">Home</a></li>
+					<li id="mnav-products"><a href="https://access.redhat.com/products/">Products &amp; Services</a></li>
+					<li id="mnav-tools"><a href="https://access.redhat.com/tools/">Tools</a></li>
+					<li id="mnav-security"><a href="https://access.redhat.com/security/">Security</a></li>
+					<li id="mnav-community"><a href="https://access.redhat.com/community/">Community</a></li><!-- #Need URL -->
+					<li id="mnav-downloads"><a href="https://access.redhat.com/downloads/">Downloads</a></li>
+					<li id="mnav-subscription"><a href="https://access.redhat.com/management/">Subscriptions</a></li>
+					<li id="mnav-support"><a href="https://access.redhat.com/support/cases/">Support Cases</a></li>
+				</ul>
+			</menu>
+		</div>
+	</div>
+</div>
+
+<div class="mega-wrap visible-sm visible-md visible-lg">
+	<menu class="mega">
+		<div class="container">
+			<div class="mega-menu-wrap">
+				<!-- Products Menu -->
+				<div aria-labelledby="products-menu" class="products-menu mega-menu" data-eh="mega-menu" role="menu">
+					<div class="row">
+						<div class="col-md-6 col-sm-8">
+							<nav class="root">
+								<div class="row">
+									<ul class="subnav subnav-root col-sm-6">
+										<li data-target="infrastructure-menu" class="active">
+											<a href="https://access.redhat.com/products/">Infrastructure and Management</a>
+										</li>
+										<li data-target="cloud-menu">
+											<a href="https://access.redhat.com/products/">Cloud Products</a>
+										</li>
+										<li data-target="jboss-dev-menu">
+											<a href="https://access.redhat.com/products/">JBoss Development and Management</a>
+										</li>
+										<li data-target="jboss-int-menu">
+											<a href="https://access.redhat.com/products/">JBoss Integration and Automation</a>
+										</li>
+										<li data-target="services-menu">
+											<a href="https://access.redhat.com/products/">Services</a>
+										</li>
+									</ul>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="infrastructure-menu" style="display: block;">
+										<ul>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-enterprise-linux/">Red Hat Enterprise Linux</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-enterprise-virtualization/">Red Hat Enterprise Virtualization</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/Identity_Management/">Red Hat Identity Management &amp; Infrastructure</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-directory-server/">Red Hat Directory Server</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-certificate-system/">Red Hat Certificate System</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-satellite/">Red Hat Satellite</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/subscription-asset-manager/">Subscription Asset Manager</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-update-infrastructure/">Red Hat Update Infrastructure</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-storage/">Red Hat Gluster Storage</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-ceph-storage/">Red Hat Ceph Storage</a>
+											</li>
+										</ul>
+									</div>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="cloud-menu">
+										<ul>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-cloudforms/">Red Hat CloudForms</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-enterprise-linux-openstack-platform/">Red Hat Enterprise Linux OpenStack Platform</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-cloud-infrastructure/">Red Hat Cloud Infrastructure</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/openshift-enterprise-red-hat/">OpenShift Enterprise by Red Hat</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/openshift-online-red-hat/">OpenShift Online by Red Hat</a>
+											</li>
+										</ul>
+									</div>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="jboss-dev-menu">
+										<ul>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-enterprise-application-platform/">Red Hat JBoss Enterprise Application Platform</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-data-grid/">Red Hat JBoss Data Grid</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-web-server/">Red Hat JBoss Web Server</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-portal/">Red Hat JBoss Portal</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-operations-network/">Red Hat JBoss Operations Network</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-developer-studio/">Red Hat JBoss Developer Studio</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/feedhenry/">FeedHenry by Red Hat</a>
+											</li>
+										</ul>
+									</div>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="jboss-int-menu">
+										<ul>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-fuse-service-works/">Red Hat JBoss Fuse Service Works</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-data-virtualization/">Red Hat JBoss Data Virtualization</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-fuse/">Red Hat JBoss Fuse</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-a-mq/">Red Hat JBoss A-MQ</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-bpm-suite/">Red Hat JBoss BPM Suite</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-brms/">Red Hat JBoss BRMS</a>
+											</li>
+										</ul>
+									</div>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="services-menu">
+										<ul>
+											<li><a href="https://access.redhat.com/products/Consulting/">Consulting</a></li>
+			                    			<li><a href="https://access.redhat.com/products/red-hat-access/">Red Hat Access</a></li>
+			                    			<li><a href="https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/">Red Hat Enterprise Linux Developer Program</a></li>
+			                    			<li><a href="https://access.redhat.com/products/Training/">Training</a></li>
+			                    			<li><a href="https://access.redhat.com/support/offerings/tam/">Technical Account Management</a></li>
+										</ul>
+									</div>
+								</div>
+							</nav>
+							<a href="https://access.redhat.com/products" class="btn btn-primary">Explore Products and Services</a>
+						</div>
+
+						<div class="col-md-6 col-sm-4 pull-right">
+							<div class="row">
+								<div class="col-md-4">
+									<h3 class="nav-title">Ecosystem</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/certification">Overview</a></li>
+										<li><a href="https://access.redhat.com/search/browse/certified-hardware#?">Certified Hardware</a></li>
+										<li><a href="https://access.redhat.com/search/browse/certified-software#?">Certified Software</a></li>
+										<li><a href="https://access.redhat.com/search/browse/certified-cloud-providers#?">Certified Cloud Providers</a></li>
+									</ul>
+								</div>
+								<div class="col-md-4">
+									<h3 class="nav-title">Knowledge</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/search/browse/search/">Expert Advice</a></li>
+										<li><a href="https://access.redhat.com/documentation/">Product Documentation</a></li>
+									</ul>
+								</div>
+								<div class="col-md-4">
+									<h3 class="nav-title">Support Policies</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/support/offerings/production/">Production Support</a></li>
+										<li><a href="https://access.redhat.com/support/offerings/developer/">Development Support</a></li>
+									</ul>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Tools Menu -->
+				<div aria-labelledby="tools-menu" class="tools-menu mega-menu" data-eh="mega-menu" role="menu">
+					<div class="row">
+
+						<nav class="col-sm-9">
+							<div class="mega-menu-feature">
+								<div class="row">
+									<div class="col-sm-4">
+										<h2 class="mega-menu-feature-title">Red Hat Access Labs</h2>
+										<p>To help you use Red Hat products to their full potential, our engineers have developed a set of tools to support customer success.</p>
+										<p class="push-top"><a href="https://access.redhat.com/labs/" class="btn btn-primary">Explore Labs</a></p>
+									</div>
+									<div class="col-sm-4">
+										<a href="https://access.redhat.com/labs/#?type=config">
+											<h3 class="nav-title">Configuration</h3>
+										</a>
+										<ul>
+											<li><a href="https://access.redhat.com/labs/jvmconfig/">JVM Config</a></li>
+											<li><a href="https://access.redhat.com/labs/networkbondinghelper/">Network Bonding Helper</a></li>
+											<li><a href="https://access.redhat.com/labs/linterfordockerfile/">Linter for Dockerfile</a></li>
+										</ul>
+
+										<a href="https://access.redhat.com/labs/#?type=deploy">
+											<h3 class="nav-title">Deployment</h3>
+										</a>
+										<ul>
+											<li><a href="https://access.redhat.com/labs/registrationassistant/">Registration Assistant</a></li>
+											<li><a href="https://access.redhat.com/labs/kickstartconfig/">Kickstart Generator</a></li>
+											<li><a href="https://access.redhat.com/labs/rhevupgradehelper/">RHEV Upgrade Helper</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-4">
+										<a href="https://access.redhat.com/labs/#?type=troubleshoot">
+											<h3 class="nav-title">Troubleshooting</h3>
+										</a>
+										<ul>
+											<li><a href="https://access.redhat.com/labs/garbagedog/">Garbage Collection Analysis</a></li>
+											<li><a href="https://access.redhat.com/labs/kerneloopsanalyzer/">Kernel Oops Analyzer</a></li>
+											<li><a href="https://access.redhat.com/labs/kdumphelper/">Kdump Helper</a></li>
+										</ul>
+										<a href="https://access.redhat.com/labs/#?type=security">
+											<h3 class="nav-title">Security</h3>
+										</a>
+										<ul>
+											<li><a href="https://access.redhat.com/labs/venom/">VENOM: QEMU Vulnerability Detector</a></li>
+											<li><a href="https://access.redhat.com/labs/ghost/">GHOST - gethostbyname Detector</a></li>
+											<li><a href="https://access.redhat.com/labs/poodle/">SSLv3 (POODLE) Detector</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</nav>
+
+						<nav class="col-sm-3">
+							<h3 class="nav-title">Additional Tools</h3>
+							<ul>
+								<li><a href="https://access.redhat.com/products/red-hat-access/">Red Hat Access - Overview</a></li>
+								<li><a href="https://access.redhat.com/labs/hacat/">Red Hat High Availability Cluster Architecture Tool</a></li>
+								<li><a href="https://access.redhat.com/tools/satcert/">Red Hat Satellite Certificate Tool</a></li>
+							</ul>
+						</nav>
+
+					</div>
+				</div>
+
+				<!-- Security Menu -->
+				<div aria-labelledby="security-menu" class="security-menu mega-menu" data-eh="mega-menu" role="menu">
+					<div class="row">
+						<nav class="col-sm-12 basic">
+							<div class="row">
+								<div class="col-md-3 col-sm-4">
+									<h3 class="nav-title">Security Updates</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/security/cve">Red Hat CVE Database</a></li>
+										<li><a href="https://access.redhat.com/security/updates/active/">Active Products</a></li>
+										<li><a href="https://access.redhat.com/security/updates/eol/">End-of-Life Products</a></li>
+										<li><a href="https://access.redhat.com/security/updates/advisory/">How to Get Notified</a></li>
+									</ul>
+								</div>
+								<div class="col-md-3 col-sm-4">
+									<h3 class="nav-title">Red Hat Product Security</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/security/team/">About</a></li>
+										<li><a href="https://securityblog.redhat.com/">Security Blog</a></li>
+										<li><a href="https://access.redhat.com/security/team/contact/">Contact</a></li>
+									</ul>
+								</div>
+								<div class="col-md-3 col-sm-4">
+									<h3 class="nav-title">Resources</h3>
+									<ul>
+										<li><a href="https://www.redhat.com/security/data/metrics/">Security Measurement</a></li>
+										<li><a href="https://access.redhat.com/security/updates/classification/">Severity Ratings</a></li>
+										<li><a href="https://access.redhat.com/security/updates/backporting/">Backporting Policies</a></li>
+										<li><a href="https://access.redhat.com/security/team/key/">Product Signing (GPG) Keys</a></li>
+									</ul>
+								</div>
+							</div>
+						</nav>
+						<a href="https://access.redhat.com/security/" class="btn btn-primary">Explore Security</a>
+					</div>
+				</div>
+
+				<!-- Community Menu -->
+				<div aria-labelledby="community-menu" class="community-menu mega-menu" data-eh="mega-menu" role="menu">
+					<div class="row">
+            			<nav class="col-sm-12 basic">
+							<div class="row">
+								<div class="col-sm-3">
+									<h3 class="nav-title">Discussions</h3>
+									<ul>
+
+										<li><a href="https://access.redhat.com/discussions?product=25&category=All&tags=All">Red Hat Enterprise Linux</a></li>
+										<li><a href="https://access.redhat.com/discussions?product=8163&category=All&tags=All">Red Hat Enterprise Virtualization</a></li>
+										<li><a href="https://access.redhat.com/discussions?product=36&category=All&tags=All">Red Hat Satellite</a></li>
+										<li><a href="https://access.redhat.com/discussions?product=22&category=All&tags=All">Customer Portal</a></li>
+										<li><a href="https://access.redhat.com/groups/">Private Groups</a></li>
+										<li class="more-link"><a href="https://access.redhat.com/discussions?keyword=&name=&product=All&category=All&tags=All">All Discussions</a></li>
+										<li class="more-link"><a href="https://access.redhat.com/node/add/discussion">Start a Discussion</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-3">
+									<h3 class="nav-title">Blogs</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/blogs/767163">Customer Portal</a></li>
+										<li><a href="https://access.redhat.com/blogs/759303">Red Hat Access Labs</a></li>
+										<li><a href="https://access.redhat.com/blogs/766093">Red Hat Product Security Team</a></li>
+										<li class="more-link"><a href="https://access.redhat.com/blogs/">All Blogs</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-3">
+									<h3 class="nav-title">Events</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/customer-convergence">Customer Events</a></li>
+										<li><a href="http://www.redhat.com/summit/">Red Hat Summit</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-3">
+									<h3 class="nav-title">Stories</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/subscription-value/">Red Hat Subscription Benefits</a></li>
+										<li><a href="https://access.redhat.com/customer-success/">You Asked. We Acted.</a></li>
+										<li><a href="http://www.redhat.com/en/open-source">Open Source Communities</a></li>
+									</ul>
+								</div>
+							</div>
+						</nav>
+						<!--<a href="https://access.redhat.com/community/" class="btn btn-primary">Explore Community</a>-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</menu>
+</div>
+
+				<div id="site-section"></div>
+
+			</header>
+<!--googleon: all-->
+			<main id="cp-main" class="portal-content-area" role="main">
+				<div id="cp-content" class="main-content">
+					<!-- legacy divs start here -->
+					<div id="legacy-portal">
+						<div class="content-area">
+							<div id="legacy-container" class="legacy-container">
+									
+
+    <div class="wrapi">
+      <div id="container" class="clearWrap">
+        <div id="content">
+
+    
+
+
+
+
+
+
+
+
+
+<h1><img src="/img/rhn-icon-security.gif" alt="Security Advisory" align="absmiddle" /> Critical: glibc security update</h1>
+
+<table class="details">
+	<tr>
+		<th>Advisory:</th>
+		<td>RHSA-2015:0099-1</td>
+	</tr>
+	<tr>	
+		<th>Type:</th>
+		<td>Security Advisory</td>
+	</tr>
+        <tr>
+                <th>Severity:</th>
+                <td>Critical</td>
+        </tr>
+	<tr>	
+		<th>Issued on:</th>
+		<td>2015-01-28</td>
+	</tr>
+	<tr>	
+		<th>Last updated on:</th>
+		<td>2015-01-28</td>
+	</tr>
+
+	<tr>
+		<th valign="top">Affected Products:</th>
+		<td><a href="#Red Hat Enterprise Linux EUS (v. 5.9.z server)">Red Hat Enterprise Linux EUS (v. 5.9.z server)</a><br />
+<a href="#Red Hat Enterprise Linux Long Life (v. 5.6 server)">Red Hat Enterprise Linux Long Life (v. 5.6 server)</a><br />
+<a href="#Red Hat Enterprise Linux Long Life (v. 5.9 server)">Red Hat Enterprise Linux Long Life (v. 5.9 server)</a><br />
+<a href="#Red Hat Enterprise Linux Server AUS (v. 6.2)">Red Hat Enterprise Linux Server AUS (v. 6.2)</a><br />
+<a href="#Red Hat Enterprise Linux Server AUS (v. 6.4)">Red Hat Enterprise Linux Server AUS (v. 6.4)</a><br />
+<a href="#Red Hat Enterprise Linux Server AUS (v. 6.5)">Red Hat Enterprise Linux Server AUS (v. 6.5)</a><br />
+<a href="#Red Hat Enterprise Linux Server EUS (v. 6.4.z)">Red Hat Enterprise Linux Server EUS (v. 6.4.z)</a><br />
+<a href="#Red Hat Enterprise Linux Server EUS (v. 6.5.z)">Red Hat Enterprise Linux Server EUS (v. 6.5.z)</a></td>
+	</tr>
+
+
+	<tr>
+		<th valign="top">CVEs (<a href="http://cve.mitre.org">cve.mitre.org</a>):</th>
+		<td rowspan="2" valign="top">
+          <a href="https://www.redhat.com/security/data/cve/CVE-2015-0235.html">CVE-2015-0235</a><br />
+		</td>
+	</tr>
+
+</table>
+
+<br />
+
+<h2>Details</h2>
+<div class="page-summary">
+<p>Updated glibc packages that fix one security issue are now available for<br />Red Hat Enterprise Linux 5.6 Long Life, Red Hat Enterprise Linux 5.9<br />Extended Update Support, Red Hat Enterprise Linux 6.2 Advanced Update<br />Support, and Red Hat Enterprise Linux 6.4 and 6.5 Extended Update Support.<br /><br />Red Hat Product Security has rated this update as having Critical security<br />impact. A Common Vulnerability Scoring System (CVSS) base score, which<br />gives a detailed severity rating, is available from the CVE link in the<br />References section.<br /></p>
+
+<p>The glibc packages provide the standard C libraries (libc), POSIX thread<br />libraries (libpthread), standard math libraries (libm), and the Name<br />Server Caching Daemon (nscd) used by multiple programs on the system.<br />Without these libraries, the Linux system cannot function correctly.<br /><br />A heap-based buffer overflow was found in glibc&#39;s<br />__nss_hostname_digits_dots() function, which is used by the gethostbyname()<br />and gethostbyname2() glibc function calls. A remote attacker able to make<br />an application call either of these functions could use this flaw to<br />execute arbitrary code with the permissions of the user running the<br />application. (CVE-2015-0235)<br /><br />Red Hat would like to thank Qualys for reporting this issue.<br /><br />All glibc users are advised to upgrade to these updated packages, which<br />contain a backported patch to correct this issue.<br /></p>
+</div>
+
+
+<br />
+
+<h2>Solution</h2>
+<div class="page-summary">Before applying this update, make sure all previously released errata<br />relevant to your system have been applied.<br /><br />This update is available via the Red Hat Network. Details on how to use the<br />Red Hat Network to apply this update are available at<br /><A HREF="https://access.redhat.com/articles/11258">https://access.redhat.com/articles/11258</A><br /></div>
+<br />
+
+<h2>Updated packages</h2>
+
+<table border="0" cellpadding="6" cellspacing="0">
+
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux EUS (v. 5.9.z server)">Red Hat Enterprise Linux EUS (v. 5.9.z server)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.5-107.el5_9.8.src.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 36eebadcb8abbf81f653f90712a2d336<br/>SHA-256: c225e7de427aebf4e8b15b8b691fb2f37a8eb41ba91df9644dc5dce4924b7c92</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.5-107.el5_9.8.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f4773572550003c83abf9f699564e9fa<br/>SHA-256: 6f4584a1308a35dec9523b4dd425fb782fd7e2096e20e80352278d81134819fc</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-2.5-107.el5_9.8.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 4f20906cf3fc8f2746226d8410fb222b<br/>SHA-256: 57b9c70383b6c195e40e6e1ef46ecfc70c16b002da12f8a269c165da07ea800b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-common-2.5-107.el5_9.8.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6a7dcea924a6774bea7f7f4f28ad5a3c<br/>SHA-256: ce185ea409b0855697441baf1aff36bf4f84d8f846778fe739b60197613046ba</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-2.5-107.el5_9.8.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 25bddbc937b43146999699d3370a7b5a<br/>SHA-256: 54e9c1662428853a38deafd4c5f856e67a07d26849ec8ff7b5578cfc2bbc62af</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-2.5-107.el5_9.8.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: cd737af41958a3a9f16fbd7a68623613<br/>SHA-256: bb260654ee4e1f1f3db899497fddcdefb2915db34ccc955d1f74faad50f5c3ab</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-common-2.5-107.el5_9.8.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 715e752211f14cdbabb2c495a6f6c0b7<br/>SHA-256: c28182f282fd4450b5ea39bc855372e58b44481e6bdf4935254352084bdffede</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-devel-2.5-107.el5_9.8.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1d5342514bb64e91f09cb404483ec42a<br/>SHA-256: a083398fdedc1b9406cacbb77c70633fc036209b44365fb8f8ea93da4ba9f75d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-headers-2.5-107.el5_9.8.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5931511a7674d011eef6890c5186d166<br/>SHA-256: 66a6ec561aeced8ad803fc9b3511ceb3dfdbabc52c5ea5b9dad4650eae0454d4</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-utils-2.5-107.el5_9.8.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: fd49fc5196fa6fbda4bb694b41f1fef1<br/>SHA-256: 8e9cafe05ab2ca5f78b6216bc389a3a559679423af608fd302f41b70fcdf73a7</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>nscd-2.5-107.el5_9.8.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5f5979f3da9ef3655ab16dbf9009a4b3<br/>SHA-256: 42b2463b4d31fb6411fc61b85e5ed7b62c5b02d6e3ca9832c5340738f86b04ba</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.5-107.el5_9.8.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 4f20906cf3fc8f2746226d8410fb222b<br/>SHA-256: 57b9c70383b6c195e40e6e1ef46ecfc70c16b002da12f8a269c165da07ea800b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-2.5-107.el5_9.8.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ba5180bef24b37da61406e0562e0e0a3<br/>SHA-256: e7ea06db3b705e9aee13f0b77cf521db50c93c387f75cd31c064b8b055aa0f61</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-common-2.5-107.el5_9.8.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 848f041d75b9636017d9f497bb54f414<br/>SHA-256: 6086a1fb489529b82fd9326c6793661fe368450d94c7beb42604ba505da40ed4</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-2.5-107.el5_9.8.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: cd737af41958a3a9f16fbd7a68623613<br/>SHA-256: bb260654ee4e1f1f3db899497fddcdefb2915db34ccc955d1f74faad50f5c3ab</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-2.5-107.el5_9.8.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c07b19650c0a319ac5e4a42463a6c9db<br/>SHA-256: 56923f863abcb98029cb234af4f9cc3d32b87d83f5670bf1ec8d59b251442687</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-common-2.5-107.el5_9.8.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 715e752211f14cdbabb2c495a6f6c0b7<br/>SHA-256: c28182f282fd4450b5ea39bc855372e58b44481e6bdf4935254352084bdffede</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-devel-2.5-107.el5_9.8.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2231fc55c100097fc500c7e5773e95be<br/>SHA-256: 6812b3bc38fa82ab30bedae3d82eb509d0a92c21bbb7d4c2a58f53873d8cca03</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-headers-2.5-107.el5_9.8.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: aaf11ab5b67050021dbf66c98e827843<br/>SHA-256: 15b49e46fbdecd522d71d16c6783429cb39045b56bea225abbf7bbc8faf63d2a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-utils-2.5-107.el5_9.8.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f7ad920f90fb2c8af26f79406631fbb8<br/>SHA-256: 03beb409ab4c962f28044fcc5fdfa6b24c5fbf2f1aed12240331f302d3d5cf53</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>nscd-2.5-107.el5_9.8.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1d5dc228da4e90b4cb62a22cbba80ff8<br/>SHA-256: 07cce552f8cb9e001e98f28a7a299bc438dbd44fcaa79479def4892ff330da0a</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>PPC:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.5-107.el5_9.8.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 455ddee97bc27ac7659b7b57bf5fd4be<br/>SHA-256: e3641c0790c60ad30ab4de7d93538205e46f90066e29ace5d15f5e62903d084a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-2.5-107.el5_9.8.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 71aa3ded3e1f6af5f84aafbaf8249337<br/>SHA-256: 8af61ecd2d751cbfcc0ac2bed9bc0e142b02eff3f6ef9356290b62a27a0ec5fd</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-common-2.5-107.el5_9.8.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0e6a3ecb569919d27d10115672a585b1<br/>SHA-256: b0e33a3fbc17731672386c0bc4bca227147470faa2de3b5460dad6f3dd32502c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-2.5-107.el5_9.8.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b530cebeee16d63a39007f487fdc78ab<br/>SHA-256: 9f005e60aae48f01d0528e1e50f260646ef91353049f293e600305b97b5f5a65</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-2.5-107.el5_9.8.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 08ff2b5e86167ce9929dd6c24ce98178<br/>SHA-256: ccd4de055a80c1ee9074ed3455a5fa3b81e49cd0bdf037530de39bd69f0f144a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-devel-2.5-107.el5_9.8.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 7ce9ce1650e5da75e90dc43658014d7b<br/>SHA-256: 0b24148cb9f5af127f12acc2f471eeaaafc552fff0311383e22d38f46fc7a3a3</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-devel-2.5-107.el5_9.8.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f812e35475c470cabcc5a0a5b121db3a<br/>SHA-256: 097222d81029b519ff3b96e3894b9341289079cc79c136a933fdf2b720126a9f</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-headers-2.5-107.el5_9.8.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e5fbb6a3f7a3854159c556a6b9e60940<br/>SHA-256: 29eecb5d56fd0368d3014d697f00e4abc9a316d00f2d5efb7d084d991a0eb3ec</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-utils-2.5-107.el5_9.8.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 73f21aec9cbf9a4356de61f9f5fb055a<br/>SHA-256: 5e6f5de2604d02db4ea8275adae3e8f98dcb37a85d133bf994f4991b93a3e70d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>nscd-2.5-107.el5_9.8.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2b2f504d0481ff0e4edba3b8a9562819<br/>SHA-256: 75ec189e24cee317a7bee8f16114936a7a12a7fdb6c316097f9299e9e271e848</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>s390x:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.5-107.el5_9.8.s390.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9442db3e882d585f7c9cc1bc0cba245f<br/>SHA-256: 8567b3546ee24550f70573b582c4d75b97c2ccd0dc70078d3f7e1495c0b4d31c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-2.5-107.el5_9.8.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 953f19424accdabd83deb08c2d551de0<br/>SHA-256: 0ba3ea0bb11b8ce857f2e83157336575a09e40caee553cfaceeacdd97cbd9b6d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-common-2.5-107.el5_9.8.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 92746cbeabf347354a570602021a2948<br/>SHA-256: dbbb1ee2701ba014788d3531d1aa2afc25f43fb2f61855f23f12287a89f31bde</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-2.5-107.el5_9.8.s390.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d02123e8530113d72b4144c85084d68a<br/>SHA-256: d333ec80a9b64733f357dc433f9e83381ab512db948b84a0d4b72f1b1e0c243a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-2.5-107.el5_9.8.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 7b42b201fbbb83f49748ad118a828df4<br/>SHA-256: 3b3963164c6c8d62b43c4f21988088f86cf0f3593be60a740d1b2071e099823e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-devel-2.5-107.el5_9.8.s390.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3fdd04761c7cc04207f202b4d291d13f<br/>SHA-256: ae4aa79041c3f9a78da5f2285e9509cfe4dbba64c7ed7f2054b1f72185576f24</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-devel-2.5-107.el5_9.8.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 97d74ebe5bc851b3e40e411ac7f16bea<br/>SHA-256: 0b9ec4824dd391c374b9a99205966d64733d00b908148b496a26f8153e353abc</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-headers-2.5-107.el5_9.8.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f7921ff0577870df3cc24d02031ef23a<br/>SHA-256: 6228168b76de7c978a4fcd31055b15e6e18010a5f9c4359ef6f0c3ea7a4baace</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-utils-2.5-107.el5_9.8.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1e0a2ec528dbf018f2e6e11366939c5c<br/>SHA-256: f5fbcafc0e3a257ca32610f41a0520721cf4ee30fdbce5386c716dfd3ec85a8d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>nscd-2.5-107.el5_9.8.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 626077542994f2e0a6323e4fbaf7cf5a<br/>SHA-256: a2af8825326f2cf2a2a0357307209e2252604fd8dec0eef2247dc6f18351fc6c</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.5-107.el5_9.8.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 4f20906cf3fc8f2746226d8410fb222b<br/>SHA-256: 57b9c70383b6c195e40e6e1ef46ecfc70c16b002da12f8a269c165da07ea800b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-2.5-107.el5_9.8.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 681e30b5a0194b084f96e8b8e269921d<br/>SHA-256: ee9809aa9db68ac5f6a8188da8e9f4c256cf86d750a59f829f06a9145c8a98a3</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-common-2.5-107.el5_9.8.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f6639058fe40bf5954d1b57ced0de76b<br/>SHA-256: 13408617611b0044c12bbc852215290324dd489401ec7ea21d79fb9d3ed9a65e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-2.5-107.el5_9.8.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 25bddbc937b43146999699d3370a7b5a<br/>SHA-256: 54e9c1662428853a38deafd4c5f856e67a07d26849ec8ff7b5578cfc2bbc62af</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-2.5-107.el5_9.8.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: cd737af41958a3a9f16fbd7a68623613<br/>SHA-256: bb260654ee4e1f1f3db899497fddcdefb2915db34ccc955d1f74faad50f5c3ab</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-2.5-107.el5_9.8.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 4cfdb9edbb42ba030eae76e11560975b<br/>SHA-256: 24856718a928cb30db59f91027ca766fe900dd2a2d8312d6cbab710cc84bfa9c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-common-2.5-107.el5_9.8.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 715e752211f14cdbabb2c495a6f6c0b7<br/>SHA-256: c28182f282fd4450b5ea39bc855372e58b44481e6bdf4935254352084bdffede</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-devel-2.5-107.el5_9.8.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1d5342514bb64e91f09cb404483ec42a<br/>SHA-256: a083398fdedc1b9406cacbb77c70633fc036209b44365fb8f8ea93da4ba9f75d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-devel-2.5-107.el5_9.8.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: cf649efa191d296d5d4f15b09562cf91<br/>SHA-256: 56f990c9225155d3a5477faef33122cdddfc0ee90cab2ee8264841e41c86dab2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-headers-2.5-107.el5_9.8.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 619649a492cab7011e5e5d8c9da46c48<br/>SHA-256: 85c6ec32a64f5382f8c0acfb3eb004dd28fc01bff20bdd52715de5eac809c428</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-utils-2.5-107.el5_9.8.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 833ed968f869f9ae6962ba8793947d74<br/>SHA-256: e4c8a5d7f9b3f4aedfcbd3f287ddf4945295d67e0de4565a596327c889f8b4d2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>nscd-2.5-107.el5_9.8.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1d69aa2d0e084a9b39c6427593f05868<br/>SHA-256: f338c1dd8a61702cf46038a775dd436d73d7fabd61d1b9446faa27638b915ee4</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Long Life (v. 5.6 server)">Red Hat Enterprise Linux Long Life (v. 5.6 server)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.5-58.el5_6.6.src.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 37079d9f942e9b6d68bb2594a11315d0<br/>SHA-256: 1d68718da22cb556f7652049951f08a5a498c5dc190983137c50b1b29fa451d8</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.5-58.el5_6.6.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6be7a1d02d80c383c6fabb5a0fdf415b<br/>SHA-256: 001b79a9d51ef157228f9807f86c15999957a8d458d454e2fb01ef0c19b7fc51</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-2.5-58.el5_6.6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 55140ba3409c81f044a42197da927ffc<br/>SHA-256: 3f480f6088725f0c535ba2fd32b7ecb3fb75c1533fe309a5b329fc6bff9f0473</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-common-2.5-58.el5_6.6.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 049d60bcbc577fda551d49908e2f83b6<br/>SHA-256: 8e38720f515578939f2a7070636649147c6c94378f3aefbca175bdc749bcdcc5</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-2.5-58.el5_6.6.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ae797e8bddd93f2ff9ab056ed6c4a9b2<br/>SHA-256: 9fdefd4af731a61687204661018e89692d49f054efe14dc1377c20c347cc3902</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-2.5-58.el5_6.6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 39965f971e2089578edc3c25dc3baef0<br/>SHA-256: 08d2cffafe6757258753f01ff2fa223eb362aecb65a4e2388a43a4ac963a432c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-common-2.5-58.el5_6.6.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0ba742340bff04eb488d719b9290bf56<br/>SHA-256: 43bccca590402cf3e086dbd208c7364280db2e8c3be7039768af989f45dbc260</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-devel-2.5-58.el5_6.6.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 98049b11ba2c745001d1f715b8876e98<br/>SHA-256: 140a6344c6016e370b54642236a722ad9a9cc2156a90ddc3f60ee6eddb969a39</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-headers-2.5-58.el5_6.6.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ebef33535c4419bdb654e7f62e81a9d5<br/>SHA-256: 6b307b9e965d005c5d80bb8fa6e1ce13d5d2eb66eff6b1687d11ca9bff44659a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-utils-2.5-58.el5_6.6.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b99a66e06edea7ce333a126eaf01802e<br/>SHA-256: 2339cee99d0eec805a5f2ff01ebc3b551339fbd2b0df7e5023821e87febcc7f8</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>nscd-2.5-58.el5_6.6.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ba490acbf423b2a7ca265040eedd85c1<br/>SHA-256: de00ea5cd55d84a32f9864910731350eeeef46bd2c33d2c030011efaef5b3a44</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.5-58.el5_6.6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 55140ba3409c81f044a42197da927ffc<br/>SHA-256: 3f480f6088725f0c535ba2fd32b7ecb3fb75c1533fe309a5b329fc6bff9f0473</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-2.5-58.el5_6.6.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 807c8d7c12e13f35aff8f8fcc222516b<br/>SHA-256: f7fcfba76b953fae9d77ca84bedc6710e869e58fefd0f1163071014be08261d3</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-common-2.5-58.el5_6.6.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0654fc04c78f2a5daaf8fc6782c21320<br/>SHA-256: a29cd38b8a373b2ae78e4422455b15353126b6ecaf1b0322ae48458fd4929b81</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-2.5-58.el5_6.6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 39965f971e2089578edc3c25dc3baef0<br/>SHA-256: 08d2cffafe6757258753f01ff2fa223eb362aecb65a4e2388a43a4ac963a432c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-2.5-58.el5_6.6.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0e2ae6af2848ef4b7cb91c4057f8bf0c<br/>SHA-256: 5b7f2d2da791f3dc80c82b995b61be4b76ee9dd640331023080fe9967a91ffae</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-common-2.5-58.el5_6.6.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0ba742340bff04eb488d719b9290bf56<br/>SHA-256: 43bccca590402cf3e086dbd208c7364280db2e8c3be7039768af989f45dbc260</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-devel-2.5-58.el5_6.6.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2c454fd2c0a8bfefacb5165139548e0b<br/>SHA-256: 7868fc9d60ab881d14b3349103d321eeaa252c73002fccd2dab7352014f2c800</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-headers-2.5-58.el5_6.6.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ce458fb6334f6fb91b07399004f3c286<br/>SHA-256: 767f33522abe3aa004ca3eedcee83985540e705849c5be91101b10736ac92736</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-utils-2.5-58.el5_6.6.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e6a583b62521c9462de5168d864fbf11<br/>SHA-256: 56f5f8af24da0c4d0b26d0327bb286646fe957be82f3a4e135173123e93c1a3b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>nscd-2.5-58.el5_6.6.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3f3bc74d5d0d33dff34d8ac9f9611b49<br/>SHA-256: 8041e38ef88200343b9fdd71c62ad99feffffc074f75063489201393ea9a7bec</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.5-58.el5_6.6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 55140ba3409c81f044a42197da927ffc<br/>SHA-256: 3f480f6088725f0c535ba2fd32b7ecb3fb75c1533fe309a5b329fc6bff9f0473</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-2.5-58.el5_6.6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8cadccb5d656f73b92ec2ea07a7b298a<br/>SHA-256: 7e907490f096f4ad48d9080a4178ab703f7b4916c0ca96b7d4cf2392500298aa</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-common-2.5-58.el5_6.6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 96577938e9f7661a8ea6e70b5e7e1114<br/>SHA-256: 53d43600c966457b8ceb6e5fc0157d168db37f1ce1e43e0c8c76f40ed2fdb30d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-2.5-58.el5_6.6.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ae797e8bddd93f2ff9ab056ed6c4a9b2<br/>SHA-256: 9fdefd4af731a61687204661018e89692d49f054efe14dc1377c20c347cc3902</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-2.5-58.el5_6.6.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 39965f971e2089578edc3c25dc3baef0<br/>SHA-256: 08d2cffafe6757258753f01ff2fa223eb362aecb65a4e2388a43a4ac963a432c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-2.5-58.el5_6.6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 71d79b82679ccd1b03ba4a96f3b1862c<br/>SHA-256: 34e42a2a30157fa97109ced818258ef4e502c2dd408ed254dc9e661113edcf2c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-common-2.5-58.el5_6.6.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0ba742340bff04eb488d719b9290bf56<br/>SHA-256: 43bccca590402cf3e086dbd208c7364280db2e8c3be7039768af989f45dbc260</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-devel-2.5-58.el5_6.6.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 98049b11ba2c745001d1f715b8876e98<br/>SHA-256: 140a6344c6016e370b54642236a722ad9a9cc2156a90ddc3f60ee6eddb969a39</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-devel-2.5-58.el5_6.6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: afbd0c239e601307c02dc874dd44bc2b<br/>SHA-256: 55a69e5e37d5735d1972dd777d56e6621ee3c95c82fc513adc07bdef203554e5</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-headers-2.5-58.el5_6.6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5bacbd473cb4a3b9bab584aaa6c58ef2<br/>SHA-256: 0bf6c84b710b607a4afa3809648b16eeb16d21e0ac7c3a0c49dd6f129feae079</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-utils-2.5-58.el5_6.6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b285311eb35cfc5a7f0d2c7930346979<br/>SHA-256: 75a56a331871361009fbada996a53a67f83bb49a4ff673bd3ef03848c2a7c2dd</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>nscd-2.5-58.el5_6.6.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1aa2ab4cd1e39c152e8239feae2ab1d7<br/>SHA-256: 58653dcc02279a9f323e13ae6db1bdd13539d4eddf7474fe09afe5b895bebd9d</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Long Life (v. 5.9 server)">Red Hat Enterprise Linux Long Life (v. 5.9 server)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.5-107.el5_9.8.src.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 36eebadcb8abbf81f653f90712a2d336<br/>SHA-256: c225e7de427aebf4e8b15b8b691fb2f37a8eb41ba91df9644dc5dce4924b7c92</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.5-107.el5_9.8.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f4773572550003c83abf9f699564e9fa<br/>SHA-256: 6f4584a1308a35dec9523b4dd425fb782fd7e2096e20e80352278d81134819fc</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-2.5-107.el5_9.8.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 4f20906cf3fc8f2746226d8410fb222b<br/>SHA-256: 57b9c70383b6c195e40e6e1ef46ecfc70c16b002da12f8a269c165da07ea800b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-common-2.5-107.el5_9.8.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6a7dcea924a6774bea7f7f4f28ad5a3c<br/>SHA-256: ce185ea409b0855697441baf1aff36bf4f84d8f846778fe739b60197613046ba</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-2.5-107.el5_9.8.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 25bddbc937b43146999699d3370a7b5a<br/>SHA-256: 54e9c1662428853a38deafd4c5f856e67a07d26849ec8ff7b5578cfc2bbc62af</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-2.5-107.el5_9.8.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: cd737af41958a3a9f16fbd7a68623613<br/>SHA-256: bb260654ee4e1f1f3db899497fddcdefb2915db34ccc955d1f74faad50f5c3ab</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-common-2.5-107.el5_9.8.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 715e752211f14cdbabb2c495a6f6c0b7<br/>SHA-256: c28182f282fd4450b5ea39bc855372e58b44481e6bdf4935254352084bdffede</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-devel-2.5-107.el5_9.8.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1d5342514bb64e91f09cb404483ec42a<br/>SHA-256: a083398fdedc1b9406cacbb77c70633fc036209b44365fb8f8ea93da4ba9f75d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-headers-2.5-107.el5_9.8.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5931511a7674d011eef6890c5186d166<br/>SHA-256: 66a6ec561aeced8ad803fc9b3511ceb3dfdbabc52c5ea5b9dad4650eae0454d4</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-utils-2.5-107.el5_9.8.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: fd49fc5196fa6fbda4bb694b41f1fef1<br/>SHA-256: 8e9cafe05ab2ca5f78b6216bc389a3a559679423af608fd302f41b70fcdf73a7</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>nscd-2.5-107.el5_9.8.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5f5979f3da9ef3655ab16dbf9009a4b3<br/>SHA-256: 42b2463b4d31fb6411fc61b85e5ed7b62c5b02d6e3ca9832c5340738f86b04ba</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.5-107.el5_9.8.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 4f20906cf3fc8f2746226d8410fb222b<br/>SHA-256: 57b9c70383b6c195e40e6e1ef46ecfc70c16b002da12f8a269c165da07ea800b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-2.5-107.el5_9.8.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ba5180bef24b37da61406e0562e0e0a3<br/>SHA-256: e7ea06db3b705e9aee13f0b77cf521db50c93c387f75cd31c064b8b055aa0f61</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-common-2.5-107.el5_9.8.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 848f041d75b9636017d9f497bb54f414<br/>SHA-256: 6086a1fb489529b82fd9326c6793661fe368450d94c7beb42604ba505da40ed4</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-2.5-107.el5_9.8.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: cd737af41958a3a9f16fbd7a68623613<br/>SHA-256: bb260654ee4e1f1f3db899497fddcdefb2915db34ccc955d1f74faad50f5c3ab</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-2.5-107.el5_9.8.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c07b19650c0a319ac5e4a42463a6c9db<br/>SHA-256: 56923f863abcb98029cb234af4f9cc3d32b87d83f5670bf1ec8d59b251442687</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-common-2.5-107.el5_9.8.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 715e752211f14cdbabb2c495a6f6c0b7<br/>SHA-256: c28182f282fd4450b5ea39bc855372e58b44481e6bdf4935254352084bdffede</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-devel-2.5-107.el5_9.8.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2231fc55c100097fc500c7e5773e95be<br/>SHA-256: 6812b3bc38fa82ab30bedae3d82eb509d0a92c21bbb7d4c2a58f53873d8cca03</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-headers-2.5-107.el5_9.8.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: aaf11ab5b67050021dbf66c98e827843<br/>SHA-256: 15b49e46fbdecd522d71d16c6783429cb39045b56bea225abbf7bbc8faf63d2a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-utils-2.5-107.el5_9.8.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f7ad920f90fb2c8af26f79406631fbb8<br/>SHA-256: 03beb409ab4c962f28044fcc5fdfa6b24c5fbf2f1aed12240331f302d3d5cf53</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>nscd-2.5-107.el5_9.8.ia64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1d5dc228da4e90b4cb62a22cbba80ff8<br/>SHA-256: 07cce552f8cb9e001e98f28a7a299bc438dbd44fcaa79479def4892ff330da0a</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.5-107.el5_9.8.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 4f20906cf3fc8f2746226d8410fb222b<br/>SHA-256: 57b9c70383b6c195e40e6e1ef46ecfc70c16b002da12f8a269c165da07ea800b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-2.5-107.el5_9.8.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 681e30b5a0194b084f96e8b8e269921d<br/>SHA-256: ee9809aa9db68ac5f6a8188da8e9f4c256cf86d750a59f829f06a9145c8a98a3</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-common-2.5-107.el5_9.8.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f6639058fe40bf5954d1b57ced0de76b<br/>SHA-256: 13408617611b0044c12bbc852215290324dd489401ec7ea21d79fb9d3ed9a65e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-2.5-107.el5_9.8.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 25bddbc937b43146999699d3370a7b5a<br/>SHA-256: 54e9c1662428853a38deafd4c5f856e67a07d26849ec8ff7b5578cfc2bbc62af</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-2.5-107.el5_9.8.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: cd737af41958a3a9f16fbd7a68623613<br/>SHA-256: bb260654ee4e1f1f3db899497fddcdefb2915db34ccc955d1f74faad50f5c3ab</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-2.5-107.el5_9.8.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 4cfdb9edbb42ba030eae76e11560975b<br/>SHA-256: 24856718a928cb30db59f91027ca766fe900dd2a2d8312d6cbab710cc84bfa9c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-common-2.5-107.el5_9.8.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 715e752211f14cdbabb2c495a6f6c0b7<br/>SHA-256: c28182f282fd4450b5ea39bc855372e58b44481e6bdf4935254352084bdffede</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-devel-2.5-107.el5_9.8.i386.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1d5342514bb64e91f09cb404483ec42a<br/>SHA-256: a083398fdedc1b9406cacbb77c70633fc036209b44365fb8f8ea93da4ba9f75d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-devel-2.5-107.el5_9.8.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: cf649efa191d296d5d4f15b09562cf91<br/>SHA-256: 56f990c9225155d3a5477faef33122cdddfc0ee90cab2ee8264841e41c86dab2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-headers-2.5-107.el5_9.8.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 619649a492cab7011e5e5d8c9da46c48<br/>SHA-256: 85c6ec32a64f5382f8c0acfb3eb004dd28fc01bff20bdd52715de5eac809c428</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-utils-2.5-107.el5_9.8.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 833ed968f869f9ae6962ba8793947d74<br/>SHA-256: e4c8a5d7f9b3f4aedfcbd3f287ddf4945295d67e0de4565a596327c889f8b4d2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>nscd-2.5-107.el5_9.8.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1d69aa2d0e084a9b39c6427593f05868<br/>SHA-256: f338c1dd8a61702cf46038a775dd436d73d7fabd61d1b9446faa27638b915ee4</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Server AUS (v. 6.2)">Red Hat Enterprise Linux Server AUS (v. 6.2)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.12-1.47.el6_2.15.src.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0151fd76facd8743715503f3ec6668d1<br/>SHA-256: ce97a4733414403583d4efecc6ca7ff2af77232ff87f8a6a9608be143fbb85c3</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.12-1.47.el6_2.15.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ef6f0f2d5d5f29f73752dc6620379a7f<br/>SHA-256: 70a4f453523355f7d5dda94964c7f63cc1cd1f67f60fdf1648f19f42ab6f4ec0</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-2.12-1.47.el6_2.15.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 670ba141dc3b6b53f2f75330f1992588<br/>SHA-256: c10c85d83c41171bc146093b57899fa6571a2e09a17928c1c1dc8833b4202815</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-common-2.12-1.47.el6_2.15.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8fc017acc99d7d8dc158960c4d4e5021<br/>SHA-256: 5a6e23c7d7d54ee5de1318bc0e0481a8a750c8b166c012def21485de6adce562</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-2.12-1.47.el6_2.15.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 82369756699eaf954e3e74655e2d449e<br/>SHA-256: a9b48fc13aca398819e72edcdc558dc61b30f67ab1ccd6105110119a637d6060</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-2.12-1.47.el6_2.15.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 7a482e01b12e0c8384cfd253347dde55<br/>SHA-256: adaf2bd5f5fde4c7f48452ed9e58168897f9c8105d282787fe6353ce21ae92ac</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-common-2.12-1.47.el6_2.15.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a792580492324ac0b244fa9edb951e19<br/>SHA-256: a7a3e2704eac885ece134dc509c0a23adedbdab0113f585cc39e93660b633956</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-common-2.12-1.47.el6_2.15.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 95b003660fdc65c02bed83758b31d1a1<br/>SHA-256: f55dba9b4d40996b47607c1d3b99664bb8206c50ee97657ec7c515e28a60f4bc</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-devel-2.12-1.47.el6_2.15.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c7238667b70be12006c21a4e07758c67<br/>SHA-256: cf55997be3d505db773d90e1884be83bb44d0cb3283d5a1e2d8241ee730807e0</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-devel-2.12-1.47.el6_2.15.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 7b8511c0327ce669e0184cce47378b55<br/>SHA-256: f861c909db03bcbd9dac9c97e54eacc50718c73364dd71396bb5b91ce7362957</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-headers-2.12-1.47.el6_2.15.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2c29f2e87193cf956c4df4480f2c8487<br/>SHA-256: 3fa59a6709499ee1da674d307d5f0ac802ee0cec1bb5a8c39d8236c9cf29961e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-static-2.12-1.47.el6_2.15.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6a0906762ec312ae93bc4973b269a38c<br/>SHA-256: 9b86a4ffc309182311ba3649640a7a72a2c8865df16aa356b5dc7ab44598a044</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-static-2.12-1.47.el6_2.15.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 121b9bf2dfaca128ad84932428504c51<br/>SHA-256: e90e8eb18dec90c31fcee58ea154580840fbb545b31c87a548823ce0e878b8aa</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-utils-2.12-1.47.el6_2.15.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9be00808cbc58170a89ff7b84af5b7d3<br/>SHA-256: 8f8af9906b86893e74c29c2c2aad3cb40a059dd30ce85433a471cc1344d3a636</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>nscd-2.12-1.47.el6_2.15.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3f29af24692c9848b370d081e1e5497f<br/>SHA-256: 70cc1045b9833c1b183513abe15e086cbce1ab349d266cc6655a63e3231218ce</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Server AUS (v. 6.4)">Red Hat Enterprise Linux Server AUS (v. 6.4)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.12-1.107.el6_4.7.src.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 28b5dd615a0239177b1480afea2ed991<br/>SHA-256: e64fa9ea8b5fe2e0c40596adc156a3c766a7cc758ffba4f154f7532e11b861bd</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.12-1.107.el6_4.7.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6d83f728e3f01f425fef78fcc43da133<br/>SHA-256: 6e419697fef9a0d250e739209803de5e00f4b159c68865c2524a2d325b4e2b39</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-2.12-1.107.el6_4.7.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 326c7f52da393f8ea25a2c49932e402b<br/>SHA-256: 9266e882a76eeba7d26cf49bd5d3e03b13188104a8bccfbbf5e27c6e00bbf1d1</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-common-2.12-1.107.el6_4.7.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: eb3c4b889ab867d697b31ae61206c1fa<br/>SHA-256: 2926c6f89f0994140e193ee9dd2fe2acd3569aeb377700e7a9226235cdac794e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-2.12-1.107.el6_4.7.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 47a9887e797f4367ae92ab0bcc6dbebf<br/>SHA-256: 545397fb2a3002b7a4c0ca94eddd4888d8b8bd3766683ef3ee60d9c74809397a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-2.12-1.107.el6_4.7.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e0dbe27224f210bd2b4ce10faabf7514<br/>SHA-256: 72fb842191b8e93ad2a90af531fd7ce14e2cf00ccaac87f8b18c35a3ae80cca7</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-common-2.12-1.107.el6_4.7.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3914153b936c5356af72a7aaa06e359c<br/>SHA-256: 167526553acd3c138c585e7c2e8351e146cd39f1834e5153396213e044bf9ee4</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-common-2.12-1.107.el6_4.7.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b2f69da87a608528f67192300b34a36d<br/>SHA-256: 42811f76584266c801fb169b6f0937da25408940752f42fb60a63c171e95b504</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-devel-2.12-1.107.el6_4.7.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f2f2935f09581d4ce11b7aef68efb4ca<br/>SHA-256: 1f3440640dda7ed6d0b99c9eebb19f6c4e585bfb2fee2f328b6989d781b70c70</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-devel-2.12-1.107.el6_4.7.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d1ddfff60d23bc2aab8c1a5bb9d9b91b<br/>SHA-256: 919701df87d52d268f94d3d7b1e0e47613ec5a4498fd796f86be01aa49585b89</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-headers-2.12-1.107.el6_4.7.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 270b4b3375a8060d446d124d10c8688c<br/>SHA-256: e19158145c3d2755e2112a4b35c58e7ef1450ea63e4159ffb42b1184649d2337</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-static-2.12-1.107.el6_4.7.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: eb118eadaf5b2a549cd03f746ab18f41<br/>SHA-256: 8a72e7d9a13c7e94040452b8f1eaa36869ec15df2e747be6ad93ff9097309d41</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-static-2.12-1.107.el6_4.7.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 13af75f8124aa3b99d1e0d964347b155<br/>SHA-256: 5a60a0193dcc45490e123004572ffe5aec56b4682f04a7da987280f4ba9661bf</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-utils-2.12-1.107.el6_4.7.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 00695121f060e0ecfe37ba651cf5cb75<br/>SHA-256: 5649f93acc6dee4773a81a46e4159a6b9ed6a830ad65f7dc1d282b3d4bc58c9a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>nscd-2.12-1.107.el6_4.7.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f733374a8fddac94af8e101e60299959<br/>SHA-256: 69e9a98304f93644610f7bced5cf500895901331af08939724de06e48c44fe1e</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Server AUS (v. 6.5)">Red Hat Enterprise Linux Server AUS (v. 6.5)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.12-1.132.el6_5.5.src.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 41a30bd63eb35bb96320f98c38c567a1<br/>SHA-256: 79809194b1dc2c7310d77f11f521c3bd7e3f61b3850b3ca5cb5102d1b0dd2cc2</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.12-1.132.el6_5.5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 71aa83e97c344ce9793953cb84c3c211<br/>SHA-256: 5caf6ddf60f32514712ca3f0e6527175ce137cc533301565a2618e99649e39ff</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-2.12-1.132.el6_5.5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 27d13c69f523f15f621f081da230ee3b<br/>SHA-256: aee91b5b59b9134d3ffdd2de67e9a41039303f5f8b35b8c0e53c1896bc966259</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-common-2.12-1.132.el6_5.5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9d5d5f71e29d21d275223b659a2c37d5<br/>SHA-256: a47c43757deea3bc0d01e4d8eb49c7bfe5708ea39d5fb4fb4c414fe12fea68ad</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-2.12-1.132.el6_5.5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9acbc4cf2bffd0f2746b90e88fd7882b<br/>SHA-256: 77132e1c5604a4aeada563b8a59ed8f758c36d4d77715629efe98710aa79de9e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-2.12-1.132.el6_5.5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 917b710a696b68d51b1f5c75392f09ff<br/>SHA-256: ce0c5aad3e01a176a179b7fac0b637b1bac1381d842c7de7d8be29bde0670948</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-common-2.12-1.132.el6_5.5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a6d91ee7e82cda1406e9ffbb86cf4b94<br/>SHA-256: 017c4cc644447b7cc11d3cc96e1559bff0f3644de495367b022b620b2ee07d30</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-common-2.12-1.132.el6_5.5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 840d346e1edebdd184ce5d8dbe4cde23<br/>SHA-256: eaa3ca83ee9f3e6be86c2da234a072e48dae343902d39041b73e7e76844d9fe7</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-devel-2.12-1.132.el6_5.5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 73e0f1950a706c31d02be2593b7c6c61<br/>SHA-256: d3d344d81eb2077b880cbf50ba4daa0cb39ba9abefdef482c44f103e70f6f4ba</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-devel-2.12-1.132.el6_5.5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f3a4b7be68cdc4cf0ced2d3729761415<br/>SHA-256: 299468d336f01fae6a31288f6c7fe103c081b1c2f466a3a8c61af38e12465b1d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-headers-2.12-1.132.el6_5.5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3b48a4a0483f5633e98ae5e4c2fe6143<br/>SHA-256: 49251ee112840570cf1e6a82b8c9dda00c41bcf65dec6f657b22e31f33bcddc0</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-static-2.12-1.132.el6_5.5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 40231492f7c2352d7a450d0e65e59fcc<br/>SHA-256: 0eb4dd428932205260f4a2d9f5a82436593c2195aae2f5d8397b5da8199b7078</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-static-2.12-1.132.el6_5.5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0d9a51e7641517e019c863ccef8beef5<br/>SHA-256: 70c888b795f37727841ce14fbcfd91d3179a3877fc90566f50881db3906e158e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-utils-2.12-1.132.el6_5.5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 428ef083435354bb6136b9924cc703aa<br/>SHA-256: c6b8de72c35c7f916c3a1887f896de1b485479858ac8a9ae73ba2d4c7779c0c3</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>nscd-2.12-1.132.el6_5.5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 70f2b3cba241ecae75a7d6bde04ddee1<br/>SHA-256: a1a51c33a515d6802ca6b53eb03b378def071cdf677da92b537a1d30b5f655f6</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Server EUS (v. 6.4.z)">Red Hat Enterprise Linux Server EUS (v. 6.4.z)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.12-1.107.el6_4.7.src.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 28b5dd615a0239177b1480afea2ed991<br/>SHA-256: e64fa9ea8b5fe2e0c40596adc156a3c766a7cc758ffba4f154f7532e11b861bd</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.12-1.107.el6_4.7.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6d83f728e3f01f425fef78fcc43da133<br/>SHA-256: 6e419697fef9a0d250e739209803de5e00f4b159c68865c2524a2d325b4e2b39</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-common-2.12-1.107.el6_4.7.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0d9d2f5002cb07b454696553e9cc0188<br/>SHA-256: 015bc53681fc91f8069c13f0bd2bea3c407a234a43b37cdebdde53c26b863b19</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-2.12-1.107.el6_4.7.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 47a9887e797f4367ae92ab0bcc6dbebf<br/>SHA-256: 545397fb2a3002b7a4c0ca94eddd4888d8b8bd3766683ef3ee60d9c74809397a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-common-2.12-1.107.el6_4.7.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3914153b936c5356af72a7aaa06e359c<br/>SHA-256: 167526553acd3c138c585e7c2e8351e146cd39f1834e5153396213e044bf9ee4</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-devel-2.12-1.107.el6_4.7.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f2f2935f09581d4ce11b7aef68efb4ca<br/>SHA-256: 1f3440640dda7ed6d0b99c9eebb19f6c4e585bfb2fee2f328b6989d781b70c70</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-headers-2.12-1.107.el6_4.7.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 147ae0cf7ce3720a19bab9fa324bcc9c<br/>SHA-256: 6a5cc7a39ab01fbc6871882be42f44deeb92181dcd76c01455f68a21c46c9603</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-static-2.12-1.107.el6_4.7.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: eb118eadaf5b2a549cd03f746ab18f41<br/>SHA-256: 8a72e7d9a13c7e94040452b8f1eaa36869ec15df2e747be6ad93ff9097309d41</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-utils-2.12-1.107.el6_4.7.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 4d14e96cf4366f7c802f5166f7cc3352<br/>SHA-256: 5a46f1436ca518533498ec8e2232d76878f44b37e5fe8c0b78e58dda8b00b43e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>nscd-2.12-1.107.el6_4.7.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: fc3abcf3e4254febfd6490b00379c6e4<br/>SHA-256: 935e4fb305f32ba5056946933f15823a45f8a6f161b51880bac145fc1168b995</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>PPC:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.12-1.107.el6_4.7.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: fbe5bfd4aeebd11c77519904ee881d86<br/>SHA-256: 0bfcd12e0d4d2e6a55cd9749cd6f6a0252a2ceef9fa9640d7586dd955e9337a8</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-2.12-1.107.el6_4.7.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6fb3d2ffc22a7ece5ef93f160ec0d3fa<br/>SHA-256: dcf95a27f0ff29d786d47d7c07d5895d5db77ae9dc0a43f6e716f4bbe74226ca</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-common-2.12-1.107.el6_4.7.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c3e14fa4fe7fa498f5800e6360666435<br/>SHA-256: 3d6945a09981b055d186e0d39ef2c56c7edd5fa4ef99f6fe7e6a99de5fe345cc</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-2.12-1.107.el6_4.7.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d7efc56f1d5392bbea8618615dad33e7<br/>SHA-256: 126ec0cc8ef871e7ab4a477618059def1ac8019604b5f16fd6834365e738c7cf</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-2.12-1.107.el6_4.7.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: fcb415146de8b4aaf501c4df75ab0a0b<br/>SHA-256: 65c08e5b7d8dcac8a16e295420f289211ef16068c11249b3fde7e6bab5160237</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-common-2.12-1.107.el6_4.7.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 779fce168a21ca73a5e5fb52d63873df<br/>SHA-256: d36d1b0dd74e087f299b33ad2b25ce2ee2ab45b485f8f5461785e17f5228bd2f</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-common-2.12-1.107.el6_4.7.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1e1ded89e07e0ff3478234ab9bdee66c<br/>SHA-256: 8820baafdde52c1b465a1f53b455c5ec4f69ac4b499519bd782aef4903610136</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-devel-2.12-1.107.el6_4.7.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d5893bc9312d7c786d20ff807219f6ae<br/>SHA-256: 5005a52c9f6c8a7e5b062efd5e3725b62a8ddf24301380ce9689a3a0d50caad6</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-devel-2.12-1.107.el6_4.7.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9be96b6e7b0d3718cde170cf63da9078<br/>SHA-256: 6f7d0ae1c01d0b23a07476065c3be87296cce7aa772cc1b51a9fcd9762cd42b3</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-headers-2.12-1.107.el6_4.7.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ee0e1d622a6c998a653f8003cdce21b4<br/>SHA-256: 8475522160be7ef394c04155ec019f494d2aaef8d2e8d40d8a5687deedf9ebd5</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-static-2.12-1.107.el6_4.7.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c2be5407bffdf63526c8b2c54961f686<br/>SHA-256: 312bff9638aa6144f67f15804a80cecaea08b7f6c3354a7110053a83646397f9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-static-2.12-1.107.el6_4.7.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 068d29cb8f80ec34d09897ec007c5df6<br/>SHA-256: 51d6b3198abbed7daf289f74ff4b7af320f9116aca2823d335526c2c578e9878</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-utils-2.12-1.107.el6_4.7.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6a4f3f0c25038b987b270ab5e0310d11<br/>SHA-256: 90b5322140856a2ea611430fdc7d2237ce2159f0beb59ba5990f67cd978a9ec7</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>nscd-2.12-1.107.el6_4.7.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8728f1957c568948b7804ee05c09260f<br/>SHA-256: 0c9b18035cd03375748fefc469a0950b26794ffd135d8297eb3bd8a318864b6c</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>s390x:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.12-1.107.el6_4.7.s390.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 17ea44bdff5b139c9cae5aa7afc1dc40<br/>SHA-256: 72a50ad0ee855e682703761c41f380c6376f21cb3a782ffa3f460739fda3ea66</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-2.12-1.107.el6_4.7.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 61d7d746fbd400928de25523acce4445<br/>SHA-256: cb3e50b6c48cfa8c42199c3f72e992b461602169a1e931cda696313ed81336c9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-common-2.12-1.107.el6_4.7.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 38069fddbe5c9e990dfed0adcb8ab1b1<br/>SHA-256: cbb39b01a778a186f8bc58ec5b85dff3d4e6359e837bae8a4cddd7b77d3aa9b0</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-2.12-1.107.el6_4.7.s390.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 46abc37e9776eee8896e2f6e04e32b61<br/>SHA-256: 1c02083a2acd798530ff854896bdb26808c24446cf563c5fe3e13872bd01137c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-2.12-1.107.el6_4.7.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2ef28c692b7f72db1379c8171c65aec6<br/>SHA-256: 9c4578dd6742f38d629e66a421509b2a4eb53d6515ec8ff4c1da14dcb9e1473c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-common-2.12-1.107.el6_4.7.s390.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 4745073921bb6a4650434f5c68ec15ec<br/>SHA-256: ba77b2eb7d44654a0a9be7aac5a4e5fd5f828d8806ed63e694a360cdebd5645e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-common-2.12-1.107.el6_4.7.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 48c9262ec240e88f20b30e158330c20f<br/>SHA-256: 1f160ec95b86fe6e489fdbc49e1df4f2d773cbea368193420d02153ce8678757</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-devel-2.12-1.107.el6_4.7.s390.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ebf179e2402e52e7f210548947fcd321<br/>SHA-256: 8628f38be68e02822b491f05e77b59625c79c85d5032da80bedaaf4b246b7399</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-devel-2.12-1.107.el6_4.7.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 059ca69c48ca95fa32625990deb0191f<br/>SHA-256: 1693ea08774f56e20413b505382b3672599d9f4ee61a6c044981d13b1197dc0e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-headers-2.12-1.107.el6_4.7.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8c0bd0e46820e88c23cd233fdf993fd2<br/>SHA-256: 0fd8a1a8b713260e4c061ad3d3eeb0b8845b698e6e26239c0da305f4b6b41a85</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-static-2.12-1.107.el6_4.7.s390.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 285a0814f9d008bdbea21892de94f74d<br/>SHA-256: 29946c05d9778deafc1f0fd4a8154f04a1b9af2cb59d0549016726a9df665e50</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-static-2.12-1.107.el6_4.7.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a6f1e6fc80dbdccff2693eb979a0ea41<br/>SHA-256: c2996ffb7b6a6d10310d9fc76940e36b28801718e9016a2a55d769fcb3c77ee9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-utils-2.12-1.107.el6_4.7.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: faec23cfc541647b6dc11504f7961401<br/>SHA-256: 2f2cf3f2e5af2694828827e76fe9d56d567ab376d7a0312c4373be9a3b40303f</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>nscd-2.12-1.107.el6_4.7.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: cba91dabde788e190f39013712f847dc<br/>SHA-256: c17fd3955ed33a68dc957c6cfcef63371b3e2ceebbaa9248b42eee495be219fa</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.12-1.107.el6_4.7.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6d83f728e3f01f425fef78fcc43da133<br/>SHA-256: 6e419697fef9a0d250e739209803de5e00f4b159c68865c2524a2d325b4e2b39</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-2.12-1.107.el6_4.7.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 326c7f52da393f8ea25a2c49932e402b<br/>SHA-256: 9266e882a76eeba7d26cf49bd5d3e03b13188104a8bccfbbf5e27c6e00bbf1d1</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-common-2.12-1.107.el6_4.7.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: eb3c4b889ab867d697b31ae61206c1fa<br/>SHA-256: 2926c6f89f0994140e193ee9dd2fe2acd3569aeb377700e7a9226235cdac794e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-2.12-1.107.el6_4.7.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 47a9887e797f4367ae92ab0bcc6dbebf<br/>SHA-256: 545397fb2a3002b7a4c0ca94eddd4888d8b8bd3766683ef3ee60d9c74809397a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-2.12-1.107.el6_4.7.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e0dbe27224f210bd2b4ce10faabf7514<br/>SHA-256: 72fb842191b8e93ad2a90af531fd7ce14e2cf00ccaac87f8b18c35a3ae80cca7</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-common-2.12-1.107.el6_4.7.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3914153b936c5356af72a7aaa06e359c<br/>SHA-256: 167526553acd3c138c585e7c2e8351e146cd39f1834e5153396213e044bf9ee4</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-common-2.12-1.107.el6_4.7.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b2f69da87a608528f67192300b34a36d<br/>SHA-256: 42811f76584266c801fb169b6f0937da25408940752f42fb60a63c171e95b504</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-devel-2.12-1.107.el6_4.7.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f2f2935f09581d4ce11b7aef68efb4ca<br/>SHA-256: 1f3440640dda7ed6d0b99c9eebb19f6c4e585bfb2fee2f328b6989d781b70c70</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-devel-2.12-1.107.el6_4.7.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d1ddfff60d23bc2aab8c1a5bb9d9b91b<br/>SHA-256: 919701df87d52d268f94d3d7b1e0e47613ec5a4498fd796f86be01aa49585b89</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-headers-2.12-1.107.el6_4.7.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 270b4b3375a8060d446d124d10c8688c<br/>SHA-256: e19158145c3d2755e2112a4b35c58e7ef1450ea63e4159ffb42b1184649d2337</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-static-2.12-1.107.el6_4.7.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: eb118eadaf5b2a549cd03f746ab18f41<br/>SHA-256: 8a72e7d9a13c7e94040452b8f1eaa36869ec15df2e747be6ad93ff9097309d41</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-static-2.12-1.107.el6_4.7.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 13af75f8124aa3b99d1e0d964347b155<br/>SHA-256: 5a60a0193dcc45490e123004572ffe5aec56b4682f04a7da987280f4ba9661bf</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-utils-2.12-1.107.el6_4.7.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 00695121f060e0ecfe37ba651cf5cb75<br/>SHA-256: 5649f93acc6dee4773a81a46e4159a6b9ed6a830ad65f7dc1d282b3d4bc58c9a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>nscd-2.12-1.107.el6_4.7.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f733374a8fddac94af8e101e60299959<br/>SHA-256: 69e9a98304f93644610f7bced5cf500895901331af08939724de06e48c44fe1e</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Server EUS (v. 6.5.z)">Red Hat Enterprise Linux Server EUS (v. 6.5.z)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.12-1.132.el6_5.5.src.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 41a30bd63eb35bb96320f98c38c567a1<br/>SHA-256: 79809194b1dc2c7310d77f11f521c3bd7e3f61b3850b3ca5cb5102d1b0dd2cc2</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.12-1.132.el6_5.5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 71aa83e97c344ce9793953cb84c3c211<br/>SHA-256: 5caf6ddf60f32514712ca3f0e6527175ce137cc533301565a2618e99649e39ff</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-common-2.12-1.132.el6_5.5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3000f54426a434b7d869dbb74f380314<br/>SHA-256: 032cb8d78ecdaca42b94733dddca240c77c10df941ab463d6c02da1ff27894ee</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-2.12-1.132.el6_5.5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9acbc4cf2bffd0f2746b90e88fd7882b<br/>SHA-256: 77132e1c5604a4aeada563b8a59ed8f758c36d4d77715629efe98710aa79de9e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-common-2.12-1.132.el6_5.5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a6d91ee7e82cda1406e9ffbb86cf4b94<br/>SHA-256: 017c4cc644447b7cc11d3cc96e1559bff0f3644de495367b022b620b2ee07d30</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-devel-2.12-1.132.el6_5.5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 73e0f1950a706c31d02be2593b7c6c61<br/>SHA-256: d3d344d81eb2077b880cbf50ba4daa0cb39ba9abefdef482c44f103e70f6f4ba</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-headers-2.12-1.132.el6_5.5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9a4321614f07db7810c079edb10ad333<br/>SHA-256: 474470222fb943c27b44a5418ae6db4e53e4c1c5bb104defffcc028d908e7fcc</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-static-2.12-1.132.el6_5.5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 40231492f7c2352d7a450d0e65e59fcc<br/>SHA-256: 0eb4dd428932205260f4a2d9f5a82436593c2195aae2f5d8397b5da8199b7078</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-utils-2.12-1.132.el6_5.5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d1eac8b3da453eb2a2163f961fb97c04<br/>SHA-256: 271c515700c393406b10999dbc2fdcf94c2a2dad94d3b27d3c2d76fbdd82c9ff</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>nscd-2.12-1.132.el6_5.5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: cee359424cb5a786d2487c45f9b96e1a<br/>SHA-256: 6e5c3d1c3a83597d5f99aa0cd77b4f0955500cc97598eaf303470f1f37db03a9</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>PPC:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.12-1.132.el6_5.5.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e29deedbf8a38a4036fe76e812164a49<br/>SHA-256: 9fa8238e6faa262ea953ae5258d9b5055f7f79e08eb09ea80038853d4062cc18</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-2.12-1.132.el6_5.5.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a929144994567e1963fcbae31dac46bf<br/>SHA-256: b15277d0b31ac85a63c08f31940f8f66726d8341cda4b7e34d5ee81d27d0cad9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-common-2.12-1.132.el6_5.5.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a5c2f7835d4a3a83b9481c6252306f00<br/>SHA-256: eb9da936f91f6a03eab9767e88f1b7ca9d6681f464a2d1ee469a4d48c582c81b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-2.12-1.132.el6_5.5.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 51c3a6faa4822a8cc3e155255588477a<br/>SHA-256: 92e09fa4a513f7a90d705e184a4c8a38b85dd9c7f34ed1b4b7f339c515937f36</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-2.12-1.132.el6_5.5.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6a1f0a6e89b320ebd4246006643dc3cb<br/>SHA-256: 08f1c27227586ea9612c54828d662d60fbbf7c366c002a734722e796b8e05e58</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-common-2.12-1.132.el6_5.5.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 713a0cb84d91f20435d24684d884893b<br/>SHA-256: ddbdd5831785ed9344432fd7e4be01036d274059de3e7bed5b53679ea1d59b24</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-common-2.12-1.132.el6_5.5.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ed4e16f4e5813c357e931c6acb545c17<br/>SHA-256: 5c410903f66d2c4a4da0a94abcf9bec231ad0aabe1f9f42483fc5449890c20be</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-devel-2.12-1.132.el6_5.5.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e93399e86c708d6e2a094235ef46fbf2<br/>SHA-256: cb59d45be2a9b70bbf8b7949668c7f34af2ff0e7c3cc02824025c4bab931a8c9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-devel-2.12-1.132.el6_5.5.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ea9e0eb8232782ba2e054c4a5e43dd7f<br/>SHA-256: b888756ddc6321dd985e7685accf8255c40c70a2674ba3c796a7bccf66968ca1</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-headers-2.12-1.132.el6_5.5.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8070500eea3ce2a4378297061ca0390f<br/>SHA-256: d223ed8f8ef9926e2f9c83aa1d4b88eece9e0285dfbd9bb36e00575ada2ebe53</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-static-2.12-1.132.el6_5.5.ppc.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5741a569351b3fb07313f4b146275fec<br/>SHA-256: 0d1c8630835e2546a66ebe791f7261a7be18498dfb9a0767fb6e0e4c6592e261</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-static-2.12-1.132.el6_5.5.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: bb56c821c522dba9e3de93b31b83176c<br/>SHA-256: 4abdbbf5b63832282342793e79b391e4061f3f5e9ac49410682a38690d625e2d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-utils-2.12-1.132.el6_5.5.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ae8dc87746042116da89395a94f49714<br/>SHA-256: 5f30f8602d40eb9e87efb03f1ab2e585e6428fb5beeae4b8b5eefaaa64d8f1c5</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>nscd-2.12-1.132.el6_5.5.ppc64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: aad81f588e7420ebcfea20e6f8a260ab<br/>SHA-256: 3d051635507d5f1217425a22db43cc36bd2a9e6e6c548f9b048a69d5d9faabab</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>s390x:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.12-1.132.el6_5.5.s390.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 21b90e5b89dc8db27a92b82e9d442b9f<br/>SHA-256: 3a1babb6f968b0bed73c3f0da69452695037807345f3c9368c858cd44b71fda5</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-2.12-1.132.el6_5.5.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: defa75bef62f38f4fd390d368d59af36<br/>SHA-256: 73e1d021619effd7af72beb480c9be8b0b24f9a288b3427837d4a377c6c134cc</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-common-2.12-1.132.el6_5.5.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3e1c24b549bd29ee5cda6570bd01a925<br/>SHA-256: 01e5c820f669c85810a4fcd0ef3465db7a4eba62f3ed43f66b13262262e89e1a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-2.12-1.132.el6_5.5.s390.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b0f8d75089f5f58dc6d4301f3ea41186<br/>SHA-256: 446e86dc0c30b35f77f7f55639b75f2e407afba08e0ee250b3f7a2f71ace1611</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-2.12-1.132.el6_5.5.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8044789cae51a7193e13b4e9c5d1c44f<br/>SHA-256: 8f53f13e4196cd75e055bf2418e8c06d243110b2d580cbc5f148ebc8c3b6ab6d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-common-2.12-1.132.el6_5.5.s390.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5b98f2a6245fc6a6412e269d31caa829<br/>SHA-256: fbdabaef63d6efba122ba6ac3b96e2ecaf210ede18bf576d49b7dedbf924a12e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-common-2.12-1.132.el6_5.5.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0ab07886967221a3cf7e3cb5a513d71e<br/>SHA-256: 4890b0e8076a4af9608b500efc05829d80456ee5d7e6af9eedc198b7fe7c8a0e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-devel-2.12-1.132.el6_5.5.s390.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 485c650d6b1a64c8b745b037f865f6cd<br/>SHA-256: a4843f606345b604252d4d62858917d6f6b6e1bf79b630161f66a29628858a75</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-devel-2.12-1.132.el6_5.5.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: cac77e6924140146150235d8a9a3584b<br/>SHA-256: 43d8368db67bdefc44695d430c58a7fb52cba76b0aeb560c802fc2b8512eccae</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-headers-2.12-1.132.el6_5.5.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c8dcfbb53133c8fb7e110f58f26e495f<br/>SHA-256: 8ec46b9aca9e8a3dd9d70761636c4a70ca6b729c557607755eabe6021baace19</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-static-2.12-1.132.el6_5.5.s390.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 11dfad06f9e5747624cb03e54303a359<br/>SHA-256: ca6351e49481721d8e4c74b5608441eb32088da53856325324252b6f60970fd5</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-static-2.12-1.132.el6_5.5.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d0651b2c7cc0940fc9fa4bdba406a88a<br/>SHA-256: 8bc3239cc19cff9c161f423272304593f8a6e41c93d5e21260451d8be9bed1fd</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-utils-2.12-1.132.el6_5.5.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e11beb3ee0402fb59110c4483cf06a69<br/>SHA-256: 8d90fd51079c76970558ad043918b6cc7508789dab58cc7b88eafc9da512fd96</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>nscd-2.12-1.132.el6_5.5.s390x.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2357a94276afda8cd4230b6ea76216d1<br/>SHA-256: 838064d0c1796dbead94b3dc7816651efecd401d3be2efede680b0c9b72dbd46</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-2.12-1.132.el6_5.5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 71aa83e97c344ce9793953cb84c3c211<br/>SHA-256: 5caf6ddf60f32514712ca3f0e6527175ce137cc533301565a2618e99649e39ff</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-2.12-1.132.el6_5.5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 27d13c69f523f15f621f081da230ee3b<br/>SHA-256: aee91b5b59b9134d3ffdd2de67e9a41039303f5f8b35b8c0e53c1896bc966259</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-common-2.12-1.132.el6_5.5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9d5d5f71e29d21d275223b659a2c37d5<br/>SHA-256: a47c43757deea3bc0d01e4d8eb49c7bfe5708ea39d5fb4fb4c414fe12fea68ad</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-2.12-1.132.el6_5.5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9acbc4cf2bffd0f2746b90e88fd7882b<br/>SHA-256: 77132e1c5604a4aeada563b8a59ed8f758c36d4d77715629efe98710aa79de9e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-2.12-1.132.el6_5.5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 917b710a696b68d51b1f5c75392f09ff<br/>SHA-256: ce0c5aad3e01a176a179b7fac0b637b1bac1381d842c7de7d8be29bde0670948</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-debuginfo-common-2.12-1.132.el6_5.5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a6d91ee7e82cda1406e9ffbb86cf4b94<br/>SHA-256: 017c4cc644447b7cc11d3cc96e1559bff0f3644de495367b022b620b2ee07d30</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-debuginfo-common-2.12-1.132.el6_5.5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 840d346e1edebdd184ce5d8dbe4cde23<br/>SHA-256: eaa3ca83ee9f3e6be86c2da234a072e48dae343902d39041b73e7e76844d9fe7</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-devel-2.12-1.132.el6_5.5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 73e0f1950a706c31d02be2593b7c6c61<br/>SHA-256: d3d344d81eb2077b880cbf50ba4daa0cb39ba9abefdef482c44f103e70f6f4ba</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-devel-2.12-1.132.el6_5.5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f3a4b7be68cdc4cf0ced2d3729761415<br/>SHA-256: 299468d336f01fae6a31288f6c7fe103c081b1c2f466a3a8c61af38e12465b1d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-headers-2.12-1.132.el6_5.5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3b48a4a0483f5633e98ae5e4c2fe6143<br/>SHA-256: 49251ee112840570cf1e6a82b8c9dda00c41bcf65dec6f657b22e31f33bcddc0</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-static-2.12-1.132.el6_5.5.i686.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 40231492f7c2352d7a450d0e65e59fcc<br/>SHA-256: 0eb4dd428932205260f4a2d9f5a82436593c2195aae2f5d8397b5da8199b7078</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>glibc-static-2.12-1.132.el6_5.5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0d9a51e7641517e019c863ccef8beef5<br/>SHA-256: 70c888b795f37727841ce14fbcfd91d3179a3877fc90566f50881db3906e158e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>glibc-utils-2.12-1.132.el6_5.5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 428ef083435354bb6136b9924cc703aa<br/>SHA-256: c6b8de72c35c7f916c3a1887f896de1b485479858ac8a9ae73ba2d4c7779c0c3</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>nscd-2.12-1.132.el6_5.5.x86_64.rpm</td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 70f2b3cba241ecae75a7d6bde04ddee1<br/>SHA-256: a1a51c33a515d6802ca6b53eb03b378def071cdf677da92b537a1d30b5f655f6</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+<tr><td colspan="2">(The unlinked packages above are only available from the <a href="/">Red Hat Network</a>)<br /></td></tr>
+
+</table>
+
+
+
+<br />
+<h2>Bugs fixed (see <A HREF="http://bugzilla.redhat.com/bugzilla">bugzilla</A> for more information)</h2>
+<div class="page-summary">
+<p><a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1183461">1183461</a> - CVE-2015-0235 glibc: __nss_hostname_digits_dots() heap-based buffer overflow</p>
+</div>
+
+
+
+<br />
+<h2>References</h2>
+<div class="page-summary">
+
+<a href="https://www.redhat.com/security/data/cve/CVE-2015-0235.html">https://www.redhat.com/security/data/cve/CVE-2015-0235.html</a><br />
+
+<A HREF="https://access.redhat.com/security/updates/classification/#critical">https://access.redhat.com/security/updates/classification/#critical</A>
+</div>
+
+
+
+
+
+
+
+<br />
+
+<hr border="1" />
+These packages are GPG signed by Red Hat for security.  Our key and 
+details on how to verify the signature are available from:<br />
+
+<a href="https://www.redhat.com/security/team/key/#package">https://www.redhat.com/security/team/key/#package</a>
+
+<p>The Red Hat security contact is <a href="mailto:secalert@redhat.com">secalert@redhat.com</a>.  More contact details at <a href="http://www.redhat.com/security/team/contact/">http://www.redhat.com/security/team/contact/</a></p>
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+    
+
+							</div>
+						</div>
+					</div>
+					<!-- end of legacy -->
+				</div>
+			</main>
+		</div>
+	<!--googleoff: all-->
+	<footer class="footer-main">
+		<div class="container footer-top">
+			<div class="row">
+
+				<div class="col-sm-2 brand">
+					<img src="https://access.redhat.com/chrome_themes/nimbus/img/l_redhat-reverse.png" alt="Red Hat" />
+				</div><menu class="col-sm-2">
+					<h3>Quick Links</h3>
+					<ul>
+						<li><a class="download-software" href="https://access.redhat.com/downloads/">Downloads</a></li>
+						<li><a class="manage-subscriptions" href="https://access.redhat.com/management/subscriptions/#active">Subscriptions</a></li>
+						<li><a class="support-cases" href="https://access.redhat.com/support">Support Cases</a></li>
+						<li><a class="quick-docs" href="https://access.redhat.com/documentation">Product Documentation</a></li>
+					</ul>
+				</menu>
+
+				<menu class="col-sm-2">
+					<h3>Help</h3>
+					<ul>
+						<li><a class="contact-us" href="https://access.redhat.com/support/contact/">Contact Us</a></li>
+						<li><a class="login-problems" href="https://access.redhat.com/help/login_assistance">Log-in Assistance</a></li>
+						<li><a class="accessibility" href="https://access.redhat.com/help/accessibility/">Accessibility</a></li>
+						<li><a class="browser-support-policy" href="https://access.redhat.com/help/browsers/">Browser Support Policy</a></li>
+					</ul>
+				</menu>
+
+				<menu class="col-sm-2">
+					<h3>Site Info</h3>
+					<ul>
+						<li><a class="recognition" href="https://access.redhat.com/recognition/">Awards and Recognition</a></li>
+						<li><a class="colophon" href="https://access.redhat.com/help/colophon/">Colophon</a></li>
+						<li><a class="cp-faqs" href="https://access.redhat.com/articles/33844">Customer Portal FAQ</a></li>
+					</ul>
+				</menu>
+
+				<menu class="col-sm-2">
+					<h3>About</h3>
+					<ul>
+						<li><a href="https://access.redhat.com/subscription-value" class="subscription-value">Red Hat Subscription Value</a></li>
+						<li><a href="https://www.redhat.com/about/" class="about-red-hat">About Red Hat</a></li>
+					</ul>
+				</menu>
+
+				<menu class="col-sm-2">
+					<h3>Related Sites</h3>
+					<ul>
+						<li><a href="https://www.redhat.com/" class="red-hat-com">RedHat.com</a></li>
+						<li><a href="https://www.jboss.org/" class="jboss-org">JBoss.org</a></li>
+						<li><a href="https://www.openshift.com" class="openshift-com">OpenShift.com</a></li>
+						<li><a href="https://partnercenter.force.com" class="partner-connect">Red Hat Partner Connect</a></li>
+					</ul>
+				</menu>
+
+			</div>
+		</div>
+
+		<div class="anchor">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 social">
+						<a target="_blank" href="http://www.redhat.com/summit/" class="summit"><img src="https://access.redhat.com/chrome_themes/nimbus/img/l_summit.png" alt="Red Hat Summit" /></a>
+						<a target="_blank" href="https://twitter.com/RedHatSupport" class="sm-icon twitter"><span class="nicon-twitter"></span><span class="offscreen">Twitter</span></a>
+						<a target="_blank" href="https://www.facebook.com/RedHatSupport" class="sm-icon facebook"><span class="nicon-facebook"></span><span class="offscreen">Facebook</span></a>
+						<a target="_blank" href="https://plus.google.com/100456039940694908045/posts" class="sm-icon googleplus"><span class="nicon-googleplus"></span><span class="offscreen">Google+</span></a>
+					</div>
+					<div class="col-sm-8 legal">
+						<menu class="legal-nav">
+							<ul>
+								<li><a href="http://www.redhat.com/en/about/privacy-policy" class="privacy-policy">Privacy Policy</a></li>
+								<li><a href="https://access.redhat.com/help/terms/" class="terms-of-use">Customer Portal Terms of Use</a></li>
+								<li><a href="http://www.redhat.com/en/about/all-policies-guidelines" class="all-policies">All Policies and Guidelines</a></li>
+							</ul>
+						</menu>							
+						<small class="copyright">Copyright © 2015 Red Hat, Inc.
+						</small>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+	</footer>
+	<!--googleon: all-->
+	</div>
+	
+  </body>
+</html>
+
+
+
+

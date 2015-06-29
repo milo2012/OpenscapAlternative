@@ -1,0 +1,3266 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <script type="text/javascript">
+      var siteMapState="security";
+    </script>
+    <link rel="stylesheet" href="/css/rhn-base.css" type="text/css" />
+    
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<!-- metaInclude -->
+	<meta name="avalon-host-info" content="gss-webjava02" />
+	<meta name="avalon-version" content="2.0.19.0" />
+	<meta name="google-site-verification" content="nP0a2DWUcOxjRgDDACHEbDptiGIGBrChbghrC0ZzcK0" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- /metaInclude -->
+	<!-- ^ meta and X-UA-Compatible must come first -->
+	
+	<meta http-equiv="cleartype" content="on" />
+
+	<!-- _preInclude -->
+
+	<!-- title -->
+	<title>Red Hat Customer Portal
+	</title>
+	<!-- /title -->
+	<!-- /_preInclude -->
+
+	<!-- cssInclude -->
+
+	<link rel="shortcut icon" href="https://access.redhat.com/webassets/avalon/g/favicon.ico" />
+	<link rel="stylesheet" type="text/css" media="screen, print" href="https://access.redhat.com/webassets/avalon/s/jquery-ui/cp/jquery-ui-1.8.7.custom.css?version=2.0.19.0" />
+
+	<!-- TODO: What is pageCssLinks and do we still need it? -->
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/legacy.css?version=2.0.19.0" />
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/bootstrap.css?version=2.0.19.0" />
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/master-blessed1.css?version=2.0.19.0" />
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/master.css?version=2.0.19.0" />
+
+	<link href="https://access.redhat.com/webassets/avalon/s/chosen.css?version=2.0.19.0" rel="stylesheet" type="text/css" />
+	<!--[if lte IE 9]>
+	<link media="all" rel="stylesheet" type="text/css" href="https://access.redhat.com/chrome_themes/nimbus/css/ie.css" />
+    <![endif]-->
+    
+
+	<!-- .primary-nav starts out hidden (at sm res and higher), and
+	is later revealed with JS after the megamenu has been built
+	out.  here, use noscript to un-hide the nav, in case the user
+	has JS disabled. -->
+	<noscript>
+		<style type="text/css" media="screen"> .primary-nav { display: block; } </style>
+	</noscript>
+
+	<!-- /cssInclude -->
+
+	<!-- jsInclude -->
+	<script type="text/javascript">
+		window.portal = {
+			analytics             : {},
+			host                  : "https://access.redhat.com",
+			kbaseContext          : "/preview_faq",
+			cspContext            : "/preview_jbossnetwork",
+			customerCenterContext : "/wapps",
+			lang                  : "en",
+			version               : "2.0.19.0",
+			decorationWhitelist   : ["https://access.redhat.com","https://rhn.redhat.com", "docs.redhat.com"]
+		};
+
+		/*
+		* TODO
+		* deprecate this avalon object
+		*/
+		window.avalon = window.portal;
+		window.avalonHost = avalon.host; // deprecate this?
+
+		/********************************
+		*  Temporary pagename shim     *
+		*  TODO: Remove this           *
+		********************************/
+
+		portal.analytics.shim = {};
+		portal.analytics.shim.pageTitle = "";
+		portal.analytics.shim.siteMapState = "";
+
+	</script>
+	<script type="text/javascript" src="https://access.redhat.com/webassets/avalon/j/lib/jquery.min.js?version=2.0.19.0"></script>
+	<script type="text/javascript" src="https://access.redhat.com/webassets/avalon/j/lib/require.js?version=2.0.19.0" data-main="/webassets/avalon/j/"></script>
+	<!-- TODO: can we please upgrade jquery?! -->
+	<script type="text/javascript">
+		/*
+		 * THIS IS NEEDED! Integrated apps include their own jQuery lib.
+		 * We need this *before* base.js so we can effectvley pass messages (trigger, bind) to base.js
+		 * *DO NOT* remove! window.jQuery the object is still accessible.
+		*/
+		window.ajq = jQuery.noConflict();
+	</script>
+	<script type="text/javascript" src="https://access.redhat.com/webassets/avalon/j/outage/outageJson_en.js?version=2.0.19.0"></script>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	
+	<!-- /jsInclude -->
+	
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>
+  </head>
+  <body>
+    
+	<!-- Chrome: Full -->
+	<div id="page-wrap" class="page-wrap">
+		<div class="top-page-wrap">
+<!--googleoff: all-->
+
+			<header class="masthead"><div id="to-top"><a class="btn_slideto"><span class="web-icon-upload"></span></a></div>
+<div class="mobile-bar-wrap hidden-sm hidden-md hidden-lg">
+	<a class="logo" href="https://access.redhat.com/">
+		<span class="logo-crop"><img src="https://access.redhat.com/chrome_themes/nimbus/img/l_redhat-lg.png"></span>
+		<span class="site-title"><span>Customer </span><span>Portal</span></span>
+	</a>
+	<button id="mobile-nav-btn" class="btn btn-navbar" data-toggle="collapse" data-target="#mobile-nav">
+		<span class="web-icon-mobile-menu"></span>
+		<span class="link-text">global.menu</span>
+	</button>
+	<button class="btn btn-search btn-utility" data-target="#site-search">
+		<span class="web-icon-search"></span>
+		<span class="link-text">Search</span>
+	</button>
+</div>
+
+<div class="utility-wrap">
+	<div class="utility-container">
+		<div class="utility-bar visible-sm visible-md visible-lg">
+			<menu class="top-nav">
+				<ul>
+					<li id="nav-subscription"><a class="top-nav-subscriptions" href="https://access.redhat.com/management/">Subscriptions</a></li>
+					<li id="nav-downloads"><a class="top-nav-downloads" href="https://access.redhat.com/downloads/">Downloads</a></li>
+					<li id="nav-support"><a class="top-nav-support-cases" href="https://access.redhat.com/support/cases/">Support Cases</a></li>
+				</ul>
+			</menu>
+
+			<menu class="utility-nav">
+				<ul>
+					<li>
+						<a class="btn-search" data-target="#site-search">
+							<span class="web-icon-search"></span>
+							<span class="link-text">Search</span>
+						</a>
+					</li>
+					<li>
+						<a class="btn-profile" data-target="#account-info">
+							<span class="web-icon-user"></span>
+							<span class="link-text">Account</span>
+							<span class="account-user" id="accountUserName"></span>
+						</a>
+					</li>
+					<li>
+						<a class="btn-language" data-target="#language">
+							<span class="web-icon-globe"></span>
+							<span class="link-text">Language</span>
+						</a>
+					</li>
+				</ul>
+			</menu>
+		</div>
+		<!-- Utility Tray -->
+		<div class="utility-tray-container">
+			<div class="utility-tray">
+				<div id="site-search" class="utility-link site-search">
+					<div class="content">
+            			<form class="ng-pristine ng-valid topSearchForm" id="topSearchForm" name="topSearchForm" action="/search/browse/search/" method="get" enctype="application/x-www-form-urlencoded">
+							<div class="input-group">
+
+                    			<input class="form-control searchField" id="topSearchInput" name="keyword" value="" placeholder="Enter Your Search Term" type="text">
+								<span class="input-group-btn">
+				    				<button type="submit" class="btn btn-primary">Search</button>
+								</span>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div id="account-info" class="utility-link account-info">
+					<div class="content">
+
+						<!-- Account Unauthenticated -->
+						<div id="accountLinksLoggedOut" class="unauthenticated">
+							<h2 class="utility-header">Log in to Your Red Hat Account</h2>
+							<div class="row col-border-row">
+								<div class="col-sm-6 col-border">
+									<p><a href="https://access.redhat.com/login" id="accountLogin" class="btn btn-primary">Log In</a></p>
+									<p>Your Red Hat account gives you access to your profile, preferences, and services, depending on your status.</p>
+								</div>
+								<div class="col-sm-6 col-border col-border-left">
+									<p><a href="https://www.redhat.com/wapps/ugc/register.html" class="btn btn-primary">Register</a></p>
+									<p>If you are a new customer, register now for access to product evaluations and purchasing capabilities. </p>
+
+									<strong>Need access to an account?</strong><p>If your company has an existing Red Hat account, your organization administrator can grant you access.</p>
+
+									<p><a href="https://access.redhat.com/support/contact/customerService/">If you have any questions, please contact customer service.</a></p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Account Authenticated -->
+						<div id="accountLinksLoggedIn" class="authenticated">
+							<h2 class="utility-header"><span id="userFirstName"></span></h2>
+							<div class="row col-border-row">
+								<div class="col-sm-6 col-border col-border-right">
+									<div class="account-info" id="accountUser">
+										<div class="avatar"><!-- placeholder--></div>
+										<div class="account-name"><strong id="userFullName"></strong></div>
+										<div class="account-org"><span id="userOrg"></span></div>
+										<div class="account-number accountNumber"><span class="property">Red Hat Account Number:</span> <span class="value"></span></div>
+									</div>
+
+									<div class="row account-settings">
+										<div class="col-md-6">
+											<h3>Red Hat Account</h3>
+											<ul class="reset">
+												<li><a href="https://www.redhat.com/wapps/ugc/protected/personalInfo.html">Account Details</a></li>
+												<li><a href="https://www.redhat.com/wapps/ugc/protected/prefs.html">Newsletter and Contact Preferences</a></li>
+												<li><a href="https://www.redhat.com/wapps/ugc/protected/usermgt/userList.html">User Management</a></li>
+												<li><a href="https://www.redhat.com/wapps/ugc/protected/account.html">Account Maintenance</a></li>
+											</ul>
+										</div>
+										<div class="col-md-6">
+											<h3>Customer Portal</h3>
+											<ul class="reset">
+												<li><a href="https://access.redhat.com/user">My Profile</a></li>
+												<li><a href="https://access.redhat.com/user" id="userNotificationsLink">Notifications</a></li>
+												<li><a href="https://access.redhat.com/help/">Help</a></li>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+								<div class="col-sm-6 col-border">
+									<p>For your security, if you’re on a public computer and have finished using your Red Hat services, please be sure to log out.</p>
+									<p><a href="https://www.redhat.com/wapps/sso/logout.html?redirect=https://access.redhat.com/logout" id="accountLogout" class="btn btn-primary">Log Out</a></p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div id="language" class="utility-link language">
+					<div class="content">
+						<h2 class="utility-header">Select Your Language</h2>
+						<div class="row" id="localesMenu">
+							<div class="col-sm-4">
+								<ul class="reset">
+									<li><a href="https://access.redhat.com/changeLanguage?language=en" id="en">English</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=es" id="es">español</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=de" id="de">Deutsch</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=it" id="it">italiano</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=ko" id="ko">한국어</a></li>
+								</ul>
+							</div>
+							<div class="col-sm-4">
+								<ul class="reset">
+									<li><a href="https://access.redhat.com/changeLanguage?language=fr" id="fr">français</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=ja" id="ja">日本語</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=pt" id="pt">português</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=zh_CN" id="zh_CN">中文 (中国)</a></li>
+									<li><a href="https://access.redhat.com/changeLanguage?language=ru" id="ru">русский</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="scroll-anchor">
+</div>
+
+<div class="header-nav visible-sm visible-md visible-lg">
+	<div id="header-nav">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+
+					<a href="https://access.redhat.com/" class="logo">
+						<span class="logo-crop"><img src="https://access.redhat.com/chrome_themes/nimbus/img/l_redhat-lg.png"></span>
+						<span class="site-title"><span>Customer </span><span>Portal</span></span>
+					</a>
+
+					<menu class="primary-nav hidden-sm">
+						<ul>
+							<li id="nav-products"><a class="products" data-link="mega" data-target="products-menu" href="https://access.redhat.com/products/">Products &amp; Services</a></li>
+							<li id="nav-tools"><a class="tools" data-link="mega" data-target="tools-menu" href="https://access.redhat.com/labs/">Tools</a></li><!-- #Need URL -->
+							<li id="nav-security"><a class="security" data-link="mega" data-target="security-menu" href="https://access.redhat.com/security/">Security</a></li>
+							<li id="nav-community"><a class="community" data-link="mega" data-target="community-menu" href="https://access.redhat.com/community/">Community</a></li><!-- #Need URL -->
+						</ul>
+					</menu>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="mobile-nav-wrap hidden-sm hidden-md hidden-lg">
+	<div id="mobile-nav" class="mobile-nav navbar collapse navbar-collapse">
+		<div class="navbar-inner">
+
+			<menu>
+				<ul class="mobile-utility">
+					<li>
+						<a class="btn-profile" data-target="#account-info-mobile">
+							<span class="web-icon-user"></span>
+							<span class="link-text">Account</span>
+						</a>
+					</li><!-- white space inline
+					--><li>
+						<a class="btn-language" data-target="#language-mobile">
+							<span class="web-icon-globe"></span>
+							<span class="link-text">Language</span>
+						</a>
+					</li>
+				</ul>
+				<div id="account-info-mobile" class="mobile-utility-wrap">
+					<!-- Account Unauthenticated -->
+					<div id="mobile-accountLinksLoggedOut" class="unauthenticated">
+						<ul class="nav mobile-utility-nav">
+							<li><a href="https://access.redhat.com/login">Log In</a></li>
+							<li><a href="https://www.redhat.com/wapps/ugc/register.html">Register</a></li>
+						</ul>
+					</div>
+					<!-- Account Authenticated -->
+					<div id="mobile-accountLinksLoggedIn" class="authenticated">
+						<div class="account-info" id="mobile-accountUser">
+							<div class="account-name"><strong id="mobile-userFullName"></strong></div>
+							<div class="account-org"><span id="mobile-userOrg"></span></div>
+							<div class="account-number mobile-accountNumber"><span class="property">Red Hat Account Number:</span> <span class="value"></span></div>
+						</div>
+						<ul class="nav mobile-utility-nav">
+							<li><a href="https://www.redhat.com/wapps/ugc/protected/personalInfo.html">Account Details</a></li>
+							<li><a href="https://www.redhat.com/wapps/ugc/protected/prefs.html">Newsletter and Contact Preferences</a></li>
+							<li><a href="https://www.redhat.com/wapps/ugc/protected/usermgt/userList.html">User Management</a></li>
+							<li><a href="https://www.redhat.com/wapps/ugc/protected/account.html">Account Maintenance</a></li>
+							<li><a href="https://access.redhat.com/user">My Profile</a></li>
+							<li><a href="https://access.redhat.com/user" id="userNotificationsLink">Notifications</a></li>
+							<li><a href="https://access.redhat.com/help/">Help</a></li>
+							<li class="logout"><a href="https://www.redhat.com/wapps/sso/logout.html?redirect=https://access.redhat.com/logout">Log Out</a>
+						</ul>
+					</div>
+				</div>
+				<div id="language-mobile" class="mobile-utility-wrap">
+					<ul class="nav mobile-utility-nav">
+						<li><a href="https://access.redhat.com/changeLanguage?language=en" id="mobile-en">English</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=es" id="mobile-es">español</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=de" id="mobile-de">Deutsch</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=it" id="mobile-it">italiano</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=ko" id="mobile-ko">한국어</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=fr" id="mobile-fr">français</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=ja" id="mobile-ja">日本語</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=pt" id="mobile-pt">português</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=zh_CN" id="mobile-zh_CN">中文 (中国)</a></li>
+						<li><a href="https://access.redhat.com/changeLanguage?language=ru" id="mobile-ru">русский</a></li>
+					</ul>
+				</div>
+				<ul class="main-mobile-nav nav">
+					<li id="mnav-home"><a href="https://access.redhat.com/">Home</a></li>
+					<li id="mnav-products"><a href="https://access.redhat.com/products/">Products &amp; Services</a></li>
+					<li id="mnav-tools"><a href="https://access.redhat.com/tools/">Tools</a></li>
+					<li id="mnav-security"><a href="https://access.redhat.com/security/">Security</a></li>
+					<li id="mnav-community"><a href="https://access.redhat.com/community/">Community</a></li><!-- #Need URL -->
+					<li id="mnav-downloads"><a href="https://access.redhat.com/downloads/">Downloads</a></li>
+					<li id="mnav-subscription"><a href="https://access.redhat.com/management/">Subscriptions</a></li>
+					<li id="mnav-support"><a href="https://access.redhat.com/support/cases/">Support Cases</a></li>
+				</ul>
+			</menu>
+		</div>
+	</div>
+</div>
+
+<div class="mega-wrap visible-sm visible-md visible-lg">
+	<menu class="mega">
+		<div class="container">
+			<div class="mega-menu-wrap">
+				<!-- Products Menu -->
+				<div aria-labelledby="products-menu" class="products-menu mega-menu" data-eh="mega-menu" role="menu">
+					<div class="row">
+						<div class="col-md-6 col-sm-8">
+							<nav class="root">
+								<div class="row">
+									<ul class="subnav subnav-root col-sm-6">
+										<li data-target="infrastructure-menu" class="active">
+											<a href="https://access.redhat.com/products/">Infrastructure and Management</a>
+										</li>
+										<li data-target="cloud-menu">
+											<a href="https://access.redhat.com/products/">Cloud Products</a>
+										</li>
+										<li data-target="jboss-dev-menu">
+											<a href="https://access.redhat.com/products/">JBoss Development and Management</a>
+										</li>
+										<li data-target="jboss-int-menu">
+											<a href="https://access.redhat.com/products/">JBoss Integration and Automation</a>
+										</li>
+										<li data-target="services-menu">
+											<a href="https://access.redhat.com/products/">Services</a>
+										</li>
+									</ul>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="infrastructure-menu" style="display: block;">
+										<ul>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-enterprise-linux/">Red Hat Enterprise Linux</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-enterprise-virtualization/">Red Hat Enterprise Virtualization</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/Identity_Management/">Red Hat Identity Management &amp; Infrastructure</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-directory-server/">Red Hat Directory Server</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-certificate-system/">Red Hat Certificate System</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-satellite/">Red Hat Satellite</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/subscription-asset-manager/">Subscription Asset Manager</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-update-infrastructure/">Red Hat Update Infrastructure</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-storage/">Red Hat Gluster Storage</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-ceph-storage/">Red Hat Ceph Storage</a>
+											</li>
+										</ul>
+									</div>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="cloud-menu">
+										<ul>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-cloudforms/">Red Hat CloudForms</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-enterprise-linux-openstack-platform/">Red Hat Enterprise Linux OpenStack Platform</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-cloud-infrastructure/">Red Hat Cloud Infrastructure</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/openshift-enterprise-red-hat/">OpenShift Enterprise by Red Hat</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/openshift-online-red-hat/">OpenShift Online by Red Hat</a>
+											</li>
+										</ul>
+									</div>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="jboss-dev-menu">
+										<ul>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-enterprise-application-platform/">Red Hat JBoss Enterprise Application Platform</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-data-grid/">Red Hat JBoss Data Grid</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-web-server/">Red Hat JBoss Web Server</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-portal/">Red Hat JBoss Portal</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-operations-network/">Red Hat JBoss Operations Network</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-developer-studio/">Red Hat JBoss Developer Studio</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/feedhenry/">FeedHenry by Red Hat</a>
+											</li>
+										</ul>
+									</div>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="jboss-int-menu">
+										<ul>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-fuse-service-works/">Red Hat JBoss Fuse Service Works</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-data-virtualization/">Red Hat JBoss Data Virtualization</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-fuse/">Red Hat JBoss Fuse</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-a-mq/">Red Hat JBoss A-MQ</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-bpm-suite/">Red Hat JBoss BPM Suite</a>
+											</li>
+											<li>
+												<a href="https://access.redhat.com/products/red-hat-jboss-brms/">Red Hat JBoss BRMS</a>
+											</li>
+										</ul>
+									</div>
+									<div class="subnav subnav-child col-sm-6" data-eh="subnav-child" data-menu-local="services-menu">
+										<ul>
+											<li><a href="https://access.redhat.com/products/Consulting/">Consulting</a></li>
+			                    			<li><a href="https://access.redhat.com/products/red-hat-access/">Red Hat Access</a></li>
+			                    			<li><a href="https://access.redhat.com/products/Red_Hat_Enterprise_Linux/Developer/">Red Hat Enterprise Linux Developer Program</a></li>
+			                    			<li><a href="https://access.redhat.com/products/Training/">Training</a></li>
+			                    			<li><a href="https://access.redhat.com/support/offerings/tam/">Technical Account Management</a></li>
+										</ul>
+									</div>
+								</div>
+							</nav>
+							<a href="https://access.redhat.com/products" class="btn btn-primary">Explore Products and Services</a>
+						</div>
+
+						<div class="col-md-6 col-sm-4 pull-right">
+							<div class="row">
+								<div class="col-md-4">
+									<h3 class="nav-title">Ecosystem</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/certification">Overview</a></li>
+										<li><a href="https://access.redhat.com/search/browse/certified-hardware#?">Certified Hardware</a></li>
+										<li><a href="https://access.redhat.com/search/browse/certified-software#?">Certified Software</a></li>
+										<li><a href="https://access.redhat.com/search/browse/certified-cloud-providers#?">Certified Cloud Providers</a></li>
+									</ul>
+								</div>
+								<div class="col-md-4">
+									<h3 class="nav-title">Knowledge</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/search/browse/search/">Expert Advice</a></li>
+										<li><a href="https://access.redhat.com/documentation/">Product Documentation</a></li>
+									</ul>
+								</div>
+								<div class="col-md-4">
+									<h3 class="nav-title">Support Policies</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/support/offerings/production/">Production Support</a></li>
+										<li><a href="https://access.redhat.com/support/offerings/developer/">Development Support</a></li>
+									</ul>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Tools Menu -->
+				<div aria-labelledby="tools-menu" class="tools-menu mega-menu" data-eh="mega-menu" role="menu">
+					<div class="row">
+
+						<nav class="col-sm-9">
+							<div class="mega-menu-feature">
+								<div class="row">
+									<div class="col-sm-4">
+										<h2 class="mega-menu-feature-title">Red Hat Access Labs</h2>
+										<p>To help you use Red Hat products to their full potential, our engineers have developed a set of tools to support customer success.</p>
+										<p class="push-top"><a href="https://access.redhat.com/labs/" class="btn btn-primary">Explore Labs</a></p>
+									</div>
+									<div class="col-sm-4">
+										<a href="https://access.redhat.com/labs/#?type=config">
+											<h3 class="nav-title">Configuration</h3>
+										</a>
+										<ul>
+											<li><a href="https://access.redhat.com/labs/jvmconfig/">JVM Config</a></li>
+											<li><a href="https://access.redhat.com/labs/networkbondinghelper/">Network Bonding Helper</a></li>
+											<li><a href="https://access.redhat.com/labs/linterfordockerfile/">Linter for Dockerfile</a></li>
+										</ul>
+
+										<a href="https://access.redhat.com/labs/#?type=deploy">
+											<h3 class="nav-title">Deployment</h3>
+										</a>
+										<ul>
+											<li><a href="https://access.redhat.com/labs/registrationassistant/">Registration Assistant</a></li>
+											<li><a href="https://access.redhat.com/labs/kickstartconfig/">Kickstart Generator</a></li>
+											<li><a href="https://access.redhat.com/labs/rhevupgradehelper/">RHEV Upgrade Helper</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-4">
+										<a href="https://access.redhat.com/labs/#?type=troubleshoot">
+											<h3 class="nav-title">Troubleshooting</h3>
+										</a>
+										<ul>
+											<li><a href="https://access.redhat.com/labs/garbagedog/">Garbage Collection Analysis</a></li>
+											<li><a href="https://access.redhat.com/labs/kerneloopsanalyzer/">Kernel Oops Analyzer</a></li>
+											<li><a href="https://access.redhat.com/labs/kdumphelper/">Kdump Helper</a></li>
+										</ul>
+										<a href="https://access.redhat.com/labs/#?type=security">
+											<h3 class="nav-title">Security</h3>
+										</a>
+										<ul>
+											<li><a href="https://access.redhat.com/labs/venom/">VENOM: QEMU Vulnerability Detector</a></li>
+											<li><a href="https://access.redhat.com/labs/ghost/">GHOST - gethostbyname Detector</a></li>
+											<li><a href="https://access.redhat.com/labs/poodle/">SSLv3 (POODLE) Detector</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</nav>
+
+						<nav class="col-sm-3">
+							<h3 class="nav-title">Additional Tools</h3>
+							<ul>
+								<li><a href="https://access.redhat.com/products/red-hat-access/">Red Hat Access - Overview</a></li>
+								<li><a href="https://access.redhat.com/labs/hacat/">Red Hat High Availability Cluster Architecture Tool</a></li>
+								<li><a href="https://access.redhat.com/tools/satcert/">Red Hat Satellite Certificate Tool</a></li>
+							</ul>
+						</nav>
+
+					</div>
+				</div>
+
+				<!-- Security Menu -->
+				<div aria-labelledby="security-menu" class="security-menu mega-menu" data-eh="mega-menu" role="menu">
+					<div class="row">
+						<nav class="col-sm-12 basic">
+							<div class="row">
+								<div class="col-md-3 col-sm-4">
+									<h3 class="nav-title">Security Updates</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/security/cve">Red Hat CVE Database</a></li>
+										<li><a href="https://access.redhat.com/security/updates/active/">Active Products</a></li>
+										<li><a href="https://access.redhat.com/security/updates/eol/">End-of-Life Products</a></li>
+										<li><a href="https://access.redhat.com/security/updates/advisory/">How to Get Notified</a></li>
+									</ul>
+								</div>
+								<div class="col-md-3 col-sm-4">
+									<h3 class="nav-title">Red Hat Product Security</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/security/team/">About</a></li>
+										<li><a href="https://securityblog.redhat.com/">Security Blog</a></li>
+										<li><a href="https://access.redhat.com/security/team/contact/">Contact</a></li>
+									</ul>
+								</div>
+								<div class="col-md-3 col-sm-4">
+									<h3 class="nav-title">Resources</h3>
+									<ul>
+										<li><a href="https://www.redhat.com/security/data/metrics/">Security Measurement</a></li>
+										<li><a href="https://access.redhat.com/security/updates/classification/">Severity Ratings</a></li>
+										<li><a href="https://access.redhat.com/security/updates/backporting/">Backporting Policies</a></li>
+										<li><a href="https://access.redhat.com/security/team/key/">Product Signing (GPG) Keys</a></li>
+									</ul>
+								</div>
+							</div>
+						</nav>
+						<a href="https://access.redhat.com/security/" class="btn btn-primary">Explore Security</a>
+					</div>
+				</div>
+
+				<!-- Community Menu -->
+				<div aria-labelledby="community-menu" class="community-menu mega-menu" data-eh="mega-menu" role="menu">
+					<div class="row">
+            			<nav class="col-sm-12 basic">
+							<div class="row">
+								<div class="col-sm-3">
+									<h3 class="nav-title">Discussions</h3>
+									<ul>
+
+										<li><a href="https://access.redhat.com/discussions?product=25&category=All&tags=All">Red Hat Enterprise Linux</a></li>
+										<li><a href="https://access.redhat.com/discussions?product=8163&category=All&tags=All">Red Hat Enterprise Virtualization</a></li>
+										<li><a href="https://access.redhat.com/discussions?product=36&category=All&tags=All">Red Hat Satellite</a></li>
+										<li><a href="https://access.redhat.com/discussions?product=22&category=All&tags=All">Customer Portal</a></li>
+										<li><a href="https://access.redhat.com/groups/">Private Groups</a></li>
+										<li class="more-link"><a href="https://access.redhat.com/discussions?keyword=&name=&product=All&category=All&tags=All">All Discussions</a></li>
+										<li class="more-link"><a href="https://access.redhat.com/node/add/discussion">Start a Discussion</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-3">
+									<h3 class="nav-title">Blogs</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/blogs/767163">Customer Portal</a></li>
+										<li><a href="https://access.redhat.com/blogs/759303">Red Hat Access Labs</a></li>
+										<li><a href="https://access.redhat.com/blogs/766093">Red Hat Product Security Team</a></li>
+										<li class="more-link"><a href="https://access.redhat.com/blogs/">All Blogs</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-3">
+									<h3 class="nav-title">Events</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/customer-convergence">Customer Events</a></li>
+										<li><a href="http://www.redhat.com/summit/">Red Hat Summit</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-3">
+									<h3 class="nav-title">Stories</h3>
+									<ul>
+										<li><a href="https://access.redhat.com/subscription-value/">Red Hat Subscription Benefits</a></li>
+										<li><a href="https://access.redhat.com/customer-success/">You Asked. We Acted.</a></li>
+										<li><a href="http://www.redhat.com/en/open-source">Open Source Communities</a></li>
+									</ul>
+								</div>
+							</div>
+						</nav>
+						<!--<a href="https://access.redhat.com/community/" class="btn btn-primary">Explore Community</a>-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</menu>
+</div>
+
+				<div id="site-section"></div>
+
+			</header>
+<!--googleon: all-->
+			<main id="cp-main" class="portal-content-area" role="main">
+				<div id="cp-content" class="main-content">
+					<!-- legacy divs start here -->
+					<div id="legacy-portal">
+						<div class="content-area">
+							<div id="legacy-container" class="legacy-container">
+									
+
+    <div class="wrapi">
+      <div id="container" class="clearWrap">
+        <div id="content">
+
+    
+
+
+
+
+
+
+
+
+
+<h1><img src="/img/rhn-icon-security.gif" alt="Security Advisory" align="absmiddle" /> Moderate: samba and samba3x security update</h1>
+
+<table class="details">
+	<tr>
+		<th>Advisory:</th>
+		<td>RHSA-2014:0866-1</td>
+	</tr>
+	<tr>	
+		<th>Type:</th>
+		<td>Security Advisory</td>
+	</tr>
+        <tr>
+                <th>Severity:</th>
+                <td>Moderate</td>
+        </tr>
+	<tr>	
+		<th>Issued on:</th>
+		<td>2014-07-09</td>
+	</tr>
+	<tr>	
+		<th>Last updated on:</th>
+		<td>2014-07-09</td>
+	</tr>
+
+	<tr>
+		<th valign="top">Affected Products:</th>
+		<td><a href="#RHEL Desktop Workstation (v. 5 client)">RHEL Desktop Workstation (v. 5 client)</a><br />
+<a href="#Red Hat Enterprise Linux (v. 5 server)">Red Hat Enterprise Linux (v. 5 server)</a><br />
+<a href="#Red Hat Enterprise Linux Desktop (v. 5 client)">Red Hat Enterprise Linux Desktop (v. 5 client)</a><br />
+<a href="#Red Hat Enterprise Linux Desktop (v. 6)">Red Hat Enterprise Linux Desktop (v. 6)</a><br />
+<a href="#Red Hat Enterprise Linux HPC Node (v. 6)">Red Hat Enterprise Linux HPC Node (v. 6)</a><br />
+<a href="#Red Hat Enterprise Linux Server (v. 6)">Red Hat Enterprise Linux Server (v. 6)</a><br />
+<a href="#Red Hat Enterprise Linux Server AUS (v. 6.5)">Red Hat Enterprise Linux Server AUS (v. 6.5)</a><br />
+<a href="#Red Hat Enterprise Linux Server EUS (v. 6.5.z)">Red Hat Enterprise Linux Server EUS (v. 6.5.z)</a><br />
+<a href="#Red Hat Enterprise Linux Workstation (v. 6)">Red Hat Enterprise Linux Workstation (v. 6)</a></td>
+	</tr>
+
+
+	<tr>
+		<th valign="top">CVEs (<a href="http://cve.mitre.org">cve.mitre.org</a>):</th>
+		<td rowspan="2" valign="top">
+          <a href="https://www.redhat.com/security/data/cve/CVE-2014-0244.html">CVE-2014-0244</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2014-3493.html">CVE-2014-3493</a><br />
+		</td>
+	</tr>
+
+</table>
+
+<br />
+
+<h2>Details</h2>
+<div class="page-summary">
+<p>Updated samba3x and samba packages that fix two security issues are now<br />available for Red Hat Enterprise Linux 5 and 6 respectively.<br /><br />The Red Hat Security Response Team has rated this update as having Moderate<br />security impact. Common Vulnerability Scoring System (CVSS) base scores,<br />which give detailed severity ratings, are available for each vulnerability<br />from the CVE links in the References section.<br /></p>
+
+<p>Samba is an open-source implementation of the Server Message Block (SMB) or<br />Common Internet File System (CIFS) protocol, which allows PC-compatible<br />machines to share files, printers, and other information.<br /><br />A denial of service flaw was found in the way the sys_recvfile() function<br />of nmbd, the NetBIOS message block daemon, processed non-blocking sockets.<br />An attacker could send a specially crafted packet that, when processed,<br />would cause nmbd to enter an infinite loop and consume an excessive amount<br />of CPU time. (CVE-2014-0244)<br /><br />It was discovered that smbd, the Samba file server daemon, did not properly<br />handle certain files that were stored on the disk and used a valid Unicode<br />character in the file name. An attacker able to send an authenticated<br />non-Unicode request that attempted to read such a file could cause smbd to<br />crash. (CVE-2014-3493)<br /><br />Red Hat would like to thank Daniel Berteaud of FIREWALL-SERVICES SARL for<br />reporting CVE-2014-0244, and the Samba project for reporting CVE-2014-3493.<br />The Samba project acknowledges Simon Arlott as the original reporter of<br />CVE-2014-3493.<br /><br />All Samba users are advised to upgrade to these updated packages, which<br />contain backported patches to correct these issues. After installing this<br />update, the smb service will be restarted automatically.<br /></p>
+</div>
+
+
+<br />
+
+<h2>Solution</h2>
+<div class="page-summary">Before applying this update, make sure all previously released errata<br />relevant to your system have been applied.<br /><br />This update is available via the Red Hat Network. Details on how to use the<br />Red Hat Network to apply this update are available at<br /><A HREF="https://access.redhat.com/articles/11258">https://access.redhat.com/articles/11258</A><br /></div>
+<br />
+
+<h2>Updated packages</h2>
+
+<table border="0" cellpadding="6" cellspacing="0">
+
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="RHEL Desktop Workstation (v. 5 client)">RHEL Desktop Workstation (v. 5 client)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-3.6.6-0.140.el5_10.src.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 762bd8bc66af67b722245e8476caea8f<br/>SHA-256: b92641316c524a3c2228919efd49b60436b6732a6ad2e431f666bd7c3a8fdeb1</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-debuginfo-3.6.6-0.140.el5_10.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2b5b9b134fb8646eb1fe33a9c6fc6418<br/>SHA-256: 6eef206f174ae0d0742288569b963494385a915ff78d87bf619a4053686d3c70</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-winbind-devel-3.6.6-0.140.el5_10.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d6b987f1ababd57f3117feec319b1f8c<br/>SHA-256: 0a346370a904f1c829014832b4b97855e6b2437fbc90d1a77cfcc3220913a25d</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-debuginfo-3.6.6-0.140.el5_10.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2b5b9b134fb8646eb1fe33a9c6fc6418<br/>SHA-256: 6eef206f174ae0d0742288569b963494385a915ff78d87bf619a4053686d3c70</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-debuginfo-3.6.6-0.140.el5_10.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1a94d857c92add5769eb65e42095225b<br/>SHA-256: 7eb7ce549a9b9205a5f0f3f4233288461bc179e6015b2d06316e66b663724148</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-winbind-devel-3.6.6-0.140.el5_10.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d6b987f1ababd57f3117feec319b1f8c<br/>SHA-256: 0a346370a904f1c829014832b4b97855e6b2437fbc90d1a77cfcc3220913a25d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-winbind-devel-3.6.6-0.140.el5_10.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9d3a344161206bc23f406729d6cc95c8<br/>SHA-256: 2cd2aebc6094d8755ffd1dc2a833c363ae12d36744db690d23f7c1f90503d40a</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux (v. 5 server)">Red Hat Enterprise Linux (v. 5 server)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-3.6.6-0.140.el5_10.src.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 762bd8bc66af67b722245e8476caea8f<br/>SHA-256: b92641316c524a3c2228919efd49b60436b6732a6ad2e431f666bd7c3a8fdeb1</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-3.6.6-0.140.el5_10.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8cbf54953ae28077dbf221a81bb530b9<br/>SHA-256: 9815a35f42500af3d4fc54a809054e3a2cbfea03c09991a0b2e705cb11eec303</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-client-3.6.6-0.140.el5_10.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8fd46e2f60b46546d869b5c8eaa04d49<br/>SHA-256: 23e60afbf12d7ed52784664080cd905b12f9cc7dcb2b3e2a973cf40759706ff2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-common-3.6.6-0.140.el5_10.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: af36df82c63bc13653fbb9fbb2c4f234<br/>SHA-256: 7a34790d7e3c2451775124c76584b14b20f24a5bc8ef48ba5fda4465d56486a5</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-debuginfo-3.6.6-0.140.el5_10.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2b5b9b134fb8646eb1fe33a9c6fc6418<br/>SHA-256: 6eef206f174ae0d0742288569b963494385a915ff78d87bf619a4053686d3c70</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-doc-3.6.6-0.140.el5_10.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1a2eebcd34c85c405596530b10d8a416<br/>SHA-256: f07a65f32487545ede91efd7ca7d5ee2543574c7d7503ff25c308088fba889a9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-domainjoin-gui-3.6.6-0.140.el5_10.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 416840bbd03a42495d5028e14e3b0fad<br/>SHA-256: 2b3743ddd20de5e4ff52d5162343c216b440aacd1b5453afa0d28081174ec059</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-swat-3.6.6-0.140.el5_10.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 65619891c27273143891a5775dcb150e<br/>SHA-256: 34b42e273e929437c3c2a5fc36b8b3cf96f25c1728787d0251e362009c8779fd</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-winbind-3.6.6-0.140.el5_10.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 42ecdd590d54aeff029093a424bb406f<br/>SHA-256: f91b06836b49efaee59d4151a06b939b0250da5e74135b9cf833e5b1da22dc87</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-winbind-devel-3.6.6-0.140.el5_10.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d6b987f1ababd57f3117feec319b1f8c<br/>SHA-256: 0a346370a904f1c829014832b4b97855e6b2437fbc90d1a77cfcc3220913a25d</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-3.6.6-0.140.el5_10.ia64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ff40f213032efae3a670a602b6001c33<br/>SHA-256: a7febb852ba432868785b4bb8ded9d4f7ed6bce30d23dc55914959872af08fca</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-client-3.6.6-0.140.el5_10.ia64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1a9b9d6042f82e60a3b911616d64651a<br/>SHA-256: 8ec3d963b1a63127387c6619a703e1c716a73cca6bcbbdc33a559d31f1fefcbe</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-common-3.6.6-0.140.el5_10.ia64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 94359c1277eae89b44ffa53d515cc617<br/>SHA-256: 25c16f90f28465a0aeeaf679e6db92acb1a6d9870aa0b9a11909d828a67c3c19</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-debuginfo-3.6.6-0.140.el5_10.ia64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5e4df7468f2b7d4993de89d83a34a52b<br/>SHA-256: 0b3584135a3984f7a84e7e03f0e1ca8790dc4eff3c0eb54727062d3ac7bda322</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-doc-3.6.6-0.140.el5_10.ia64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 4aff7d11879e2502b0d24511aa9ba028<br/>SHA-256: 2ef2f993a652b0f9ad582e9e513c683b7bcef2972b107db43f75e563ac6efb1f</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-domainjoin-gui-3.6.6-0.140.el5_10.ia64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8a7ab0b8a3100e1cd578ba7576c78f60<br/>SHA-256: 38ab0de04d74f2c5a37dfd7fda1b1fdd74a9aff6c85632b20dfb7817567c2feb</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-swat-3.6.6-0.140.el5_10.ia64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8b8c69d65305e64300e761826ae8c554<br/>SHA-256: 1612e15a7780963402d3cb12ec30d7050f9bac85cbe24550de5e00daf2907bfd</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-winbind-3.6.6-0.140.el5_10.ia64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: dcfa1df0e6e904ea5522dfc0587d6fff<br/>SHA-256: c346a43a5884ee587ddf12e6ce769b3f9342931e9fb2716acaa99709ad692f9f</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-winbind-devel-3.6.6-0.140.el5_10.ia64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 676fc786501567bc6e65849696e7f530<br/>SHA-256: 1155453ce9f0ee05bed34cfcbfc7881d9dea5d14a4eed44616e75b19c4dbc4f7</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>PPC:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-3.6.6-0.140.el5_10.ppc.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a6f95b7cbeb5c630dff83a07763e97b6<br/>SHA-256: 027bb88ccf7194a141cd1d9f1ce112f89a9fa612d3863472e42cad9d323aff7b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-client-3.6.6-0.140.el5_10.ppc.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: beb545ccbfbf9c4f88246f487029f7fe<br/>SHA-256: 80bb059043f29c5d409082868c47a8a808443f9a2c293592b2e2906cb15e59b1</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-common-3.6.6-0.140.el5_10.ppc.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 14d2c8942126153f28973c2bb32c8253<br/>SHA-256: 0351db55a2235a5e95c2d444fe724da7aeaea975048680a2754c8df5d77c0b6f</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-debuginfo-3.6.6-0.140.el5_10.ppc.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a4186b6e71c4008cc06c694dd8b45fa2<br/>SHA-256: 441bc789588ea6a78e7ec3c4f395ff3d2b94009100df8183b467f6c8d4fa5082</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-debuginfo-3.6.6-0.140.el5_10.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 4129ac2466eb26f1c414541ccf01a6dc<br/>SHA-256: 134c685d9250f689947ab14c9404e58cb02d73867dfc3e7387c0fafaf001572a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-doc-3.6.6-0.140.el5_10.ppc.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 7966a161dd87a045cf6106f5905f8673<br/>SHA-256: 231ca4b759447e97413f1dfdfcc2e282a7a8efb8e496e797612f05d8875be9fc</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-domainjoin-gui-3.6.6-0.140.el5_10.ppc.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 23af759fff62d695d8761394e74b4e93<br/>SHA-256: 169095f0da22426249fe0fc7c50f89d1b9a41172dfdc3c21bcfdc0de50392d08</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-swat-3.6.6-0.140.el5_10.ppc.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 02568fc93ceb6f6a867fc80b54d9f4c0<br/>SHA-256: 8047b81578660a0a2be2090408a5d91e3b6028f20e88779393809b9586855f1c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-winbind-3.6.6-0.140.el5_10.ppc.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b189ba875d59a25adf401af959545819<br/>SHA-256: adccbc0b4487d868d66fa7317741a9d4e5a8c7ca38e0eb86720744cdccab9f4e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-winbind-3.6.6-0.140.el5_10.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 28f87f71dc6ab2139a0540612741e77f<br/>SHA-256: 57ef63410881fbf5ad71f866f779e5040fdeab6857244999edf477d71c45046b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-winbind-devel-3.6.6-0.140.el5_10.ppc.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: da5fd74b09d18b16fcb3ae2529821bf4<br/>SHA-256: 0fdefb5c9ffa06e5fd8e7fa2d5b95d73359ca93c28b24c7f2ce2c92b0d066148</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-winbind-devel-3.6.6-0.140.el5_10.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: dfcc683a4088f6f36dd4f41971157dd6<br/>SHA-256: 9865869ec9f6139ca121e1ee8e128da8002808bceff1361fd4a50f46471ce61c</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>s390x:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-3.6.6-0.140.el5_10.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b745591f1d505e8b14494d4bb39dd09b<br/>SHA-256: d181441921c93832c02d34f549634684a2b9e89e5e30d701dc351b6399d86647</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-client-3.6.6-0.140.el5_10.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 0ba30ce68dc49a4cf6a29be9553a51cf<br/>SHA-256: 9ae6e5cdb51e0f69424b9d0d438c12b3b4abc13392c2a3585146a890fdfe8d2d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-common-3.6.6-0.140.el5_10.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: b47ac3df9ca95fc5fe38478b0a52cab8<br/>SHA-256: d8e35690e5ace098853b59e82cabeef6ca4475f0afdc52dee3bd0f06b1d30733</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-debuginfo-3.6.6-0.140.el5_10.s390.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c7cf003f2b4ff3665e23f14d8239deb4<br/>SHA-256: e6a7f8219f8082aecd9116290053d814d195070be34ad083856f24e2ed2f0836</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-debuginfo-3.6.6-0.140.el5_10.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d516f49e6d8f19ee19968648cfc11a73<br/>SHA-256: 285ed6bc275f85707827e5417a6ff100f1501067eb76e42ba78b629cbceab9d9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-doc-3.6.6-0.140.el5_10.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6425a858c34f98cfc280a1cad1e24a10<br/>SHA-256: 4bf66f7f0beb7f1f3f705a5cf6ccd1cd879d26f2210d00d756f9cd4f9e7e35d8</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-domainjoin-gui-3.6.6-0.140.el5_10.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a861ac44f6647ac1323fcef380c76ff0<br/>SHA-256: 4f5900957f0f99d1b7ad4c699d88f1a248f9a5d7eb90e6628035b7d51f2d1a6f</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-swat-3.6.6-0.140.el5_10.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a479b30891a16b315aaf09de7a9e9c31<br/>SHA-256: 0e502590cede309934d95390a03b70e03d3c699339d5da723383eb2ea182d2b4</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-winbind-3.6.6-0.140.el5_10.s390.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a39b0ab24ee9931cbd7186bf9c602494<br/>SHA-256: 83d090062fc7263ab65e11fed76fadb1868be0e68baeba261e2b9170e1ebae86</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-winbind-3.6.6-0.140.el5_10.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6d4c968a316a731af727ce57330cf94d<br/>SHA-256: 713aea976ff9c9ccb650b807f4f125534e0c62c3f789f0d11b0cf8c46ebf141e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-winbind-devel-3.6.6-0.140.el5_10.s390.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: dea95ebf38a1b5c15618abd85c345e07<br/>SHA-256: c4c5d0f8c186c913c6cd310e8d6b780a8f51247b0d75f5d9b5ffdf11f0f0ff7a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-winbind-devel-3.6.6-0.140.el5_10.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e084f9cdaa0bc6a2cbec74e73fcb381e<br/>SHA-256: f9732fba2fa3e279077e75d6d8833ce244e1be09651d553b6103af4c8855e9aa</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-3.6.6-0.140.el5_10.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ab8f5ff989559ad218e72d346fee8876<br/>SHA-256: 688de701aad0951140be26248933f058a0c82ae27be97fe4308d7b86b5476298</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-client-3.6.6-0.140.el5_10.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 703553583bc3247ab8794549d29a5045<br/>SHA-256: 9e7f7c26a2c0d19e8c896d45655c5f799a81ea952ead99ea3c6952102ad1819d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-common-3.6.6-0.140.el5_10.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: bf183fc7d96834ee8a8cde1a79ccf8e7<br/>SHA-256: 43f73b2a206c5b123c6e10a30a2165a9f40bb11b926b4c4418309037b71b4a41</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-debuginfo-3.6.6-0.140.el5_10.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2b5b9b134fb8646eb1fe33a9c6fc6418<br/>SHA-256: 6eef206f174ae0d0742288569b963494385a915ff78d87bf619a4053686d3c70</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-debuginfo-3.6.6-0.140.el5_10.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1a94d857c92add5769eb65e42095225b<br/>SHA-256: 7eb7ce549a9b9205a5f0f3f4233288461bc179e6015b2d06316e66b663724148</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-doc-3.6.6-0.140.el5_10.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3a619c9c4772283d5e08a56b83b5a4e4<br/>SHA-256: 5b59c36803f935cde68d9a5e7e72f08f68bc34fc1ab264e1df871da7f7b2125c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-domainjoin-gui-3.6.6-0.140.el5_10.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6afb74bcf5bd2f6a721cee2462ea0d63<br/>SHA-256: f77aa149399ee87b664e42abc4be4e7bf43838ef4552b3bacb582516606574d9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-swat-3.6.6-0.140.el5_10.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1656c03168164e2f7e994ab3fa48f590<br/>SHA-256: eaeed2d6abec8463132fa3a57de8afe9ab3a222ea32419fc436217306137ee72</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-winbind-3.6.6-0.140.el5_10.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 42ecdd590d54aeff029093a424bb406f<br/>SHA-256: f91b06836b49efaee59d4151a06b939b0250da5e74135b9cf833e5b1da22dc87</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-winbind-3.6.6-0.140.el5_10.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 650fe3268f2182d62c3566c11e9461bf<br/>SHA-256: 13769a713f98f51f169ab4edb8b812cdf34b7b5883e97b8742fe9c828b05153b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-winbind-devel-3.6.6-0.140.el5_10.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d6b987f1ababd57f3117feec319b1f8c<br/>SHA-256: 0a346370a904f1c829014832b4b97855e6b2437fbc90d1a77cfcc3220913a25d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-winbind-devel-3.6.6-0.140.el5_10.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9d3a344161206bc23f406729d6cc95c8<br/>SHA-256: 2cd2aebc6094d8755ffd1dc2a833c363ae12d36744db690d23f7c1f90503d40a</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Desktop (v. 5 client)">Red Hat Enterprise Linux Desktop (v. 5 client)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-3.6.6-0.140.el5_10.src.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 762bd8bc66af67b722245e8476caea8f<br/>SHA-256: b92641316c524a3c2228919efd49b60436b6732a6ad2e431f666bd7c3a8fdeb1</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-3.6.6-0.140.el5_10.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8cbf54953ae28077dbf221a81bb530b9<br/>SHA-256: 9815a35f42500af3d4fc54a809054e3a2cbfea03c09991a0b2e705cb11eec303</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-client-3.6.6-0.140.el5_10.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8fd46e2f60b46546d869b5c8eaa04d49<br/>SHA-256: 23e60afbf12d7ed52784664080cd905b12f9cc7dcb2b3e2a973cf40759706ff2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-common-3.6.6-0.140.el5_10.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: af36df82c63bc13653fbb9fbb2c4f234<br/>SHA-256: 7a34790d7e3c2451775124c76584b14b20f24a5bc8ef48ba5fda4465d56486a5</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-debuginfo-3.6.6-0.140.el5_10.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2b5b9b134fb8646eb1fe33a9c6fc6418<br/>SHA-256: 6eef206f174ae0d0742288569b963494385a915ff78d87bf619a4053686d3c70</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-doc-3.6.6-0.140.el5_10.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1a2eebcd34c85c405596530b10d8a416<br/>SHA-256: f07a65f32487545ede91efd7ca7d5ee2543574c7d7503ff25c308088fba889a9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-domainjoin-gui-3.6.6-0.140.el5_10.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 416840bbd03a42495d5028e14e3b0fad<br/>SHA-256: 2b3743ddd20de5e4ff52d5162343c216b440aacd1b5453afa0d28081174ec059</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-swat-3.6.6-0.140.el5_10.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 65619891c27273143891a5775dcb150e<br/>SHA-256: 34b42e273e929437c3c2a5fc36b8b3cf96f25c1728787d0251e362009c8779fd</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-winbind-3.6.6-0.140.el5_10.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 42ecdd590d54aeff029093a424bb406f<br/>SHA-256: f91b06836b49efaee59d4151a06b939b0250da5e74135b9cf833e5b1da22dc87</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-3.6.6-0.140.el5_10.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ab8f5ff989559ad218e72d346fee8876<br/>SHA-256: 688de701aad0951140be26248933f058a0c82ae27be97fe4308d7b86b5476298</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-client-3.6.6-0.140.el5_10.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 703553583bc3247ab8794549d29a5045<br/>SHA-256: 9e7f7c26a2c0d19e8c896d45655c5f799a81ea952ead99ea3c6952102ad1819d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-common-3.6.6-0.140.el5_10.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: bf183fc7d96834ee8a8cde1a79ccf8e7<br/>SHA-256: 43f73b2a206c5b123c6e10a30a2165a9f40bb11b926b4c4418309037b71b4a41</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-debuginfo-3.6.6-0.140.el5_10.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2b5b9b134fb8646eb1fe33a9c6fc6418<br/>SHA-256: 6eef206f174ae0d0742288569b963494385a915ff78d87bf619a4053686d3c70</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-debuginfo-3.6.6-0.140.el5_10.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1a94d857c92add5769eb65e42095225b<br/>SHA-256: 7eb7ce549a9b9205a5f0f3f4233288461bc179e6015b2d06316e66b663724148</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-doc-3.6.6-0.140.el5_10.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3a619c9c4772283d5e08a56b83b5a4e4<br/>SHA-256: 5b59c36803f935cde68d9a5e7e72f08f68bc34fc1ab264e1df871da7f7b2125c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-domainjoin-gui-3.6.6-0.140.el5_10.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6afb74bcf5bd2f6a721cee2462ea0d63<br/>SHA-256: f77aa149399ee87b664e42abc4be4e7bf43838ef4552b3bacb582516606574d9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-swat-3.6.6-0.140.el5_10.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1656c03168164e2f7e994ab3fa48f590<br/>SHA-256: eaeed2d6abec8463132fa3a57de8afe9ab3a222ea32419fc436217306137ee72</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba3x-winbind-3.6.6-0.140.el5_10.i386.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 42ecdd590d54aeff029093a424bb406f<br/>SHA-256: f91b06836b49efaee59d4151a06b939b0250da5e74135b9cf833e5b1da22dc87</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba3x-winbind-3.6.6-0.140.el5_10.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0249.html">RHSA-2015:0249</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 650fe3268f2182d62c3566c11e9461bf<br/>SHA-256: 13769a713f98f51f169ab4edb8b812cdf34b7b5883e97b8742fe9c828b05153b</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Desktop (v. 6)">Red Hat Enterprise Linux Desktop (v. 6)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-3.6.9-169.el6_5.src.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6a0d0722e0bb86eb8d5e1a4d71d364e8<br/>SHA-256: a3276c00a1e7d4a31c1bc342b2507a80ea70e3dd57bc60e4ef3e1249a3505363</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libsmbclient-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 510bb9e6a88413ba98fc745689d518aa<br/>SHA-256: e1d5851078954e29081f070aa9057acb63f41d9c0d9424887ae128007fe11304</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libsmbclient-devel-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 332bf175d4b95b76caa02dea317f80ae<br/>SHA-256: 8a02062216f9e25f5d425f2e1a1a57618cc4840d8d5c5cae466033b7bf1005fc</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e44e68d5603ba5544034ac2155ab9d5f<br/>SHA-256: aef4ffb837a54591e1a3180141067ce8faf6b121257002342dc9077ff777b1fe</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-client-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a1b7a3c8c347246a55ce16b4572328b5<br/>SHA-256: c3a2152bc606dc70b9eb9cfe7e6c46914066887182271b3554cd2902c739e8d2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-common-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2b0dff96b8dc459201ff886f545d7269<br/>SHA-256: da0d6aaccf7c62a86df40e7f6f81209707f8a695365b7bc3e3a2712d19d5c1db</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-debuginfo-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 79d7b044a63f58a9308d76fef275e520<br/>SHA-256: b99a302abc70ec9fa1ff6ef5d7e31ea79538761ad743b3d2357eebcac879e063</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-doc-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 92a0f3125c508bdf01c32b1d8af0310e<br/>SHA-256: 58d1505434aafc9b73fa6ee0cb1bf8bab742e10ccc0436bd56c42bdc2bcaedf8</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-domainjoin-gui-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 81e0b1136057053f583cd06009d0ab0c<br/>SHA-256: 89974f31f7fcbcafb9b8b3be550b9b97709e6d1d29d59ed34ec3608922bcd779</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-swat-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2651c0fd965a91fb1931068fb943b2b9<br/>SHA-256: f3095d29cb61df97cf43dc9987d094e9e96903f23dfaa38eb4c3aa6dd094617c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a421ee9314738b5dfd937413d783e5aa<br/>SHA-256: 799f0b8dcd63110922994be2d91ecd935eaec3798abb72e223c3a90c71b08a92</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-clients-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c0e37bf05625f769aaa8b1f08d1f4dcc<br/>SHA-256: 7abdf75fdd8c5e07baf039e50e8451a8cfb32dc82a65bf13b80d50ea9a0bc85b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-devel-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 80bfb988ff47b9c7c656dc46a5907e2c<br/>SHA-256: 0947fef8577371541641b2587ee27eb7216ad1aca7780613e723a393ccfdf04d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-krb5-locator-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d19087defea6b5c122d67a44a554dbc9<br/>SHA-256: 3d9e33f600666c2733028eb93a9a77f1786789f5770ed77f9cce7e920fc6dfb4</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libsmbclient-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 510bb9e6a88413ba98fc745689d518aa<br/>SHA-256: e1d5851078954e29081f070aa9057acb63f41d9c0d9424887ae128007fe11304</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libsmbclient-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 403564514b05395608b890b10d511121<br/>SHA-256: 0f97a4d168022508d2ae63af52af2dfccf47a9d8fb5e231c3118669055b80610</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libsmbclient-devel-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 332bf175d4b95b76caa02dea317f80ae<br/>SHA-256: 8a02062216f9e25f5d425f2e1a1a57618cc4840d8d5c5cae466033b7bf1005fc</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libsmbclient-devel-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5237b8ee3c708196805db99acfcffac9<br/>SHA-256: 72f1186bfedcdafc9b769ff1b7a99b9c9878db68c424f7836e7d4072bbd2b51e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1959e17156ab02806b71ef192cc69968<br/>SHA-256: 74a6567a27d99f048ba6b27baae8c969b829682c5c74b6e5973ec6a869e85c12</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-client-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ee08b078b8aac5476d4e2ebd514ac579<br/>SHA-256: af1c04daf11d1a4509acc8c18c0ad4ed4f8173670d5fb3f8466d6363bc709320</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-common-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2b0dff96b8dc459201ff886f545d7269<br/>SHA-256: da0d6aaccf7c62a86df40e7f6f81209707f8a695365b7bc3e3a2712d19d5c1db</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-common-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 187a98d91b91851296f408dd732c088b<br/>SHA-256: d9ae99a4339528277e868520458d7468de53f7d397c35109fecc7c6eb4de828b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-debuginfo-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 79d7b044a63f58a9308d76fef275e520<br/>SHA-256: b99a302abc70ec9fa1ff6ef5d7e31ea79538761ad743b3d2357eebcac879e063</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-debuginfo-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: df7875e2122fdd9f05051a197419ef39<br/>SHA-256: 1f32210ae98e739e1a80d7718f6031058dfd99bd92d1f69d3e115c3e9e3dad82</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-doc-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9e3e5347b337a434cfbf5e9016ca5319<br/>SHA-256: 5d2a19b2712d4df9bfcda1a2431b2caa6f3b347caadebb5dd6ab32a823443e05</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-domainjoin-gui-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3e6f97d06644bafc9d36793d8a4111ee<br/>SHA-256: 4b5a658a088b514b731089eb7dcff6535ffdc1d2d0e29bd1ea93045510e409eb</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-swat-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 7a533ac7df7c961d03d0d50b3e3af178<br/>SHA-256: 7df68ca1aacd1859de4f62f1b24fe5e4109316118591f2ab3669b6010b5bb716</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1210b528114b7c5f8d8a9ca3f4edfa86<br/>SHA-256: 357766a42515f788ab736cda46fba4c36cefaf9ed49f37a77ffd8b0722a490ec</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-clients-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c0e37bf05625f769aaa8b1f08d1f4dcc<br/>SHA-256: 7abdf75fdd8c5e07baf039e50e8451a8cfb32dc82a65bf13b80d50ea9a0bc85b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-clients-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2b548cbb17e348338b0275e9b951d364<br/>SHA-256: 9ba717f215bf194d009c31c6f3fb98cc1d8aad0b574805ac914323a706413fce</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-devel-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 80bfb988ff47b9c7c656dc46a5907e2c<br/>SHA-256: 0947fef8577371541641b2587ee27eb7216ad1aca7780613e723a393ccfdf04d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-devel-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e1da9cea0888eca891b04c95460d26d9<br/>SHA-256: c2dbb050008dbd5a6e0999d42e62dc5acd982a5a159a0f56d919ad8a9e0e0c2d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-krb5-locator-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c23529694f8f193b0b049b024000aa1f<br/>SHA-256: 42322b1c38079b8c79f3f5bebbf601ece06f56f2b324c730f92d440164b153eb</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux HPC Node (v. 6)">Red Hat Enterprise Linux HPC Node (v. 6)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-3.6.9-169.el6_5.src.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6a0d0722e0bb86eb8d5e1a4d71d364e8<br/>SHA-256: a3276c00a1e7d4a31c1bc342b2507a80ea70e3dd57bc60e4ef3e1249a3505363</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libsmbclient-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 510bb9e6a88413ba98fc745689d518aa<br/>SHA-256: e1d5851078954e29081f070aa9057acb63f41d9c0d9424887ae128007fe11304</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libsmbclient-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 403564514b05395608b890b10d511121<br/>SHA-256: 0f97a4d168022508d2ae63af52af2dfccf47a9d8fb5e231c3118669055b80610</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libsmbclient-devel-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 332bf175d4b95b76caa02dea317f80ae<br/>SHA-256: 8a02062216f9e25f5d425f2e1a1a57618cc4840d8d5c5cae466033b7bf1005fc</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libsmbclient-devel-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5237b8ee3c708196805db99acfcffac9<br/>SHA-256: 72f1186bfedcdafc9b769ff1b7a99b9c9878db68c424f7836e7d4072bbd2b51e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1959e17156ab02806b71ef192cc69968<br/>SHA-256: 74a6567a27d99f048ba6b27baae8c969b829682c5c74b6e5973ec6a869e85c12</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-client-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ee08b078b8aac5476d4e2ebd514ac579<br/>SHA-256: af1c04daf11d1a4509acc8c18c0ad4ed4f8173670d5fb3f8466d6363bc709320</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-common-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2b0dff96b8dc459201ff886f545d7269<br/>SHA-256: da0d6aaccf7c62a86df40e7f6f81209707f8a695365b7bc3e3a2712d19d5c1db</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-common-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 187a98d91b91851296f408dd732c088b<br/>SHA-256: d9ae99a4339528277e868520458d7468de53f7d397c35109fecc7c6eb4de828b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-debuginfo-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 79d7b044a63f58a9308d76fef275e520<br/>SHA-256: b99a302abc70ec9fa1ff6ef5d7e31ea79538761ad743b3d2357eebcac879e063</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-debuginfo-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: df7875e2122fdd9f05051a197419ef39<br/>SHA-256: 1f32210ae98e739e1a80d7718f6031058dfd99bd92d1f69d3e115c3e9e3dad82</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-doc-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9e3e5347b337a434cfbf5e9016ca5319<br/>SHA-256: 5d2a19b2712d4df9bfcda1a2431b2caa6f3b347caadebb5dd6ab32a823443e05</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-domainjoin-gui-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3e6f97d06644bafc9d36793d8a4111ee<br/>SHA-256: 4b5a658a088b514b731089eb7dcff6535ffdc1d2d0e29bd1ea93045510e409eb</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-swat-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 7a533ac7df7c961d03d0d50b3e3af178<br/>SHA-256: 7df68ca1aacd1859de4f62f1b24fe5e4109316118591f2ab3669b6010b5bb716</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1210b528114b7c5f8d8a9ca3f4edfa86<br/>SHA-256: 357766a42515f788ab736cda46fba4c36cefaf9ed49f37a77ffd8b0722a490ec</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-clients-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c0e37bf05625f769aaa8b1f08d1f4dcc<br/>SHA-256: 7abdf75fdd8c5e07baf039e50e8451a8cfb32dc82a65bf13b80d50ea9a0bc85b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-clients-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2b548cbb17e348338b0275e9b951d364<br/>SHA-256: 9ba717f215bf194d009c31c6f3fb98cc1d8aad0b574805ac914323a706413fce</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-devel-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 80bfb988ff47b9c7c656dc46a5907e2c<br/>SHA-256: 0947fef8577371541641b2587ee27eb7216ad1aca7780613e723a393ccfdf04d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-devel-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e1da9cea0888eca891b04c95460d26d9<br/>SHA-256: c2dbb050008dbd5a6e0999d42e62dc5acd982a5a159a0f56d919ad8a9e0e0c2d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-krb5-locator-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c23529694f8f193b0b049b024000aa1f<br/>SHA-256: 42322b1c38079b8c79f3f5bebbf601ece06f56f2b324c730f92d440164b153eb</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Server (v. 6)">Red Hat Enterprise Linux Server (v. 6)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-3.6.9-169.el6_5.src.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6a0d0722e0bb86eb8d5e1a4d71d364e8<br/>SHA-256: a3276c00a1e7d4a31c1bc342b2507a80ea70e3dd57bc60e4ef3e1249a3505363</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libsmbclient-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 510bb9e6a88413ba98fc745689d518aa<br/>SHA-256: e1d5851078954e29081f070aa9057acb63f41d9c0d9424887ae128007fe11304</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libsmbclient-devel-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 332bf175d4b95b76caa02dea317f80ae<br/>SHA-256: 8a02062216f9e25f5d425f2e1a1a57618cc4840d8d5c5cae466033b7bf1005fc</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e44e68d5603ba5544034ac2155ab9d5f<br/>SHA-256: aef4ffb837a54591e1a3180141067ce8faf6b121257002342dc9077ff777b1fe</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-client-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a1b7a3c8c347246a55ce16b4572328b5<br/>SHA-256: c3a2152bc606dc70b9eb9cfe7e6c46914066887182271b3554cd2902c739e8d2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-common-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2b0dff96b8dc459201ff886f545d7269<br/>SHA-256: da0d6aaccf7c62a86df40e7f6f81209707f8a695365b7bc3e3a2712d19d5c1db</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-debuginfo-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 79d7b044a63f58a9308d76fef275e520<br/>SHA-256: b99a302abc70ec9fa1ff6ef5d7e31ea79538761ad743b3d2357eebcac879e063</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-doc-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 92a0f3125c508bdf01c32b1d8af0310e<br/>SHA-256: 58d1505434aafc9b73fa6ee0cb1bf8bab742e10ccc0436bd56c42bdc2bcaedf8</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-domainjoin-gui-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 81e0b1136057053f583cd06009d0ab0c<br/>SHA-256: 89974f31f7fcbcafb9b8b3be550b9b97709e6d1d29d59ed34ec3608922bcd779</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-swat-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2651c0fd965a91fb1931068fb943b2b9<br/>SHA-256: f3095d29cb61df97cf43dc9987d094e9e96903f23dfaa38eb4c3aa6dd094617c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a421ee9314738b5dfd937413d783e5aa<br/>SHA-256: 799f0b8dcd63110922994be2d91ecd935eaec3798abb72e223c3a90c71b08a92</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-clients-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c0e37bf05625f769aaa8b1f08d1f4dcc<br/>SHA-256: 7abdf75fdd8c5e07baf039e50e8451a8cfb32dc82a65bf13b80d50ea9a0bc85b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-devel-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 80bfb988ff47b9c7c656dc46a5907e2c<br/>SHA-256: 0947fef8577371541641b2587ee27eb7216ad1aca7780613e723a393ccfdf04d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-krb5-locator-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d19087defea6b5c122d67a44a554dbc9<br/>SHA-256: 3d9e33f600666c2733028eb93a9a77f1786789f5770ed77f9cce7e920fc6dfb4</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>PPC:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libsmbclient-3.6.9-169.el6_5.ppc.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3a96b1ae331d93e217b42a124ce2b1d1<br/>SHA-256: 75c5e89426ea61e746bbe68fcdc15bc31b058013071e47716ea4ac0ce32be05e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libsmbclient-3.6.9-169.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 59a6346baf5c812aa66900fd4271d5b6<br/>SHA-256: 6756eb725cd9ce0eda994be8c2bbe766e938285a40119bfed0ea72ec53448320</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libsmbclient-devel-3.6.9-169.el6_5.ppc.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 4ea384689657d2e9a4e45a8e32a6a910<br/>SHA-256: 0cbb3263c5e60569ec7c5ab29b5d71a8ff5e9a75f0c811835d36c9aa0692adf5</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libsmbclient-devel-3.6.9-169.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e13a485df9e9773ecea6529ec144fe0d<br/>SHA-256: 040d327b0e66a34dcf97e181b11e49e0757f8cbd8c1d5983ba91368a3195e38c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-3.6.9-169.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2fb03bc2eb7db088b4c7f0617dfa986a<br/>SHA-256: 1a048ba3276f821de5a01d6fcb8edb0d255869293bda9c8996c418b761f866d7</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-client-3.6.9-169.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 33dd4c18866b5d2d8068340c05e18a13<br/>SHA-256: 2b77b73686e2da87dc9e584cf256a9dc97b0d42f492a56c215c4c5540df6d8b5</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-common-3.6.9-169.el6_5.ppc.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e7e9280cf81478cd8a7ba20ce0546e82<br/>SHA-256: 07e30ec1ce14c4f7ec24646311a7837f0812f2526c9abe4f6551ad7bdf9c6af1</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-common-3.6.9-169.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 67698ba3162c1a816cb83a5f71b606fa<br/>SHA-256: fed41f04b21a2f6fe04a22d11396ad54990102bb3beff6d5e9a879653e406086</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-debuginfo-3.6.9-169.el6_5.ppc.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 74ec6b7629b94ff04f38f81de6d2a3b5<br/>SHA-256: 936b85c4194f77209d8ea71a26a88c9495b3c2b688097bd66bf287e3c9735410</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-debuginfo-3.6.9-169.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3afca9826cd448104ddbd4a79dba9fc6<br/>SHA-256: 788c6acfff3abe8eb612942dabf1d9796e46760d083f25347fe0f2e7f5031e54</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-doc-3.6.9-169.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8008f2f6d8f799ee150e4ed73d419ad5<br/>SHA-256: 00a7a6c95ecddff8c545afa239b3c738ba25bdfdd6eb20c0c6b0e7f3df5c2e48</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-domainjoin-gui-3.6.9-169.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 4e95fd09aaa0fa626965d50ab00f0939<br/>SHA-256: 8058db445786266371668e3f1df8541236d6eff68fbbd3c4b20ab5c8ae78427d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-swat-3.6.9-169.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9e560d871b41ee4761a0398398fcd501<br/>SHA-256: 42b1528a2f6a65d810d3184570e7dfdf5159f836831eee0d5a21a376f2f33b99</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-3.6.9-169.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2a5fa9ab38803dfe9906b0722c8aff04<br/>SHA-256: 0b0bf4a2d89830ba8d3e135bb822cb2d483ff356b821f54dc2574c1cca9e2ac9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-clients-3.6.9-169.el6_5.ppc.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 51b77e4aabc08fa467d286ed46d60627<br/>SHA-256: 7e576b9e3a7a0566d50a0762a9198678bb80e4c3c82a7158e77f1597829631eb</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-clients-3.6.9-169.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c5f2732b0481911203ed879410591bdb<br/>SHA-256: 91b0da519bc3c392086d7e53bb6ca6dfc11dac62e5e60fb28bc956541e78415d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-devel-3.6.9-169.el6_5.ppc.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 80b67116304ff47e203805a8a927d138<br/>SHA-256: 950e7ed26aa5f35d7d734125e16a6e7cb55bfdff677cddd95b48c88a889c129d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-devel-3.6.9-169.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: aa01ee10a3feff4dd2cf3624f043016e<br/>SHA-256: 9ffc85919961bcecd9a456a3eb31597c7e53d24b31af62e756602cef941915cd</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-krb5-locator-3.6.9-169.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f0e2fd726799d754a3b028082e849498<br/>SHA-256: f18a418522bbc8f18329b5015c25897ed3b0c76e2e64efd7f2aa865ad64dd7ad</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>s390x:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libsmbclient-3.6.9-169.el6_5.s390.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: fcd531017fedf4f7f3d81c4daef0913a<br/>SHA-256: 7eef1a6ef0ec58a6e6bc150424e4d48f9d0b0fe6b9c6a49755083f9a2d0e5e59</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libsmbclient-3.6.9-169.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d4a1e4b00b95d3f14291bbddf72bd62d<br/>SHA-256: 1f0b16bd2e90961df603d607f250a67722e0293c1f145491be14e18853022352</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libsmbclient-devel-3.6.9-169.el6_5.s390.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1761fa54274ce95916f57fe443bb75db<br/>SHA-256: 3b58f34f1a3205478e944b730c6cfdef690ac0c38d2f618bc834a0340ffd7b76</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libsmbclient-devel-3.6.9-169.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 15f62985b5cf9aa9977ff4e6f1ba009e<br/>SHA-256: f5204c6a6353112c4427a3ce2bbe6a9b6bdb388dad09d03b8a6baa4b24a32580</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-3.6.9-169.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a9258ea1eb666f1df674488a41192415<br/>SHA-256: 2a772b3357f6fe488b3c93a016d6672d6fdd5e1cff27301c61d090e13f4ec9a8</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-client-3.6.9-169.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d81254ce450a6fb8511e99352c025c44<br/>SHA-256: 229960ea56dd60af6491ba2b5b7364a120966ecef6625b47b4cf7e8cb58ab8c2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-common-3.6.9-169.el6_5.s390.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 19f05fc96bc71691d445ae0a4bf3b554<br/>SHA-256: e0c78c22668c08a8859588f758224945096d779ab153d499671c3cb9b6ecb648</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-common-3.6.9-169.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1bae5834bcb8dd5d344fd3df9860aedb<br/>SHA-256: aed9a1ca8131074b332629dd263288a9e45f9345271f63e7be76829407429468</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-debuginfo-3.6.9-169.el6_5.s390.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 59440c0fa1992f761dfa21a2798eb72d<br/>SHA-256: e7b16f55fea5217be49d6be4db4bbe2e7499c97057cf3da0a376760f5d64c7fe</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-debuginfo-3.6.9-169.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ea85a109498175a567fbcc4e4beffa9a<br/>SHA-256: a893371ec22b81c1c7e380e20e4bec490d52ff0dce8a84ed1f126bb9b1f1208a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-doc-3.6.9-169.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 722e372ccc788128dfd608f1b3135911<br/>SHA-256: 587a4b8ec72655ffa413e9d493581c5b226b33b1e3f576ab116d3a82c74f0d49</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-domainjoin-gui-3.6.9-169.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c90070758326b058ec85aec2f42b77c3<br/>SHA-256: 3db759f3e7381e273b6c35a3dccc20d2d5a7d1fd0b455b83ceee4fd6060618e2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-swat-3.6.9-169.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8ce5463db2ba97f2062027202ce972b9<br/>SHA-256: 536d410dbe8f7bee93deba118f06578114e30f02738be800188a3888a01a2f9e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-3.6.9-169.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 480695b7acffa32c2f491cd94bc70e07<br/>SHA-256: db4a39f744fb529368c42c850dd74ede1fcc8a7a6ec35d01414241e132dac36d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-clients-3.6.9-169.el6_5.s390.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6338a9f91e2ceb532309b1f95434b0f1<br/>SHA-256: 0a320c0e5de7c6a4d65ed78c4e778331d9c42a9eb47b74a783432332cb37c44d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-clients-3.6.9-169.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8ad659e204bdd06517a65b7b92aca395<br/>SHA-256: 3ee7db290dd7303d06b1e7a6040f4dff9e3908853e255c904c7cffcb17840133</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-devel-3.6.9-169.el6_5.s390.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2cdae27b72acd9b227f07e4abb43ab86<br/>SHA-256: 49316ed1d588545bea6e65246a472acde61044f02ff15d7f84ed6ef97b65e744</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-devel-3.6.9-169.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 69d5815ca178456511bd972aa3ec7a4e<br/>SHA-256: 0cc40d9e799969e660aa5de6caf503746494ba500a3a0dd9e16d172160b638c0</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-krb5-locator-3.6.9-169.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ad9b03325f5b08c5605bc6ef149c0b1f<br/>SHA-256: b9aa3672c010a1052a9a5887a50c2cfd91aa4b1d5143926557a446c1eca0d15c</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libsmbclient-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 510bb9e6a88413ba98fc745689d518aa<br/>SHA-256: e1d5851078954e29081f070aa9057acb63f41d9c0d9424887ae128007fe11304</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libsmbclient-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 403564514b05395608b890b10d511121<br/>SHA-256: 0f97a4d168022508d2ae63af52af2dfccf47a9d8fb5e231c3118669055b80610</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libsmbclient-devel-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 332bf175d4b95b76caa02dea317f80ae<br/>SHA-256: 8a02062216f9e25f5d425f2e1a1a57618cc4840d8d5c5cae466033b7bf1005fc</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libsmbclient-devel-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5237b8ee3c708196805db99acfcffac9<br/>SHA-256: 72f1186bfedcdafc9b769ff1b7a99b9c9878db68c424f7836e7d4072bbd2b51e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1959e17156ab02806b71ef192cc69968<br/>SHA-256: 74a6567a27d99f048ba6b27baae8c969b829682c5c74b6e5973ec6a869e85c12</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-client-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ee08b078b8aac5476d4e2ebd514ac579<br/>SHA-256: af1c04daf11d1a4509acc8c18c0ad4ed4f8173670d5fb3f8466d6363bc709320</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-common-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2b0dff96b8dc459201ff886f545d7269<br/>SHA-256: da0d6aaccf7c62a86df40e7f6f81209707f8a695365b7bc3e3a2712d19d5c1db</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-common-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 187a98d91b91851296f408dd732c088b<br/>SHA-256: d9ae99a4339528277e868520458d7468de53f7d397c35109fecc7c6eb4de828b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-debuginfo-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 79d7b044a63f58a9308d76fef275e520<br/>SHA-256: b99a302abc70ec9fa1ff6ef5d7e31ea79538761ad743b3d2357eebcac879e063</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-debuginfo-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: df7875e2122fdd9f05051a197419ef39<br/>SHA-256: 1f32210ae98e739e1a80d7718f6031058dfd99bd92d1f69d3e115c3e9e3dad82</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-doc-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9e3e5347b337a434cfbf5e9016ca5319<br/>SHA-256: 5d2a19b2712d4df9bfcda1a2431b2caa6f3b347caadebb5dd6ab32a823443e05</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-domainjoin-gui-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3e6f97d06644bafc9d36793d8a4111ee<br/>SHA-256: 4b5a658a088b514b731089eb7dcff6535ffdc1d2d0e29bd1ea93045510e409eb</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-swat-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 7a533ac7df7c961d03d0d50b3e3af178<br/>SHA-256: 7df68ca1aacd1859de4f62f1b24fe5e4109316118591f2ab3669b6010b5bb716</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1210b528114b7c5f8d8a9ca3f4edfa86<br/>SHA-256: 357766a42515f788ab736cda46fba4c36cefaf9ed49f37a77ffd8b0722a490ec</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-clients-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c0e37bf05625f769aaa8b1f08d1f4dcc<br/>SHA-256: 7abdf75fdd8c5e07baf039e50e8451a8cfb32dc82a65bf13b80d50ea9a0bc85b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-clients-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2b548cbb17e348338b0275e9b951d364<br/>SHA-256: 9ba717f215bf194d009c31c6f3fb98cc1d8aad0b574805ac914323a706413fce</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-devel-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 80bfb988ff47b9c7c656dc46a5907e2c<br/>SHA-256: 0947fef8577371541641b2587ee27eb7216ad1aca7780613e723a393ccfdf04d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-devel-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e1da9cea0888eca891b04c95460d26d9<br/>SHA-256: c2dbb050008dbd5a6e0999d42e62dc5acd982a5a159a0f56d919ad8a9e0e0c2d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-krb5-locator-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c23529694f8f193b0b049b024000aa1f<br/>SHA-256: 42322b1c38079b8c79f3f5bebbf601ece06f56f2b324c730f92d440164b153eb</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Server AUS (v. 6.5)">Red Hat Enterprise Linux Server AUS (v. 6.5)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-3.6.9-169.el6_5.src.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6a0d0722e0bb86eb8d5e1a4d71d364e8<br/>SHA-256: a3276c00a1e7d4a31c1bc342b2507a80ea70e3dd57bc60e4ef3e1249a3505363</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libsmbclient-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 510bb9e6a88413ba98fc745689d518aa<br/>SHA-256: e1d5851078954e29081f070aa9057acb63f41d9c0d9424887ae128007fe11304</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libsmbclient-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 403564514b05395608b890b10d511121<br/>SHA-256: 0f97a4d168022508d2ae63af52af2dfccf47a9d8fb5e231c3118669055b80610</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libsmbclient-devel-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 332bf175d4b95b76caa02dea317f80ae<br/>SHA-256: 8a02062216f9e25f5d425f2e1a1a57618cc4840d8d5c5cae466033b7bf1005fc</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libsmbclient-devel-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5237b8ee3c708196805db99acfcffac9<br/>SHA-256: 72f1186bfedcdafc9b769ff1b7a99b9c9878db68c424f7836e7d4072bbd2b51e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1959e17156ab02806b71ef192cc69968<br/>SHA-256: 74a6567a27d99f048ba6b27baae8c969b829682c5c74b6e5973ec6a869e85c12</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-client-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ee08b078b8aac5476d4e2ebd514ac579<br/>SHA-256: af1c04daf11d1a4509acc8c18c0ad4ed4f8173670d5fb3f8466d6363bc709320</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-common-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2b0dff96b8dc459201ff886f545d7269<br/>SHA-256: da0d6aaccf7c62a86df40e7f6f81209707f8a695365b7bc3e3a2712d19d5c1db</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-common-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 187a98d91b91851296f408dd732c088b<br/>SHA-256: d9ae99a4339528277e868520458d7468de53f7d397c35109fecc7c6eb4de828b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-debuginfo-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 79d7b044a63f58a9308d76fef275e520<br/>SHA-256: b99a302abc70ec9fa1ff6ef5d7e31ea79538761ad743b3d2357eebcac879e063</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-debuginfo-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: df7875e2122fdd9f05051a197419ef39<br/>SHA-256: 1f32210ae98e739e1a80d7718f6031058dfd99bd92d1f69d3e115c3e9e3dad82</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-doc-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9e3e5347b337a434cfbf5e9016ca5319<br/>SHA-256: 5d2a19b2712d4df9bfcda1a2431b2caa6f3b347caadebb5dd6ab32a823443e05</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-domainjoin-gui-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3e6f97d06644bafc9d36793d8a4111ee<br/>SHA-256: 4b5a658a088b514b731089eb7dcff6535ffdc1d2d0e29bd1ea93045510e409eb</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-swat-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 7a533ac7df7c961d03d0d50b3e3af178<br/>SHA-256: 7df68ca1aacd1859de4f62f1b24fe5e4109316118591f2ab3669b6010b5bb716</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1210b528114b7c5f8d8a9ca3f4edfa86<br/>SHA-256: 357766a42515f788ab736cda46fba4c36cefaf9ed49f37a77ffd8b0722a490ec</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-clients-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c0e37bf05625f769aaa8b1f08d1f4dcc<br/>SHA-256: 7abdf75fdd8c5e07baf039e50e8451a8cfb32dc82a65bf13b80d50ea9a0bc85b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-clients-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2b548cbb17e348338b0275e9b951d364<br/>SHA-256: 9ba717f215bf194d009c31c6f3fb98cc1d8aad0b574805ac914323a706413fce</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-devel-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 80bfb988ff47b9c7c656dc46a5907e2c<br/>SHA-256: 0947fef8577371541641b2587ee27eb7216ad1aca7780613e723a393ccfdf04d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-devel-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e1da9cea0888eca891b04c95460d26d9<br/>SHA-256: c2dbb050008dbd5a6e0999d42e62dc5acd982a5a159a0f56d919ad8a9e0e0c2d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-krb5-locator-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c23529694f8f193b0b049b024000aa1f<br/>SHA-256: 42322b1c38079b8c79f3f5bebbf601ece06f56f2b324c730f92d440164b153eb</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Server EUS (v. 6.5.z)">Red Hat Enterprise Linux Server EUS (v. 6.5.z)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-3.6.9-169.el6_5.src.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6a0d0722e0bb86eb8d5e1a4d71d364e8<br/>SHA-256: a3276c00a1e7d4a31c1bc342b2507a80ea70e3dd57bc60e4ef3e1249a3505363</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libsmbclient-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 510bb9e6a88413ba98fc745689d518aa<br/>SHA-256: e1d5851078954e29081f070aa9057acb63f41d9c0d9424887ae128007fe11304</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libsmbclient-devel-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 332bf175d4b95b76caa02dea317f80ae<br/>SHA-256: 8a02062216f9e25f5d425f2e1a1a57618cc4840d8d5c5cae466033b7bf1005fc</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e44e68d5603ba5544034ac2155ab9d5f<br/>SHA-256: aef4ffb837a54591e1a3180141067ce8faf6b121257002342dc9077ff777b1fe</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-client-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a1b7a3c8c347246a55ce16b4572328b5<br/>SHA-256: c3a2152bc606dc70b9eb9cfe7e6c46914066887182271b3554cd2902c739e8d2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-common-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2b0dff96b8dc459201ff886f545d7269<br/>SHA-256: da0d6aaccf7c62a86df40e7f6f81209707f8a695365b7bc3e3a2712d19d5c1db</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-debuginfo-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 79d7b044a63f58a9308d76fef275e520<br/>SHA-256: b99a302abc70ec9fa1ff6ef5d7e31ea79538761ad743b3d2357eebcac879e063</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-doc-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 92a0f3125c508bdf01c32b1d8af0310e<br/>SHA-256: 58d1505434aafc9b73fa6ee0cb1bf8bab742e10ccc0436bd56c42bdc2bcaedf8</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-domainjoin-gui-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 81e0b1136057053f583cd06009d0ab0c<br/>SHA-256: 89974f31f7fcbcafb9b8b3be550b9b97709e6d1d29d59ed34ec3608922bcd779</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-swat-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2651c0fd965a91fb1931068fb943b2b9<br/>SHA-256: f3095d29cb61df97cf43dc9987d094e9e96903f23dfaa38eb4c3aa6dd094617c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a421ee9314738b5dfd937413d783e5aa<br/>SHA-256: 799f0b8dcd63110922994be2d91ecd935eaec3798abb72e223c3a90c71b08a92</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-clients-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c0e37bf05625f769aaa8b1f08d1f4dcc<br/>SHA-256: 7abdf75fdd8c5e07baf039e50e8451a8cfb32dc82a65bf13b80d50ea9a0bc85b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-devel-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 80bfb988ff47b9c7c656dc46a5907e2c<br/>SHA-256: 0947fef8577371541641b2587ee27eb7216ad1aca7780613e723a393ccfdf04d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-krb5-locator-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d19087defea6b5c122d67a44a554dbc9<br/>SHA-256: 3d9e33f600666c2733028eb93a9a77f1786789f5770ed77f9cce7e920fc6dfb4</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>PPC:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libsmbclient-3.6.9-169.el6_5.ppc.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3a96b1ae331d93e217b42a124ce2b1d1<br/>SHA-256: 75c5e89426ea61e746bbe68fcdc15bc31b058013071e47716ea4ac0ce32be05e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libsmbclient-3.6.9-169.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 59a6346baf5c812aa66900fd4271d5b6<br/>SHA-256: 6756eb725cd9ce0eda994be8c2bbe766e938285a40119bfed0ea72ec53448320</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libsmbclient-devel-3.6.9-169.el6_5.ppc.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 4ea384689657d2e9a4e45a8e32a6a910<br/>SHA-256: 0cbb3263c5e60569ec7c5ab29b5d71a8ff5e9a75f0c811835d36c9aa0692adf5</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libsmbclient-devel-3.6.9-169.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e13a485df9e9773ecea6529ec144fe0d<br/>SHA-256: 040d327b0e66a34dcf97e181b11e49e0757f8cbd8c1d5983ba91368a3195e38c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-3.6.9-169.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2fb03bc2eb7db088b4c7f0617dfa986a<br/>SHA-256: 1a048ba3276f821de5a01d6fcb8edb0d255869293bda9c8996c418b761f866d7</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-client-3.6.9-169.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 33dd4c18866b5d2d8068340c05e18a13<br/>SHA-256: 2b77b73686e2da87dc9e584cf256a9dc97b0d42f492a56c215c4c5540df6d8b5</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-common-3.6.9-169.el6_5.ppc.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e7e9280cf81478cd8a7ba20ce0546e82<br/>SHA-256: 07e30ec1ce14c4f7ec24646311a7837f0812f2526c9abe4f6551ad7bdf9c6af1</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-common-3.6.9-169.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 67698ba3162c1a816cb83a5f71b606fa<br/>SHA-256: fed41f04b21a2f6fe04a22d11396ad54990102bb3beff6d5e9a879653e406086</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-debuginfo-3.6.9-169.el6_5.ppc.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 74ec6b7629b94ff04f38f81de6d2a3b5<br/>SHA-256: 936b85c4194f77209d8ea71a26a88c9495b3c2b688097bd66bf287e3c9735410</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-debuginfo-3.6.9-169.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3afca9826cd448104ddbd4a79dba9fc6<br/>SHA-256: 788c6acfff3abe8eb612942dabf1d9796e46760d083f25347fe0f2e7f5031e54</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-doc-3.6.9-169.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8008f2f6d8f799ee150e4ed73d419ad5<br/>SHA-256: 00a7a6c95ecddff8c545afa239b3c738ba25bdfdd6eb20c0c6b0e7f3df5c2e48</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-domainjoin-gui-3.6.9-169.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 4e95fd09aaa0fa626965d50ab00f0939<br/>SHA-256: 8058db445786266371668e3f1df8541236d6eff68fbbd3c4b20ab5c8ae78427d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-swat-3.6.9-169.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9e560d871b41ee4761a0398398fcd501<br/>SHA-256: 42b1528a2f6a65d810d3184570e7dfdf5159f836831eee0d5a21a376f2f33b99</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-3.6.9-169.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2a5fa9ab38803dfe9906b0722c8aff04<br/>SHA-256: 0b0bf4a2d89830ba8d3e135bb822cb2d483ff356b821f54dc2574c1cca9e2ac9</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-clients-3.6.9-169.el6_5.ppc.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 51b77e4aabc08fa467d286ed46d60627<br/>SHA-256: 7e576b9e3a7a0566d50a0762a9198678bb80e4c3c82a7158e77f1597829631eb</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-clients-3.6.9-169.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c5f2732b0481911203ed879410591bdb<br/>SHA-256: 91b0da519bc3c392086d7e53bb6ca6dfc11dac62e5e60fb28bc956541e78415d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-devel-3.6.9-169.el6_5.ppc.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 80b67116304ff47e203805a8a927d138<br/>SHA-256: 950e7ed26aa5f35d7d734125e16a6e7cb55bfdff677cddd95b48c88a889c129d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-devel-3.6.9-169.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: aa01ee10a3feff4dd2cf3624f043016e<br/>SHA-256: 9ffc85919961bcecd9a456a3eb31597c7e53d24b31af62e756602cef941915cd</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-krb5-locator-3.6.9-169.el6_5.ppc64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: f0e2fd726799d754a3b028082e849498<br/>SHA-256: f18a418522bbc8f18329b5015c25897ed3b0c76e2e64efd7f2aa865ad64dd7ad</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>s390x:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libsmbclient-3.6.9-169.el6_5.s390.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: fcd531017fedf4f7f3d81c4daef0913a<br/>SHA-256: 7eef1a6ef0ec58a6e6bc150424e4d48f9d0b0fe6b9c6a49755083f9a2d0e5e59</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libsmbclient-3.6.9-169.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d4a1e4b00b95d3f14291bbddf72bd62d<br/>SHA-256: 1f0b16bd2e90961df603d607f250a67722e0293c1f145491be14e18853022352</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libsmbclient-devel-3.6.9-169.el6_5.s390.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1761fa54274ce95916f57fe443bb75db<br/>SHA-256: 3b58f34f1a3205478e944b730c6cfdef690ac0c38d2f618bc834a0340ffd7b76</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libsmbclient-devel-3.6.9-169.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 15f62985b5cf9aa9977ff4e6f1ba009e<br/>SHA-256: f5204c6a6353112c4427a3ce2bbe6a9b6bdb388dad09d03b8a6baa4b24a32580</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-3.6.9-169.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a9258ea1eb666f1df674488a41192415<br/>SHA-256: 2a772b3357f6fe488b3c93a016d6672d6fdd5e1cff27301c61d090e13f4ec9a8</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-client-3.6.9-169.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d81254ce450a6fb8511e99352c025c44<br/>SHA-256: 229960ea56dd60af6491ba2b5b7364a120966ecef6625b47b4cf7e8cb58ab8c2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-common-3.6.9-169.el6_5.s390.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 19f05fc96bc71691d445ae0a4bf3b554<br/>SHA-256: e0c78c22668c08a8859588f758224945096d779ab153d499671c3cb9b6ecb648</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-common-3.6.9-169.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1bae5834bcb8dd5d344fd3df9860aedb<br/>SHA-256: aed9a1ca8131074b332629dd263288a9e45f9345271f63e7be76829407429468</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-debuginfo-3.6.9-169.el6_5.s390.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 59440c0fa1992f761dfa21a2798eb72d<br/>SHA-256: e7b16f55fea5217be49d6be4db4bbe2e7499c97057cf3da0a376760f5d64c7fe</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-debuginfo-3.6.9-169.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ea85a109498175a567fbcc4e4beffa9a<br/>SHA-256: a893371ec22b81c1c7e380e20e4bec490d52ff0dce8a84ed1f126bb9b1f1208a</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-doc-3.6.9-169.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 722e372ccc788128dfd608f1b3135911<br/>SHA-256: 587a4b8ec72655ffa413e9d493581c5b226b33b1e3f576ab116d3a82c74f0d49</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-domainjoin-gui-3.6.9-169.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c90070758326b058ec85aec2f42b77c3<br/>SHA-256: 3db759f3e7381e273b6c35a3dccc20d2d5a7d1fd0b455b83ceee4fd6060618e2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-swat-3.6.9-169.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8ce5463db2ba97f2062027202ce972b9<br/>SHA-256: 536d410dbe8f7bee93deba118f06578114e30f02738be800188a3888a01a2f9e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-3.6.9-169.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 480695b7acffa32c2f491cd94bc70e07<br/>SHA-256: db4a39f744fb529368c42c850dd74ede1fcc8a7a6ec35d01414241e132dac36d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-clients-3.6.9-169.el6_5.s390.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6338a9f91e2ceb532309b1f95434b0f1<br/>SHA-256: 0a320c0e5de7c6a4d65ed78c4e778331d9c42a9eb47b74a783432332cb37c44d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-clients-3.6.9-169.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 8ad659e204bdd06517a65b7b92aca395<br/>SHA-256: 3ee7db290dd7303d06b1e7a6040f4dff9e3908853e255c904c7cffcb17840133</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-devel-3.6.9-169.el6_5.s390.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2cdae27b72acd9b227f07e4abb43ab86<br/>SHA-256: 49316ed1d588545bea6e65246a472acde61044f02ff15d7f84ed6ef97b65e744</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-devel-3.6.9-169.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 69d5815ca178456511bd972aa3ec7a4e<br/>SHA-256: 0cc40d9e799969e660aa5de6caf503746494ba500a3a0dd9e16d172160b638c0</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-krb5-locator-3.6.9-169.el6_5.s390x.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ad9b03325f5b08c5605bc6ef149c0b1f<br/>SHA-256: b9aa3672c010a1052a9a5887a50c2cfd91aa4b1d5143926557a446c1eca0d15c</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libsmbclient-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 510bb9e6a88413ba98fc745689d518aa<br/>SHA-256: e1d5851078954e29081f070aa9057acb63f41d9c0d9424887ae128007fe11304</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libsmbclient-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 403564514b05395608b890b10d511121<br/>SHA-256: 0f97a4d168022508d2ae63af52af2dfccf47a9d8fb5e231c3118669055b80610</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libsmbclient-devel-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 332bf175d4b95b76caa02dea317f80ae<br/>SHA-256: 8a02062216f9e25f5d425f2e1a1a57618cc4840d8d5c5cae466033b7bf1005fc</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libsmbclient-devel-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5237b8ee3c708196805db99acfcffac9<br/>SHA-256: 72f1186bfedcdafc9b769ff1b7a99b9c9878db68c424f7836e7d4072bbd2b51e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1959e17156ab02806b71ef192cc69968<br/>SHA-256: 74a6567a27d99f048ba6b27baae8c969b829682c5c74b6e5973ec6a869e85c12</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-client-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ee08b078b8aac5476d4e2ebd514ac579<br/>SHA-256: af1c04daf11d1a4509acc8c18c0ad4ed4f8173670d5fb3f8466d6363bc709320</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-common-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2b0dff96b8dc459201ff886f545d7269<br/>SHA-256: da0d6aaccf7c62a86df40e7f6f81209707f8a695365b7bc3e3a2712d19d5c1db</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-common-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 187a98d91b91851296f408dd732c088b<br/>SHA-256: d9ae99a4339528277e868520458d7468de53f7d397c35109fecc7c6eb4de828b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-debuginfo-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 79d7b044a63f58a9308d76fef275e520<br/>SHA-256: b99a302abc70ec9fa1ff6ef5d7e31ea79538761ad743b3d2357eebcac879e063</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-debuginfo-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: df7875e2122fdd9f05051a197419ef39<br/>SHA-256: 1f32210ae98e739e1a80d7718f6031058dfd99bd92d1f69d3e115c3e9e3dad82</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-doc-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9e3e5347b337a434cfbf5e9016ca5319<br/>SHA-256: 5d2a19b2712d4df9bfcda1a2431b2caa6f3b347caadebb5dd6ab32a823443e05</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-domainjoin-gui-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3e6f97d06644bafc9d36793d8a4111ee<br/>SHA-256: 4b5a658a088b514b731089eb7dcff6535ffdc1d2d0e29bd1ea93045510e409eb</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-swat-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 7a533ac7df7c961d03d0d50b3e3af178<br/>SHA-256: 7df68ca1aacd1859de4f62f1b24fe5e4109316118591f2ab3669b6010b5bb716</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1210b528114b7c5f8d8a9ca3f4edfa86<br/>SHA-256: 357766a42515f788ab736cda46fba4c36cefaf9ed49f37a77ffd8b0722a490ec</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-clients-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c0e37bf05625f769aaa8b1f08d1f4dcc<br/>SHA-256: 7abdf75fdd8c5e07baf039e50e8451a8cfb32dc82a65bf13b80d50ea9a0bc85b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-clients-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2b548cbb17e348338b0275e9b951d364<br/>SHA-256: 9ba717f215bf194d009c31c6f3fb98cc1d8aad0b574805ac914323a706413fce</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-devel-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 80bfb988ff47b9c7c656dc46a5907e2c<br/>SHA-256: 0947fef8577371541641b2587ee27eb7216ad1aca7780613e723a393ccfdf04d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-devel-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e1da9cea0888eca891b04c95460d26d9<br/>SHA-256: c2dbb050008dbd5a6e0999d42e62dc5acd982a5a159a0f56d919ad8a9e0e0c2d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-krb5-locator-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0254.html">RHSA-2015:0254</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c23529694f8f193b0b049b024000aa1f<br/>SHA-256: 42322b1c38079b8c79f3f5bebbf601ece06f56f2b324c730f92d440164b153eb</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+
+	<tr>
+		<td colspan="2"><font color="#666666"><strong><a name="Red Hat Enterprise Linux Workstation (v. 6)">Red Hat Enterprise Linux Workstation (v. 6)</a></strong></font></td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr noshade="1" size="1" /></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>SRPMS:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-3.6.9-169.el6_5.src.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 6a0d0722e0bb86eb8d5e1a4d71d364e8<br/>SHA-256: a3276c00a1e7d4a31c1bc342b2507a80ea70e3dd57bc60e4ef3e1249a3505363</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>IA-32:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libsmbclient-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 510bb9e6a88413ba98fc745689d518aa<br/>SHA-256: e1d5851078954e29081f070aa9057acb63f41d9c0d9424887ae128007fe11304</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libsmbclient-devel-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 332bf175d4b95b76caa02dea317f80ae<br/>SHA-256: 8a02062216f9e25f5d425f2e1a1a57618cc4840d8d5c5cae466033b7bf1005fc</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e44e68d5603ba5544034ac2155ab9d5f<br/>SHA-256: aef4ffb837a54591e1a3180141067ce8faf6b121257002342dc9077ff777b1fe</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-client-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a1b7a3c8c347246a55ce16b4572328b5<br/>SHA-256: c3a2152bc606dc70b9eb9cfe7e6c46914066887182271b3554cd2902c739e8d2</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-common-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2b0dff96b8dc459201ff886f545d7269<br/>SHA-256: da0d6aaccf7c62a86df40e7f6f81209707f8a695365b7bc3e3a2712d19d5c1db</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-debuginfo-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 79d7b044a63f58a9308d76fef275e520<br/>SHA-256: b99a302abc70ec9fa1ff6ef5d7e31ea79538761ad743b3d2357eebcac879e063</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-doc-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 92a0f3125c508bdf01c32b1d8af0310e<br/>SHA-256: 58d1505434aafc9b73fa6ee0cb1bf8bab742e10ccc0436bd56c42bdc2bcaedf8</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-domainjoin-gui-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 81e0b1136057053f583cd06009d0ab0c<br/>SHA-256: 89974f31f7fcbcafb9b8b3be550b9b97709e6d1d29d59ed34ec3608922bcd779</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-swat-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2651c0fd965a91fb1931068fb943b2b9<br/>SHA-256: f3095d29cb61df97cf43dc9987d094e9e96903f23dfaa38eb4c3aa6dd094617c</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: a421ee9314738b5dfd937413d783e5aa<br/>SHA-256: 799f0b8dcd63110922994be2d91ecd935eaec3798abb72e223c3a90c71b08a92</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-clients-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c0e37bf05625f769aaa8b1f08d1f4dcc<br/>SHA-256: 7abdf75fdd8c5e07baf039e50e8451a8cfb32dc82a65bf13b80d50ea9a0bc85b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-devel-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 80bfb988ff47b9c7c656dc46a5907e2c<br/>SHA-256: 0947fef8577371541641b2587ee27eb7216ad1aca7780613e723a393ccfdf04d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-krb5-locator-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: d19087defea6b5c122d67a44a554dbc9<br/>SHA-256: 3d9e33f600666c2733028eb93a9a77f1786789f5770ed77f9cce7e920fc6dfb4</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+	<tr>
+		<td colspan="2"><font color="#666666"><strong>x86_64:</strong></font></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libsmbclient-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 510bb9e6a88413ba98fc745689d518aa<br/>SHA-256: e1d5851078954e29081f070aa9057acb63f41d9c0d9424887ae128007fe11304</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libsmbclient-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 403564514b05395608b890b10d511121<br/>SHA-256: 0f97a4d168022508d2ae63af52af2dfccf47a9d8fb5e231c3118669055b80610</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>libsmbclient-devel-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 332bf175d4b95b76caa02dea317f80ae<br/>SHA-256: 8a02062216f9e25f5d425f2e1a1a57618cc4840d8d5c5cae466033b7bf1005fc</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>libsmbclient-devel-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 5237b8ee3c708196805db99acfcffac9<br/>SHA-256: 72f1186bfedcdafc9b769ff1b7a99b9c9878db68c424f7836e7d4072bbd2b51e</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1959e17156ab02806b71ef192cc69968<br/>SHA-256: 74a6567a27d99f048ba6b27baae8c969b829682c5c74b6e5973ec6a869e85c12</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-client-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: ee08b078b8aac5476d4e2ebd514ac579<br/>SHA-256: af1c04daf11d1a4509acc8c18c0ad4ed4f8173670d5fb3f8466d6363bc709320</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-common-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2b0dff96b8dc459201ff886f545d7269<br/>SHA-256: da0d6aaccf7c62a86df40e7f6f81209707f8a695365b7bc3e3a2712d19d5c1db</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-common-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 187a98d91b91851296f408dd732c088b<br/>SHA-256: d9ae99a4339528277e868520458d7468de53f7d397c35109fecc7c6eb4de828b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-debuginfo-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 79d7b044a63f58a9308d76fef275e520<br/>SHA-256: b99a302abc70ec9fa1ff6ef5d7e31ea79538761ad743b3d2357eebcac879e063</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-debuginfo-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: df7875e2122fdd9f05051a197419ef39<br/>SHA-256: 1f32210ae98e739e1a80d7718f6031058dfd99bd92d1f69d3e115c3e9e3dad82</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-doc-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 9e3e5347b337a434cfbf5e9016ca5319<br/>SHA-256: 5d2a19b2712d4df9bfcda1a2431b2caa6f3b347caadebb5dd6ab32a823443e05</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-domainjoin-gui-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 3e6f97d06644bafc9d36793d8a4111ee<br/>SHA-256: 4b5a658a088b514b731089eb7dcff6535ffdc1d2d0e29bd1ea93045510e409eb</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-swat-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 7a533ac7df7c961d03d0d50b3e3af178<br/>SHA-256: 7df68ca1aacd1859de4f62f1b24fe5e4109316118591f2ab3669b6010b5bb716</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 1210b528114b7c5f8d8a9ca3f4edfa86<br/>SHA-256: 357766a42515f788ab736cda46fba4c36cefaf9ed49f37a77ffd8b0722a490ec</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-clients-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c0e37bf05625f769aaa8b1f08d1f4dcc<br/>SHA-256: 7abdf75fdd8c5e07baf039e50e8451a8cfb32dc82a65bf13b80d50ea9a0bc85b</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-clients-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 2b548cbb17e348338b0275e9b951d364<br/>SHA-256: 9ba717f215bf194d009c31c6f3fb98cc1d8aad0b574805ac914323a706413fce</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-devel-3.6.9-169.el6_5.i686.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: 80bfb988ff47b9c7c656dc46a5907e2c<br/>SHA-256: 0947fef8577371541641b2587ee27eb7216ad1aca7780613e723a393ccfdf04d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#eeeeee">
+		<td>samba-winbind-devel-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: e1da9cea0888eca891b04c95460d26d9<br/>SHA-256: c2dbb050008dbd5a6e0999d42e62dc5acd982a5a159a0f56d919ad8a9e0e0c2d</tt></td>
+	</tr>
+	
+	<tr bgcolor="#ffffff">
+		<td>samba-winbind-krb5-locator-3.6.9-169.el6_5.x86_64.rpm<br />
+<font color="#990000">File outdated by: &#160;</font><a href="/errata/RHSA-2015-0251.html">RHSA-2015:0251</a></td>
+		<td valign="top" align="right">&#160;&#160;&#160;&#160;<tt>MD5: c23529694f8f193b0b049b024000aa1f<br/>SHA-256: 42322b1c38079b8c79f3f5bebbf601ece06f56f2b324c730f92d440164b153eb</tt></td>
+	</tr>
+	
+	<tr>
+		<td colspan="2">&#160;</td>
+	</tr>
+	
+<tr><td colspan="2">(The unlinked packages above are only available from the <a href="/">Red Hat Network</a>)<br /></td></tr>
+
+</table>
+
+
+
+<br />
+<h2>Bugs fixed (see <A HREF="http://bugzilla.redhat.com/bugzilla">bugzilla</A> for more information)</h2>
+<div class="page-summary">
+<p><a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1097815">1097815</a> - CVE-2014-0244 samba: nmbd denial of service<br />
+<a href="http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=1108748">1108748</a> - CVE-2014-3493 samba: smbd unicode path names denial of service</p>
+</div>
+
+
+
+<br />
+<h2>References</h2>
+<div class="page-summary">
+
+<a href="https://www.redhat.com/security/data/cve/CVE-2014-0244.html">https://www.redhat.com/security/data/cve/CVE-2014-0244.html</a><br /><a href="https://www.redhat.com/security/data/cve/CVE-2014-3493.html">https://www.redhat.com/security/data/cve/CVE-2014-3493.html</a><br />
+
+<A HREF="https://access.redhat.com/security/updates/classification/#moderate">https://access.redhat.com/security/updates/classification/#moderate</A><br /><A HREF="https://www.samba.org/samba/security/CVE-2014-0244">https://www.samba.org/samba/security/CVE-2014-0244</A><br /><A HREF="https://www.samba.org/samba/security/CVE-2014-3493">https://www.samba.org/samba/security/CVE-2014-3493</A>
+</div>
+
+
+
+
+
+
+
+<br />
+
+<hr border="1" />
+These packages are GPG signed by Red Hat for security.  Our key and 
+details on how to verify the signature are available from:<br />
+
+<a href="https://www.redhat.com/security/team/key/#package">https://www.redhat.com/security/team/key/#package</a>
+
+<p>The Red Hat security contact is <a href="mailto:secalert@redhat.com">secalert@redhat.com</a>.  More contact details at <a href="http://www.redhat.com/security/team/contact/">http://www.redhat.com/security/team/contact/</a></p>
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+    
+
+							</div>
+						</div>
+					</div>
+					<!-- end of legacy -->
+				</div>
+			</main>
+		</div>
+	<!--googleoff: all-->
+	<footer class="footer-main">
+		<div class="container footer-top">
+			<div class="row">
+
+				<div class="col-sm-2 brand">
+					<img src="https://access.redhat.com/chrome_themes/nimbus/img/l_redhat-reverse.png" alt="Red Hat" />
+				</div><menu class="col-sm-2">
+					<h3>Quick Links</h3>
+					<ul>
+						<li><a class="download-software" href="https://access.redhat.com/downloads/">Downloads</a></li>
+						<li><a class="manage-subscriptions" href="https://access.redhat.com/management/subscriptions/#active">Subscriptions</a></li>
+						<li><a class="support-cases" href="https://access.redhat.com/support">Support Cases</a></li>
+						<li><a class="quick-docs" href="https://access.redhat.com/documentation">Product Documentation</a></li>
+					</ul>
+				</menu>
+
+				<menu class="col-sm-2">
+					<h3>Help</h3>
+					<ul>
+						<li><a class="contact-us" href="https://access.redhat.com/support/contact/">Contact Us</a></li>
+						<li><a class="login-problems" href="https://access.redhat.com/help/login_assistance">Log-in Assistance</a></li>
+						<li><a class="accessibility" href="https://access.redhat.com/help/accessibility/">Accessibility</a></li>
+						<li><a class="browser-support-policy" href="https://access.redhat.com/help/browsers/">Browser Support Policy</a></li>
+					</ul>
+				</menu>
+
+				<menu class="col-sm-2">
+					<h3>Site Info</h3>
+					<ul>
+						<li><a class="recognition" href="https://access.redhat.com/recognition/">Awards and Recognition</a></li>
+						<li><a class="colophon" href="https://access.redhat.com/help/colophon/">Colophon</a></li>
+						<li><a class="cp-faqs" href="https://access.redhat.com/articles/33844">Customer Portal FAQ</a></li>
+					</ul>
+				</menu>
+
+				<menu class="col-sm-2">
+					<h3>About</h3>
+					<ul>
+						<li><a href="https://access.redhat.com/subscription-value" class="subscription-value">Red Hat Subscription Value</a></li>
+						<li><a href="https://www.redhat.com/about/" class="about-red-hat">About Red Hat</a></li>
+					</ul>
+				</menu>
+
+				<menu class="col-sm-2">
+					<h3>Related Sites</h3>
+					<ul>
+						<li><a href="https://www.redhat.com/" class="red-hat-com">RedHat.com</a></li>
+						<li><a href="https://www.jboss.org/" class="jboss-org">JBoss.org</a></li>
+						<li><a href="https://www.openshift.com" class="openshift-com">OpenShift.com</a></li>
+						<li><a href="https://partnercenter.force.com" class="partner-connect">Red Hat Partner Connect</a></li>
+					</ul>
+				</menu>
+
+			</div>
+		</div>
+
+		<div class="anchor">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 social">
+						<a target="_blank" href="http://www.redhat.com/summit/" class="summit"><img src="https://access.redhat.com/chrome_themes/nimbus/img/l_summit.png" alt="Red Hat Summit" /></a>
+						<a target="_blank" href="https://twitter.com/RedHatSupport" class="sm-icon twitter"><span class="nicon-twitter"></span><span class="offscreen">Twitter</span></a>
+						<a target="_blank" href="https://www.facebook.com/RedHatSupport" class="sm-icon facebook"><span class="nicon-facebook"></span><span class="offscreen">Facebook</span></a>
+						<a target="_blank" href="https://plus.google.com/100456039940694908045/posts" class="sm-icon googleplus"><span class="nicon-googleplus"></span><span class="offscreen">Google+</span></a>
+					</div>
+					<div class="col-sm-8 legal">
+						<menu class="legal-nav">
+							<ul>
+								<li><a href="http://www.redhat.com/en/about/privacy-policy" class="privacy-policy">Privacy Policy</a></li>
+								<li><a href="https://access.redhat.com/help/terms/" class="terms-of-use">Customer Portal Terms of Use</a></li>
+								<li><a href="http://www.redhat.com/en/about/all-policies-guidelines" class="all-policies">All Policies and Guidelines</a></li>
+							</ul>
+						</menu>							
+						<small class="copyright">Copyright © 2015 Red Hat, Inc.
+						</small>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+	</footer>
+	<!--googleon: all-->
+	</div>
+	
+  </body>
+</html>
+
+
+
+
