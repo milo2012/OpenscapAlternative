@@ -16,5 +16,5 @@ $ python checkPatches.py -i packages.txt
 - Extracting hotfixes from https://rhn.redhat.com/errata/RHSA-2015-0255.html  
 - Extracting hotfixes from https://rhn.redhat.com/errata/RHSA-2015-0113.html  
   
-Outdated Package: lzo-2.03-3.1.el6_5.1.x86_64  
+Outdated Package: XXXXXX
 https://rhn.redhat.com/errata/RHSA-2014-0861.html  
