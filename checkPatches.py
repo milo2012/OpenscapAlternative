@@ -112,13 +112,13 @@ def runTask(argFilename):
    html = ""
    lines = []
    if not os.path.exists(filename):
-    print "- Extracting hotfixes from "+url
+    #print "- Extracting hotfixes from "+url
     html = urlopen(url).read()    
     f = open(filename, 'w')
     f.write(html)
     f.close()
    else:
-    print "- Extracting hotfixes from "+filename
+    #print "- Extracting hotfixes from "+filename
     with open(filename) as f:
      #html=f.read().replace('\n', '')
      html=f.read()
@@ -167,7 +167,8 @@ def runTask(argFilename):
      else:
       if "x86_64" not in pkgVerHotfix and "i686" not in pkgVerHotFix and "ppc" not in pkgVerHotFix and "s390" not in pkgVerHotFix and "x86_64" not in pkgVer and "i686" not in pkgVer and "ppc" not in pkgVer and "s390" not in pkgVer:
        if [pkgName,pkgVerHotfix,pkgVer] not in doneList:
-        cmd = "dpkg --compare-versions "+pkgVerHotfix+" gt "+pkgVer+" && echo 'True'"
+        cmd = "dpkg --compare-versions "+pkgVerHotfix+" lt "+pkgVer+" && echo 'True'"
+        #cmd = "dpkg --compare-versions "+pkgVerHotfix+" gt "+pkgVer+" && echo 'True'"
         results = runCommand(cmd)
         if results:
          errataNo = line1[0]
